@@ -13,7 +13,17 @@
       "module_id": "research",
       "status": "ATIVADO",
       "rationale": "Justificativa baseada em evidência",
-      "source_refs": []
+      "source_refs": [],
+      "decided_at": "YYYY-MM-DDThh:mm:ss±hh:mm",
+      "kernel_version": "1.2"
+    },
+    {
+      "module_id": "automation",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Sinais insuficientes para ativação.",
+      "source_refs": [],
+      "decided_at": "YYYY-MM-DDThh:mm:ss±hh:mm",
+      "kernel_version": "1.2"
     }
   ],
   "migration_status": "NAO_INICIADO",
