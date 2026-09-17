@@ -6,11 +6,21 @@ O Gerador de Agents deve selecionar módulos especializados por evidência do pr
 
 ## 1. Estados possíveis
 
-Cada módulo avaliado deve receber exatamente um estado:
+Cada módulo avaliado deve receber exatamente um estado conceitual:
 
 - `ATIVADO` — há evidência suficiente de que o domínio ou fluxo faz parte do projeto;
 - `NÃO APLICÁVEL` — o domínio não integra o escopo comprovado;
 - `PENDENTE DE EVIDÊNCIA` — há sinais insuficientes ou contraditórios; não ativar até confirmação documental.
+
+Em arquivos estruturados JSON/JSONL, usar preferencialmente os códigos estáveis:
+
+```text
+ATIVADO
+NAO_APLICAVEL
+PENDENTE_DE_EVIDENCIA
+```
+
+A normalização de código não altera o significado do estado.
 
 ## 2. Regra de decisão
 
@@ -21,7 +31,7 @@ Um módulo pode ser `ATIVADO` quando pelo menos uma das condições abaixo for c
 3. o usuário determina explicitamente que aquele fluxo fará parte do projeto;
 4. entregas, riscos ou ferramentas do projeto exigem regras especializadas daquele módulo.
 
-A mera possibilidade futura não basta.
+A mera possibilidade futura, a simples menção de uma ferramenta ou a presença genérica do termo em um escopo amplo não bastam, isoladamente, para ativar um módulo.
 
 ## 3. Registro obrigatório
 
@@ -36,7 +46,7 @@ decided_at
 kernel_version
 ```
 
-A decisão pode ser persistida no perfil do projeto ou em arquivo estruturado próprio.
+A decisão pode ser persistida no perfil do projeto ou em arquivo estruturado próprio. Em um perfil com várias decisões, `decided_at` e `kernel_version` devem acompanhar cada decisão para que revisões futuras possam ser auditadas individualmente.
 
 ## 4. Matriz inicial de módulos
 
@@ -86,3 +96,5 @@ Quando duas regras de módulos entrarem em conflito:
 ## 6. Desativação ou revisão
 
 Módulos ativados não devem ser removidos apenas porque uma conversa atual não os utiliza. A desativação exige evidência de mudança material do escopo do projeto e deve ser registrada.
+
+Decisões `PENDENTE_DE_EVIDENCIA` devem ser revistas quando novas fontes canônicas relevantes forem examinadas; até lá, suas regras especializadas não são presumidas como vigentes no projeto-alvo.
