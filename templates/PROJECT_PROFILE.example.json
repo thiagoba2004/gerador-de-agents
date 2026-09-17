@@ -1,0 +1,22 @@
+{
+  "project_id": "PROJ",
+  "project_name": "Nome do projeto",
+  "project_purpose": "Finalidade comprovada",
+  "project_ref": "owner/repo ou outra fonte persistente",
+  "kernel_version": "1.2",
+  "canonical_files": [],
+  "tools_and_integrations": [],
+  "formats": [],
+  "risks": [],
+  "modules": [
+    {
+      "module_id": "research",
+      "status": "ATIVADO",
+      "rationale": "Justificativa baseada em evidência",
+      "source_refs": []
+    }
+  ],
+  "migration_status": "NAO_INICIADO",
+  "local_strategy_log_ref": "STRATEGY_LOG.jsonl",
+  "updated_at": "YYYY-MM-DDThh:mm:ss±hh:mm"
+}
