@@ -9,11 +9,25 @@ Este documento transforma a arquitetura do Gerador de Agents em um procedimento 
 
 Antes de qualquer diagnóstico substantivo:
 
-1. registrar o pedido no `REQUEST_LOG.jsonl` do projeto em que o Gerador estiver operando;
-2. confirmar tecnicamente o registro;
-3. identificar ou registrar a Estratégia Autônoma correspondente;
-4. identificar o Plano de Fases e a fase atual;
-5. somente então executar a rota aplicável.
+1. registrar o pedido no `REQUEST_LOG.jsonl` do projeto que governa a execução;
+2. confirmar tecnicamente que o registro foi persistido;
+3. informar ao usuário: **“Pedido registrado.”**;
+4. informar que irá ler o prompt, analisar e tomar as providências necessárias;
+5. identificar ou registrar a Estratégia Autônoma correspondente;
+6. identificar o Plano de Fases e a fase atual;
+7. somente então executar a rota aplicável.
+
+### 1.1. Auditoria não destrutiva de outro projeto
+
+Quando o Gerador estiver apenas auditando outro projeto, sem autorização para migrá-lo ou alterá-lo, o pedido e a estratégia de auditoria permanecem registrados no **Gerador de Agents**. A leitura do projeto-alvo não autoriza escrever nele.
+
+Somente quando houver execução aprovada dentro do projeto-alvo é que os registros locais daquele projeto deverão ser criados ou atualizados conforme seu próprio `AGENTS.md` e o plano de migração.
+
+A distinção é obrigatória:
+
+```text
+AUDITAR ≠ MIGRAR ≠ IMPLANTAR
+```
 
 ## 2. Rota A — Novo projeto
 
