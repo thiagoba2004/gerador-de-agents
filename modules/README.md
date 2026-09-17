@@ -11,4 +11,17 @@ Cada módulo deve declarar, no mínimo:
 5. procedimentos de verificação;
 6. riscos próprios do domínio.
 
-Exemplos futuros: `translation.md`, `legal.md`, `research.md`, `software.md`, `data.md`, `publication.md`, `digital-evidence.md`, `automation.md`.
+A ativação de qualquer módulo deve seguir `../MODULE_SELECTION.md` e ser registrada no perfil do projeto com evidência suficiente.
+
+## Módulos atualmente disponíveis
+
+- `research.md` — pesquisa documental, bibliográfica, normativa, histórica, científica ou jornalística;
+- `legal.md` — análise e produção jurídica substantiva;
+- `publication.md` — fluxos editoriais e publicação em destinos públicos;
+- `digital-evidence.md` — preservação, integridade e rastreabilidade de prova digital;
+- `translation.md` — tradução com fonte, revisão e controle terminológico;
+- `software.md` — código, scripts, APIs, testes e implantação;
+- `data.md` — coleta, transformação, análise e validação de dados estruturados;
+- `automation.md` — agendas, gatilhos, monitoramentos, pipelines e ações automáticas.
+
+Módulos não são ativados globalmente só por existirem neste diretório. Cada projeto deve classificá-los como `ATIVADO`, `NAO_APLICAVEL` ou `PENDENTE_DE_EVIDENCIA` conforme as fontes examinadas.
