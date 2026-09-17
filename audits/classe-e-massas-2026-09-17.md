@@ -28,8 +28,6 @@ Portanto, o projeto não deve ser tratado como instalação nova. A rota correta
 
 ## 4. Compatibilidade com o kernel 1.2
 
-### Compatibilidades fortes
-
 O `AGENTS.md` atual já implementa, em grau igual ou mais rigoroso que o kernel, os seguintes princípios:
 
 - fonte da verdade documental superior à memória;
@@ -120,12 +118,14 @@ Esses elementos pertencem ao perfil do projeto ou a módulos especializados, nã
 | `publication` | ATIVADO | O projeto mantém artigos, notícias, HTML e site público. |
 | `software` | ATIVADO | Código e infraestrutura técnica do site integram o escopo. |
 | `data` | ATIVADO | Bases de dados e arquivos estruturados são objetos expressos do projeto. |
-| `automation` | ATIVADO | O escopo canônico abrange automações e agentes que trabalhem no repositório. |
+| `automation` | PENDENTE DE EVIDÊNCIA | A menção genérica a automações no escopo do AGENTS, isoladamente, não comprova dependência recorrente de tarefas agendadas, gatilhos ou pipelines. |
 | `digital-evidence` | PENDENTE DE EVIDÊNCIA | A leitura realizada comprova dossiês e pesquisa documental, mas não basta para afirmar que preservação probatória digital é função transversal do repositório. |
+
+As decisões estruturadas, com `decided_at`, `kernel_version`, justificativas e fontes, estão em `profiles/classe-e-massas.json`.
 
 ## 9. Estratégias autônomas e logs
 
-O `STRATEGY_LOG.jsonl` atual contém cinco eventos persistidos, concentrados em duas estratégias:
+O `STRATEGY_LOG.jsonl` examinado contém cinco eventos persistidos, concentrados em duas estratégias:
 
 - `STRAT-CEM-20260917-001` — Governança e continuidade documental do Classe e Massas;
 - `STRAT-GDA-20260917-001` — Projeto Gerador de Agents, registrado provisoriamente no repositório Classe e Massas antes da criação do repositório próprio.
@@ -146,9 +146,9 @@ O `STRATEGY_LOG.jsonl` do Classe e Massas contém evidência persistente da vida
 2. atualização para kernel/logs obrigatórios;
 3. pausa aguardando criação do repositório próprio.
 
-Agora que `thiagoba2004/gerador-de-agents` existe, essa trilha deve ser **backfillada** no log local do Gerador sem apagar os eventos originais do Classe e Massas.
+Durante a consolidação do Gerador, essa trilha foi efetivamente **backfillada** no `STRATEGY_LOG.jsonl` local do Gerador por eventos `BACKFILLED`, preservando os identificadores dos eventos-fonte do Classe e Massas. Os pedidos `REQ-20260917-011` a `REQ-20260917-014` também foram recuperados a partir do `REQUEST_LOG.jsonl` do projeto de origem.
 
-O log do Classe e Massas permanece prova histórica de origem; o log próprio do Gerador passa a ser a fonte local primária para a continuidade futura da estratégia.
+O log do Classe e Massas permanece prova histórica de origem; o log próprio do Gerador é a fonte local primária para a continuidade futura da estratégia.
 
 ## 11. Plano de migração proposto para o Classe e Massas
 
@@ -187,9 +187,10 @@ No repositório `thiagoba2004/classe-e-massas`: **nenhuma**.
 
 No repositório `thiagoba2004/gerador-de-agents`:
 
-- perfil auditado criado em `profiles/classe-e-massas.json`;
+- perfil auditado criado e posteriormente alinhado ao esquema de seleção de módulos;
 - este relatório de auditoria criado;
-- módulos necessários à avaliação foram consolidados no Gerador.
+- módulos necessários à avaliação foram consolidados no Gerador;
+- histórico do próprio Gerador recuperado das fontes persistentes do Classe e Massas.
 
 ## 13. Verificação do teste
 
@@ -200,23 +201,20 @@ O teste demonstrou que o Gerador consegue:
 - comparar regras locais com o kernel;
 - localizar conflito concreto entre versões;
 - preservar regras locais mais rigorosas;
-- selecionar módulos por evidência;
+- selecionar módulos por evidência e revisar classificações excessivas;
 - distinguir auditoria de implantação;
 - localizar dívida de backfill sem inventar histórico;
-- localizar história migrável do próprio Gerador em outro repositório.
+- localizar e recuperar história migrável do próprio Gerador em outro repositório.
 
-## 14. Estado real
+## 14. Estado real após consolidação
 
 - auditoria: SALVA E VERSIONADA NO REPOSITÓRIO DO GERADOR;
-- perfil: SALVO E VERSIONADO NO REPOSITÓRIO DO GERADOR;
+- perfil: SALVO, VERSIONADO E ALINHADO À POLÍTICA DE MÓDULOS;
 - migração do Classe e Massas: NÃO IMPLANTADA;
 - `AGENTS.md` do Classe e Massas: NÃO ALTERADO;
-- backfill histórico do Gerador: PENDENTE NO MOMENTO DE CRIAÇÃO DESTE RELATÓRIO;
+- backfill histórico do Gerador: CONCLUÍDO PARA OS EVENTOS E PEDIDOS COMPROVADOS LOCALIZADOS;
 - backfill das estratégias do Classe e Massas: PENDENTE E DEVE SER PROGRESSIVO.
 
 ## 15. Próximo passo lógico
 
-1. executar o backfill comprovado da estratégia `STRAT-GDA-20260917-001` no `STRATEGY_LOG.jsonl` do Gerador;
-2. verificar os artefatos da Fase 4 no remoto;
-3. atualizar `PROJECT_STATE.json`, `ROADMAP.md`, `CHANGELOG.md` e o registro da estratégia;
-4. avaliar se o gate da Fase 4 foi satisfeito e, se sim, iniciar a Fase 5 — consolidação e verificação.
+A migração do Classe e Massas somente deverá ocorrer em estratégia própria e após autorização específica. Para o Gerador de Agents, este teste satisfaz o gate operacional da Fase 4; a continuidade está na Fase 5 — consolidação e verificação do próprio Gerador.
