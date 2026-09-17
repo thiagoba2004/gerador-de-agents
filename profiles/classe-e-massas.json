@@ -4,67 +4,73 @@
   "project_purpose": "Projeto editorial, documental e de pesquisa com traduções, artigos, observatórios, materiais jurídicos, bases estruturadas e infraestrutura de site.",
   "project_ref": "thiagoba2004/classe-e-massas",
   "kernel_version_audited_against": "1.2",
-  "agents_version_found": "1.8",
-  "agents_blob_sha": "0c0fc7bd17de1084728ed1f1f2c4aa61405d1a86",
+  "kernel_version_applied": "1.2",
+  "agents_version_current": "1.9",
+  "agents_blob_sha_current": "c7fd2693377c881b9f045ed02743a9711ae9b412",
+  "previous_agents_version": "1.8",
+  "previous_agents_blob_sha": "0c0fc7bd17de1084728ed1f1f2c4aa61405d1a86",
+  "migration_strategy_id": "STRAT-CEM-20260917-002",
+  "migration_commit": "3fb8a9ed721b5e614301d4528c0bad54eded62f9",
   "canonical_files_observed": [
     "AGENTS.md",
     "REQUEST_LOG.jsonl",
     "STRATEGY_LOG.jsonl",
-    "PROJECT_STATE.json"
+    "PROJECT_STATE.json",
+    "governanca/estrategia-migracao-agents-kernel-1.2.md"
   ],
   "modules": [
     {
       "module_id": "translation",
       "status": "ATIVADO",
-      "rationale": "O AGENTS.md contém protocolo específico de traduções e o PROJECT_STATE.json mantém TCM-001 como tradução em revisão humana.",
-      "source_refs": ["AGENTS.md#5", "PROJECT_STATE.json:TCM-001"],
+      "rationale": "O projeto mantém tradução como fluxo substantivo e o PROJECT_STATE.json mantém TCM-001 em revisão humana; a regra local de tradução foi preservada na migração v1.9.",
+      "source_refs": ["AGENTS.md#8.1", "PROJECT_STATE.json:TCM-001"],
       "decided_at": "2026-09-17T14:43:30-03:00",
       "kernel_version": "1.2"
     },
     {
       "module_id": "research",
       "status": "ATIVADO",
-      "rationale": "Pesquisa e levantamento documental integram expressamente o escopo e os objetos ativos do projeto.",
-      "source_refs": ["AGENTS.md#3", "AGENTS.md#21", "PROJECT_STATE.json:DOS-PLR-BB-2026"],
+      "rationale": "Pesquisa e levantamento documental integram expressamente o escopo e os objetos ativos do projeto; as regras locais da v1.8 permanecem incorporadas na v1.9.",
+      "source_refs": ["AGENTS.md#1.1", "PROJECT_STATE.json:DOS-PLR-BB-2026"],
       "decided_at": "2026-09-17T14:43:30-03:00",
       "kernel_version": "1.2"
     },
     {
       "module_id": "legal",
       "status": "ATIVADO",
-      "rationale": "O projeto inclui denúncias, peças jurídicas e materiais do MPT.",
-      "source_refs": ["AGENTS.md#3", "AGENTS.md#21"],
+      "rationale": "O projeto inclui denúncias, peças jurídicas e materiais do MPT; essas regras específicas permanecem incorporadas por referência da v1.8.",
+      "source_refs": ["AGENTS.md#1.1"],
       "decided_at": "2026-09-17T14:43:30-03:00",
       "kernel_version": "1.2"
     },
     {
       "module_id": "publication",
       "status": "ATIVADO",
-      "rationale": "HTML é tratado como formato de publicação e o projeto mantém artigos, notícias e site.",
-      "source_refs": ["AGENTS.md#6", "AGENTS.md#21"],
+      "rationale": "O projeto mantém artigos, notícias, HTML e site público, e a distinção entre produção e publicação permanece normativa.",
+      "source_refs": ["AGENTS.md#8.2", "AGENTS.md#14"],
       "decided_at": "2026-09-17T14:43:30-03:00",
       "kernel_version": "1.2"
     },
     {
       "module_id": "software",
       "status": "ATIVADO",
-      "rationale": "Código e infraestrutura técnica do site integram expressamente o escopo do projeto.",
-      "source_refs": ["AGENTS.md#3", "AGENTS.md#21"],
+      "rationale": "Código e infraestrutura técnica do site integram o escopo histórico do projeto e permanecem cobertos por incorporação normativa da v1.8.",
+      "source_refs": ["AGENTS.md#1.1"],
       "decided_at": "2026-09-17T14:43:30-03:00",
       "kernel_version": "1.2"
     },
     {
       "module_id": "data",
       "status": "ATIVADO",
-      "rationale": "Bases de dados e arquivos estruturados integram expressamente o escopo do projeto.",
-      "source_refs": ["AGENTS.md#3", "AGENTS.md#21"],
+      "rationale": "Bases de dados e arquivos estruturados integram expressamente o escopo histórico do projeto e permanecem normativos após a migração.",
+      "source_refs": ["AGENTS.md#1.1", "AGENTS.md#8.2"],
       "decided_at": "2026-09-17T14:43:30-03:00",
       "kernel_version": "1.2"
     },
     {
       "module_id": "automation",
       "status": "PENDENTE_DE_EVIDENCIA",
-      "rationale": "A auditoria comprovou que o AGENTS.md abrange automações no escopo geral, mas essa menção isolada não comprova dependência recorrente de tarefas agendadas, gatilhos ou pipelines no projeto.",
+      "rationale": "A menção a automações no escopo geral não comprova, sozinha, dependência recorrente de tarefas agendadas, gatilhos ou pipelines.",
       "source_refs": ["AGENTS.md:escopo"],
       "decided_at": "2026-09-17T14:43:30-03:00",
       "kernel_version": "1.2"
@@ -72,14 +78,16 @@
     {
       "module_id": "digital-evidence",
       "status": "PENDENTE_DE_EVIDENCIA",
-      "rationale": "A leitura canônica auditada comprova dossiês e levantamento documental, mas não foi suficiente, por si só, para afirmar que coleta probatória digital é função transversal do repositório.",
+      "rationale": "A auditoria comprovou dossiês e levantamento documental, mas não foi suficiente para afirmar que preservação probatória digital é função transversal do repositório.",
       "source_refs": [],
       "decided_at": "2026-09-17T14:43:30-03:00",
       "kernel_version": "1.2"
     }
   ],
-  "migration_status": "AUDITADA_NAO_IMPLANTADA",
+  "migration_status": "IMPLANTADA_E_VERIFICADA",
   "local_strategy_log_ref": "STRATEGY_LOG.jsonl",
   "audit_ref": "audits/classe-e-massas-2026-09-17.md",
-  "updated_at": "2026-09-17T14:43:30-03:00"
+  "migration_plan_ref": "governanca/estrategia-migracao-agents-kernel-1.2.md",
+  "next_governance_step": "Backfill progressivo das demais Estratégias Autônomas do Classe e Massas, somente em estratégia separada e com evidência persistente.",
+  "updated_at": "2026-09-17T15:43:00-03:00"
 }
