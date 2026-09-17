@@ -13,33 +13,33 @@ Implantar o Projeto Gerador de Agents como repositório independente, capaz de c
 
 ### FASE 1 — Registro e delimitação
 
-**Estado:** EM EXECUÇÃO
+**Estado:** CONCLUÍDA
 
 **Objetivo:** estabelecer identidade do projeto, logs obrigatórios, fonte canônica, estratégia vigente e estrutura mínima do repositório.
 
-**Gate:** existência e verificação de `REQUEST_LOG.jsonl`, `STRATEGY_LOG.jsonl`, `PROJECT_STATE.json`, instruções canônicas e roadmap.
+**Gate atingido:** `REQUEST_LOG.jsonl`, `STRATEGY_LOG.jsonl`, `PROJECT_STATE.json` e roadmap criados e verificados remotamente.
 
 ### FASE 2 — Kernel universal
 
-**Estado:** NÃO INICIADO
+**Estado:** CONCLUÍDA
 
 **Objetivo:** criar `AGENTS_KERNEL.md`, separar regras universais de regras específicas e definir esquema de versionamento do kernel.
 
-**Gate:** kernel versionado, auditável e coerente com as instruções canônicas vigentes.
+**Gate atingido:** `AGENTS_KERNEL.md` v1.2 e `AGENTS.md` do próprio Gerador criados, versionados e confirmados no branch `main`.
 
 ### FASE 3 — Infraestrutura reutilizável
 
-**Estado:** NÃO INICIADO
+**Estado:** CONCLUÍDA
 
 **Objetivo:** criar `templates/`, `modules/` e `profiles/`, com esquemas mínimos para pedidos, estratégias, estado e planejamento.
 
-**Gate:** templates válidos e pelo menos a estrutura-base documentada para módulos e perfis.
+**Gate atingido:** diretórios criados; templates de `REQUEST_LOG`, `STRATEGY_LOG`, `PROJECT_STATE` e `ROADMAP` persistidos e verificados remotamente; regras-base de módulos e perfis documentadas.
 
 ### FASE 4 — Gerador operacional
 
-**Estado:** NÃO INICIADO
+**Estado:** EM EXECUÇÃO
 
-**Objetivo:** definir o procedimento executável para projeto novo e projeto existente, incluindo auditoria, migração, atualização e relatório de lacunas.
+**Objetivo:** transformar a arquitetura documental em procedimento executável para projeto novo e projeto existente, incluindo auditoria, migração, atualização, seleção de módulos e relatório de lacunas.
 
 **Gate:** fluxo completo testado em pelo menos um projeto de referência sem sobrescrever personalizações locais.
 
@@ -61,4 +61,4 @@ Implantar o Projeto Gerador de Agents como repositório independente, capaz de c
 
 ## Próximo passo lógico
 
-Concluir a Fase 1, consolidando o estado do projeto e migrando a fonte canônica recuperada para o novo repositório antes de derivar o kernel universal.
+Desenvolver a Fase 4: procedimento operacional reproduzível para criação e migração de `AGENTS.md`, incluindo template de `AGENTS.md`, relatório de auditoria e mecanismo explícito de seleção de módulos/perfis.
