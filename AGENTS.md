@@ -42,10 +42,12 @@ Ordem de precedência:
 4. `STRATEGY_LOG.jsonl` para histórico de estratégias;
 5. `PROJECT_STATE.json` para fotografia do estado corrente;
 6. `ROADMAP.md` para Plano de Fases;
-7. `DECISIONS.md` para decisões arquiteturais/metodológicas;
-8. `CHANGELOG.md` para evolução do kernel e do Gerador;
-9. histórico Git comprovado;
-10. somente depois, memória ou contexto conversacional.
+7. `GERADOR_WORKFLOW.md` para o procedimento operacional;
+8. `MODULE_SELECTION.md` para decisão de módulos;
+9. `DECISIONS.md` para decisões arquiteturais/metodológicas;
+10. `CHANGELOG.md` para evolução do kernel e do Gerador;
+11. histórico Git comprovado;
+12. somente depois, memória ou contexto conversacional.
 
 ## 4. Estratégias
 
@@ -59,7 +61,7 @@ STRAT-GDA-AAAAMMDD-NNN
 
 O log é append-only. Continuação, retomada ou alteração material mantém o mesmo `strategy_id`; somente nova estratégia autônoma recebe novo identificador.
 
-O `STRATEGY_REGISTRY.jsonl` é índice agregado e reconstruível. Nunca prevalece sobre o `STRATEGY_LOG.jsonl` local do projeto de origem.
+O `STRATEGY_REGISTRY.jsonl` é índice agregado e reconstruível. Nunca prevalece sobre o `STRATEGY_LOG.jsonl` local do projeto de origem. Quando o Gerador tiver acesso a estratégias comprovadas de projetos auditados ou gerados, o índice deverá ser atualizado sem inventar estados ausentes.
 
 ## 5. Plano de Fases
 
@@ -82,11 +84,14 @@ PRODUZIR → SALVAR → VERIFICAR → ATUALIZAR ESTADO → CONTINUAR
 
 Git é a memória histórica preferencial deste projeto. Não afirmar commit, atualização remota, publicação ou implantação sem confirmação técnica.
 
-## 7. Arquitetura esperada
+## 7. Arquitetura vigente
 
 ```text
+README.md
 AGENTS.md
 AGENTS_KERNEL.md
+GERADOR_WORKFLOW.md
+MODULE_SELECTION.md
 REQUEST_LOG.jsonl
 STRATEGY_LOG.jsonl
 STRATEGY_REGISTRY.jsonl
@@ -97,17 +102,25 @@ CHANGELOG.md
 modules/
 profiles/
 templates/
+audits/
+history/
 ```
+
+`README.md` é o ponto de entrada para novos agentes/modelos. `audits/` registra auditorias e testes não destrutivos. `history/` preserva proveniência e versões históricas do próprio Gerador.
 
 ## 8. Templates
 
-`templates/` deve manter modelos reutilizáveis, pelo menos, para:
+`templates/` deve manter modelos reutilizáveis, conforme aplicável, para:
 
 - `REQUEST_LOG.jsonl`;
 - `STRATEGY_LOG.jsonl`;
 - `PROJECT_STATE.json`;
 - `ROADMAP.md`;
-- `AGENTS.md`.
+- `AGENTS.md`;
+- relatório de auditoria/migração;
+- perfil estruturado do projeto.
+
+O índice atualizado de templates fica em `templates/README.md`.
 
 ## 9. Módulos
 
@@ -120,6 +133,8 @@ Cada módulo em `modules/` deve declarar:
 - procedimentos de verificação;
 - riscos próprios do domínio.
 
+A ativação deve seguir `MODULE_SELECTION.md`; não ativar módulo apenas por possibilidade abstrata.
+
 ## 10. Perfis
 
 Cada perfil em `profiles/` deve registrar, quando aplicável:
@@ -127,19 +142,24 @@ Cada perfil em `profiles/` deve registrar, quando aplicável:
 - `project_id`;
 - nome e finalidade;
 - repositório/fonte de persistência;
-- versão do kernel utilizada;
-- módulos ativados;
+- versão do kernel utilizada ou auditada;
+- módulos ativados, não aplicáveis ou pendentes de evidência;
 - arquivos canônicos;
 - riscos e restrições;
-- estado de migração/implantação.
+- estado de migração/implantação;
+- referência ao log local de estratégias.
 
 ## 11. Projeto novo
 
-Para projeto novo: identificar finalidade, persistência, versionamento, formatos, ferramentas, riscos, `project_id`, módulos aplicáveis e arquivos auxiliares; depois gerar e verificar o `AGENTS.md` e registrar a origem do kernel.
+Para projeto novo, seguir a **Rota A** de `GERADOR_WORKFLOW.md`: identificar finalidade, persistência, versionamento, formatos, ferramentas, riscos, `project_id`, módulos aplicáveis e arquivos auxiliares; depois gerar e verificar o `AGENTS.md` e registrar a origem do kernel.
 
 ## 12. Projeto existente
 
-Nunca substituir cegamente o `AGENTS.md` existente. Primeiro ler Agents, estado e planejamento; inventariar estratégias comprováveis; comparar com o kernel; preservar regras específicas válidas; identificar lacunas/conflitos; produzir plano de migração; preservar versão anterior; atualizar; verificar; versionar.
+Para projeto existente, seguir a **Rota B** de `GERADOR_WORKFLOW.md`. Nunca substituir cegamente o `AGENTS.md` existente. Primeiro ler Agents, estado e planejamento; inventariar estratégias comprováveis; comparar com o kernel; preservar regras específicas válidas; identificar lacunas/conflitos; produzir plano de migração; preservar versão anterior; atualizar; verificar; versionar.
+
+### 12.1. Auditoria não é migração
+
+Quando o Gerador estiver realizando auditoria não destrutiva, o projeto-alvo deve permanecer inalterado. O pedido, a estratégia da auditoria, o perfil e o relatório são persistidos no repositório do Gerador. A escrita no projeto-alvo somente ocorre quando houver execução de migração/implantação autorizada e governada pelas regras locais daquele projeto.
 
 ## 13. Não regressão e recuperação
 
@@ -149,10 +169,14 @@ Diante de perda aparente:
 
 Retomar sempre do estado mais avançado comprovado.
 
-## 14. Fechamento
+## 14. Histórico e proveniência
 
-Antes de declarar uma operação substancial concluída, confirmar persistência, versionamento remoto, estado do projeto, referências produzidas e próximo passo lógico.
+Versões históricas das instruções do próprio Gerador devem permanecer recuperáveis em `history/` com proveniência e verificação de integridade. Material histórico não prevalece sobre o kernel vigente em caso de conflito normativo.
 
-## 15. Regra máxima
+## 15. Fechamento
+
+Antes de declarar uma operação substancial concluída, confirmar persistência, versionamento remoto, estado do projeto, referências produzidas, sincronização do registro agregado quando aplicável e próximo passo lógico.
+
+## 16. Regra máxima
 
 > **Nunca obrigar o usuário a pagar novamente, com tempo, energia ou recursos, por falha de memória, persistência, continuidade, planejamento ou verificação do Modelo de IA.**
