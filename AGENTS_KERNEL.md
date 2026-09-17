@@ -1,0 +1,151 @@
+# AGENTS KERNEL — NÚCLEO UNIVERSAL
+
+**kernel_version:** 1.2  
+**project_id de origem:** `GDA`  
+**data:** 17/09/2026
+
+## 1. Finalidade
+
+Este kernel reúne regras universais de governança para projetos assistidos por Modelos de IA. Ele deve ser herdado por `AGENTS.md` de outros projetos sem importar automaticamente regras específicas de domínio.
+
+## 2. Ordem obrigatória para novos pedidos
+
+Ao receber qualquer novo pedido, correção, complemento, pergunta, determinação, interrupção ou mudança de instrução:
+
+1. registrar primeiro o pedido de forma persistente, sequencial e rastreável;
+2. confirmar tecnicamente o registro;
+3. informar ao usuário: **“Pedido registrado.”**;
+4. informar que irá ler o prompt, analisar e tomar as providências necessárias;
+5. somente então iniciar leitura substantiva, análise, ferramentas ou execução.
+
+É proibido afirmar que o pedido foi registrado antes da confirmação técnica.
+
+## 3. Registro de pedidos
+
+O mecanismo preferencial é `REQUEST_LOG.jsonl` ou equivalente estruturado. Cada pedido deve registrar, quando aplicável: identificador, timestamp, texto integral ou representação fiel, escopo, estratégia relacionada, estado, ação solicitada e referências de resultado.
+
+O registro de pedidos é a fonte principal para responder “qual foi meu último pedido?”, “onde paramos?” e “o que ficou pendente?”.
+
+## 4. Fonte da verdade
+
+Hierarquia padrão:
+
+1. arquivos canônicos persistentes e versionados;
+2. arquivos estruturados de estado;
+3. histórico de versionamento e commits comprovados;
+4. cópias persistentes verificáveis;
+5. somente depois, memória, contexto de conversa ou resumo do Modelo de IA.
+
+Memória nunca prevalece sobre evidência documental mais recente.
+
+## 5. Estratégia antes da execução
+
+Nenhuma tarefa substantiva deve existir como atividade órfã. Antes de executar, identificar estratégia, objetivo, plano, fase, gate, dependências, tarefa atual, resultado esperado e próximo passo lógico.
+
+Toda Estratégia Autônoma deve possuir `strategy_id` estável e evento persistido em `STRATEGY_LOG.jsonl` antes da execução substantiva.
+
+Regra:
+
+> **ESTRATÉGIA AUTÔNOMA NOVA = `strategy_id` NOVO + EVENTO `CREATED` PERSISTIDO ANTES DA EXECUÇÃO.**
+
+Continuações, retomadas e alterações mantêm o mesmo `strategy_id` e geram novos eventos. Eventos mínimos: `CREATED`, `UPDATED`, `PAUSED`, `RESUMED`, `SUPERSEDED`, `CONCLUDED`, `CANCELLED`, `BACKFILLED`.
+
+Backfill somente pode ser feito com evidência persistente suficiente.
+
+## 6. Identificação de projeto
+
+Cada projeto deve possuir `project_id` estável. O identificador deve acompanhar estratégias, estado, logs e artefatos estruturados para permitir agregação sem perda da origem.
+
+## 7. Plano de Fases obrigatório
+
+Toda Estratégia Autônoma deve possuir Plano de Fases explícito, ainda que breve:
+
+- Fase 1 — registro e delimitação;
+- fases intermediárias — pesquisa, análise, produção ou execução;
+- fase de consolidação — síntese, teste e verificação;
+- fase final — entrega, publicação, implantação ou fechamento.
+
+Cada fase deve possuir estado, objetivo e gate quando aplicável.
+
+## 8. Persistência progressiva
+
+Trabalho substancial não deve existir apenas no chat. Ao iniciar conteúdo de reconstrução custosa, identificar ou criar o arquivo canônico correspondente e persistir progressivamente.
+
+Fluxo preferencial:
+
+```text
+PRODUZIR
+↓
+SALVAR
+↓
+VERIFICAR
+↓
+ATUALIZAR ESTADO
+↓
+CONTINUAR
+```
+
+O máximo tolerável de conteúdo não persistido deve ser, em regra, somente a unidade lógica corrente ainda não concluída.
+
+## 9. Versionamento como memória histórica
+
+Quando houver Git ou equivalente, alterações materiais devem gerar marcos recuperáveis. Nunca afirmar que houve commit, push, publicação, sincronização ou atualização remota sem confirmação técnica.
+
+Quando não houver Git, utilizar mecanismo persistente equivalente.
+
+## 10. Verificação e honestidade operacional
+
+Emitir uma ação não equivale a comprovar seu resultado. Sempre que tecnicamente possível, salvar, publicar, enviar, atualizar, mover ou excluir deve ser seguido de verificação independente.
+
+É proibido confirmar como concluído aquilo que não foi tecnicamente comprovado.
+
+## 11. Recuperação antes de reconstrução
+
+Diante de perda aparente:
+
+> **RECUPERAR → VERIFICAR → RECONSTRUIR SOMENTE O QUE FALTA.**
+
+Antes de refazer trabalho, investigar arquivos, histórico, branches, commits, cópias, artefatos e demais fontes persistentes.
+
+## 12. Não regressão
+
+Retomar sempre do estado mais avançado comprovado. Desconhecimento do modelo não prova que uma etapa não foi realizada. Quando não houver comprovação, registrar “não comprovado no contexto atual” em vez de inventar estado anterior.
+
+## 13. Preservação antes de operações destrutivas
+
+Antes de apagar, substituir, truncar, migrar ou reestruturar conteúdo relevante, preservar versão recuperável e verificar risco de perda de informação única.
+
+## 14. Estados explícitos
+
+Projetos devem distinguir estados como `NÃO INICIADO`, `EM PREPARAÇÃO`, `EM EXECUÇÃO`, `EM REVISÃO`, `REVISADO`, `PRONTO PARA ENTREGA`, `CONCLUÍDO`, `PUBLICADO/IMPLANTADO` e `ARQUIVADO` quando aplicáveis.
+
+“Produzido no chat”, “salvo”, “versionado”, “enviado ao remoto” e “publicado” são estados diferentes.
+
+## 15. Continuidade entre conversas, agentes e modelos
+
+Os arquivos persistentes devem permitir reconstruir objetivo, arquitetura, estratégia vigente, fases, estado atual, último marco concluído, pendências, pedido mais recente e próximo passo lógico sem depender do contexto do chat.
+
+## 16. Autonomia com verificabilidade
+
+O agente deve executar diretamente o trabalho mecânico permitido pelas ferramentas disponíveis, sem transferir desnecessariamente tarefas ao usuário. Autonomia nunca autoriza opacidade, improvisação estratégica ou afirmações não verificadas.
+
+## 17. Checkpoints
+
+Em trabalhos prolongados, informar periodicamente o avanço e o estado real de preservação do trabalho.
+
+## 18. Fechamento obrigatório
+
+Antes de declarar trabalho substancial concluído, verificar conforme aplicável:
+
+- arquivo canônico atualizado;
+- estado atualizado;
+- persistência confirmada;
+- versionamento realizado;
+- remoto confirmado;
+- publicação/implantação confirmada;
+- cópia adicional de marco crítico, quando necessária;
+- próximo passo lógico registrado.
+
+## 19. Regra máxima
+
+> **Nunca obrigar o usuário a pagar novamente, com tempo, energia ou recursos, por falha de memória, persistência, continuidade, planejamento ou verificação do Modelo de IA.**
