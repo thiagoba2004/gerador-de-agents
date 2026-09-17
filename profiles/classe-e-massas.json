@@ -17,53 +17,69 @@
       "module_id": "translation",
       "status": "ATIVADO",
       "rationale": "O AGENTS.md contém protocolo específico de traduções e o PROJECT_STATE.json mantém TCM-001 como tradução em revisão humana.",
-      "source_refs": ["AGENTS.md#5", "PROJECT_STATE.json:TCM-001"]
+      "source_refs": ["AGENTS.md#5", "PROJECT_STATE.json:TCM-001"],
+      "decided_at": "2026-09-17T14:43:30-03:00",
+      "kernel_version": "1.2"
     },
     {
       "module_id": "research",
       "status": "ATIVADO",
       "rationale": "Pesquisa e levantamento documental integram expressamente o escopo e os objetos ativos do projeto.",
-      "source_refs": ["AGENTS.md#3", "AGENTS.md#21", "PROJECT_STATE.json:DOS-PLR-BB-2026"]
+      "source_refs": ["AGENTS.md#3", "AGENTS.md#21", "PROJECT_STATE.json:DOS-PLR-BB-2026"],
+      "decided_at": "2026-09-17T14:43:30-03:00",
+      "kernel_version": "1.2"
     },
     {
       "module_id": "legal",
       "status": "ATIVADO",
       "rationale": "O projeto inclui denúncias, peças jurídicas e materiais do MPT.",
-      "source_refs": ["AGENTS.md#3", "AGENTS.md#21"]
+      "source_refs": ["AGENTS.md#3", "AGENTS.md#21"],
+      "decided_at": "2026-09-17T14:43:30-03:00",
+      "kernel_version": "1.2"
     },
     {
       "module_id": "publication",
       "status": "ATIVADO",
       "rationale": "HTML é tratado como formato de publicação e o projeto mantém artigos, notícias e site.",
-      "source_refs": ["AGENTS.md#6", "AGENTS.md#21"]
+      "source_refs": ["AGENTS.md#6", "AGENTS.md#21"],
+      "decided_at": "2026-09-17T14:43:30-03:00",
+      "kernel_version": "1.2"
     },
     {
       "module_id": "software",
       "status": "ATIVADO",
       "rationale": "Código e infraestrutura técnica do site integram expressamente o escopo do projeto.",
-      "source_refs": ["AGENTS.md#3", "AGENTS.md#21"]
+      "source_refs": ["AGENTS.md#3", "AGENTS.md#21"],
+      "decided_at": "2026-09-17T14:43:30-03:00",
+      "kernel_version": "1.2"
     },
     {
       "module_id": "data",
       "status": "ATIVADO",
       "rationale": "Bases de dados e arquivos estruturados integram expressamente o escopo do projeto.",
-      "source_refs": ["AGENTS.md#3", "AGENTS.md#21"]
+      "source_refs": ["AGENTS.md#3", "AGENTS.md#21"],
+      "decided_at": "2026-09-17T14:43:30-03:00",
+      "kernel_version": "1.2"
     },
     {
       "module_id": "automation",
-      "status": "ATIVADO",
-      "rationale": "O escopo canônico do AGENTS.md abrange automações que trabalhem no repositório e regras operacionais automatizáveis.",
-      "source_refs": ["AGENTS.md:escopo", "AGENTS.md#21"]
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "A auditoria comprovou que o AGENTS.md abrange automações no escopo geral, mas essa menção isolada não comprova dependência recorrente de tarefas agendadas, gatilhos ou pipelines no projeto.",
+      "source_refs": ["AGENTS.md:escopo"],
+      "decided_at": "2026-09-17T14:43:30-03:00",
+      "kernel_version": "1.2"
     },
     {
       "module_id": "digital-evidence",
       "status": "PENDENTE_DE_EVIDENCIA",
       "rationale": "A leitura canônica auditada comprova dossiês e levantamento documental, mas não foi suficiente, por si só, para afirmar que coleta probatória digital é função transversal do repositório.",
-      "source_refs": []
+      "source_refs": [],
+      "decided_at": "2026-09-17T14:43:30-03:00",
+      "kernel_version": "1.2"
     }
   ],
   "migration_status": "AUDITADA_NAO_IMPLANTADA",
   "local_strategy_log_ref": "STRATEGY_LOG.jsonl",
   "audit_ref": "audits/classe-e-massas-2026-09-17.md",
-  "updated_at": "2026-09-17"
+  "updated_at": "2026-09-17T14:43:30-03:00"
 }
