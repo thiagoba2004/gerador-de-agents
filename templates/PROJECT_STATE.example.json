@@ -1,0 +1,14 @@
+{
+  "project_id": "PROJ",
+  "project_name": "Nome do projeto",
+  "repository": "owner/repo ou outra fonte persistente",
+  "status": "EM_PREPARACAO",
+  "current_strategy_id": "STRAT-PROJ-YYYYMMDD-NNN",
+  "current_phase": "FASE 1 — registro e delimitação",
+  "last_completed_milestone": "",
+  "canonical_files": [],
+  "pending_items": [],
+  "next_logical_step": "",
+  "chat_only_work_is_not_persisted": true,
+  "updated_at": "YYYY-MM-DDThh:mm:ss±hh:mm"
+}
