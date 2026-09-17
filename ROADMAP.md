@@ -1,21 +1,21 @@
 # ROADMAP — GERADOR DE AGENTS
 
 **project_id:** `GDA`  
-**strategy_id:** `STRAT-GDA-20260917-001`  
-**status:** EM EXECUÇÃO  
-**data de início no repositório:** 17/09/2026
+**strategy_id de bootstrap:** `STRAT-GDA-20260917-001`  
+**status:** OPERACIONAL  
+**data de início no repositório:** 17/09/2026  
+**versão operacional inicial:** `1.3`  
+**kernel vigente:** `1.2`
 
 ## Objetivo
 
 Implantar o Projeto Gerador de Agents como repositório independente, capaz de criar, auditar, adaptar, atualizar e versionar `AGENTS.md` para outros projetos, com núcleo universal, perfis de projeto, módulos especializados e infraestrutura de continuidade, persistência e rastreabilidade.
 
-## Plano de Fases
+## Plano de Fases da estratégia de bootstrap
 
 ### FASE 1 — Registro e delimitação
 
 **Estado:** CONCLUÍDA
-
-**Objetivo:** estabelecer identidade do projeto, logs obrigatórios, fonte canônica, estratégia vigente e estrutura mínima do repositório.
 
 **Gate atingido:** `REQUEST_LOG.jsonl`, `STRATEGY_LOG.jsonl`, `PROJECT_STATE.json` e roadmap criados e verificados remotamente.
 
@@ -23,52 +23,49 @@ Implantar o Projeto Gerador de Agents como repositório independente, capaz de c
 
 **Estado:** CONCLUÍDA
 
-**Objetivo:** criar `AGENTS_KERNEL.md`, separar regras universais de regras específicas e definir esquema de versionamento do kernel.
-
 **Gate atingido:** `AGENTS_KERNEL.md` v1.2 e `AGENTS.md` do próprio Gerador criados, versionados e confirmados no branch `main`.
 
 ### FASE 3 — Infraestrutura reutilizável
 
 **Estado:** CONCLUÍDA
 
-**Objetivo:** criar `templates/`, `modules/` e `profiles/`, com esquemas mínimos para pedidos, estratégias, estado e planejamento.
-
-**Gate atingido:** diretórios criados; templates de `REQUEST_LOG`, `STRATEGY_LOG`, `PROJECT_STATE` e `ROADMAP` persistidos e verificados remotamente; regras-base de módulos e perfis documentadas.
+**Gate atingido:** templates, módulos, perfis e estruturas auxiliares criados e persistidos.
 
 ### FASE 4 — Gerador operacional
 
 **Estado:** CONCLUÍDA
 
-**Objetivo:** transformar a arquitetura documental em procedimento executável para projeto novo e projeto existente, incluindo auditoria, migração, atualização, seleção de módulos e relatório de lacunas.
-
-**Gate atingido:** workflow operacional, seleção determinística de módulos, templates de `AGENTS` e auditoria, módulos especializados e perfil de projeto foram criados; o fluxo foi testado de ponta a ponta no projeto `thiagoba2004/classe-e-massas` em modo não destrutivo, gerando `profiles/classe-e-massas.json` e `audits/classe-e-massas-2026-09-17.md` sem sobrescrever personalizações locais.
+**Gate atingido:** `GERADOR_WORKFLOW.md`, `MODULE_SELECTION.md`, templates operacionais, oito módulos especializados, perfil e relatório de auditoria foram criados. A Rota B foi testada no projeto `thiagoba2004/classe-e-massas` em modo não destrutivo.
 
 ### FASE 5 — Consolidação e verificação
 
-**Estado:** EM EXECUÇÃO
+**Estado:** CONCLUÍDA
 
-**Objetivo:** auditar consistência entre kernel, templates, logs, estado, changelog e instruções do próprio Gerador.
-
-**Gate:** nenhuma contradição material conhecida e repositório capaz de reconstruir seu próprio estado sem depender do chat.
-
-**Itens de verificação:**
-
-- coerência entre `AGENTS_KERNEL.md`, `AGENTS.md`, `GERADOR_WORKFLOW.md` e `MODULE_SELECTION.md`;
-- completude de templates, módulos e perfis;
-- sincronização entre `REQUEST_LOG.jsonl`, `STRATEGY_LOG.jsonl`, `STRATEGY_REGISTRY.jsonl`, `PROJECT_STATE.json` e este roadmap;
-- registro histórico dos pedidos e da estratégia anteriores ao repositório próprio;
-- atualização do `CHANGELOG.md`;
-- preservação documental da versão histórica v1.1;
-- existência de um ponto de entrada claro para novos agentes/modelos.
+**Gate atingido:** autoauditoria registrada em `audits/gerador-de-agents-self-audit-2026-09-17.md`; inconsistências de workflow, arquitetura, esquema de módulos, perfil, auditoria, registry e preservação histórica foram corrigidas. A versão 1.1 foi preservada integralmente e verificada em `history/`.
 
 ### FASE FINAL — Implantação do Gerador
 
-**Estado:** NÃO INICIADO
+**Estado:** CONCLUÍDA
 
-**Objetivo:** declarar a versão inicial do Gerador operacional, registrar o marco no changelog e encerrar a estratégia de bootstrap ou abrir estratégia sucessora de evolução.
+**Objetivo:** declarar a versão operacional inicial, confirmar persistência/versionamento remoto e encerrar a estratégia de bootstrap.
 
-**Gate:** persistência, versionamento remoto e verificação final confirmados.
+**Gate atingido:** versão operacional `1.3` declarada sobre kernel `1.2`; estado, roadmap, changelog, logs e registro agregado sincronizados; repositório possui ponto de entrada e documentação suficiente para reconstrução sem o chat.
+
+## Estado pós-bootstrap
+
+O Gerador entra em **modo operacional/manutenção**. A estratégia `STRAT-GDA-20260917-001` não deve permanecer artificialmente aberta depois de cumprido seu objetivo.
+
+Novas evoluções materiais devem ser classificadas conforme o kernel:
+
+- continuação/ajuste pequeno de trabalho ainda pertencente a estratégia existente → registrar evento na estratégia correspondente;
+- nova frente autônoma de evolução, novo módulo complexo, nova geração ou mudança arquitetural relevante → criar novo `strategy_id` antes da execução substantiva.
+
+## Dívidas não bloqueantes conhecidas
+
+- migração efetiva do Classe e Massas para o kernel 1.2 — pertence ao projeto-alvo e exige execução específica;
+- backfill progressivo das demais estratégias do Classe e Massas — pertence ao log local daquele projeto;
+- testes futuros adicionais da Rota A e expansão de módulos — evolução normal do Gerador.
 
 ## Próximo passo lógico
 
-Concluir a autoauditoria da Fase 5, corrigir as lacunas documentais encontradas, verificar remotamente os arquivos críticos e somente então decidir se o gate da Fase 5 permite avançar à implantação final.
+Aguardar novo pedido. Ao recebê-lo, registrar primeiro em `REQUEST_LOG.jsonl` e decidir, antes da execução substantiva, se ele pertence a manutenção simples ou cria nova Estratégia Autônoma.
