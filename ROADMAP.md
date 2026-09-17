@@ -37,19 +37,29 @@ Implantar o Projeto Gerador de Agents como repositório independente, capaz de c
 
 ### FASE 4 — Gerador operacional
 
-**Estado:** EM EXECUÇÃO
+**Estado:** CONCLUÍDA
 
 **Objetivo:** transformar a arquitetura documental em procedimento executável para projeto novo e projeto existente, incluindo auditoria, migração, atualização, seleção de módulos e relatório de lacunas.
 
-**Gate:** fluxo completo testado em pelo menos um projeto de referência sem sobrescrever personalizações locais.
+**Gate atingido:** workflow operacional, seleção determinística de módulos, templates de `AGENTS` e auditoria, módulos especializados e perfil de projeto foram criados; o fluxo foi testado de ponta a ponta no projeto `thiagoba2004/classe-e-massas` em modo não destrutivo, gerando `profiles/classe-e-massas.json` e `audits/classe-e-massas-2026-09-17.md` sem sobrescrever personalizações locais.
 
 ### FASE 5 — Consolidação e verificação
 
-**Estado:** NÃO INICIADO
+**Estado:** EM EXECUÇÃO
 
 **Objetivo:** auditar consistência entre kernel, templates, logs, estado, changelog e instruções do próprio Gerador.
 
 **Gate:** nenhuma contradição material conhecida e repositório capaz de reconstruir seu próprio estado sem depender do chat.
+
+**Itens de verificação:**
+
+- coerência entre `AGENTS_KERNEL.md`, `AGENTS.md`, `GERADOR_WORKFLOW.md` e `MODULE_SELECTION.md`;
+- completude de templates, módulos e perfis;
+- sincronização entre `REQUEST_LOG.jsonl`, `STRATEGY_LOG.jsonl`, `STRATEGY_REGISTRY.jsonl`, `PROJECT_STATE.json` e este roadmap;
+- registro histórico dos pedidos e da estratégia anteriores ao repositório próprio;
+- atualização do `CHANGELOG.md`;
+- preservação documental da versão histórica v1.1;
+- existência de um ponto de entrada claro para novos agentes/modelos.
 
 ### FASE FINAL — Implantação do Gerador
 
@@ -61,4 +71,4 @@ Implantar o Projeto Gerador de Agents como repositório independente, capaz de c
 
 ## Próximo passo lógico
 
-Desenvolver a Fase 4: procedimento operacional reproduzível para criação e migração de `AGENTS.md`, incluindo template de `AGENTS.md`, relatório de auditoria e mecanismo explícito de seleção de módulos/perfis.
+Concluir a autoauditoria da Fase 5, corrigir as lacunas documentais encontradas, verificar remotamente os arquivos críticos e somente então decidir se o gate da Fase 5 permite avançar à implantação final.
