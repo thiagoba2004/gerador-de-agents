@@ -11,12 +11,37 @@
   "previous_agents_blob_sha": "0c0fc7bd17de1084728ed1f1f2c4aa61405d1a86",
   "migration_strategy_id": "STRAT-CEM-20260917-002",
   "migration_commit": "3fb8a9ed721b5e614301d4528c0bad54eded62f9",
+  "backfill_strategy_id": "STRAT-CEM-20260917-003",
+  "strategy_map_ref": "governanca/STRATEGY_MAP.json",
   "canonical_files_observed": [
     "AGENTS.md",
     "REQUEST_LOG.jsonl",
     "STRATEGY_LOG.jsonl",
     "PROJECT_STATE.json",
-    "governanca/estrategia-migracao-agents-kernel-1.2.md"
+    "governanca/STRATEGY_MAP.json",
+    "governanca/estrategia-migracao-agents-kernel-1.2.md",
+    "governanca/estrategia-backfill-estrategias-autonomas.md",
+    "governanca/inventario-backfill-estrategias-autonomas-2026-09-17.md"
+  ],
+  "backfilled_strategy_ids": [
+    "STRAT-CEM-20260917-004",
+    "STRAT-CEM-20260917-005",
+    "STRAT-CEM-20260917-006",
+    "STRAT-CEM-20260917-007"
+  ],
+  "backfilled_strategy_legacy_objects": {
+    "STRAT-CEM-20260917-004": "TCM-001",
+    "STRAT-CEM-20260917-005": "DOS-PLR-BB-2026",
+    "STRAT-CEM-20260917-006": "WHATSAPP-ACT-BB-18-BASES-2026",
+    "STRAT-CEM-20260917-007": "Refundação e implantação do Observatório Classe e Massas"
+  },
+  "pending_backfill_evidence_groups": [
+    "MPT",
+    "LAI",
+    "artigos individuais de 2026",
+    "diretriz editorial de notícias",
+    "documentos bancários históricos anteriores à refundação",
+    "ferramentas e automações"
   ],
   "modules": [
     {
@@ -85,9 +110,11 @@
     }
   ],
   "migration_status": "IMPLANTADA_E_VERIFICADA",
+  "backfill_status": "LOTE_INICIAL_EXECUTADO_QUATRO_ESTRATEGIAS_COMPROVADAS",
   "local_strategy_log_ref": "STRATEGY_LOG.jsonl",
   "audit_ref": "audits/classe-e-massas-2026-09-17.md",
   "migration_plan_ref": "governanca/estrategia-migracao-agents-kernel-1.2.md",
-  "next_governance_step": "Backfill progressivo das demais Estratégias Autônomas do Classe e Massas, somente em estratégia separada e com evidência persistente.",
-  "updated_at": "2026-09-17T15:43:00-03:00"
+  "backfill_plan_ref": "governanca/estrategia-backfill-estrategias-autonomas.md",
+  "next_governance_step": "Classificar apenas quando necessário os grupos ainda pendentes de evidência; não criar estratégias retroativas por suposição.",
+  "updated_at": "2026-09-17"
 }
