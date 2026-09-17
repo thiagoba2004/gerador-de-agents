@@ -4,30 +4,38 @@
   "repository": "thiagoba2004/gerador-de-agents",
   "status": "EM_EXECUCAO",
   "current_strategy_id": "STRAT-GDA-20260917-001",
-  "current_phase": "FASE 1 — registro e delimitação",
-  "last_completed_milestone": "Repositório criado e registro persistente de pedidos/estratégia iniciado",
-  "canonical_instruction_version_recovered": "1.1",
-  "canonical_instruction_source": "INSTRUCOES_PROJETO_GERADOR_DE_AGENTS_v1.1.md",
-  "known_pending_reconciliation": [
-    "A instrução canônica v1.1 recuperada ainda contém ordem antiga de confirmação/registro e deve ser reconciliada com a determinação mais recente do usuário: registrar primeiro, confirmar o registro e só então informar leitura/análise/providências."
-  ],
-  "files_present_or_in_creation": [
-    "REQUEST_LOG.jsonl",
-    "STRATEGY_LOG.jsonl",
-    "ROADMAP.md",
-    "PROJECT_STATE.json"
-  ],
-  "planned_core_files": [
+  "current_phase": "FASE 4 — Gerador operacional",
+  "last_completed_milestone": "Fases 1, 2 e 3 concluídas e verificadas remotamente",
+  "kernel_version": "1.2",
+  "canonical_files": [
     "AGENTS.md",
     "AGENTS_KERNEL.md",
+    "REQUEST_LOG.jsonl",
+    "STRATEGY_LOG.jsonl",
     "STRATEGY_REGISTRY.jsonl",
-    "CHANGELOG.md",
+    "PROJECT_STATE.json",
+    "ROADMAP.md",
     "DECISIONS.md",
-    "modules/",
-    "profiles/",
-    "templates/"
+    "CHANGELOG.md"
   ],
-  "next_logical_step": "Migrar e reconciliar as instruções canônicas recuperadas; depois derivar o AGENTS_KERNEL.md e o AGENTS.md do próprio projeto.",
+  "reusable_areas": [
+    "templates/",
+    "modules/",
+    "profiles/"
+  ],
+  "completed_phases": [
+    "FASE 1 — registro e delimitação",
+    "FASE 2 — Kernel universal",
+    "FASE 3 — Infraestrutura reutilizável"
+  ],
+  "pending_items": [
+    "Criar template de AGENTS.md",
+    "Formalizar relatório de auditoria/migração",
+    "Definir seleção operacional de módulos e perfis",
+    "Testar o fluxo completo em projeto de referência",
+    "Avaliar backfill histórico adicional somente com evidência persistente suficiente"
+  ],
+  "next_logical_step": "Desenvolver e testar a Fase 4 — Gerador operacional.",
   "chat_only_work_is_not_persisted": true,
-  "updated_at": "2026-09-17T14:29:00-03:00"
+  "updated_at": "2026-09-17T14:32:00-03:00"
 }
