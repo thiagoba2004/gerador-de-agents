@@ -4,12 +4,14 @@
   "repository": "thiagoba2004/gerador-de-agents",
   "status": "EM_EXECUCAO",
   "current_strategy_id": "STRAT-GDA-20260917-001",
-  "current_phase": "FASE 4 — Gerador operacional",
-  "last_completed_milestone": "Fases 1, 2 e 3 concluídas e verificadas remotamente",
+  "current_phase": "FASE 5 — Consolidação e verificação",
+  "last_completed_milestone": "Fase 4 concluída com teste integral não destrutivo no projeto Classe e Massas",
   "kernel_version": "1.2",
   "canonical_files": [
     "AGENTS.md",
     "AGENTS_KERNEL.md",
+    "GERADOR_WORKFLOW.md",
+    "MODULE_SELECTION.md",
     "REQUEST_LOG.jsonl",
     "STRATEGY_LOG.jsonl",
     "STRATEGY_REGISTRY.jsonl",
@@ -21,21 +23,55 @@
   "reusable_areas": [
     "templates/",
     "modules/",
-    "profiles/"
+    "profiles/",
+    "audits/",
+    "history/"
   ],
   "completed_phases": [
     "FASE 1 — registro e delimitação",
     "FASE 2 — Kernel universal",
-    "FASE 3 — Infraestrutura reutilizável"
+    "FASE 3 — Infraestrutura reutilizável",
+    "FASE 4 — Gerador operacional"
   ],
-  "pending_items": [
-    "Criar template de AGENTS.md",
-    "Formalizar relatório de auditoria/migração",
-    "Definir seleção operacional de módulos e perfis",
-    "Testar o fluxo completo em projeto de referência",
-    "Avaliar backfill histórico adicional somente com evidência persistente suficiente"
+  "phase_4_results": [
+    "templates/AGENTS.example.md",
+    "templates/AUDIT_REPORT.example.md",
+    "templates/PROJECT_PROFILE.example.json",
+    "GERADOR_WORKFLOW.md",
+    "MODULE_SELECTION.md",
+    "modules/research.md",
+    "modules/legal.md",
+    "modules/publication.md",
+    "modules/digital-evidence.md",
+    "modules/translation.md",
+    "modules/software.md",
+    "modules/data.md",
+    "modules/automation.md",
+    "profiles/classe-e-massas.json",
+    "audits/classe-e-massas-2026-09-17.md"
   ],
-  "next_logical_step": "Desenvolver e testar a Fase 4 — Gerador operacional.",
+  "historical_recovery": {
+    "requests_backfilled": [
+      "REQ-20260917-011",
+      "REQ-20260917-012",
+      "REQ-20260917-013",
+      "REQ-20260917-014"
+    ],
+    "strategy_source_events_backfilled": [
+      "STEV-CEM-20260917-002",
+      "STEV-CEM-20260917-004",
+      "STEV-CEM-20260917-005"
+    ],
+    "source_repository": "thiagoba2004/classe-e-massas"
+  },
+  "phase_5_open_items": [
+    "Atualizar CHANGELOG.md com os marcos da Fase 4 e do backfill",
+    "Sincronizar STRATEGY_REGISTRY.jsonl com o evento mais recente",
+    "Criar ponto de entrada README.md para novos agentes/modelos",
+    "Executar autoauditoria de consistência do próprio Gerador",
+    "Confirmar a preservação da versão histórica v1.1; o manifesto e SHA-256 já estão em history/README.md e o arquivo integral permanece preservado na Biblioteca"
+  ],
+  "next_logical_step": "Executar a autoauditoria da Fase 5 e corrigir as lacunas documentais remanescentes.",
   "chat_only_work_is_not_persisted": true,
-  "updated_at": "2026-09-17T14:32:00-03:00"
+  "updated_at": "2026-09-17T14:47:00-03:00"
 }
