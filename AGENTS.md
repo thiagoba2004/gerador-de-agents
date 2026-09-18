@@ -135,6 +135,20 @@ Cada módulo em `modules/` deve declarar:
 
 A ativação deve seguir `MODULE_SELECTION.md`; não ativar módulo apenas por possibilidade abstrata.
 
+### 9.1. Propagação obrigatória de regras modulares
+
+Quando um módulo estiver `ATIVADO`, as regras marcadas como obrigatórias nesse módulo devem ser materializadas no `AGENTS.md` gerado ou migrado para o projeto-alvo, e não apenas citadas genericamente.
+
+Para o módulo `publication`, quando houver publicação de conteúdo textual/editorial, deve ser propagada a regra de triplicidade documental:
+
+```text
+Markdown (.md) = fonte textual canônica
+HTML (.html) = artefato de publicação
+JSON (.json) = representação estruturada/metadados interoperáveis
+```
+
+Cada texto editorial/publicável deve possuir os três artefatos coordenados, salvo exceção expressa, persistente e versionada no projeto-alvo.
+
 ## 10. Perfis
 
 Cada perfil em `profiles/` deve registrar, quando aplicável:
