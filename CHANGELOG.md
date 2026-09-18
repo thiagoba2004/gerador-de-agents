@@ -2,6 +2,16 @@
 
 Todas as alterações materiais do núcleo universal e da infraestrutura do Gerador devem ser registradas aqui.
 
+## 1.4 — 18/09/2026 — Triplicidade editorial
+
+- criação de regra reutilizável no módulo `publication` para exigir, em conteúdo textual/editorial, o trio coordenado Markdown + HTML + JSON;
+- definição de Markdown como fonte textual canônica, HTML como artefato de publicação e JSON como representação estruturada/interoperável;
+- criação de gate que impede considerar completa uma publicação textual sem os três artefatos coerentes;
+- exigência de decisão expressa, persistente e versionada para qualquer exceção;
+- atualização do `AGENTS.md` do Gerador para obrigar a propagação das regras modulares ao `AGENTS.md` gerado;
+- atualização de `templates/AGENTS.example.md` para materializar a regra quando o módulo `publication` estiver ativado;
+- estratégia: `STRAT-GDA-20260918-001`.
+
 ## 1.3 — 17/09/2026 — Gerador operacional sobre kernel 1.2
 
 - criação de `GERADOR_WORKFLOW.md` com rotas distintas para projeto novo e projeto existente;
