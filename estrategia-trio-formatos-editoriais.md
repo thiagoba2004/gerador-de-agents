@@ -3,7 +3,7 @@
 **strategy_id:** `STRAT-GDA-20260918-001`  
 **project_id:** `GDA`  
 **Data:** 18/09/2026  
-**Estado:** EM EXECUÇÃO
+**Estado:** CONCLUÍDA
 
 ## Objetivo
 
@@ -36,4 +36,12 @@ Atualizar `templates/AGENTS.example.md` para que o Gerador consiga materializar 
 Atualizar `AGENTS.md` do Gerador para registrar que módulos ativados devem propagar suas regras obrigatórias ao AGENTS gerado.
 
 ### Fase 5 — Verificação e fechamento
-Reler artefatos, confirmar commits e registrar conclusão.
+**CONCLUÍDA.** Artefatos relidos, commits confirmados e regra incorporada ao Gerador 1.4.
+
+## Resultado
+
+- `AGENTS.md` do Gerador obriga propagação das regras modulares;
+- `modules/publication.md` exige `.md` + `.html` + `.json`;
+- `templates/AGENTS.example.md` materializa a obrigação quando `publication` estiver ativado;
+- `CHANGELOG.md` registra a versão 1.4;
+- perfil do Classe e Massas atualizado para `AGENTS.md` v2.0.
