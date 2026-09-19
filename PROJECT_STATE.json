@@ -3,16 +3,17 @@
   "project_name": "Gerador de Agents",
   "repository": "thiagoba2004/gerador-de-agents",
   "status": "OPERACIONAL",
-  "release_version": "1.5",
-  "kernel_version": "1.3",
-  "current_strategy_id": null,
+  "release_version": "1.6",
+  "kernel_version": "1.4",
+  "current_strategy_id": "STRAT-GDA-20260919-002",
   "last_concluded_strategy_id": "STRAT-GDA-20260919-001",
-  "current_phase": "MANUTENÇÃO EVOLUTIVA — GOVERNANÇA NUMÉRICA CONCLUÍDA",
-  "last_completed_milestone": "Gerador 1.5 / kernel 1.3: códigos e denominações canônicos, PROJECT_REGISTRY, fases numeradas e resposta determinística de continuidade verificados no remoto",
+  "current_phase": "FASE 04/05 [F-000002-000004-004] — Migração dos projetos conhecidos",
+  "last_completed_milestone": "Kernel 1.4 e metodologia PRJ/EA/F implantados; registries migrados e CEM convertido para PRJ-000001.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
     "AGENTS_KERNEL.md",
+    "IDENTIFICATION_STANDARD.md",
     "GERADOR_WORKFLOW.md",
     "MODULE_SELECTION.md",
     "REQUEST_LOG.jsonl",
@@ -80,8 +81,19 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Aguardar novo pedido; ao retomar estratégia legada, normalizar o Plano de Fases vigente antes de nova execução substantiva.",
+  "next_logical_step": "Executar verificação final de unicidade, hierarquia, não reutilização e coerência entre registries, AGENTS e estados; concluir a estratégia.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-19",
-  "project_code": "GDA"
+  "project_code": "PRJ-000002",
+  "project_sequence": 2,
+  "project_alias": "GDA",
+  "current_strategy_code": "EA-000002-000004",
+  "current_strategy_name": "Metodologia universal de codificação hierárquica",
+  "identification_standard": {
+    "file": "IDENTIFICATION_STANDARD.md",
+    "version": "1.0",
+    "project_code_format": "PRJ-NNNNNN",
+    "strategy_code_format": "EA-PPPPPP-EEEEEE",
+    "phase_code_format": "F-PPPPPP-EEEEEE-FFF"
+  }
 }
