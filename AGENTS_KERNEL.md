@@ -1,8 +1,8 @@
 # AGENTS KERNEL — NÚCLEO UNIVERSAL
 
-**kernel_version:** 1.2  
+**kernel_version:** 1.3  
 **project_id de origem:** `GDA`  
-**data:** 17/09/2026
+**data:** 19/09/2026
 
 ## 1. Finalidade
 
@@ -42,7 +42,22 @@ Memória nunca prevalece sobre evidência documental mais recente.
 
 Nenhuma tarefa substantiva deve existir como atividade órfã. Antes de executar, identificar estratégia, objetivo, plano, fase, gate, dependências, tarefa atual, resultado esperado e próximo passo lógico.
 
-Toda Estratégia Autônoma deve possuir `strategy_id` estável e evento persistido em `STRATEGY_LOG.jsonl` antes da execução substantiva.
+Toda Estratégia Autônoma deve possuir, antes da execução substantiva:
+
+```text
+strategy_id
+strategy_name
+```
+
+O `strategy_id` é o código estável da estratégia e deve seguir, salvo regra legada preservada:
+
+```text
+STRAT-<PROJECT_CODE>-AAAAMMDD-NNN
+```
+
+O `strategy_name` é a denominação humana inequívoca da Estratégia Autônoma.
+
+O evento correspondente deve ser persistido em `STRATEGY_LOG.jsonl` antes da execução substantiva.
 
 Regra:
 
@@ -54,18 +69,74 @@ Backfill somente pode ser feito com evidência persistente suficiente.
 
 ## 6. Identificação de projeto
 
-Cada projeto deve possuir `project_id` estável. O identificador deve acompanhar estratégias, estado, logs e artefatos estruturados para permitir agregação sem perda da origem.
+Cada projeto deve possuir identificação canônica composta, no mínimo, por:
+
+```text
+project_code
+project_name
+```
+
+O `project_code` é um código curto, estável, único no ecossistema e preferencialmente formado por 2 a 8 caracteres ASCII maiúsculos, podendo conter algarismos. Exemplos: `CEM`, `GDA`.
+
+O `project_name` é a denominação humana estável do Projeto.
+
+Quando existir `project_id` legado, slug técnico ou outro identificador persistente, ele deve ser preservado para compatibilidade, mas não substitui `project_code` + `project_name`.
+
+O `project_code` deve acompanhar estratégias, estado, logs e artefatos estruturados para permitir agregação sem perda da origem.
 
 ## 7. Plano de Fases obrigatório
 
-Toda Estratégia Autônoma deve possuir Plano de Fases explícito, ainda que breve:
+Toda Estratégia Autônoma deve possuir Plano de Fases explícito, integralmente numerado e persistente.
 
-- Fase 1 — registro e delimitação;
-- fases intermediárias — pesquisa, análise, produção ou execução;
-- fase de consolidação — síntese, teste e verificação;
-- fase final — entrega, publicação, implantação ou fechamento.
+Cada fase deve possuir obrigatoriamente:
 
-Cada fase deve possuir estado, objetivo e gate quando aplicável.
+```text
+phase_number
+phase_code
+phase_name
+phase_total
+```
+
+Convenção:
+
+```text
+phase_number = inteiro sequencial iniciado em 1
+phase_code   = F01, F02, F03...
+phase_name   = denominação humana inequívoca
+phase_total  = número total de fases do plano vigente
+```
+
+A forma textual canônica é:
+
+```text
+FASE 01/05 (F01) — Registro e delimitação
+FASE 02/05 (F02) — Pesquisa e análise
+...
+FASE 05/05 (F05) — Verificação e fechamento
+```
+
+Não é permitido usar `FASE FINAL`, `FASE DE CONSOLIDAÇÃO` ou expressão equivalente sem número. A função da fase pode constar na denominação, mas toda fase deve permanecer matematicamente posicionada no plano.
+
+Cada fase deve possuir estado, objetivo e gate quando aplicável. Se o plano for alterado materialmente, `phase_total` e a numeração vigente devem ser atualizados sem reescrever o histórico já persistido.
+
+## 7.1. Padrão obrigatório de resposta de continuidade
+
+Quando o usuário perguntar **“Onde paramos?”**, **“Qual a Estratégia Autônoma em curso?”**, **“Qual a Fase dessa Estratégia Autônoma?”**, **“Qual o Projeto?”** ou equivalente, a resposta deve ser determinística e conter, nesta ordem:
+
+```text
+PROJETO: <PROJECT_CODE> — <PROJECT_NAME>
+ESTRATÉGIA AUTÔNOMA: <STRATEGY_ID> — <STRATEGY_NAME>
+FASE: <PHASE_NUMBER>/<PHASE_TOTAL> (<PHASE_CODE>) — <PHASE_NAME>
+ESTADO: <estado comprovado>
+ONDE PARAMOS: <ponto exato comprovado>
+PRÓXIMO PASSO LÓGICO: <próximo passo comprovado pelo plano>
+```
+
+Código e denominação são obrigatórios tanto para Projeto quanto para Estratégia Autônoma. Número, total, código e denominação são obrigatórios para a Fase.
+
+A resposta deve ser reconstruída prioritariamente de `REQUEST_LOG.jsonl`, `STRATEGY_LOG.jsonl`, `PROJECT_STATE.json`, Plano de Fases e arquivos canônicos. Memória conversacional só pode ser usada subsidiariamente.
+
+---
 
 ## 8. Persistência progressiva
 
