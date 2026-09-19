@@ -1,6 +1,8 @@
 # AGENTS.md — {{PROJECT_NAME}}
 
 **project_id:** `{{PROJECT_ID}}`  
+**project_code:** `{{PROJECT_CODE}}`  
+**project_name:** `{{PROJECT_NAME}}`  
 **generated_from_kernel:** `{{KERNEL_VERSION}}`  
 **repository/source:** `{{PROJECT_REF}}`  
 **modules:** {{MODULE_LIST}}
@@ -38,26 +40,44 @@ Hierarquia deste projeto:
 
 ## 4. Estratégias
 
-Toda Estratégia Autônoma deve possuir `strategy_id` estável e evento persistido em `STRATEGY_LOG.jsonl` antes da execução substantiva.
+Toda Estratégia Autônoma deve possuir `strategy_id` e `strategy_name` estáveis e evento persistido em `STRATEGY_LOG.jsonl` antes da execução substantiva.
 
 Padrão:
 
 ```text
-STRAT-{{PROJECT_ID}}-AAAAMMDD-NNN
+STRAT-{{PROJECT_CODE}}-AAAAMMDD-NNN
 ```
 
 Continuações e retomadas mantêm o mesmo identificador. Apenas nova unidade estratégica recebe novo `strategy_id`.
 
 ## 5. Plano de Fases
 
-Toda Estratégia Autônoma deve possuir Plano de Fases explícito, com estado, objetivo e gate quando aplicável.
+Toda Estratégia Autônoma deve possuir Plano de Fases explícito, persistente e integralmente numerado.
 
-Estrutura mínima:
+Cada fase deve possuir `phase_number`, `phase_code`, `phase_name` e `phase_total`, além de estado, objetivo e gate quando aplicável.
 
-- Fase 1 — registro e delimitação;
-- fases intermediárias — pesquisa, análise, produção ou execução;
-- fase de consolidação — síntese, teste e verificação;
-- fase final — entrega, publicação, implantação ou fechamento.
+Padrão obrigatório:
+
+```text
+FASE 01/{{PHASE_TOTAL}} (F01) — Registro e delimitação
+FASE 02/{{PHASE_TOTAL}} (F02) — ...
+FASE {{PHASE_TOTAL}}/{{PHASE_TOTAL}} (F{{PHASE_TOTAL_PADDED}}) — Verificação e fechamento
+```
+
+Não usar fases sem número, inclusive “FASE FINAL” isoladamente.
+
+## 5.1. Padrão de resposta de continuidade
+
+Quando o usuário perguntar **“Onde paramos? Qual a Estratégia Autônoma em curso? Qual a Fase dessa Estratégia Autônoma? E qual o Projeto?”** ou equivalente, responder:
+
+```text
+PROJETO: <PROJECT_CODE> — <PROJECT_NAME>
+ESTRATÉGIA AUTÔNOMA: <STRATEGY_ID> — <STRATEGY_NAME>
+FASE: <PHASE_NUMBER>/<PHASE_TOTAL> (<PHASE_CODE>) — <PHASE_NAME>
+ESTADO: <estado comprovado>
+ONDE PARAMOS: <ponto exato comprovado>
+PRÓXIMO PASSO LÓGICO: <próximo passo comprovado>
+```
 
 ## 6. Persistência progressiva
 
