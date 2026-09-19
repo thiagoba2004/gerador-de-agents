@@ -3,10 +3,10 @@
   "project_name": "Classe e Massas",
   "project_purpose": "Projeto editorial, documental e de pesquisa com traduções, artigos, observatórios, materiais jurídicos, bases estruturadas e infraestrutura de site.",
   "project_ref": "thiagoba2004/classe-e-massas",
-  "kernel_version_audited_against": "1.2",
-  "kernel_version_applied": "1.2",
-  "agents_version_current": "2.0",
-  "agents_blob_sha_current": "9001760d0e7f987da4ac1aaa84b816dd7c47de2d",
+  "kernel_version_audited_against": "1.3",
+  "kernel_version_applied": "1.3",
+  "agents_version_current": "2.1",
+  "agents_blob_sha_current": "6743e9bc0cf1d660bf3e1814d53cf8e9dc83c919",
   "previous_agents_version": "1.8",
   "previous_agents_blob_sha": "0c0fc7bd17de1084728ed1f1f2c4aa61405d1a86",
   "migration_strategy_id": "STRAT-CEM-20260917-002",
@@ -136,13 +136,20 @@
   "migration_plan_ref": "governanca/estrategia-migracao-agents-kernel-1.2.md",
   "backfill_plan_ref": "governanca/estrategia-backfill-estrategias-autonomas.md",
   "next_governance_step": "Classificar apenas quando necessário os grupos ainda pendentes de evidência; não criar estratégias retroativas por suposição.",
-  "updated_at": "2026-09-17",
+  "updated_at": "2026-09-19",
   "post_migration_governance_updates": [
     {
       "date": "2026-09-18",
       "strategy_id": "STRAT-CEM-20260918-001",
       "change": "AGENTS v2.0 institui trio obrigatório Markdown + HTML + JSON para textos editoriais/publicáveis.",
       "generator_strategy_id": "STRAT-GDA-20260918-001"
+    },
+    {
+      "date": "2026-09-19",
+      "strategy_id": "STRAT-CEM-20260919-001",
+      "change": "AGENTS v2.1 institui código + denominação de Projeto e Estratégia Autônoma, fases numeradas e padrão determinístico de recuperação de estado.",
+      "generator_strategy_id": "STRAT-GDA-20260919-001"
     }
-  ]
+  ],
+  "project_code": "CEM"
 }
