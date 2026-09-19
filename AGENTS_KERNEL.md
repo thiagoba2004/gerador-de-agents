@@ -1,6 +1,6 @@
 # AGENTS KERNEL — NÚCLEO UNIVERSAL
 
-**kernel_version:** 1.3  
+**kernel_version:** 1.4  
 **project_id de origem:** `GDA`  
 **data:** 19/09/2026
 
@@ -45,17 +45,23 @@ Nenhuma tarefa substantiva deve existir como atividade órfã. Antes de executar
 Toda Estratégia Autônoma deve possuir, antes da execução substantiva:
 
 ```text
-strategy_id
+strategy_code
 strategy_name
 ```
 
-O `strategy_id` é o código estável da estratégia e deve seguir, salvo regra legada preservada:
+O `strategy_code` é o identificador canônico, numérico, hierárquico e independente da denominação. Sua gramática universal é:
 
 ```text
-STRAT-<PROJECT_CODE>-AAAAMMDD-NNN
+EA-PPPPPP-EEEEEE
 ```
 
+onde `PPPPPP` é a sequência do Projeto e `EEEEEE` é a sequência monotônica da Estratégia dentro do Projeto.
+
+Para Estratégias novas, `strategy_id` deve ser igual a `strategy_code`. Estratégias históricas com identificadores legados preservam o identificador antigo em `legacy_strategy_id` ou mapeamento equivalente; o histórico append-only não deve ser reescrito.
+
 O `strategy_name` é a denominação humana inequívoca da Estratégia Autônoma.
+
+A alocação e a migração devem obedecer a `IDENTIFICATION_STANDARD.md`.
 
 O evento correspondente deve ser persistido em `STRATEGY_LOG.jsonl` antes da execução substantiva.
 
@@ -73,16 +79,26 @@ Cada projeto deve possuir identificação canônica composta, no mínimo, por:
 
 ```text
 project_code
+project_sequence
 project_name
+project_alias
 ```
 
-O `project_code` é um código curto, estável, único no ecossistema e preferencialmente formado por 2 a 8 caracteres ASCII maiúsculos, podendo conter algarismos. Exemplos: `CEM`, `GDA`.
+O `project_code` é numérico, globalmente único, estável, imutável e independente da denominação:
 
-O `project_name` é a denominação humana estável do Projeto.
+```text
+PRJ-NNNNNN
+```
 
-Quando existir `project_id` legado, slug técnico ou outro identificador persistente, ele deve ser preservado para compatibilidade, mas não substitui `project_code` + `project_name`.
+`NNNNNN` é uma sequência global de seis algarismos registrada em `PROJECT_REGISTRY.jsonl`.
 
-O `project_code` deve acompanhar estratégias, estado, logs e artefatos estruturados para permitir agregação sem perda da origem.
+O `project_name` é a denominação humana estável do Projeto. O `project_alias` é opcional e exclusivamente mnemônico; siglas como `CEM` e `GDA` não constituem identidade canônica e nunca participam do cálculo dos códigos descendentes.
+
+Quando existir `project_id` legado, slug técnico ou código antigo, ele deve ser preservado para compatibilidade histórica, mas não substitui o `project_code`.
+
+Códigos nunca são reutilizados nem renumerados. Renomear o Projeto, mover o repositório, arquivar ou cancelar não altera o código.
+
+A metodologia completa de alocação, hierarquia e migração é `IDENTIFICATION_STANDARD.md`.
 
 ## 7. Plano de Fases obrigatório
 
@@ -101,18 +117,18 @@ Convenção:
 
 ```text
 phase_number = inteiro sequencial iniciado em 1
-phase_code   = F01, F02, F03...
+phase_code   = F-PPPPPP-EEEEEE-FFF
 phase_name   = denominação humana inequívoca
 phase_total  = número total de fases do plano vigente
 ```
 
-A forma textual canônica é:
+O código da Fase herda numericamente Projeto e Estratégia. A forma textual canônica é:
 
 ```text
-FASE 01/05 (F01) — Registro e delimitação
-FASE 02/05 (F02) — Pesquisa e análise
+FASE 01/05 [F-000001-000014-001] — Registro e delimitação
+FASE 02/05 [F-000001-000014-002] — Pesquisa e análise
 ...
-FASE 05/05 (F05) — Verificação e fechamento
+FASE 05/05 [F-000001-000014-005] — Verificação e fechamento
 ```
 
 Não é permitido usar `FASE FINAL`, `FASE DE CONSOLIDAÇÃO` ou expressão equivalente sem número. A função da fase pode constar na denominação, mas toda fase deve permanecer matematicamente posicionada no plano.
@@ -127,14 +143,15 @@ Quando o usuário perguntar **“Onde paramos?”**, **“Qual a Estratégia Aut
 
 ```text
 PROJETO: <PROJECT_CODE> — <PROJECT_NAME>
-ESTRATÉGIA AUTÔNOMA: <STRATEGY_ID> — <STRATEGY_NAME>
-FASE: <PHASE_NUMBER>/<PHASE_TOTAL> (<PHASE_CODE>) — <PHASE_NAME>
+ALIAS: <PROJECT_ALIAS, quando existir>
+ESTRATÉGIA AUTÔNOMA: <STRATEGY_CODE> — <STRATEGY_NAME>
+FASE: <PHASE_NUMBER>/<PHASE_TOTAL> [<PHASE_CODE>] — <PHASE_NAME>
 ESTADO: <estado comprovado>
 ONDE PARAMOS: <ponto exato comprovado>
 PRÓXIMO PASSO LÓGICO: <próximo passo comprovado pelo plano>
 ```
 
-Código e denominação são obrigatórios tanto para Projeto quanto para Estratégia Autônoma. Número, total, código e denominação são obrigatórios para a Fase.
+Identificador canônico e denominação são obrigatórios para Projeto e Estratégia Autônoma. Alias é apenas mnemônico. Número, total, código hierárquico e denominação são obrigatórios para a Fase.
 
 A resposta deve ser reconstruída prioritariamente de `REQUEST_LOG.jsonl`, `STRATEGY_LOG.jsonl`, `PROJECT_STATE.json`, Plano de Fases e arquivos canônicos. Memória conversacional só pode ser usada subsidiariamente.
 
