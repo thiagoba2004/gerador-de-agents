@@ -98,5 +98,16 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000004"
+  "last_concluded_strategy_code": "EA-000002-000004",
+  "current_strategy": {
+    "strategy_code": "EA-000002-000005",
+    "strategy_name": "Padrão reutilizável de Modelos Públicos",
+    "phase_number": 2,
+    "phase_total": 3,
+    "phase_code": "F-000002-000005-002",
+    "phase_name": "Propagação",
+    "status": "EM_EXECUCAO",
+    "plan_ref": "estrategia-padrao-modelos-publicos.md",
+    "next_step": "ATUALIZAR TEMPLATE E CHANGELOG; VERIFICAR PROPAGAÇÃO."
+  }
 }
