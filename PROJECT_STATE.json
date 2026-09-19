@@ -5,10 +5,10 @@
   "status": "OPERACIONAL",
   "release_version": "1.6",
   "kernel_version": "1.4",
-  "current_strategy_id": "STRAT-GDA-20260919-002",
-  "last_concluded_strategy_id": "STRAT-GDA-20260919-001",
-  "current_phase": "FASE 04/05 [F-000002-000004-004] — Migração dos projetos conhecidos",
-  "last_completed_milestone": "Kernel 1.4 e metodologia PRJ/EA/F implantados; registries migrados e CEM convertido para PRJ-000001.",
+  "current_strategy_id": null,
+  "last_concluded_strategy_id": "STRAT-GDA-20260919-002",
+  "current_phase": "MANUTENÇÃO EVOLUTIVA — METODOLOGIA PRJ/EA/F CONCLUÍDA",
+  "last_completed_milestone": "Gerador 1.6 / kernel 1.4: metodologia universal PRJ/EA/F implantada e verificada, com 2 Projetos e 18 Estratégias sem colisão.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -40,7 +40,8 @@
     "FASE 5 — Consolidação e verificação",
     "FASE FINAL — Implantação do Gerador",
     "MANUTENÇÃO 1.4 — Triplicidade editorial",
-    "MANUTENÇÃO 1.5 — Governança numérica e continuidade determinística"
+    "MANUTENÇÃO 1.5 — Governança numérica e continuidade determinística",
+    "MANUTENÇÃO 1.6 — Codificação hierárquica universal"
   ],
   "phase_4_results": [
     "templates/AGENTS.example.md",
@@ -81,19 +82,21 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Executar verificação final de unicidade, hierarquia, não reutilização e coerência entre registries, AGENTS e estados; concluir a estratégia.",
+  "next_logical_step": "Aguardar novo pedido; novos Projetos devem receber PRJ pelo PROJECT_REGISTRY antes da criação de qualquer Estratégia Autônoma.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-19",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
-  "current_strategy_code": "EA-000002-000004",
-  "current_strategy_name": "Metodologia universal de codificação hierárquica",
+  "current_strategy_code": null,
+  "current_strategy_name": null,
   "identification_standard": {
     "file": "IDENTIFICATION_STANDARD.md",
     "version": "1.0",
     "project_code_format": "PRJ-NNNNNN",
     "strategy_code_format": "EA-PPPPPP-EEEEEE",
-    "phase_code_format": "F-PPPPPP-EEEEEE-FFF"
-  }
+    "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
+    "status": "IMPLANTADO_E_VERIFICADO"
+  },
+  "last_concluded_strategy_code": "EA-000002-000004"
 }
