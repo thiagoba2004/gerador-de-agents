@@ -6,7 +6,7 @@
   "kernel_version_audited_against": "1.3",
   "kernel_version_applied": "1.3",
   "agents_version_current": "2.1",
-  "agents_blob_sha_current": "6743e9bc0cf1d660bf3e1814d53cf8e9dc83c919",
+  "agents_blob_sha_current": "1ae5a2b574116f86a4985b9b7bfb574abfe4b1e9",
   "previous_agents_version": "1.8",
   "previous_agents_blob_sha": "0c0fc7bd17de1084728ed1f1f2c4aa61405d1a86",
   "migration_strategy_id": "STRAT-CEM-20260917-002",
