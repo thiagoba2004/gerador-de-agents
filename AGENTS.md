@@ -1,7 +1,9 @@
 # AGENTS.md — GERADOR DE AGENTS
 
 **project_id:** `GDA`  
-**generated_from_kernel:** `1.2`  
+**project_code:** `GDA`  
+**project_name:** `Gerador de Agents`  
+**generated_from_kernel:** `1.3`  
 **repository:** `thiagoba2004/gerador-de-agents`
 
 ## 1. Missão do projeto
@@ -51,12 +53,14 @@ Ordem de precedência:
 
 ## 4. Estratégias
 
-Toda Estratégia Autônoma deve possuir `strategy_id` estável e evento no `STRATEGY_LOG.jsonl` antes de qualquer execução substantiva.
+Toda Estratégia Autônoma deve possuir `strategy_id` e `strategy_name` estáveis e evento no `STRATEGY_LOG.jsonl` antes de qualquer execução substantiva.
+
+O código da Estratégia Autônoma deve usar o código canônico do Projeto:
 
 Padrão de identificação deste projeto:
 
 ```text
-STRAT-GDA-AAAAMMDD-NNN
+STRAT-<PROJECT_CODE>-AAAAMMDD-NNN
 ```
 
 O log é append-only. Continuação, retomada ou alteração material mantém o mesmo `strategy_id`; somente nova estratégia autônoma recebe novo identificador.
@@ -65,14 +69,34 @@ O `STRATEGY_REGISTRY.jsonl` é índice agregado e reconstruível. Nunca prevalec
 
 ## 5. Plano de Fases
 
-Nenhuma estratégia autônoma pode existir sem Plano de Fases explícito. O plano deve possuir, no mínimo:
+Nenhuma Estratégia Autônoma pode existir sem Plano de Fases explícito, persistente e integralmente numerado.
 
-- registro e delimitação;
-- fases intermediárias de trabalho;
-- consolidação/verificação;
-- fase final.
+Cada fase deve registrar obrigatoriamente `phase_number`, `phase_code`, `phase_name` e `phase_total`, além de estado, objetivo e gate quando aplicável.
 
-Cada fase deve registrar estado, objetivo e gate quando aplicável.
+Padrão textual:
+
+```text
+FASE 01/05 (F01) — Registro e delimitação
+FASE 02/05 (F02) — ...
+FASE 05/05 (F05) — Verificação e fechamento
+```
+
+É proibido manter fases sem número, inclusive rótulos como “FASE FINAL” isoladamente.
+
+## 5.1. Padrão de resposta para recuperação de estado
+
+Quando o usuário perguntar **“Onde paramos? Qual a Estratégia Autônoma em curso? Qual a Fase dessa Estratégia Autônoma? E qual o Projeto?”** ou formulação equivalente, responder obrigatoriamente:
+
+```text
+PROJETO: <PROJECT_CODE> — <PROJECT_NAME>
+ESTRATÉGIA AUTÔNOMA: <STRATEGY_ID> — <STRATEGY_NAME>
+FASE: <PHASE_NUMBER>/<PHASE_TOTAL> (<PHASE_CODE>) — <PHASE_NAME>
+ESTADO: <estado comprovado>
+ONDE PARAMOS: <ponto exato comprovado>
+PRÓXIMO PASSO LÓGICO: <próximo passo comprovado>
+```
+
+A recuperação deve usar fontes persistentes, não memória isolada.
 
 ## 6. Persistência e Git
 
