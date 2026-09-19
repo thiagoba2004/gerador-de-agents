@@ -119,6 +119,8 @@ Não é permitido usar `FASE FINAL`, `FASE DE CONSOLIDAÇÃO` ou expressão equi
 
 Cada fase deve possuir estado, objetivo e gate quando aplicável. Se o plano for alterado materialmente, `phase_total` e a numeração vigente devem ser atualizados sem reescrever o histórico já persistido.
 
+Estratégias legadas permanecem historicamente preservadas, mas, ao serem retomadas, seu Plano de Fases vigente deve ser normalizado para este esquema **antes** de nova execução substantiva ou de uma resposta que pretenda informar a fase atual com precisão. É proibido inventar retrospectivamente números de fase sem apoio em evidência persistente.
+
 ## 7.1. Padrão obrigatório de resposta de continuidade
 
 Quando o usuário perguntar **“Onde paramos?”**, **“Qual a Estratégia Autônoma em curso?”**, **“Qual a Fase dessa Estratégia Autônoma?”**, **“Qual o Projeto?”** ou equivalente, a resposta deve ser determinística e conter, nesta ordem:
