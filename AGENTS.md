@@ -42,14 +42,15 @@ Ordem de precedência:
 2. `AGENTS.md` para regras específicas deste repositório;
 3. `REQUEST_LOG.jsonl` para sequência de pedidos;
 4. `STRATEGY_LOG.jsonl` para histórico de estratégias;
-5. `PROJECT_STATE.json` para fotografia do estado corrente;
-6. `ROADMAP.md` para Plano de Fases;
-7. `GERADOR_WORKFLOW.md` para o procedimento operacional;
-8. `MODULE_SELECTION.md` para decisão de módulos;
-9. `DECISIONS.md` para decisões arquiteturais/metodológicas;
-10. `CHANGELOG.md` para evolução do kernel e do Gerador;
-11. histórico Git comprovado;
-12. somente depois, memória ou contexto conversacional.
+5. `PROJECT_REGISTRY.jsonl` para códigos e denominações canônicos dos Projetos conhecidos;
+6. `PROJECT_STATE.json` para fotografia do estado corrente;
+7. `ROADMAP.md` para Plano de Fases;
+8. `GERADOR_WORKFLOW.md` para o procedimento operacional;
+9. `MODULE_SELECTION.md` para decisão de módulos;
+10. `DECISIONS.md` para decisões arquiteturais/metodológicas;
+11. `CHANGELOG.md` para evolução do kernel e do Gerador;
+12. histórico Git comprovado;
+13. somente depois, memória ou contexto conversacional.
 
 ## 4. Estratégias
 
