@@ -1,7 +1,8 @@
 # AGENTS KERNEL — NÚCLEO UNIVERSAL
 
 **kernel_version:** 1.4  
-**project_id de origem:** `GDA`  
+**project_code de origem:** `PRJ-000002`  
+**project_alias de origem:** `GDA`  
 **data:** 19/09/2026
 
 ## 1. Finalidade
@@ -67,9 +68,9 @@ O evento correspondente deve ser persistido em `STRATEGY_LOG.jsonl` antes da exe
 
 Regra:
 
-> **ESTRATÉGIA AUTÔNOMA NOVA = `strategy_id` NOVO + EVENTO `CREATED` PERSISTIDO ANTES DA EXECUÇÃO.**
+> **ESTRATÉGIA AUTÔNOMA NOVA = `strategy_code` NOVO + `strategy_id = strategy_code` + EVENTO `CREATED` PERSISTIDO ANTES DA EXECUÇÃO.**
 
-Continuações, retomadas e alterações mantêm o mesmo `strategy_id` e geram novos eventos. Eventos mínimos: `CREATED`, `UPDATED`, `PAUSED`, `RESUMED`, `SUPERSEDED`, `CONCLUDED`, `CANCELLED`, `BACKFILLED`.
+Continuações, retomadas e alterações mantêm o mesmo `strategy_code` e geram novos eventos. Eventos mínimos: `CREATED`, `UPDATED`, `PAUSED`, `RESUMED`, `SUPERSEDED`, `CONCLUDED`, `CANCELLED`, `BACKFILLED`.
 
 Backfill somente pode ser feito com evidência persistente suficiente.
 
