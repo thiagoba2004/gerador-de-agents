@@ -1,9 +1,12 @@
 {
-  "project_id": "PROJ",
+  "project_code": "PRJ-000001",
+  "project_sequence": 1,
   "project_name": "Nome do projeto",
+  "project_alias": "ALIAS",
+  "project_id_legacy": "slug-ou-id-legado",
   "project_purpose": "Finalidade comprovada",
   "project_ref": "owner/repo ou outra fonte persistente",
-  "kernel_version": "1.2",
+  "kernel_version": "1.4",
   "canonical_files": [],
   "tools_and_integrations": [],
   "formats": [],
@@ -15,7 +18,7 @@
       "rationale": "Justificativa baseada em evidência",
       "source_refs": [],
       "decided_at": "YYYY-MM-DDThh:mm:ss±hh:mm",
-      "kernel_version": "1.2"
+      "kernel_version": "1.4"
     },
     {
       "module_id": "automation",
@@ -23,7 +26,7 @@
       "rationale": "Sinais insuficientes para ativação.",
       "source_refs": [],
       "decided_at": "YYYY-MM-DDThh:mm:ss±hh:mm",
-      "kernel_version": "1.2"
+      "kernel_version": "1.4"
     }
   ],
   "migration_status": "NAO_INICIADO",
