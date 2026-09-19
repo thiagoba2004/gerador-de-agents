@@ -33,6 +33,12 @@ Além disso, conforme o caso:
 9. Alterações materiais de título, subtítulo, autoria, data, corpo, referências, status ou slug devem ser sincronizadas nos três artefatos antes de o conteúdo atingir estado de conclusão/publicação.
 10. HTML publicado sem Markdown correspondente, ou conteúdo editorial sem JSON correspondente, constitui lacuna documental e não deve ser tratado como estado completo.
 11. Exceções somente são válidas quando houver decisão expressa, persistente e versionada no projeto-alvo, com justificativa e indicação da fonte da verdade substitutiva.
+12. Quando o conteúdo publicado for um **Modelo reutilizável**, o HTML deve conter botão canônico **`COPIAR MODELO`** imediatamente acima do bloco exato a ser copiado, sem elemento intermediário.
+13. O botão de cópia deve copiar somente o conteúdo do Modelo e deve ser verificado funcionalmente antes do estado `VERIFICADO PUBLICAMENTE`.
+14. O Site Público deve disponibilizar somente a edição vigente de cada Modelo.
+15. É proibido manter botões, links, cards, menus, rotas navegáveis ou outros portões públicos para edições anteriores de Modelos.
+16. O histórico de edições anteriores deve ser preservado pelo Git ou por mecanismo não publicado no Site Público; a preservação histórica não justifica manter HTML superado publicamente acessível.
+17. A auditoria de publicação deve procurar regressões desses padrões em todas as seções do site, e não apenas na página modificada.
 
 ## Estados específicos
 
@@ -67,4 +73,6 @@ Antes do fechamento:
 - publicar versão desatualizada;
 - quebrar links ou navegação;
 - perder versão anterior;
-- divergência entre fonte canônica e cópia pública.
+- divergência entre fonte canônica e cópia pública;
+- Modelo sem botão de cópia ou com botão distante do texto;
+- edição histórica de Modelo exposta ou navegável no Site Público.
