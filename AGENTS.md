@@ -185,6 +185,22 @@ JSON (.json) = representação estruturada/metadados interoperáveis
 
 Cada texto editorial/publicável deve possuir os três artefatos coordenados, salvo exceção expressa, persistente e versionada no projeto-alvo.
 
+
+### 9.2. Propagação obrigatória do padrão de Modelos públicos
+
+Quando o módulo `publication` estiver ativado e o projeto publicar **Modelos reutilizáveis**, o Gerador deve materializar no `AGENTS.md` do projeto-alvo, no mínimo, estas regras:
+
+1. todo Modelo público possui botão **`COPIAR MODELO`**;
+2. o botão fica **imediatamente acima** do texto exato a copiar, sem elementos intermediários;
+3. a função copia somente o Modelo;
+4. somente a edição vigente do Modelo permanece no Site Público;
+5. edições anteriores não recebem botões, links, cards, menus, rotas navegáveis ou outros portões de acesso no Site Público;
+6. o histórico de edições é preservado em Git ou mecanismo não publicado;
+7. a verificação pública deve testar posição do botão, alvo de cópia e inexistência de acesso à edição superada.
+
+Essas regras são obrigatórias para projetos com publicação de Modelos e não podem permanecer apenas no módulo: devem ser propagadas para o `AGENTS.md` gerado ou migrado.
+
+
 ## 10. Perfis
 
 Cada perfil em `profiles/` deve registrar, quando aplicável:
