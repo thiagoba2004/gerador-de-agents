@@ -2,6 +2,20 @@
 
 Todas as alterações materiais do núcleo universal e da infraestrutura do Gerador devem ser registradas aqui.
 
+## 1.6 — 19/09/2026 — Codificação hierárquica universal
+
+- atualização do núcleo universal para `AGENTS_KERNEL.md` **1.4**;
+- criação de `IDENTIFICATION_STANDARD.md` como metodologia canônica única para identificação;
+- substituição de códigos de Projeto derivados de iniciais por `PRJ-NNNNNN`;
+- definição de `EA-PPPPPP-EEEEEE` para Estratégias Autônomas;
+- definição de `F-PPPPPP-EEEEEE-FFF` para Fases;
+- reclassificação de `CEM` e `GDA` como aliases mnemônicos, sem função identificadora;
+- alocação inicial: `PRJ-000001 — Classe e Massas` e `PRJ-000002 — Gerador de Agents`;
+- migração do `PROJECT_REGISTRY.jsonl` e do `STRATEGY_REGISTRY.jsonl` com preservação dos identificadores legados;
+- regra de não reutilização e não renumeração de códigos;
+- atualização de `AGENTS.md`, template de AGENTS, perfil do Classe e Massas e estados estruturados;
+- estratégia canônica: `EA-000002-000004`; identificador legado: `STRAT-GDA-20260919-002`.
+
 ## 1.5 — 19/09/2026 — Governança numérica e continuidade determinística
 
 - atualização do núcleo universal para `AGENTS_KERNEL.md` **1.3**;
