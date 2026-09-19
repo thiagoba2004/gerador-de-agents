@@ -1,7 +1,9 @@
 # GERADOR WORKFLOW — PROCEDIMENTO OPERACIONAL
 
-**project_id:** `GDA`  
-**kernel_version:** `1.2`
+**project_code:** `PRJ-000002`  
+**project_alias:** `GDA`  
+**project_id legado:** `GDA`  
+**kernel_version:** `1.4`
 
 Este documento transforma a arquitetura do Gerador de Agents em um procedimento executável e reproduzível.
 
@@ -36,7 +38,9 @@ AUDITAR ≠ MIGRAR ≠ IMPLANTAR
 Identificar e registrar:
 
 - nome e finalidade;
-- `project_id` estável;
+- alocação de `project_code` canônico em `PROJECT_REGISTRY.jsonl`;
+- `project_name` e `project_alias` opcional;
+- `project_id` legado, quando existir;
 - repositório ou fonte persistente;
 - existência ou não de Git/versionamento;
 - formatos canônicos;
@@ -46,6 +50,17 @@ Identificar e registrar:
 - restrições conhecidas.
 
 **Gate A1:** nenhuma capacidade ou integração relevante foi inventada; todas as fontes persistentes conhecidas estão identificadas.
+
+### Etapa A1.1 — Alocação do código canônico
+
+Antes de criar Estratégias Autônomas no novo Projeto, aplicar `IDENTIFICATION_STANDARD.md`:
+
+1. ler `PROJECT_REGISTRY.jsonl`;
+2. alocar o próximo `PRJ-NNNNNN` disponível;
+3. persistir e verificar o registro;
+4. somente depois gerar códigos `EA-PPPPPP-EEEEEE`.
+
+**Gate A1.1:** código único, persistido e não derivado da denominação.
 
 ### Etapa A2 — Seleção de módulos
 
@@ -207,7 +222,7 @@ Nunca inferir um estado a partir de outro.
 
 A saída deve informar, conforme aplicável:
 
-- `project_id`;
+- `project_code`, `project_name` e alias, quando houver;
 - versão do kernel;
 - módulos ativados;
 - arquivos criados/alterados;
