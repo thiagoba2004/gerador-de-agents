@@ -5,10 +5,10 @@
   "status": "OPERACIONAL",
   "release_version": "1.5",
   "kernel_version": "1.3",
-  "current_strategy_id": "STRAT-GDA-20260919-001",
-  "last_concluded_strategy_id": "STRAT-GDA-20260918-001",
-  "current_phase": "FASE 04/05 (F04) — Sincronização de estado e versão",
-  "last_completed_milestone": "Gerador 1.5 em implantação: kernel 1.3, códigos e denominações canônicos, fases numeradas e resposta determinística de continuidade",
+  "current_strategy_id": null,
+  "last_concluded_strategy_id": "STRAT-GDA-20260919-001",
+  "current_phase": "MANUTENÇÃO EVOLUTIVA — GOVERNANÇA NUMÉRICA CONCLUÍDA",
+  "last_completed_milestone": "Gerador 1.5 / kernel 1.3: códigos e denominações canônicos, PROJECT_REGISTRY, fases numeradas e resposta determinística de continuidade verificados no remoto",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -38,7 +38,8 @@
     "FASE 4 — Gerador operacional",
     "FASE 5 — Consolidação e verificação",
     "FASE FINAL — Implantação do Gerador",
-    "MANUTENÇÃO 1.4 — Triplicidade editorial"
+    "MANUTENÇÃO 1.4 — Triplicidade editorial",
+    "MANUTENÇÃO 1.5 — Governança numérica e continuidade determinística"
   ],
   "phase_4_results": [
     "templates/AGENTS.example.md",
@@ -79,9 +80,8 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Concluir verificação cruzada do kernel 1.3, AGENTS, template, registries, perfil CEM e estado dos dois repositórios.",
+  "next_logical_step": "Aguardar novo pedido; ao retomar estratégia legada, normalizar o Plano de Fases vigente antes de nova execução substantiva.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-19",
-  "project_code": "GDA",
-  "current_strategy_name": "Padrão universal de códigos, denominações e fases numeradas"
+  "project_code": "GDA"
 }
