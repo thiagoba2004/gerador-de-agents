@@ -1,9 +1,11 @@
 # AGENTS.md — GERADOR DE AGENTS
 
-**project_id:** `GDA`  
-**project_code:** `GDA`  
+**project_id legado:** `GDA`  
+**project_code:** `PRJ-000002`  
+**project_sequence:** `000002`  
+**project_alias:** `GDA`  
 **project_name:** `Gerador de Agents`  
-**generated_from_kernel:** `1.3`  
+**generated_from_kernel:** `1.4`  
 **repository:** `thiagoba2004/gerador-de-agents`
 
 ## 1. Missão do projeto
@@ -54,17 +56,17 @@ Ordem de precedência:
 
 ## 4. Estratégias
 
-Toda Estratégia Autônoma deve possuir `strategy_id` e `strategy_name` estáveis e evento no `STRATEGY_LOG.jsonl` antes de qualquer execução substantiva.
+Toda Estratégia Autônoma deve possuir `strategy_code` e `strategy_name` estáveis e evento no `STRATEGY_LOG.jsonl` antes de qualquer execução substantiva.
 
-O código da Estratégia Autônoma deve usar o código canônico do Projeto:
-
-Padrão de identificação deste projeto:
+O código canônico é independente de nomes e aliases e segue `IDENTIFICATION_STANDARD.md`:
 
 ```text
-STRAT-<PROJECT_CODE>-AAAAMMDD-NNN
+EA-PPPPPP-EEEEEE
 ```
 
-O log é append-only. Continuação, retomada ou alteração material mantém o mesmo `strategy_id`; somente nova estratégia autônoma recebe novo identificador.
+Para este Projeto, `PPPPPP = 000002`. Novas Estratégias devem usar `strategy_id = strategy_code`. Identificadores históricos `STRAT-GDA-...` permanecem apenas como legados mapeados.
+
+O log é append-only. Continuação, retomada ou alteração material mantém o mesmo `strategy_code`; somente nova Estratégia Autônoma recebe novo código.
 
 O `STRATEGY_REGISTRY.jsonl` é índice agregado e reconstruível. Nunca prevalece sobre o `STRATEGY_LOG.jsonl` local do projeto de origem. Quando o Gerador tiver acesso a estratégias comprovadas de projetos auditados ou gerados, o índice deverá ser atualizado sem inventar estados ausentes.
 
@@ -74,12 +76,18 @@ Nenhuma Estratégia Autônoma pode existir sem Plano de Fases explícito, persis
 
 Cada fase deve registrar obrigatoriamente `phase_number`, `phase_code`, `phase_name` e `phase_total`, além de estado, objetivo e gate quando aplicável.
 
+Padrão canônico:
+
+```text
+F-PPPPPP-EEEEEE-FFF
+```
+
 Padrão textual:
 
 ```text
-FASE 01/05 (F01) — Registro e delimitação
-FASE 02/05 (F02) — ...
-FASE 05/05 (F05) — Verificação e fechamento
+FASE 01/05 [F-000002-000004-001] — Registro e delimitação
+FASE 02/05 [F-000002-000004-002] — ...
+FASE 05/05 [F-000002-000004-005] — Verificação e fechamento
 ```
 
 É proibido manter fases sem número, inclusive rótulos como “FASE FINAL” isoladamente.
@@ -90,8 +98,9 @@ Quando o usuário perguntar **“Onde paramos? Qual a Estratégia Autônoma em c
 
 ```text
 PROJETO: <PROJECT_CODE> — <PROJECT_NAME>
-ESTRATÉGIA AUTÔNOMA: <STRATEGY_ID> — <STRATEGY_NAME>
-FASE: <PHASE_NUMBER>/<PHASE_TOTAL> (<PHASE_CODE>) — <PHASE_NAME>
+ALIAS: <PROJECT_ALIAS, quando existir>
+ESTRATÉGIA AUTÔNOMA: <STRATEGY_CODE> — <STRATEGY_NAME>
+FASE: <PHASE_NUMBER>/<PHASE_TOTAL> [<PHASE_CODE>] — <PHASE_NAME>
 ESTADO: <estado comprovado>
 ONDE PARAMOS: <ponto exato comprovado>
 PRÓXIMO PASSO LÓGICO: <próximo passo comprovado>
@@ -115,6 +124,7 @@ Git é a memória histórica preferencial deste projeto. Não afirmar commit, at
 README.md
 AGENTS.md
 AGENTS_KERNEL.md
+IDENTIFICATION_STANDARD.md
 GERADOR_WORKFLOW.md
 MODULE_SELECTION.md
 REQUEST_LOG.jsonl
