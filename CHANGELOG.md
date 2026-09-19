@@ -2,6 +2,15 @@
 
 Todas as alterações materiais do núcleo universal e da infraestrutura do Gerador devem ser registradas aqui.
 
+## 1.7 — 19/09/2026 — Padrão de Modelos Públicos
+
+- módulo `publication` passa a exigir botão **`COPIAR MODELO`** imediatamente acima do conteúdo copiável;
+- somente a edição vigente de cada Modelo pode permanecer disponível no Site Público;
+- edições anteriores devem ser preservadas por Git ou mecanismo não publicado, sem botões, links, cards, menus ou rotas públicas de acesso;
+- `AGENTS.md` do Gerador passa a exigir propagação material dessas regras para projetos-alvo;
+- `templates/AGENTS.example.md` atualizado para materializar o padrão em novos AGENTS;
+- estratégia: `EA-000002-000005`.
+
 ## 1.6 — 19/09/2026 — Codificação hierárquica universal
 
 - atualização do núcleo universal para `AGENTS_KERNEL.md` **1.4**;
