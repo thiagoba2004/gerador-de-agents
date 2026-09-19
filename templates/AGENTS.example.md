@@ -1,7 +1,9 @@
 # AGENTS.md — {{PROJECT_NAME}}
 
-**project_id:** `{{PROJECT_ID}}`  
+**project_id legado:** `{{PROJECT_ID_LEGACY}}`  
 **project_code:** `{{PROJECT_CODE}}`  
+**project_sequence:** `{{PROJECT_SEQUENCE}}`  
+**project_alias:** `{{PROJECT_ALIAS}}`  
 **project_name:** `{{PROJECT_NAME}}`  
 **generated_from_kernel:** `{{KERNEL_VERSION}}`  
 **repository/source:** `{{PROJECT_REF}}`  
@@ -40,13 +42,15 @@ Hierarquia deste projeto:
 
 ## 4. Estratégias
 
-Toda Estratégia Autônoma deve possuir `strategy_id` e `strategy_name` estáveis e evento persistido em `STRATEGY_LOG.jsonl` antes da execução substantiva.
+Toda Estratégia Autônoma deve possuir `strategy_code` e `strategy_name` estáveis e evento persistido em `STRATEGY_LOG.jsonl` antes da execução substantiva.
 
-Padrão:
+Padrão canônico:
 
 ```text
-STRAT-{{PROJECT_CODE}}-AAAAMMDD-NNN
+EA-{{PROJECT_SEQUENCE}}-EEEEEE
 ```
+
+Para Estratégias novas, `strategy_id = strategy_code`. Identificadores históricos, quando existirem, ficam em `legacy_strategy_id` ou mapeamento equivalente.
 
 Continuações e retomadas mantêm o mesmo identificador. Apenas nova unidade estratégica recebe novo `strategy_id`.
 
@@ -56,12 +60,18 @@ Toda Estratégia Autônoma deve possuir Plano de Fases explícito, persistente e
 
 Cada fase deve possuir `phase_number`, `phase_code`, `phase_name` e `phase_total`, além de estado, objetivo e gate quando aplicável.
 
+Padrão canônico:
+
+```text
+F-{{PROJECT_SEQUENCE}}-{{STRATEGY_SEQUENCE}}-FFF
+```
+
 Padrão obrigatório:
 
 ```text
-FASE 01/{{PHASE_TOTAL}} (F01) — Registro e delimitação
-FASE 02/{{PHASE_TOTAL}} (F02) — ...
-FASE {{PHASE_TOTAL}}/{{PHASE_TOTAL}} (F{{PHASE_TOTAL_PADDED}}) — Verificação e fechamento
+FASE 01/{{PHASE_TOTAL}} [F-{{PROJECT_SEQUENCE}}-{{STRATEGY_SEQUENCE}}-001] — Registro e delimitação
+FASE 02/{{PHASE_TOTAL}} [F-{{PROJECT_SEQUENCE}}-{{STRATEGY_SEQUENCE}}-002] — ...
+FASE {{PHASE_TOTAL}}/{{PHASE_TOTAL}} [F-{{PROJECT_SEQUENCE}}-{{STRATEGY_SEQUENCE}}-{{PHASE_TOTAL_PADDED3}}] — Verificação e fechamento
 ```
 
 Não usar fases sem número, inclusive “FASE FINAL” isoladamente.
@@ -72,8 +82,9 @@ Quando o usuário perguntar **“Onde paramos? Qual a Estratégia Autônoma em c
 
 ```text
 PROJETO: <PROJECT_CODE> — <PROJECT_NAME>
-ESTRATÉGIA AUTÔNOMA: <STRATEGY_ID> — <STRATEGY_NAME>
-FASE: <PHASE_NUMBER>/<PHASE_TOTAL> (<PHASE_CODE>) — <PHASE_NAME>
+ALIAS: <PROJECT_ALIAS, quando existir>
+ESTRATÉGIA AUTÔNOMA: <STRATEGY_CODE> — <STRATEGY_NAME>
+FASE: <PHASE_NUMBER>/<PHASE_TOTAL> [<PHASE_CODE>] — <PHASE_NAME>
 ESTADO: <estado comprovado>
 ONDE PARAMOS: <ponto exato comprovado>
 PRÓXIMO PASSO LÓGICO: <próximo passo comprovado>
