@@ -2,6 +2,18 @@
 
 Todas as alterações materiais do núcleo universal e da infraestrutura do Gerador devem ser registradas aqui.
 
+## 1.5 — 19/09/2026 — Governança numérica e continuidade determinística
+
+- atualização do núcleo universal para `AGENTS_KERNEL.md` **1.3**;
+- criação de `PROJECT_REGISTRY.jsonl` com `project_code` + `project_name` para os Projetos conhecidos;
+- obrigatoriedade de código e denominação para todo Projeto e toda Estratégia Autônoma;
+- padronização de `strategy_id` como `STRAT-<PROJECT_CODE>-AAAAMMDD-NNN` para novas estratégias;
+- obrigatoriedade de `phase_number`, `phase_total`, `phase_code` e `phase_name` em todos os Planos de Fases;
+- proibição de fases não numeradas como “FASE FINAL” isoladamente;
+- instituição do padrão determinístico de resposta para “Onde paramos?” com Projeto, Estratégia, Fase, estado, ponto exato e próximo passo;
+- atualização do `AGENTS.md`, `templates/AGENTS.example.md`, `STRATEGY_REGISTRY.jsonl`, `PROJECT_STATE.json` e perfil do Classe e Massas;
+- estratégia: `STRAT-GDA-20260919-001`.
+
 ## 1.4 — 18/09/2026 — Triplicidade editorial
 
 - criação de regra reutilizável no módulo `publication` para exigir, em conteúdo textual/editorial, o trio coordenado Markdown + HTML + JSON;
