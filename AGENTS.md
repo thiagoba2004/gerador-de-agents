@@ -41,18 +41,19 @@ Nenhum pedido deve ser tratado apenas no chat quando o repositório estiver aces
 Ordem de precedência:
 
 1. `AGENTS_KERNEL.md` para regras universais;
-2. `AGENTS.md` para regras específicas deste repositório;
-3. `REQUEST_LOG.jsonl` para sequência de pedidos;
-4. `STRATEGY_LOG.jsonl` para histórico de estratégias;
-5. `PROJECT_REGISTRY.jsonl` para códigos e denominações canônicos dos Projetos conhecidos;
-6. `PROJECT_STATE.json` para fotografia do estado corrente;
-7. `ROADMAP.md` para Plano de Fases;
-8. `GERADOR_WORKFLOW.md` para o procedimento operacional;
-9. `MODULE_SELECTION.md` para decisão de módulos;
-10. `DECISIONS.md` para decisões arquiteturais/metodológicas;
-11. `CHANGELOG.md` para evolução do kernel e do Gerador;
-12. histórico Git comprovado;
-13. somente depois, memória ou contexto conversacional.
+2. `IDENTIFICATION_STANDARD.md` para a gramática canônica de códigos e alocação;
+3. `AGENTS.md` para regras específicas deste repositório;
+4. `REQUEST_LOG.jsonl` para sequência de pedidos;
+5. `STRATEGY_LOG.jsonl` para histórico de estratégias;
+6. `PROJECT_REGISTRY.jsonl` para códigos e denominações canônicos dos Projetos conhecidos;
+7. `PROJECT_STATE.json` para fotografia do estado corrente;
+8. `ROADMAP.md` para Plano de Fases;
+9. `GERADOR_WORKFLOW.md` para o procedimento operacional;
+10. `MODULE_SELECTION.md` para decisão de módulos;
+11. `DECISIONS.md` para decisões arquiteturais/metodológicas;
+12. `CHANGELOG.md` para evolução do kernel e do Gerador;
+13. histórico Git comprovado;
+14. somente depois, memória ou contexto conversacional.
 
 ## 4. Estratégias
 
@@ -188,7 +189,8 @@ Cada texto editorial/publicável deve possuir os três artefatos coordenados, sa
 
 Cada perfil em `profiles/` deve registrar, quando aplicável:
 
-- `project_id`;
+- `project_code`, `project_sequence`, `project_name` e `project_alias`;
+- `project_id` legado, quando existir;
 - nome e finalidade;
 - repositório/fonte de persistência;
 - versão do kernel utilizada ou auditada;
@@ -200,7 +202,7 @@ Cada perfil em `profiles/` deve registrar, quando aplicável:
 
 ## 11. Projeto novo
 
-Para projeto novo, seguir a **Rota A** de `GERADOR_WORKFLOW.md`: identificar finalidade, persistência, versionamento, formatos, ferramentas, riscos, `project_id`, módulos aplicáveis e arquivos auxiliares; depois gerar e verificar o `AGENTS.md` e registrar a origem do kernel.
+Para projeto novo, seguir a **Rota A** de `GERADOR_WORKFLOW.md`: identificar finalidade, persistência, versionamento, formatos, ferramentas e riscos; alocar `project_code` em `PROJECT_REGISTRY.jsonl`; definir `project_name` e alias opcional; selecionar módulos e arquivos auxiliares; depois gerar e verificar o `AGENTS.md` e registrar a origem do kernel.
 
 ## 12. Projeto existente
 
