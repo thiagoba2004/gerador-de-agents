@@ -123,6 +123,15 @@ Retomar sempre do estado mais avançado comprovado.
 As regras obrigatórias dos módulos ativados devem ser materializadas nesta seção; não basta listar ou referenciar o nome do módulo.
 
 Quando o módulo `publication` estiver ativado para conteúdo textual/editorial, incluir expressamente a obrigação de manter, para cada texto publicável, o trio coordenado `.md` + `.html` + `.json`, com Markdown como fonte textual canônica, HTML como publicação e JSON como representação estruturada, salvo exceção persistente e versionada.
+Quando o módulo `publication` estiver ativado **e o projeto publicar Modelos reutilizáveis**, incluir também expressamente:
+
+- botão canônico **`COPIAR MODELO`** imediatamente acima do texto exato a ser copiado, sem elemento intermediário;
+- cópia restrita ao corpo do Modelo;
+- somente a edição vigente do Modelo disponível no Site Público;
+- proibição de botões, links, cards, menus, rotas navegáveis ou outros portões públicos para edições anteriores;
+- preservação histórica por Git ou mecanismo não publicado;
+- gate de verificação que teste posição do botão, alvo da cópia e ausência de acesso público à edição superada.
+
 
 ## 11. Estados e critérios de conclusão
 
