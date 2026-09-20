@@ -25,3 +25,9 @@ A ativação de qualquer módulo deve seguir `../MODULE_SELECTION.md` e ser regi
 - `automation.md` — agendas, gatilhos, monitoramentos, pipelines e ações automáticas.
 
 Módulos não são ativados globalmente só por existirem neste diretório. Cada projeto deve classificá-los como `ATIVADO`, `NAO_APLICAVEL` ou `PENDENTE_DE_EVIDENCIA` conforme as fontes examinadas.
+
+
+## Módulos de interface pública
+
+- `web-site.md` — arquitetura de Site, menus, Home, Mapa do Site, identidade visual, responsividade, acessibilidade e separação público/interno.
+- `contact-protocol.md` — Fale Conosco, protocolo, backend de recebimento, confirmação por e-mail e testes end-to-end.

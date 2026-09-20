@@ -127,6 +127,28 @@
       "source_refs": [],
       "decided_at": "2026-09-17T14:43:30-03:00",
       "kernel_version": "1.2"
+    },
+    {
+      "module_id": "web-site",
+      "status": "ATIVADO",
+      "rationale": "O projeto mantém Site Público multipágina e constitui referência estrutural para arquitetura de navegação.",
+      "source_refs": [
+        "AGENTS.md",
+        "modules/web-site.md"
+      ],
+      "decided_at": "2026-09-20T14:30:00-03:00",
+      "kernel_version": "1.4"
+    },
+    {
+      "module_id": "contact-protocol",
+      "status": "ATIVADO",
+      "rationale": "O projeto possui Fale Conosco protocolado implementado com Forminit + EmailJS e constitui stack de referência.",
+      "source_refs": [
+        "fale-conosco/index.html",
+        "modules/contact-protocol.md"
+      ],
+      "decided_at": "2026-09-20T14:30:00-03:00",
+      "kernel_version": "1.4"
     }
   ],
   "migration_status": "IMPLANTADA_E_VERIFICADA",
@@ -136,7 +158,7 @@
   "migration_plan_ref": "governanca/estrategia-migracao-agents-kernel-1.2.md",
   "backfill_plan_ref": "governanca/estrategia-backfill-estrategias-autonomas.md",
   "next_governance_step": "Classificar apenas quando necessário os grupos ainda pendentes de evidência; não criar estratégias retroativas por suposição.",
-  "updated_at": "2026-09-19",
+  "updated_at": "2026-09-20",
   "post_migration_governance_updates": [
     {
       "date": "2026-09-18",
@@ -163,5 +185,14 @@
   "project_sequence": 1,
   "project_alias": "CEM",
   "project_id_legacy": "classe-e-massas",
-  "identification_standard_ref": "IDENTIFICATION_STANDARD.md"
+  "identification_standard_ref": "IDENTIFICATION_STANDARD.md",
+  "contact_protocol": {
+    "status": "REFERENCIA_TECNICA",
+    "canonical_stack": {
+      "receipt": "Forminit",
+      "email_confirmation": "EmailJS"
+    },
+    "receipt_rule": "Exibir protocolo somente após sucesso do Forminit.",
+    "email_rule": "EmailJS é acionado após recebimento confirmado."
+  }
 }

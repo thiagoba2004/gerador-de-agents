@@ -3,18 +3,18 @@
   "project_name": "Gerador de Agents",
   "repository": "thiagoba2004/gerador-de-agents",
   "status": "OPERACIONAL_EM_EVOLUCAO",
-  "release_version": "1.8",
+  "release_version": "1.9",
   "kernel_version": "1.4",
   "current_strategy_id": "EA-000002-000007",
   "last_concluded_strategy_id": "EA-000002-000006",
   "current_phase": {
-    "phase_number": 1,
+    "phase_number": 3,
     "phase_total": 5,
-    "phase_code": "F-000002-000007-001",
-    "phase_name": "Auditoria e delimitação",
+    "phase_code": "F-000002-000007-003",
+    "phase_name": "Propagação do Gerador",
     "status": "EM_EXECUCAO"
   },
-  "last_completed_milestone": "EA-000002-000006 concluída: Rota A testada e verificada em PRJ-000003 e PRJ-000004; módulo professional-education incorporado.",
+  "last_completed_milestone": "Fases 01 e 02 concluídas: lacunas auditadas e módulos web-site/contact-protocol criados.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -37,7 +37,9 @@
     "profiles/",
     "audits/",
     "history/",
-    "modules/professional-education.md"
+    "modules/professional-education.md",
+    "modules/web-site.md",
+    "modules/contact-protocol.md"
   ],
   "completed_phases": [
     "FASE 1 — registro e delimitação",
@@ -90,7 +92,7 @@
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap.",
     "Ativar/configurar GitHub Pages dos PRJ-000003 e PRJ-000004 por mecanismo com acesso às configurações Pages; até lá o estado é ESTRUTURADO_NAO_PUBLICADO."
   ],
-  "next_logical_step": "Criar módulos web-site e contact-protocol, propagar ao template/perfis e migrar PRJ-000003/PRJ-000004.",
+  "next_logical_step": "Concluir propagação no Gerador e migrar os AGENTS dos projetos Ações Judiciais e Planejamento Financeiro.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-20",
   "project_code": "PRJ-000002",

@@ -86,6 +86,14 @@ Ativar quando o projeto depender de tarefas agendadas, gatilhos, monitoramento r
 
 Ativar quando a finalidade incluir formação, capacitação, preparação para certificações ou desenvolvimento de competências profissionais. Quando houver certificação e atuação profissional, o módulo exige distinguir a trilha de prova da trilha de prática.
 
+### `web-site`
+
+Ativar quando o projeto possuir ou deva possuir Site Público, portal, documentação navegável ou interface web destinada a terceiros. A simples existência de HTML isolado não basta; o critério é haver arquitetura pública com navegação, páginas e identidade visual.
+
+### `contact-protocol`
+
+Ativar quando o Site possuir Fale Conosco, formulário de mensagens, denúncias, dúvidas, documentos ou colaboração com geração de protocolo e/ou confirmação por e-mail. Quando o usuário pedir o mesmo padrão de outro projeto, comparar e preservar também a stack técnica, não apenas a aparência.
+
 ## 5. Regras de combinação
 
 Módulos não são mutuamente exclusivos. Um projeto jurídico com pesquisa documental e publicação pode ativar `legal`, `research` e `publication` simultaneamente.

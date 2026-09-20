@@ -18,7 +18,9 @@
   ],
   "tools_and_integrations": [
     "GitHub",
-    "GitHub Pages/site estático"
+    "GitHub Pages/site estático",
+    "Forminit (stack canônica alvo para Fale Conosco)",
+    "EmailJS (stack canônica alvo para confirmação de protocolo)"
   ],
   "formats": [
     "Markdown",
@@ -103,6 +105,28 @@
       ],
       "decided_at": "2026-09-20T10:55:00-03:00",
       "kernel_version": "1.4"
+    },
+    {
+      "module_id": "web-site",
+      "status": "ATIVADO",
+      "rationale": "O projeto mantém Site Público multipágina com navegação, identidade visual própria e GitHub Pages.",
+      "source_refs": [
+        "REQ-20260920-003",
+        "modules/web-site.md"
+      ],
+      "decided_at": "2026-09-20T14:30:00-03:00",
+      "kernel_version": "1.4"
+    },
+    {
+      "module_id": "contact-protocol",
+      "status": "ATIVADO",
+      "rationale": "O Site possui Fale Conosco protocolado e o usuário determinou seguir o padrão técnico do Classe e Massas.",
+      "source_refs": [
+        "REQ-20260920-003",
+        "modules/contact-protocol.md"
+      ],
+      "decided_at": "2026-09-20T14:30:00-03:00",
+      "kernel_version": "1.4"
     }
   ],
   "migration_status": "ROTA_A_IMPLANTADA_E_VERIFICADA",
@@ -110,5 +134,32 @@
   "generator_strategy_code": "EA-000002-000006",
   "updated_at": "2026-09-20",
   "audit_ref": "audits/rota-a-piloto-prj-000003-prj-000004-2026-09-20.md",
-  "site_status": "ESTRUTURADO_NAO_PUBLICADO"
+  "site_status": "PUBLICADO_COM_ARQUITETURA_VERIFICADA_CONTATO_EM_MIGRACAO",
+  "contact_protocol": {
+    "status": "MIGRACAO_TECNICA_PENDENTE",
+    "institutional_email": "acoesjudiciais2026@gmail.com",
+    "protocol_prefix": "AJ",
+    "reference_project": "Classe e Massas",
+    "canonical_stack": {
+      "receipt": "Forminit",
+      "email_confirmation": "EmailJS"
+    },
+    "current_nonconforming_stack": "FormSubmit",
+    "rule": "Não declarar E2E_VERIFICADO antes da migração e do teste real."
+  },
+  "site_architecture": {
+    "home_mode": "INSTITUCIONAL_ENXUTA",
+    "site_map": "rodape",
+    "global_menu": [
+      "Início",
+      "Ações",
+      "Guias",
+      "Modelos",
+      "Jurisprudência",
+      "Legislação",
+      "Fontes",
+      "Fale Conosco"
+    ],
+    "visual_identity": "jurídica/editorial exclusiva"
+  }
 }

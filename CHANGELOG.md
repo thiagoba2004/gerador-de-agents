@@ -101,3 +101,14 @@ Todas as alterações materiais do núcleo universal e da infraestrutura do Gera
 
 - criação das instruções canônicas do Projeto Gerador de Agents;
 - definição do kernel universal, perfis de projeto e módulos especializados.
+
+
+## 1.9 — 20/09/2026 — Sites e contato protocolado
+
+- criado módulo `web-site`;
+- criado módulo `contact-protocol`;
+- Site Público passa a exigir arquitetura explícita, menu global, Home com papel definido, Mapa do Site, identidade própria e auditoria mobile;
+- Fale Conosco protocolado passa a exigir stack declarada, protocolo confirmado somente após aceite do backend e teste end-to-end;
+- padrão de referência do Classe e Massas documentado como **Forminit + EmailJS**;
+- troca silenciosa por FormSubmit ou outro provedor passa a ser proibida;
+- perfis de Ações Judiciais e Planejamento Financeiro registram migração técnica pendente do FormSubmit para a stack canônica.

@@ -71,3 +71,14 @@ Toda Estratégia Autônoma deverá possuir Plano de Fases explícito, com estado
 **Estado:** ACEITA
 
 Quando disponível, Git será a memória histórica preferencial. Estados como produzido, salvo, versionado, enviado ao remoto e publicado/implantado permanecem distintos.
+
+
+## DEC-20260920-SITE-CONTACT — Site e Fale Conosco como módulos próprios
+
+**Decisão:** arquitetura/UI de Site e contato protocolado deixam de ser regras ad hoc de `publication`/ `software` e passam a módulos reutilizáveis próprios: `web-site` e `contact-protocol`.
+
+**Razão:** os projetos piloto revelaram lacunas recorrentes em menus, papel da Home, Mapa do Site, identidade visual e escolha de provedores de formulário.
+
+**Padrão de referência para “igual ao Classe e Massas”:** Forminit para recebimento confirmado e EmailJS para confirmação do protocolo ao remetente.
+
+**Consequência:** FormSubmit implantado nos projetos piloto é classificado como divergência técnica e deve ser migrado antes da verificação end-to-end.

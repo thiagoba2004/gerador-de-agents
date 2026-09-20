@@ -133,6 +133,29 @@ Quando o módulo `publication` estiver ativado **e o projeto publicar Modelos re
 - gate de verificação que teste posição do botão, alvo da cópia e ausência de acesso público à edição superada.
 
 
+Quando o módulo `web-site` estiver ativado, incluir expressamente:
+
+- `SITE_ARCHITECTURE.md` e `SITE_STYLE_GUIDE.md`;
+- menu global em todas as páginas;
+- Home institucional enxuta por padrão, sem catálogo dos Menus;
+- página **Mapa do Site** e link homônimo no rodapé de toda página pública;
+- identidade visual exclusiva, definida por design tokens;
+- responsividade e acessibilidade básica;
+- separação entre governança interna e camada pública;
+- gate de auditoria de navegação, rotas, mobile, links e identidade.
+
+Quando o módulo `contact-protocol` estiver ativado, incluir expressamente:
+
+- **Fale Conosco** no menu global;
+- e-mail institucional e prefixo de protocolo;
+- `CONTACT_STACK.md`;
+- protocolo confirmado somente após aceite do backend;
+- confirmação por e-mail somente após o recebimento confirmado;
+- página de recibo `noindex,nofollow`;
+- teste end-to-end antes de declarar o canal operacional;
+- proibição de troca silenciosa de provedor;
+- quando o padrão de referência for Classe e Massas, usar **Forminit + EmailJS**, salvo decisão expressa em contrário.
+
 ## 11. Estados e critérios de conclusão
 
 {{STATE_MODEL_AND_DONE_CRITERIA}}

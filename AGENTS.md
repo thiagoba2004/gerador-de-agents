@@ -201,6 +201,47 @@ Quando o módulo `publication` estiver ativado e o projeto publicar **Modelos re
 Essas regras são obrigatórias para projetos com publicação de Modelos e não podem permanecer apenas no módulo: devem ser propagadas para o `AGENTS.md` gerado ou migrado.
 
 
+### 9.3. Propagação obrigatória do padrão de Site Público
+
+Quando o módulo `web-site` estiver `ATIVADO`, o Gerador deve materializar no `AGENTS.md` do projeto-alvo, no mínimo:
+
+1. arquitetura multipágina quando o projeto foi definido como Site;
+2. menu global consistente em todas as rotas;
+3. Home institucional enxuta, sem duplicar os Menus, salvo decisão expressa;
+4. página própria **Mapa do Site** e hiperlink **Mapa do Site** no rodapé de toda página pública;
+5. identidade visual exclusiva do projeto, com design tokens documentados;
+6. responsividade mobile/desktop, foco visível, semântica e `aria-current="page"`;
+7. páginas centrais com conteúdo real, sem placeholders;
+8. separação entre governança interna do repositório e interface pública;
+9. `SITE_ARCHITECTURE.md` e `SITE_STYLE_GUIDE.md`;
+10. gate de auditoria de rotas, menu, Mapa do Site, mobile, links, identidade e vazamento interno.
+
+É proibido tratar “Site” como sinônimo de uma homepage com cards e uma página longa.
+
+### 9.4. Propagação obrigatória do Fale Conosco protocolado
+
+Quando o módulo `contact-protocol` estiver `ATIVADO`, o Gerador deve materializar no `AGENTS.md` do projeto-alvo:
+
+1. **Fale Conosco** no menu global;
+2. e-mail institucional do projeto;
+3. prefixo e formato do protocolo;
+4. backend/provedor aprovado e estado de configuração;
+5. página de confirmação `noindex,nofollow`;
+6. regra de que protocolo só é confirmado após aceite do backend;
+7. confirmação por e-mail somente depois do recebimento confirmado;
+8. teste end-to-end real antes do estado `E2E_VERIFICADO`;
+9. `CONTACT_STACK.md` ou equivalente;
+10. proibição de troca silenciosa de provedor.
+
+Quando o usuário determinar “seguir o mesmo padrão do Fale Conosco do Classe e Massas”, o padrão técnico de referência é:
+
+```text
+Forminit = recebimento/aceite da submissão e anexos
+EmailJS  = confirmação do protocolo ao e-mail informado
+```
+
+FormSubmit ou outro serviço não é substituto automático. A mudança exige decisão expressa e persistida.
+
 ## 10. Perfis
 
 Cada perfil em `profiles/` deve registrar, quando aplicável:
