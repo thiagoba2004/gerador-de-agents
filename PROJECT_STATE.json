@@ -3,12 +3,12 @@
   "project_name": "Gerador de Agents",
   "repository": "thiagoba2004/gerador-de-agents",
   "status": "OPERACIONAL",
-  "release_version": "1.6",
+  "release_version": "1.7",
   "kernel_version": "1.4",
-  "current_strategy_id": null,
-  "last_concluded_strategy_id": "STRAT-GDA-20260919-002",
-  "current_phase": "MANUTENÇÃO EVOLUTIVA — METODOLOGIA PRJ/EA/F CONCLUÍDA",
-  "last_completed_milestone": "Gerador 1.6 / kernel 1.4: metodologia universal PRJ/EA/F implantada e verificada, com 2 Projetos e 18 Estratégias sem colisão.",
+  "current_strategy_id": "EA-000002-000006",
+  "last_concluded_strategy_id": "EA-000002-000005",
+  "current_phase": "FASE 01/06 — Registro, diagnóstico e saneamento do Gerador",
+  "last_completed_milestone": "Gerador 1.7: padrão reutilizável de Modelos Públicos concluído e verificado.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -82,14 +82,14 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Aguardar novo pedido; novos Projetos devem receber PRJ pelo PROJECT_REGISTRY antes da criação de qualquer Estratégia Autônoma.",
+  "next_logical_step": "Concluir Fase 01 da EA-000002-000006 e avançar para perfis e seleção de módulos dos PRJ-000003 e PRJ-000004.",
   "chat_only_work_is_not_persisted": true,
-  "updated_at": "2026-09-19",
+  "updated_at": "2026-09-20",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
-  "current_strategy_code": null,
-  "current_strategy_name": null,
+  "current_strategy_code": "EA-000002-000006",
+  "current_strategy_name": "Implantação piloto da Rota A em dois projetos reais",
   "identification_standard": {
     "file": "IDENTIFICATION_STANDARD.md",
     "version": "1.0",
@@ -98,16 +98,16 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000004",
+  "last_concluded_strategy_code": "EA-000002-000005",
   "current_strategy": {
-    "strategy_code": "EA-000002-000005",
-    "strategy_name": "Padrão reutilizável de Modelos Públicos",
-    "phase_number": 2,
-    "phase_total": 3,
-    "phase_code": "F-000002-000005-002",
-    "phase_name": "Propagação",
+    "strategy_code": "EA-000002-000006",
+    "strategy_name": "Implantação piloto da Rota A em dois projetos reais",
+    "phase_number": 1,
+    "phase_total": 6,
+    "phase_code": "F-000002-000006-001",
+    "phase_name": "Registro, diagnóstico e saneamento do Gerador",
     "status": "EM_EXECUCAO",
-    "plan_ref": "estrategia-padrao-modelos-publicos.md",
-    "next_step": "ATUALIZAR TEMPLATE E CHANGELOG; VERIFICAR PROPAGAÇÃO."
+    "plan_ref": "estrategia-implantacao-piloto-rota-a-dois-projetos.md",
+    "next_step": "Criar perfis dos dois projetos e selecionar módulos por evidência."
   }
 }
