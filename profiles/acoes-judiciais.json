@@ -105,10 +105,10 @@
       "kernel_version": "1.4"
     }
   ],
-  "migration_status": "IMPLANTADA_E_VERIFICADA",
+  "migration_status": "ROTA_A_IMPLANTADA_E_VERIFICADA",
   "local_strategy_log_ref": "STRATEGY_LOG.jsonl",
   "generator_strategy_code": "EA-000002-000006",
-  "updated_at": "2026-09-20T11:30:00-03:00",
-  "audit_ref": "audits/rota-a-piloto-2026-09-20.md",
+  "updated_at": "2026-09-20",
+  "audit_ref": "audits/rota-a-piloto-prj-000003-prj-000004-2026-09-20.md",
   "site_status": "ESTRUTURADO_NAO_PUBLICADO"
 }
