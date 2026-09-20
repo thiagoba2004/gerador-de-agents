@@ -1,0 +1,116 @@
+{
+  "project_code": "PRJ-000004",
+  "project_sequence": 4,
+  "project_name": "Planejamento Financeiro",
+  "project_alias": "PF",
+  "project_id_legacy": "planejamento-financeiro",
+  "project_purpose": "Qualificar profissionais com base no CFP®, integrando preparação para a prova, desenvolvimento de competências e aplicação profissional no mercado.",
+  "project_ref": "thiagoba2004/planejamento-financeiro",
+  "kernel_version": "1.4",
+  "canonical_files": [
+    "AGENTS.md",
+    "REQUEST_LOG.jsonl",
+    "STRATEGY_LOG.jsonl",
+    "PROJECT_STATE.json",
+    "ROADMAP.md",
+    "DECISIONS.md",
+    "SOURCE_REGISTRY.jsonl",
+    "PLANEJAR_SOURCES.md"
+  ],
+  "tools_and_integrations": [
+    "GitHub",
+    "GitHub Pages/site estático",
+    "fontes oficiais da Planejar por referência"
+  ],
+  "formats": [
+    "Markdown",
+    "HTML",
+    "JSON",
+    "JSONL"
+  ],
+  "risks": [
+    "mistura entre prova e prática profissional",
+    "conteúdo de certificação desatualizado",
+    "fonte não oficial tratada como canônica",
+    "reprodução indevida de material protegido",
+    "cálculo ou caso prático sem premissas suficientes",
+    "divergência entre fonte canônica e site publicado"
+  ],
+  "modules": [
+    {
+      "module_id": "research",
+      "status": "ATIVADO",
+      "rationale": "O projeto depende de pesquisa e atualização sistemática de fontes da Planejar e de referências técnicas.",
+      "source_refs": [
+        "REQ-20260920-001"
+      ],
+      "decided_at": "2026-09-20T10:56:00-03:00",
+      "kernel_version": "1.4"
+    },
+    {
+      "module_id": "publication",
+      "status": "ATIVADO",
+      "rationale": "O projeto terá Site Autônomo e publicará material formativo.",
+      "source_refs": [
+        "REQ-20260920-001"
+      ],
+      "decided_at": "2026-09-20T10:56:00-03:00",
+      "kernel_version": "1.4"
+    },
+    {
+      "module_id": "software",
+      "status": "ATIVADO",
+      "rationale": "A infraestrutura do site estático integra o repositório.",
+      "source_refs": [
+        "REQ-20260920-001"
+      ],
+      "decided_at": "2026-09-20T10:56:00-03:00",
+      "kernel_version": "1.4"
+    },
+    {
+      "module_id": "professional-education",
+      "status": "ATIVADO",
+      "rationale": "A finalidade explícita é preparar profissionais tanto para a prova CFP® quanto para atuação profissional, exigindo trilhas de prova e prática.",
+      "source_refs": [
+        "REQ-20260920-001",
+        "modules/professional-education.md"
+      ],
+      "decided_at": "2026-09-20T10:56:00-03:00",
+      "kernel_version": "1.4"
+    },
+    {
+      "module_id": "data",
+      "status": "ATIVADO",
+      "rationale": "Formação em planejamento financeiro exige exercícios quantitativos, cálculos e validação de premissas como atividade recorrente.",
+      "source_refs": [
+        "REQ-20260920-001"
+      ],
+      "decided_at": "2026-09-20T10:56:00-03:00",
+      "kernel_version": "1.4"
+    },
+    {
+      "module_id": "legal",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Normas e temas jurídicos podem aparecer, inclusive no superendividamento, mas o projeto não tem finalidade jurídica primária.",
+      "source_refs": [
+        "REQ-20260920-001"
+      ],
+      "decided_at": "2026-09-20T10:56:00-03:00",
+      "kernel_version": "1.4"
+    },
+    {
+      "module_id": "automation",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Não há ainda evidência de monitoramento ou tarefas agendadas como função recorrente.",
+      "source_refs": [
+        "REQ-20260920-001"
+      ],
+      "decided_at": "2026-09-20T10:56:00-03:00",
+      "kernel_version": "1.4"
+    }
+  ],
+  "migration_status": "ROTA_A_EM_IMPLANTACAO",
+  "local_strategy_log_ref": "STRATEGY_LOG.jsonl",
+  "generator_strategy_code": "EA-000002-000006",
+  "updated_at": "2026-09-20T10:56:00-03:00"
+}
