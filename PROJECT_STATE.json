@@ -7,8 +7,8 @@
   "kernel_version": "1.4",
   "current_strategy_id": null,
   "last_concluded_strategy_id": "EA-000002-000006",
-  "current_phase": "MANUTENÇÃO EVOLUTIVA — TESTE REAL DA ROTA A CONCLUÍDO",
-  "last_completed_milestone": "Gerador 1.8: primeiro teste real da Rota A concluído em dois repositórios novos; módulo professional-education incorporado; PRJ-000003 e PRJ-000004 implantados e verificados.",
+  "current_phase": "NENHUMA — modo operacional",
+  "last_completed_milestone": "EA-000002-000006 concluída: Rota A testada e verificada em PRJ-000003 e PRJ-000004; módulo professional-education incorporado.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -84,7 +84,7 @@
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap.",
     "Ativar/configurar GitHub Pages dos PRJ-000003 e PRJ-000004 por mecanismo com acesso às configurações Pages; até lá o estado é ESTRUTURADO_NAO_PUBLICADO."
   ],
-  "next_logical_step": "Prosseguir nos projetos-alvo: PRJ-000003 EA-000003-000001 Fase 01/08 ou PRJ-000004 EA-000004-000001 Fase 01/08. Publicação GitHub Pages permanece não comprovada.",
+  "next_logical_step": "Continuar nos projetos-alvo: EA-000003-000001 e EA-000004-000001, ambas na Fase 01/08. A ativação pública do GitHub Pages permanece pendente externa.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-20",
   "project_code": "PRJ-000002",
