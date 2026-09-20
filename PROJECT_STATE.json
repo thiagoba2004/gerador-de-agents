@@ -2,19 +2,13 @@
   "project_id": "GDA",
   "project_name": "Gerador de Agents",
   "repository": "thiagoba2004/gerador-de-agents",
-  "status": "OPERACIONAL_EM_EVOLUCAO",
+  "status": "OPERACIONAL",
   "release_version": "1.9",
   "kernel_version": "1.4",
-  "current_strategy_id": "EA-000002-000007",
-  "last_concluded_strategy_id": "EA-000002-000006",
-  "current_phase": {
-    "phase_number": 4,
-    "phase_total": 5,
-    "phase_code": "F-000002-000007-004",
-    "phase_name": "Migração dos projetos piloto",
-    "status": "EM_VERIFICACAO"
-  },
-  "last_completed_milestone": "Fase 03/05 concluída: seleção, template, workflow, perfis e documentação do Gerador propagados para web-site/contact-protocol.",
+  "current_strategy_id": null,
+  "last_concluded_strategy_id": "EA-000002-000007",
+  "current_phase": "NENHUMA — modo operacional",
+  "last_completed_milestone": "EA-000002-000007 concluída: módulos web-site e contact-protocol implantados, propagados e verificados; Gerador 1.9 operacional.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -90,16 +84,18 @@
     "Migração efetiva do Classe e Massas para a ordem vigente do kernel 1.2 deve ocorrer em execução específica no projeto-alvo.",
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap.",
-    "Ativar/configurar GitHub Pages dos PRJ-000003 e PRJ-000004 por mecanismo com acesso às configurações Pages; até lá o estado é ESTRUTURADO_NAO_PUBLICADO."
+    "Ativar/configurar GitHub Pages dos PRJ-000003 e PRJ-000004 por mecanismo com acesso às configurações Pages; até lá o estado é ESTRUTURADO_NAO_PUBLICADO.",
+    "PRJ-000003: migrar Fale Conosco de FormSubmit para Forminit + EmailJS e verificar E2E.",
+    "PRJ-000004: migrar Fale Conosco de FormSubmit para Forminit + EmailJS e verificar E2E."
   ],
-  "next_logical_step": "Verificar a migração dos AGENTS dos projetos piloto, corrigir inconsistências residuais e executar autoauditoria final.",
+  "next_logical_step": "Nos projetos-alvo, migrar EA-000003-000003 e EA-000004-000003 de FormSubmit para Forminit + EmailJS e executar teste end-to-end.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-20",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
-  "current_strategy_code": "EA-000002-000007",
-  "current_strategy_name": "Padrão reutilizável de Sites e Contato Protocolado",
+  "current_strategy_code": null,
+  "current_strategy_name": null,
   "identification_standard": {
     "file": "IDENTIFICATION_STANDARD.md",
     "version": "1.0",
@@ -108,6 +104,6 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000006",
+  "last_concluded_strategy_code": "EA-000002-000007",
   "current_strategy": null
 }
