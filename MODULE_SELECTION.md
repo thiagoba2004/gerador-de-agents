@@ -1,6 +1,6 @@
 # MODULE SELECTION — POLÍTICA DE ATIVAÇÃO DE MÓDULOS
 
-**kernel_version:** `1.2`
+**kernel_version:** `1.4`
 
 O Gerador de Agents deve selecionar módulos especializados por evidência do projeto, nunca por associação vaga ou preferência do modelo.
 
@@ -81,6 +81,10 @@ Ativar quando análise, transformação, modelagem, validação ou visualizaçã
 ### `automation`
 
 Ativar quando o projeto depender de tarefas agendadas, gatilhos, monitoramento recorrente, pipelines ou ações automáticas.
+
+### `professional-education`
+
+Ativar quando a finalidade incluir formação, capacitação, preparação para certificações ou desenvolvimento de competências profissionais. Quando houver certificação e atuação profissional, o módulo exige distinguir a trilha de prova da trilha de prática.
 
 ## 5. Regras de combinação
 
