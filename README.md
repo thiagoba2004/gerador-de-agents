@@ -51,6 +51,17 @@ history/
 
 `modules/` contém regras reutilizáveis ativadas apenas por evidência do projeto. O estado de cada módulo deve ser `ATIVADO`, `NÃO APLICÁVEL` ou `PENDENTE DE EVIDÊNCIA`.
 
+### Sites e contato protocolado
+
+Projetos com Site Público devem avaliar o módulo `web-site`. Sites com Fale Conosco protocolado devem avaliar `contact-protocol`.
+
+O Gerador distingue:
+- arquitetura pública de publicação editorial;
+- identidade visual de infraestrutura de software;
+- formulário implementado de backend realmente configurado;
+- protocolo gerado de protocolo confirmado;
+- semelhança visual de equivalência de stack técnica.
+
 ### Templates
 
 `templates/` contém modelos para `AGENTS.md`, logs, estado, roadmap, perfil e relatório de auditoria/migração.

@@ -22,7 +22,8 @@ A ativação de qualquer módulo deve seguir `../MODULE_SELECTION.md` e ser regi
 - `translation.md` — tradução com fonte, revisão e controle terminológico;
 - `software.md` — código, scripts, APIs, testes e implantação;
 - `data.md` — coleta, transformação, análise e validação de dados estruturados;
-- `automation.md` — agendas, gatilhos, monitoramentos, pipelines e ações automáticas.
+- `automation.md` — agendas, gatilhos, monitoramentos, pipelines e ações automáticas;
+- `professional-education.md` — formação, certificações, competências e separação prova/prática.
 
 Módulos não são ativados globalmente só por existirem neste diretório. Cada projeto deve classificá-los como `ATIVADO`, `NAO_APLICAVEL` ou `PENDENTE_DE_EVIDENCIA` conforme as fontes examinadas.
 

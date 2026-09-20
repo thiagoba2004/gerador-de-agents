@@ -62,3 +62,10 @@ Antes do fechamento:
 - dependência não registrada;
 - segredo exposto;
 - reconstrução de código já existente por não consultar o repositório.
+
+
+## Relação com interfaces públicas
+
+Quando software sustentar um Site Público, aplicar também `web-site` quando ativado. Quando houver Fale Conosco/protocolo, aplicar `contact-protocol`.
+
+Código de formulário presente no HTML não prova backend configurado nem teste end-to-end.

@@ -76,3 +76,12 @@ Antes do fechamento:
 - divergência entre fonte canônica e cópia pública;
 - Modelo sem botão de cópia ou com botão distante do texto;
 - edição histórica de Modelo exposta ou navegável no Site Público.
+
+
+## Relação com `web-site` e `contact-protocol`
+
+O módulo `publication` governa artefatos e estados de publicação. Ele **não substitui** regras de arquitetura/UI.
+
+- Site Público → avaliar `web-site`;
+- Fale Conosco protocolado → avaliar `contact-protocol`;
+- publicação bem-sucedida não prova responsividade, navegação correta ou contato funcional.

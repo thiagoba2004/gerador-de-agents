@@ -47,7 +47,9 @@ Identificar e registrar:
 - ferramentas e integrações disponíveis;
 - riscos de perda, publicação, segurança e operações destrutivas;
 - tipos de entregas;
-- restrições conhecidas.
+- restrições conhecidas;
+- se houver Site Público: público-alvo, papel da Home, menu global, páginas centrais, Mapa do Site, identidade visual e referência estrutural;
+- se houver Fale Conosco: e-mail institucional, necessidade de protocolo, confirmação por e-mail, anexos, stack de referência e estado real do backend.
 
 **Gate A1:** nenhuma capacidade ou integração relevante foi inventada; todas as fontes persistentes conhecidas estão identificadas.
 
@@ -72,6 +74,11 @@ Aplicar `MODULE_SELECTION.md`. Cada módulo deve receber um dos estados:
 
 Toda ativação deve ter justificativa rastreável.
 
+Regras de dependência:
+- projeto com Site Público → avaliar obrigatoriamente `web-site`;
+- Site Público com Fale Conosco/protocolo → avaliar obrigatoriamente `contact-protocol`;
+- `web-site` normalmente coexiste com `publication` e `software`, mas cada ativação mantém justificativa própria.
+
 **Gate A2:** lista de módulos decidida e registrada.
 
 ### Etapa A3 — Infraestrutura mínima
@@ -85,6 +92,9 @@ STRATEGY_LOG.jsonl
 PROJECT_STATE.json
 ROADMAP.md ou PLAN.md
 DECISIONS.md, quando aplicável
+SITE_ARCHITECTURE.md, quando web-site estiver ativo
+SITE_STYLE_GUIDE.md, quando web-site estiver ativo
+CONTACT_STACK.md, quando contact-protocol estiver ativo
 ```
 
 **Gate A3:** cada função essencial — regras, pedidos, estratégias, estado e planejamento — possui fonte persistente.
@@ -110,7 +120,9 @@ Verificar:
 - referências internas válidas;
 - compatibilidade com ferramentas disponíveis;
 - ausência de confirmações falsas;
-- estado e próximo passo persistidos.
+- estado e próximo passo persistidos;
+- se `web-site` estiver ativo: menu, Home, Mapa do Site, identidade, mobile e separação público/interno;
+- se `contact-protocol` estiver ativo: stack aprovada, isolamento por projeto e estado real do teste end-to-end.
 
 **Saída:** projeto implantado ou relatório explícito das pendências restantes.
 
@@ -138,7 +150,9 @@ Inventariar:
 - estratégias autônomas comprováveis;
 - mecanismos de persistência e versionamento;
 - integrações e ferramentas;
-- lacunas documentais.
+- lacunas documentais;
+- arquitetura pública existente, menus, Home, Mapa do Site, CSS/tokens e responsividade;
+- formulário de contato, provedores, IDs/configuração pública, e-mail institucional, protocolo e evidências de teste.
 
 Backfill de estratégia somente com evidência persistente.
 

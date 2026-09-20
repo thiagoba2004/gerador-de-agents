@@ -31,5 +31,23 @@
   ],
   "migration_status": "NAO_INICIADO",
   "local_strategy_log_ref": "STRATEGY_LOG.jsonl",
-  "updated_at": "YYYY-MM-DDThh:mm:ss±hh:mm"
+  "updated_at": "YYYY-MM-DDThh:mm:ss±hh:mm",
+  "site_architecture": {
+    "status": "PENDENTE_DE_EVIDENCIA",
+    "home_mode": "INSTITUCIONAL_ENXUTA | OUTRO_APROVADO",
+    "global_menu": [],
+    "site_map": "RODAPE | OUTRO",
+    "visual_identity_ref": "SITE_STYLE_GUIDE.md"
+  },
+  "contact_protocol": {
+    "status": "NAO_APLICAVEL | MIGRACAO_TECNICA_PENDENTE | BACKEND_CONFIGURADO | E2E_VERIFICADO",
+    "institutional_email": "",
+    "protocol_prefix": "",
+    "reference_project": "",
+    "canonical_stack": {
+      "receipt": "",
+      "email_confirmation": ""
+    },
+    "contact_stack_ref": "CONTACT_STACK.md"
+  }
 }

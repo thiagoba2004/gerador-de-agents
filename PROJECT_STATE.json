@@ -8,13 +8,13 @@
   "current_strategy_id": "EA-000002-000007",
   "last_concluded_strategy_id": "EA-000002-000006",
   "current_phase": {
-    "phase_number": 3,
+    "phase_number": 4,
     "phase_total": 5,
-    "phase_code": "F-000002-000007-003",
-    "phase_name": "Propagação do Gerador",
-    "status": "EM_EXECUCAO"
+    "phase_code": "F-000002-000007-004",
+    "phase_name": "Migração dos projetos piloto",
+    "status": "EM_VERIFICACAO"
   },
-  "last_completed_milestone": "Fases 01 e 02 concluídas: lacunas auditadas e módulos web-site/contact-protocol criados.",
+  "last_completed_milestone": "Fase 03/05 concluída: seleção, template, workflow, perfis e documentação do Gerador propagados para web-site/contact-protocol.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -92,7 +92,7 @@
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap.",
     "Ativar/configurar GitHub Pages dos PRJ-000003 e PRJ-000004 por mecanismo com acesso às configurações Pages; até lá o estado é ESTRUTURADO_NAO_PUBLICADO."
   ],
-  "next_logical_step": "Concluir propagação no Gerador e migrar os AGENTS dos projetos Ações Judiciais e Planejamento Financeiro.",
+  "next_logical_step": "Verificar a migração dos AGENTS dos projetos piloto, corrigir inconsistências residuais e executar autoauditoria final.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-20",
   "project_code": "PRJ-000002",
