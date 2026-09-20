@@ -7,8 +7,8 @@
   "kernel_version": "1.4",
   "current_strategy_id": "EA-000002-000006",
   "last_concluded_strategy_id": "EA-000002-000005",
-  "current_phase": "FASE 02/06 — Perfis e seleção de módulos",
-  "last_completed_milestone": "Fase 01 da EA-000002-000006 concluída: pedido registrado, EA-000002-000005 encerrada, estado saneado e PRJ-000003/PRJ-000004 alocados.",
+  "current_phase": "FASE 04/06 — Geração e implantação do PRJ-000003",
+  "last_completed_milestone": "Fases 02 e 03 da EA-000002-000006 concluídas: perfis dos dois projetos persistidos, módulos selecionados e módulo professional-education incorporado ao Gerador.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -83,7 +83,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Criar os perfis de PRJ-000003 e PRJ-000004, concluir a seleção de módulos e avançar à geração dos repositórios.",
+  "next_logical_step": "Gerar e implantar a governança inicial, a primeira Estratégia Autônoma e a estrutura mínima do Site do PRJ-000003 — Ações Judiciais.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-20",
   "project_code": "PRJ-000002",
@@ -103,12 +103,12 @@
   "current_strategy": {
     "strategy_code": "EA-000002-000006",
     "strategy_name": "Implantação piloto da Rota A em dois projetos reais",
-    "phase_number": 2,
+    "phase_number": 4,
     "phase_total": 6,
-    "phase_code": "F-000002-000006-002",
-    "phase_name": "Perfis e seleção de módulos",
+    "phase_code": "F-000002-000006-004",
+    "phase_name": "Geração e implantação do PRJ-000003",
     "status": "EM_EXECUCAO",
     "plan_ref": "estrategia-implantacao-piloto-rota-a-dois-projetos.md",
-    "next_step": "Criar e verificar os perfis dos dois projetos."
+    "next_step": "Implantar PRJ-000003 — Ações Judiciais."
   }
 }
