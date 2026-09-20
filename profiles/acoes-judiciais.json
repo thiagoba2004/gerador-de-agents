@@ -1,0 +1,112 @@
+{
+  "project_code": "PRJ-000003",
+  "project_sequence": 3,
+  "project_name": "Ações Judiciais",
+  "project_alias": "AJ",
+  "project_id_legacy": "acoes-judiciais",
+  "project_purpose": "Fonte pública de consulta teórica e prática sobre possíveis ações judiciais para pessoas físicas e jurídicas, organizada por estratégias autônomas temáticas.",
+  "project_ref": "thiagoba2004/acoes-judiciais",
+  "kernel_version": "1.4",
+  "canonical_files": [
+    "AGENTS.md",
+    "REQUEST_LOG.jsonl",
+    "STRATEGY_LOG.jsonl",
+    "PROJECT_STATE.json",
+    "ROADMAP.md",
+    "DECISIONS.md",
+    "SOURCE_REGISTRY.jsonl"
+  ],
+  "tools_and_integrations": [
+    "GitHub",
+    "GitHub Pages/site estático"
+  ],
+  "formats": [
+    "Markdown",
+    "HTML",
+    "JSON",
+    "JSONL"
+  ],
+  "risks": [
+    "conteúdo jurídico desatualizado",
+    "jurisprudência não verificada",
+    "confusão entre informação geral e orientação para caso concreto",
+    "divergência entre fonte canônica e site publicado",
+    "modelos públicos superados"
+  ],
+  "modules": [
+    {
+      "module_id": "research",
+      "status": "ATIVADO",
+      "rationale": "O objetivo exige pesquisa sistemática de legislação, jurisprudência, doutrina e fontes institucionais.",
+      "source_refs": [
+        "REQ-20260920-001"
+      ],
+      "decided_at": "2026-09-20T10:55:00-03:00",
+      "kernel_version": "1.4"
+    },
+    {
+      "module_id": "legal",
+      "status": "ATIVADO",
+      "rationale": "O núcleo do projeto é análise e suporte teórico-prático sobre ações judiciais.",
+      "source_refs": [
+        "REQ-20260920-001"
+      ],
+      "decided_at": "2026-09-20T10:55:00-03:00",
+      "kernel_version": "1.4"
+    },
+    {
+      "module_id": "publication",
+      "status": "ATIVADO",
+      "rationale": "O projeto terá Site Autônomo como meio público de consulta.",
+      "source_refs": [
+        "REQ-20260920-001"
+      ],
+      "decided_at": "2026-09-20T10:55:00-03:00",
+      "kernel_version": "1.4"
+    },
+    {
+      "module_id": "software",
+      "status": "ATIVADO",
+      "rationale": "A infraestrutura do site estático faz parte do repositório e será versionada.",
+      "source_refs": [
+        "REQ-20260920-001"
+      ],
+      "decided_at": "2026-09-20T10:55:00-03:00",
+      "kernel_version": "1.4"
+    },
+    {
+      "module_id": "data",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Cálculos e bases estruturadas podem surgir em ações específicas, mas ainda não são função transversal comprovada.",
+      "source_refs": [
+        "REQ-20260920-001"
+      ],
+      "decided_at": "2026-09-20T10:55:00-03:00",
+      "kernel_version": "1.4"
+    },
+    {
+      "module_id": "digital-evidence",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Prova digital pode ser relevante em algumas ações, mas não há evidência de função transversal nesta fase.",
+      "source_refs": [
+        "REQ-20260920-001"
+      ],
+      "decided_at": "2026-09-20T10:55:00-03:00",
+      "kernel_version": "1.4"
+    },
+    {
+      "module_id": "professional-education",
+      "status": "NAO_APLICAVEL",
+      "rationale": "O objetivo primário é consulta e suporte jurídico, não formação profissional estruturada.",
+      "source_refs": [
+        "REQ-20260920-001"
+      ],
+      "decided_at": "2026-09-20T10:55:00-03:00",
+      "kernel_version": "1.4"
+    }
+  ],
+  "migration_status": "ROTA_A_EM_IMPLANTACAO",
+  "local_strategy_log_ref": "STRATEGY_LOG.jsonl",
+  "generator_strategy_code": "EA-000002-000006",
+  "updated_at": "2026-09-20T10:55:00-03:00"
+}
