@@ -3,12 +3,12 @@
   "project_name": "Gerador de Agents",
   "repository": "thiagoba2004/gerador-de-agents",
   "status": "OPERACIONAL",
-  "release_version": "1.7",
+  "release_version": "1.8",
   "kernel_version": "1.4",
   "current_strategy_id": "EA-000002-000006",
   "last_concluded_strategy_id": "EA-000002-000005",
-  "current_phase": "FASE 01/06 — Registro, diagnóstico e saneamento do Gerador",
-  "last_completed_milestone": "Gerador 1.7: padrão reutilizável de Modelos Públicos concluído e verificado.",
+  "current_phase": "FASE 02/06 — Perfis e seleção de módulos",
+  "last_completed_milestone": "Fase 01 da EA-000002-000006 concluída: pedido registrado, EA-000002-000005 encerrada, estado saneado e PRJ-000003/PRJ-000004 alocados.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -30,7 +30,8 @@
     "modules/",
     "profiles/",
     "audits/",
-    "history/"
+    "history/",
+    "modules/professional-education.md"
   ],
   "completed_phases": [
     "FASE 1 — registro e delimitação",
@@ -82,7 +83,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Concluir Fase 01 da EA-000002-000006 e avançar para perfis e seleção de módulos dos PRJ-000003 e PRJ-000004.",
+  "next_logical_step": "Criar os perfis de PRJ-000003 e PRJ-000004, concluir a seleção de módulos e avançar à geração dos repositórios.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-20",
   "project_code": "PRJ-000002",
@@ -102,12 +103,12 @@
   "current_strategy": {
     "strategy_code": "EA-000002-000006",
     "strategy_name": "Implantação piloto da Rota A em dois projetos reais",
-    "phase_number": 1,
+    "phase_number": 2,
     "phase_total": 6,
-    "phase_code": "F-000002-000006-001",
-    "phase_name": "Registro, diagnóstico e saneamento do Gerador",
+    "phase_code": "F-000002-000006-002",
+    "phase_name": "Perfis e seleção de módulos",
     "status": "EM_EXECUCAO",
     "plan_ref": "estrategia-implantacao-piloto-rota-a-dois-projetos.md",
-    "next_step": "Criar perfis dos dois projetos e selecionar módulos por evidência."
+    "next_step": "Criar e verificar os perfis dos dois projetos."
   }
 }
