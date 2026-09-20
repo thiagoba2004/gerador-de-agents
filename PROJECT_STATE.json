@@ -5,10 +5,10 @@
   "status": "OPERACIONAL",
   "release_version": "1.8",
   "kernel_version": "1.4",
-  "current_strategy_id": "EA-000002-000006",
-  "last_concluded_strategy_id": "EA-000002-000005",
-  "current_phase": "FASE 04/06 — Geração e implantação do PRJ-000003",
-  "last_completed_milestone": "Fases 02 e 03 da EA-000002-000006 concluídas: perfis dos dois projetos persistidos, módulos selecionados e módulo professional-education incorporado ao Gerador.",
+  "current_strategy_id": null,
+  "last_concluded_strategy_id": "EA-000002-000006",
+  "current_phase": "MANUTENÇÃO EVOLUTIVA — TESTE REAL DA ROTA A CONCLUÍDO",
+  "last_completed_milestone": "Gerador 1.8: primeiro teste real da Rota A concluído em dois repositórios novos; módulo professional-education incorporado; PRJ-000003 e PRJ-000004 implantados e verificados.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -81,16 +81,17 @@
   "non_blocking_debts": [
     "Migração efetiva do Classe e Massas para a ordem vigente do kernel 1.2 deve ocorrer em execução específica no projeto-alvo.",
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
-    "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
+    "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap.",
+    "Ativar/configurar GitHub Pages dos PRJ-000003 e PRJ-000004 por mecanismo com acesso às configurações Pages; até lá o estado é ESTRUTURADO_NAO_PUBLICADO."
   ],
-  "next_logical_step": "Gerar e implantar a governança inicial, a primeira Estratégia Autônoma e a estrutura mínima do Site do PRJ-000003 — Ações Judiciais.",
+  "next_logical_step": "Prosseguir nos projetos-alvo: PRJ-000003 EA-000003-000001 Fase 01/08 ou PRJ-000004 EA-000004-000001 Fase 01/08. Publicação GitHub Pages permanece não comprovada.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-20",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
-  "current_strategy_code": "EA-000002-000006",
-  "current_strategy_name": "Implantação piloto da Rota A em dois projetos reais",
+  "current_strategy_code": null,
+  "current_strategy_name": null,
   "identification_standard": {
     "file": "IDENTIFICATION_STANDARD.md",
     "version": "1.0",
@@ -99,16 +100,6 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000005",
-  "current_strategy": {
-    "strategy_code": "EA-000002-000006",
-    "strategy_name": "Implantação piloto da Rota A em dois projetos reais",
-    "phase_number": 4,
-    "phase_total": 6,
-    "phase_code": "F-000002-000006-004",
-    "phase_name": "Geração e implantação do PRJ-000003",
-    "status": "EM_EXECUCAO",
-    "plan_ref": "estrategia-implantacao-piloto-rota-a-dois-projetos.md",
-    "next_step": "Implantar PRJ-000003 — Ações Judiciais."
-  }
+  "last_concluded_strategy_code": "EA-000002-000006",
+  "current_strategy": null
 }
