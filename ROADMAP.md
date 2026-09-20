@@ -69,3 +69,12 @@ Novas evoluções materiais devem ser classificadas conforme o kernel:
 ## Próximo passo lógico
 
 Aguardar novo pedido. Ao recebê-lo, registrar primeiro em `REQUEST_LOG.jsonl` e decidir, antes da execução substantiva, se ele pertence a manutenção simples ou cria nova Estratégia Autônoma.
+
+
+## EA-000002-000007 — Padrão reutilizável de Sites e Contato Protocolado
+
+1. FASE 01/05 [F-000002-000007-001] — Auditoria e delimitação.
+2. FASE 02/05 [F-000002-000007-002] — Módulos reutilizáveis.
+3. FASE 03/05 [F-000002-000007-003] — Propagação do Gerador.
+4. FASE 04/05 [F-000002-000007-004] — Migração dos projetos piloto.
+5. FASE 05/05 [F-000002-000007-005] — Verificação e fechamento.
