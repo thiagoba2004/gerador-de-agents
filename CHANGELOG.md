@@ -2,6 +2,15 @@
 
 Todas as alterações materiais do núcleo universal e da infraestrutura do Gerador devem ser registradas aqui.
 
+## 1.8 — 20/09/2026 — Primeiro teste real da Rota A e educação profissional
+
+- criação de `PRJ-000003 — Ações Judiciais` e `PRJ-000004 — Planejamento Financeiro`;
+- primeiro teste do Gerador em dois repositórios novos e vazios;
+- criação do módulo reutilizável `professional-education`, motivado pela necessidade comprovada de separar preparação para certificação de desenvolvimento de competência profissional;
+- o módulo exige distinção `TRILHA_PROVA` / `TRILHA_PRATICA`, mapeamento de fontes, objetivos de competência, avaliação e atualização;
+- o kernel permanece em 1.4 porque a evolução é modular, não universal;
+- estratégia: `EA-000002-000006`.
+
 ## 1.7 — 19/09/2026 — Padrão de Modelos Públicos
 
 - módulo `publication` passa a exigir botão **`COPIAR MODELO`** imediatamente acima do conteúdo copiável;
