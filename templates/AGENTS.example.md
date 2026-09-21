@@ -122,7 +122,7 @@ Retomar sempre do estado mais avançado comprovado.
 
 As regras obrigatórias dos módulos ativados devem ser materializadas nesta seção; não basta listar ou referenciar o nome do módulo.
 
-Quando o módulo `publication` estiver ativado para conteúdo textual/editorial, incluir expressamente a obrigação de manter, para cada texto publicável, o trio coordenado `.md` + `.html` + `.json`, com Markdown como fonte textual canônica, HTML como publicação e JSON como representação estruturada, salvo exceção persistente e versionada.
+Quando o módulo `publication` estiver ativado para conteúdo textual/editorial, incluir expressamente: Markdown como fonte textual canônica; HTML como publicação quando houver; JSON/JSONL somente quando existir função estruturada real e consumidor/processo identificável. É proibido criar JSON apenas para duplicar conteúdo ou metadados já adequadamente preservados no Markdown/HTML.
 Quando o módulo `publication` estiver ativado **e o projeto publicar Modelos reutilizáveis**, incluir também expressamente:
 
 - botão canônico **`COPIAR MODELO`** imediatamente acima do texto exato a ser copiado, sem elemento intermediário;
