@@ -3,12 +3,12 @@
   "project_name": "Gerador de Agents",
   "repository": "thiagoba2004/gerador-de-agents",
   "status": "OPERACIONAL",
-  "release_version": "1.9",
+  "release_version": "1.10",
   "kernel_version": "1.4",
   "current_strategy_id": null,
   "last_concluded_strategy_id": "EA-000002-000007",
   "current_phase": "NENHUMA — modo operacional",
-  "last_completed_milestone": "EA-000002-000007 concluída: módulos web-site e contact-protocol implantados, propagados e verificados; Gerador 1.9 operacional.",
+  "last_completed_milestone": "Política de artefatos revisada: JSON deixou de ser terceiro artefato obrigatório; Markdown é fonte textual, HTML é publicação e JSON/JSONL é condicional a uso estruturado real.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -44,7 +44,8 @@
     "FASE FINAL — Implantação do Gerador",
     "MANUTENÇÃO 1.4 — Triplicidade editorial",
     "MANUTENÇÃO 1.5 — Governança numérica e continuidade determinística",
-    "MANUTENÇÃO 1.6 — Codificação hierárquica universal"
+    "MANUTENÇÃO 1.6 — Codificação hierárquica universal",
+    "MANUTENÇÃO 1.10 — JSON condicional"
   ],
   "phase_4_results": [
     "templates/AGENTS.example.md",
