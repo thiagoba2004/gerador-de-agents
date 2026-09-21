@@ -8,7 +8,7 @@
   "current_strategy_id": null,
   "last_concluded_strategy_id": "EA-000002-000007",
   "current_phase": "NENHUMA — modo operacional",
-  "last_completed_milestone": "Política de artefatos revisada: JSON deixou de ser terceiro artefato obrigatório; Markdown é fonte textual, HTML é publicação e JSON/JSONL é condicional a uso estruturado real.",
+  "last_completed_milestone": "Auditoria transversal de títulos visíveis concluída em 21/09/2026: 97 HTMLs examinados nos quatro Projetos canônicos; zero <title> técnicos ausentes; três páginas do Planejamento Financeiro sem <h1> editorial; dez documentos do Classe e Massas com múltiplos <h1>.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -89,9 +89,9 @@
     "PRJ-000003: migrar Fale Conosco de FormSubmit para Forminit + EmailJS e verificar E2E.",
     "PRJ-000004: migrar Fale Conosco de FormSubmit para Forminit + EmailJS e verificar E2E."
   ],
-  "next_logical_step": "Nos projetos-alvo, migrar EA-000003-000003 e EA-000004-000003 de FormSubmit para Forminit + EmailJS e executar teste end-to-end.",
+  "next_logical_step": "Se autorizado, corrigir no PRJ-000004 as três páginas sem <h1> editorial e, em execução separada no PRJ-000001, normalizar os dez documentos com múltiplos <h1>.",
   "chat_only_work_is_not_persisted": true,
-  "updated_at": "2026-09-20",
+  "updated_at": "2026-09-21",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
