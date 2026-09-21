@@ -79,14 +79,12 @@
     {
       "module_id": "publication",
       "status": "ATIVADO",
-      "rationale": "O projeto mantém artigos, notícias, HTML e site público; desde AGENTS v2.0, cada texto editorial/publicável exige Markdown + HTML + JSON, e o módulo publication do Gerador 1.4 reproduz essa regra.",
+      "rationale": "O projeto mantém artigos, notícias, HTML e site público. A política vigente usa Markdown como fonte textual, HTML como publicação e JSON/JSONL somente quando houver função estruturada real.",
       "source_refs": [
         "AGENTS.md#8.2",
-        "AGENTS.md#8.2.1",
-        "AGENTS.md#8.2.2",
-        "AGENTS.md#8.2.3"
+        "modules/publication.md"
       ],
-      "decided_at": "2026-09-18",
+      "decided_at": "2026-09-20",
       "kernel_version": "1.2"
     },
     {
@@ -179,6 +177,11 @@
       "change": "AGENTS v2.2 substitui códigos derivados de iniciais por PRJ/EA/F numéricos e hierárquicos; CEM torna-se alias.",
       "generator_strategy_code": "EA-000002-000004",
       "generator_legacy_strategy_id": "STRAT-GDA-20260919-002"
+    },
+    {
+      "date": "2026-09-20",
+      "change": "Revogada a triplicidade obrigatória Markdown + HTML + JSON; JSON/JSONL passa a ser condicional a uso estruturado real.",
+      "generator_strategy_code": "EA-000002-000007"
     }
   ],
   "project_code": "PRJ-000001",
@@ -194,5 +197,23 @@
     },
     "receipt_rule": "Exibir protocolo somente após sucesso do Forminit.",
     "email_rule": "EmailJS é acionado após recebimento confirmado."
+  },
+  "artifact_policy": {
+    "text_canonical": "Markdown",
+    "public_text": "HTML when published",
+    "json": "CONDITIONAL_ONLY",
+    "json_rule": "Create JSON/JSONL only for structured data with a concrete machine consumer or processing need; never as an automatic mirror of Markdown/HTML.",
+    "examples_allowed": [
+      "state",
+      "append-only logs",
+      "configuration",
+      "datasets",
+      "catalogs",
+      "taxonomies",
+      "glossaries",
+      "schemas",
+      "fixtures",
+      "automation/API/search/filter/validation inputs"
+    ]
   }
 }
