@@ -165,5 +165,23 @@
       "Fale Conosco"
     ],
     "visual_identity": "financeira/formativa exclusiva"
+  },
+  "artifact_policy": {
+    "text_canonical": "Markdown",
+    "public_text": "HTML when published",
+    "json": "CONDITIONAL_ONLY",
+    "json_rule": "Create JSON/JSONL only for structured data with a concrete machine consumer or processing need; never as an automatic mirror of Markdown/HTML.",
+    "examples_allowed": [
+      "state",
+      "append-only logs",
+      "configuration",
+      "datasets",
+      "catalogs",
+      "taxonomies",
+      "glossaries",
+      "schemas",
+      "fixtures",
+      "automation/API/search/filter/validation inputs"
+    ]
   }
 }
