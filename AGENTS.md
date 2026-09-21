@@ -175,15 +175,15 @@ A ativação deve seguir `MODULE_SELECTION.md`; não ativar módulo apenas por p
 
 Quando um módulo estiver `ATIVADO`, as regras marcadas como obrigatórias nesse módulo devem ser materializadas no `AGENTS.md` gerado ou migrado para o projeto-alvo, e não apenas citadas genericamente.
 
-Para o módulo `publication`, quando houver publicação de conteúdo textual/editorial, deve ser propagada a regra de triplicidade documental:
+Para o módulo `publication`, quando houver publicação de conteúdo textual/editorial, deve ser propagada a política condicional de artefatos:
 
 ```text
 Markdown (.md) = fonte textual canônica
-HTML (.html) = artefato de publicação
-JSON (.json) = representação estruturada/metadados interoperáveis
+HTML (.html) = artefato de publicação, quando houver publicação
+JSON/JSONL    = somente quando houver função estruturada real
 ```
 
-Cada texto editorial/publicável deve possuir os três artefatos coordenados, salvo exceção expressa, persistente e versionada no projeto-alvo.
+JSON não é terceiro artefato obrigatório. É proibido criar JSON apenas para duplicar conteúdo, outline, caminhos ou metadados já adequadamente preservados no Markdown/HTML. Quando houver JSON funcional, o perfil do projeto deve indicar sua finalidade estruturada ou consumidor/processo.
 
 
 ### 9.2. Propagação obrigatória do padrão de Modelos públicos
