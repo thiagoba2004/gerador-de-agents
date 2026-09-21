@@ -6,19 +6,38 @@
 
 Ativar quando o projeto possuir publicação editorial, site, blog, newsletter, repositório público de artigos ou qualquer fluxo em que produzir conteúdo e torná-lo público sejam etapas distintas.
 
-## Arquivos canônicos exigidos
+## Arquivos canônicos
 
-Para conteúdo textual/editorial publicável, manter obrigatoriamente o trio coordenado:
+Para conteúdo textual/editorial publicável, o padrão é:
 
 - fonte canônica em Markdown (`.md`);
-- artefato de publicação em HTML (`.html`);
-- representação estruturada/metadados em JSON (`.json`).
+- artefato de publicação em HTML (`.html`) quando houver publicação;
+- JSON/JSONL **somente quando houver função estruturada real**.
 
-Além disso, conforme o caso:
+JSON não é terceiro artefato obrigatório.
 
-- manifesto ou estado de publicação;
-- referência ao destino público;
-- histórico recuperável de versões relevantes.
+## Regra de necessidade para JSON
+
+Criar ou manter JSON/JSONL quando houver uso objetivo de máquina, como:
+
+- estado e governança;
+- registros append-only;
+- configuração;
+- datasets, catálogos, taxonomias, glossários, fixtures ou schemas;
+- metadados realmente consumidos por processo;
+- dados usados por script, automação, API, busca estruturada, filtro, cálculo ou validação;
+- interoperabilidade comprovada entre projetos.
+
+É vedado criar `.json` apenas para repetir título, descrição, outline, links, caminhos ou conteúdo já preservado no Markdown e no HTML.
+
+Antes de criar um JSON novo, o agente deve conseguir responder:
+
+```text
+QUAL PROCESSO CONSOME ESTE JSON?
+QUAL DADO ESTRUTURADO ELE PRESERVA QUE O MARKDOWN NÃO ATENDE ADEQUADAMENTE?
+```
+
+Se não houver resposta concreta, não criar.
 
 ## Regras obrigatórias
 
@@ -26,19 +45,16 @@ Além disso, conforme o caso:
 2. Nunca afirmar publicação apenas porque o arquivo local ou remoto foi atualizado.
 3. Preservar a versão anterior antes de mudanças materiais em conteúdo já publicado.
 4. Verificar o resultado no destino público quando tecnicamente possível.
-5. Manter coerência entre título, metadados, corpo, links internos e referências.
-6. Para conteúdo textual/editorial, Markdown é a fonte textual canônica; HTML é o artefato de publicação; JSON é a representação estruturada e interoperável.
-7. Cada texto editorial/publicável deve possuir os três artefatos coordenados — `.md`, `.html` e `.json` — preferencialmente com o mesmo basename/slug.
-8. O JSON deve identificar, no mínimo quando aplicável, id/slug, tipo, título, status, datas, caminho da fonte Markdown, caminho do HTML e referência de versão/commit/hash quando disponível.
-9. Alterações materiais de título, subtítulo, autoria, data, corpo, referências, status ou slug devem ser sincronizadas nos três artefatos antes de o conteúdo atingir estado de conclusão/publicação.
-10. HTML publicado sem Markdown correspondente, ou conteúdo editorial sem JSON correspondente, constitui lacuna documental e não deve ser tratado como estado completo.
-11. Exceções somente são válidas quando houver decisão expressa, persistente e versionada no projeto-alvo, com justificativa e indicação da fonte da verdade substitutiva.
-12. Quando o conteúdo publicado for um **Modelo reutilizável**, o HTML deve conter botão canônico **`COPIAR MODELO`** imediatamente acima do bloco exato a ser copiado, sem elemento intermediário.
-13. O botão de cópia deve copiar somente o conteúdo do Modelo e deve ser verificado funcionalmente antes do estado `VERIFICADO PUBLICAMENTE`.
-14. O Site Público deve disponibilizar somente a edição vigente de cada Modelo.
-15. É proibido manter botões, links, cards, menus, rotas navegáveis ou outros portões públicos para edições anteriores de Modelos.
-16. O histórico de edições anteriores deve ser preservado pelo Git ou por mecanismo não publicado no Site Público; a preservação histórica não justifica manter HTML superado publicamente acessível.
-17. A auditoria de publicação deve procurar regressões desses padrões em todas as seções do site, e não apenas na página modificada.
+5. Manter coerência entre título, corpo, links internos e referências.
+6. Para conteúdo textual/editorial, Markdown é a fonte textual canônica e HTML é o artefato de publicação.
+7. A ausência de JSON não constitui lacuna quando não houver função estruturada real.
+8. JSON existente só precisa acompanhar mudanças quando sua função de dados exigir.
+9. Quando o conteúdo publicado for um **Modelo reutilizável**, o HTML deve conter botão canônico **`COPIAR MODELO`** imediatamente acima do bloco exato a ser copiado, sem elemento intermediário.
+10. O botão de cópia deve copiar somente o conteúdo do Modelo e deve ser verificado funcionalmente antes do estado `VERIFICADO PUBLICAMENTE`.
+11. O Site Público deve disponibilizar somente a edição vigente de cada Modelo.
+12. É proibido manter botões, links, cards, menus, rotas navegáveis ou outros portões públicos para edições anteriores de Modelos.
+13. O histórico de edições anteriores deve ser preservado pelo Git ou por mecanismo não publicado no Site Público.
+14. A auditoria de publicação deve procurar regressões desses padrões em todas as seções do site, e não apenas na página modificada.
 
 ## Estados específicos
 
@@ -54,15 +70,17 @@ ARQUIVADO
 
 ## Critério de conclusão
 
-Uma publicação textual/editorial só está concluída quando o conteúdo correto chegou ao destino pretendido, os três artefatos `.md` + `.html` + `.json` existem e estão materialmente coerentes e, quando tecnicamente possível, o resultado foi verificado no endereço ou canal público correspondente.
+Uma publicação textual/editorial está concluída quando a fonte Markdown e a publicação HTML estão materialmente coerentes, o conteúdo correto chegou ao destino pretendido e, quando tecnicamente possível, o resultado foi verificado no endereço público correspondente.
+
+Se houver JSON/JSONL funcional associado, sua consistência também integra o gate.
 
 ## Verificação
 
 Antes do fechamento:
 
 - conferir a versão publicada contra a fonte Markdown canônica;
-- verificar a existência e coerência do JSON correspondente;
 - verificar links e referências críticas;
+- verificar JSON/JSONL somente quando eles tiverem função estruturada aplicável;
 - registrar URL ou identificador público;
 - registrar data da verificação;
 - atualizar o estado do projeto.
@@ -74,9 +92,9 @@ Antes do fechamento:
 - quebrar links ou navegação;
 - perder versão anterior;
 - divergência entre fonte canônica e cópia pública;
+- criar JSON redundante sem consumidor;
 - Modelo sem botão de cópia ou com botão distante do texto;
 - edição histórica de Modelo exposta ou navegável no Site Público.
-
 
 ## Relação com `web-site` e `contact-protocol`
 
