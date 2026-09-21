@@ -78,3 +78,24 @@ Aguardar novo pedido. Ao recebê-lo, registrar primeiro em `REQUEST_LOG.jsonl` e
 3. FASE 03/05 [F-000002-000007-003] — Propagação do Gerador.
 4. FASE 04/05 [F-000002-000007-004] — Migração dos projetos piloto.
 5. FASE 05/05 [F-000002-000007-005] — Verificação e fechamento.
+
+
+## Manutenção 1.10 — JSON condicional
+
+**Estado:** CONCLUÍDA em 20/09/2026.
+
+**Decisão:** revogada a criação automática do trio Markdown + HTML + JSON.
+
+Padrão vigente:
+- Markdown = fonte textual canônica;
+- HTML = publicação quando houver;
+- JSON/JSONL = somente quando houver função estruturada real e consumidor/processo identificável.
+
+**Gate atingido:**
+- módulo `publication` atualizado;
+- template de AGENTS atualizado;
+- template de perfil atualizado;
+- perfis de Classe e Massas, Ações Judiciais e Planejamento Financeiro atualizados;
+- política propagada aos projetos;
+- auditoria global registrada em `audits/json-policy-2026-09-20.md`;
+- 78 JSON redundantes removidos dos projetos auditados, preservando todos os JSON funcionais.
