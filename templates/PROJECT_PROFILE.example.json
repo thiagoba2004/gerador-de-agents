@@ -49,5 +49,12 @@
       "email_confirmation": ""
     },
     "contact_stack_ref": "CONTACT_STACK.md"
+  },
+  "artifact_policy": {
+    "text_canonical": "Markdown",
+    "public_text": "HTML when published",
+    "json": "CONDITIONAL_ONLY",
+    "requirement": "Only create JSON/JSONL when it represents structured data with a concrete machine consumer or processing need.",
+    "prohibited": "Do not create JSON merely as an automatic mirror of Markdown/HTML."
   }
 }
