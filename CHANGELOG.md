@@ -2,6 +2,17 @@
 
 Todas as alterações materiais do núcleo universal e da infraestrutura do Gerador devem ser registradas aqui.
 
+## 1.10 — 20/09/2026 — JSON condicional
+
+- revogada a regra de triplicidade editorial obrigatória `.md + .html + .json`;
+- Markdown permanece como fonte textual canônica;
+- HTML permanece como artefato de publicação quando houver;
+- JSON/JSONL passa a ser criado somente quando houver função estruturada real e finalidade/consumidor identificável;
+- proibida a criação de JSON apenas para duplicar título, outline, caminhos, metadados ou conteúdo já preservado em Markdown/HTML;
+- atualizado `modules/publication.md`, `templates/AGENTS.example.md`, `AGENTS.md` e os perfis de Classe e Massas, Ações Judiciais e Planejamento Financeiro;
+- a versão 1.4 do changelog permanece como registro histórico da política posteriormente revogada;
+- estratégia de manutenção: `EA-000002-000007`.
+
 ## 1.8 — 20/09/2026 — Primeiro teste real da Rota A e educação profissional
 
 - criação de `PRJ-000003 — Ações Judiciais` e `PRJ-000004 — Planejamento Financeiro`;
