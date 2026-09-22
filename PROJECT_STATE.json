@@ -5,16 +5,10 @@
   "status": "OPERACIONAL",
   "release_version": "1.15",
   "kernel_version": "1.4",
-  "current_strategy_id": "EA-000002-000012",
-  "last_concluded_strategy_id": "EA-000002-000011",
-  "current_phase": {
-    "phase_number": 3,
-    "phase_total": 4,
-    "phase_code": "F-000002-000012-003",
-    "phase_name": "Propagação aos projetos piloto",
-    "status": "EM_EXECUCAO"
-  },
-  "last_completed_milestone": "EA-000002-000012 Fases 01-02 concluídas: arquitetura pública do Observatório formalizada no Gerador 1.15.",
+  "current_strategy_id": null,
+  "last_concluded_strategy_id": "EA-000002-000012",
+  "current_phase": "NENHUMA — modo operacional",
+  "last_completed_milestone": "EA-000002-000012 concluída: arquitetura pública do Observatório formalizada no Gerador 1.15 e implantada/verificada em PRJ-000003 e PRJ-000004.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -92,14 +86,14 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Auditar e publicar a nova estrutura nos dois projetos piloto; sincronizar perfis e fechar.",
+  "next_logical_step": "Modo operacional: Observatórios públicos organizam temas do estado atual do conhecimento, usam data de atualização e mantêm versionamento técnico somente na governança interna.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-22",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
-  "current_strategy_code": "EA-000002-000012",
-  "current_strategy_name": "Arquitetura pública do Observatório",
+  "current_strategy_code": null,
+  "current_strategy_name": null,
   "identification_standard": {
     "file": "IDENTIFICATION_STANDARD.md",
     "version": "1.0",
@@ -108,6 +102,6 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000011",
+  "last_concluded_strategy_code": "EA-000002-000012",
   "current_strategy": null
 }

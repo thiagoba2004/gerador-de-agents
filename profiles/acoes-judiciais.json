@@ -134,7 +134,7 @@
   "generator_strategy_code": "EA-000002-000006",
   "updated_at": "2026-09-22",
   "audit_ref": "audits/rota-a-piloto-prj-000003-prj-000004-2026-09-20.md",
-  "site_status": "ESTADOS_EDITORIAIS_INTERNOS_REMOVIDOS_DA_UI_PUBLICA",
+  "site_status": "OBSERVATORIO_PUBLICO_ESTRUTURADO_E_VERIFICADO",
   "contact_protocol": {
     "status": "E2E_VERIFICADO",
     "institutional_email": "acoesjudiciais2026@gmail.com",
@@ -251,7 +251,7 @@
       "deployment_run_id": 35753373991
     },
     "observatory_public_structure": {
-      "status": "EM_PROPAGACAO",
+      "status": "IMPLEMENTADO_E_VERIFICADO",
       "public_index_unit": "tema",
       "public_date_label": "Atualizado em DD/MM/AAAA",
       "technical_version_public": false,
@@ -267,7 +267,9 @@
         "Jurisprudência relevante",
         "Doutrina e posições institucionais"
       ],
-      "implementation_strategy_ref": "thiagoba2004/acoes-judiciais:EA-000003-000027"
+      "implementation_strategy_ref": "thiagoba2004/acoes-judiciais:EA-000003-000027",
+      "audit_ref": "thiagoba2004/acoes-judiciais:research/EA-000003-000027/auditoria-observatorio-publico-2026-09-22.md",
+      "deployment_run_id": 35756498839
     }
   }
 }
