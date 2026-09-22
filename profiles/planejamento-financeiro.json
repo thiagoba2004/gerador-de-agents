@@ -257,6 +257,25 @@
       "implementation_strategy_ref": "thiagoba2004/planejamento-financeiro:EA-000004-000041",
       "audit_ref": "thiagoba2004/planejamento-financeiro:research/EA-000004-000041/auditoria-estados-internos-site-publico-2026-09-22.md",
       "deployment_run_id": 35753271968
+    },
+    "observatory_public_structure": {
+      "status": "EM_PROPAGACAO",
+      "public_index_unit": "tema",
+      "public_date_label": "Atualizado em DD/MM/AAAA",
+      "technical_version_public": false,
+      "base_sections": [
+        "Em síntese",
+        "O que mudou desde a última atualização",
+        "Questões em aberto",
+        "Fontes principais",
+        "Conteúdos relacionados"
+      ],
+      "domain_sections": [
+        "Evidências e premissas atuais",
+        "Implicações para o planejamento",
+        "Mapa de interdependências"
+      ],
+      "implementation_strategy_ref": "thiagoba2004/planejamento-financeiro:EA-000004-000042"
     }
   }
 }

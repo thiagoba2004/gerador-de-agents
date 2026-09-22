@@ -58,7 +58,7 @@ Se não houver resposta concreta, não criar.
 15. Quando o projeto utilizar **Notícias, Artigos e/ou Observatório**, todo conteúdo publicável deve possuir uma função editorial primária identificável, ainda que seja cruzado por tags e links para outras áreas.
 16. **Notícia:** registrar data do fato quando conhecida, data de publicação, fontes recuperáveis e distinção entre fato verificado, alegação e impacto ainda incerto. Cadência de busca não cria obrigação de publicar conteúdo sem materialidade.
 17. **Artigo:** distinguir fatos, marco normativo/técnico, evidências, inferências, objeções e posição autoral/editorial. O artigo deve indicar suas fontes e não se apresentar como simples notícia.
-18. **Observatório:** expor escopo, data de corte/atualização, método de coleta/sistematização quando material, estado das conclusões e mudanças relevantes entre versões.
+18. **Observatório:** expor escopo, data pública de atualização, conclusões, mudanças já analisadas, questões em aberto, fontes e relações com conteúdos estáveis. Versionamento técnico e pipeline de pesquisa permanecem internos, salvo utilidade pública comprovada.
 19. Uma mesma informação pode alimentar as três camadas, mas não deve gerar três textos duplicados. Preferir referência cruzada, atualização da página estável ou produto derivado com função genuinamente diferente.
 20. Arquivar ou atualizar conteúdo perecível sem quebrar a proveniência. Notícias históricas podem permanecer como registro; sínteses e observatórios devem indicar quando uma conclusão foi superada ou revista.
 
@@ -126,3 +126,15 @@ O módulo `publication` governa artefatos e estados de publicação. Ele **não 
 - O Observatório público pode publicar sínteses, conclusões, lacunas e mudanças analisadas, mas não a fila de sinais internos, gatilhos ou itens aguardando maturação.
 - “Critério editorial”, “Em monitoramento”, “Próximos gatilhos” e rótulos equivalentes devem permanecer nos documentos internos quando representarem governança e não conteúdo substantivo para o leitor.
 - O gate de publicação inclui busca por vazamento de estados editoriais internos.
+
+
+## Estrutura pública do Observatório
+
+- O índice organiza **temas**, não versões técnicas.
+- Cada tema público exibe **Atualizado em DD/MM/AAAA**.
+- Identificadores como `Snapshot 0.1` ou `v0.1` são internos por padrão.
+- O detalhe temático organiza síntese, conhecimento específico do domínio, mudanças analisadas, questões em aberto, fontes principais e conteúdos relacionados.
+- Projetos jurídicos podem estruturar legislação, jurisprudência e doutrina/posições institucionais.
+- Projetos financeiros/formativos podem estruturar premissas/evidências, implicações e interdependências.
+- “Questões em aberto” é conteúdo público quando descreve uma lacuna substantiva já analisada; monitoramento e gatilhos continuam internos.
+- O gate de publicação verifica data de atualização, retorno ao índice, links para fontes/conteúdos relacionados e ausência de versionamento técnico sem função pública.

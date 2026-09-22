@@ -105,11 +105,36 @@ Regras:
 4. A página individual deve possuir URL própria, título/H1 próprio, metadados próprios e ligação de retorno ou contexto para a coleção.
 5. **Notícias:** índice cronológico ou temático; cada notícia publicada possui página própria.
 6. **Artigos:** índice/arquivo com título, tese/subtítulo ou resumo e metadados; cada artigo possui página própria.
-7. **Observatório:** índice de snapshots, relatórios, mapas ou unidades temáticas; cada unidade observacional possui página própria com versão/data de corte quando aplicável.
+7. **Observatório:** índice de temas ou unidades de conhecimento; cada unidade possui página própria. Na UI pública, preferir data de atualização e linguagem compreensível ao leitor; versões técnicas permanecem internas salvo utilidade pública comprovada.
 8. Uma seção com apenas um item pode já adotar o padrão para evitar migração estrutural futura.
 9. Páginas de coleção podem incorporar paginação, filtros ou agrupamentos somente quando o volume justificar; não criar complexidade antecipadamente.
 10. O Mapa do Site deve distinguir a seção editorial das páginas individuais materialmente relevantes, conforme a densidade do acervo.
 11. A auditoria deve verificar links título→detalhe, retorno/contexto detalhe→coleção, ausência de conteúdo integral duplicado no índice e inexistência de páginas órfãs.
+
+
+### 2.4. Arquitetura pública do Observatório
+
+O Observatório não é uma página de relatório nem uma exposição do pipeline de pesquisa. É uma camada pública para organizar **o estado atual do conhecimento** sobre temas já cobertos pelo Site.
+
+Regras:
+
+1. O índice público apresenta **temas do Observatório**, com título clicável, resumo e **Atualizado em DD/MM/AAAA**.
+2. Não expor identificadores técnicos como `Snapshot 0.1`, `v0.1`, número de build, estado de rascunho ou equivalente, salvo significado público comprovado.
+3. O detalhe temático deve permitir ao leitor responder: **o que sabemos, o que mudou, o que ainda está em aberto, quais fontes sustentam a síntese e onde aprofundar**.
+4. O conjunto de seções é adaptado ao domínio. Não copiar mecanicamente subtítulos de um projeto para outro.
+5. Estrutura-base recomendada:
+   - **Em síntese**;
+   - blocos de conhecimento específicos do domínio;
+   - **O que mudou desde a última atualização**;
+   - **Questões em aberto**;
+   - **Fontes principais**;
+   - **Conteúdos relacionados**;
+   - data clara de atualização.
+6. Para projetos jurídicos, quando aplicável: **Legislação vigente**, **Jurisprudência relevante**, **Doutrina e posições institucionais**.
+7. Para planejamento financeiro/formação profissional, quando aplicável: **Evidências e premissas atuais**, **Implicações para o planejamento**, **Mapa de interdependências**.
+8. “Questões em aberto” pode ser pública quando descreve lacuna substantiva real. Monitoramento, triagem, fila, gatilhos e versões de trabalho permanecem internos.
+9. A primeira publicação pode informar que não existe atualização pública anterior para comparação; não deve simular histórico inexistente.
+10. A auditoria deve verificar ausência de versionamento técnico na UI, presença de data de atualização, seções essenciais, fontes/conteúdos relacionados e retorno ao índice.
 
 ### 3. Página Início
 

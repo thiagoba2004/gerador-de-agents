@@ -73,6 +73,21 @@
       "title_is_primary_link": true,
       "metadata_policy": "data + tema/categoria quando útil",
       "summary_policy": "resumo curto ou subtítulo para information scent"
+    },
+    "observatory_public_structure": {
+      "status": "PENDENTE_DE_EVIDENCIA | PLANEJADO | IMPLEMENTADO_E_VERIFICADO",
+      "public_index_unit": "tema",
+      "public_date_label": "Atualizado em DD/MM/AAAA",
+      "technical_version_public": false,
+      "base_sections": [
+        "Em síntese",
+        "O que mudou desde a última atualização",
+        "Questões em aberto",
+        "Fontes principais",
+        "Conteúdos relacionados"
+      ],
+      "domain_sections": [],
+      "internal_versioning": "permitido somente na governança interna por padrão"
     }
   },
   "contact_protocol": {

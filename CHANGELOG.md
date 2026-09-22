@@ -2,6 +2,18 @@
 
 Todas as alterações materiais do núcleo universal e da infraestrutura do Gerador devem ser registradas aqui.
 
+## 1.15 — 22/09/2026 — Arquitetura pública do Observatório
+
+- Observatório passa a ser tratado como sistema público de organização do **estado atual do conhecimento**;
+- índice público organizado por temas, com título, resumo e **Atualizado em DD/MM/AAAA**;
+- identificadores técnicos como `Snapshot 0.1` ou `v0.1` ficam fora da UI por padrão;
+- cada tema deve explicitar síntese, mudanças já analisadas, questões em aberto, fontes e conteúdos relacionados;
+- blocos específicos variam por domínio: jurídico pode usar legislação/jurisprudência/doutrina; financeiro pode usar premissas/implicações/interdependências;
+- monitoramento e gatilhos continuam internos;
+- padrão propagado inicialmente a Ações Judiciais e Planejamento Financeiro;
+- estratégia: `EA-000002-000012`.
+
+
 ## 1.14 — 22/09/2026 — Estados editoriais internos fora do Site Público
 
 - monitoramento, triagem, critérios editoriais, gatilhos e pré-publicações passam a ser explicitamente internos;
