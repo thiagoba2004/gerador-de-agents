@@ -99,15 +99,15 @@ Padrão vigente:
 - política propagada aos projetos;
 - auditoria global registrada em `audits/json-policy-2026-09-20.md`;
 - 78 JSON redundantes removidos dos projetos auditados, preservando todos os JSON funcionais.
-## EA-000002-000008 — Padrão editorial de Atualidade, Análise e Observação para Sites — EM EXECUÇÃO
+## EA-000002-000008 — Padrão editorial de Atualidade, Análise e Observação para Sites — CONCLUÍDA
 
 Plano: `estrategia-padrao-atualidade-analise-observacao.md`.
 
 1. FASE 01/06 [F-000002-000008-001] — Diagnóstico e estado da arte — CONCLUÍDA.
 2. FASE 02/06 [F-000002-000008-002] — Modelo canônico das três funções editoriais — CONCLUÍDA.
-3. FASE 03/06 [F-000002-000008-003] — Propagação normativa no Gerador — PENDENTE.
-4. FASE 04/06 [F-000002-000008-004] — Sincronização dos perfis piloto — PENDENTE.
-5. FASE 05/06 [F-000002-000008-005] — Regras de composição do menu e mapa do site — PENDENTE.
-6. FASE 06/06 [F-000002-000008-006] — Auditoria cruzada e fechamento — PENDENTE.
+3. FASE 03/06 [F-000002-000008-003] — Propagação normativa no Gerador — CONCLUÍDA.
+4. FASE 04/06 [F-000002-000008-004] — Sincronização dos perfis piloto — CONCLUÍDA.
+5. FASE 05/06 [F-000002-000008-005] — Regras de composição do menu e mapa do site — CONCLUÍDA.
+6. FASE 06/06 [F-000002-000008-006] — Auditoria cruzada e fechamento — CONCLUÍDA.
 
-**Próximo passo lógico:** Fase 03/06 — materializar o padrão em `modules/web-site.md`, `modules/publication.md`, `modules/research.md`, `AGENTS.md` e templates, sem ainda alterar os Sites Públicos dos projetos-piloto.
+**Resultado:** Gerador 1.11 aprovado em 13/13 controles. Próxima execução pertence às estratégias locais dos PRJ-000003 e PRJ-000004.
