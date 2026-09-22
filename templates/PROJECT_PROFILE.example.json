@@ -39,6 +39,21 @@
     "site_map": "RODAPE | OUTRO",
     "visual_identity_ref": "SITE_STYLE_GUIDE.md"
   },
+  "editorial_architecture": {
+    "status": "PENDENTE_DE_EVIDENCIA | PLANEJADO | PUBLICADO | NAO_APLICAVEL",
+    "layers": {
+      "noticias": "PENDENTE | PLANEJADO | PUBLICADO | NAO_APLICAVEL",
+      "artigos": "PENDENTE | PLANEJADO | PUBLICADO | NAO_APLICAVEL",
+      "observatorio": "PENDENTE | PLANEJADO | PUBLICADO | NAO_APLICAVEL"
+    },
+    "navigation_mode": "TOP_LEVEL_SEPARATE | EDITORIAL_HUB | NESTED_CONTEXTUAL | NOT_APPLICABLE | A_DEFINIR",
+    "hub_label": "",
+    "scope_rule": "Por padrão, temas já cobertos pelo Site; expansão exige decisão explícita.",
+    "classification_rule": "Cada conteúdo possui função editorial primária, com referências cruzadas quando necessário.",
+    "news_scan_cadence": [],
+    "observatory_update_policy": "",
+    "architecture_ref": "SITE_ARCHITECTURE.md"
+  },
   "contact_protocol": {
     "status": "NAO_APLICAVEL | MIGRACAO_TECNICA_PENDENTE | BACKEND_CONFIGURADO | E2E_VERIFICADO",
     "institutional_email": "",
