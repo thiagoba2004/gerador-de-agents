@@ -144,6 +144,22 @@ Regras:
    - raio, sombra ou linguagem de contêineres, quando usados.
 5. Esses valores devem existir como design tokens ou equivalente reutilizável.
 
+### 5.1. Escala tipográfica responsiva e composição da Home
+
+1. A hierarquia tipográfica deve ser clara sem transformar títulos em elementos de escala de display por padrão.
+2. Para Sites informativos e formativos, adotar como referência inicial:
+   - corpo em torno de `1rem`;
+   - `h1` aproximadamente entre `1,5rem` e `2,0rem`;
+   - `h1` da Home aproximadamente entre `1,7rem` e `2,2rem`;
+   - `h2` aproximadamente entre `1,2rem` e `1,6rem`;
+   - `h3` próximo de `1,05rem–1,15rem`.
+3. Variações maiores exigem justificativa visual explícita no perfil do projeto; não usar `vw` sem limite superior seguro.
+4. No mobile, títulos devem permanecer apenas moderadamente maiores que o corpo e não podem dominar a viewport, cortar palavras ou induzir rolagem horizontal.
+5. A Home institucional deve empilhar seus blocos estruturais no mobile. Layouts lado a lado só podem permanecer quando comprovadamente couberem sem corte ou overflow.
+6. Testar, no mínimo, larguras de 360 px, 390 px e 412 px, além de uma largura desktop.
+7. Overflow horizontal geral é falha. Exceções deliberadas ficam restritas a componentes próprios de rolagem, como navegação horizontal e tabelas.
+8. Avisos contextuais não devem ser duplicados na Home quando já pertencem claramente a uma página temática e a duplicação prejudica concisão ou responsividade.
+
 ### 6. Responsividade e acessibilidade
 
 1. O Site deve funcionar em desktop e mobile.

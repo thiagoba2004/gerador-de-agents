@@ -3,18 +3,18 @@
   "project_name": "Gerador de Agents",
   "repository": "thiagoba2004/gerador-de-agents",
   "status": "OPERACIONAL",
-  "release_version": "1.12",
+  "release_version": "1.13",
   "kernel_version": "1.4",
   "current_strategy_id": "EA-000002-000010",
   "last_concluded_strategy_id": "EA-000002-000009",
   "current_phase": {
-    "phase_number": 1,
+    "phase_number": 3,
     "phase_total": 4,
-    "phase_code": "F-000002-000010-001",
-    "phase_name": "Formalização do problema e regra",
+    "phase_code": "F-000002-000010-003",
+    "phase_name": "Propagação e auditoria no projeto piloto",
     "status": "EM_EXECUCAO"
   },
-  "last_completed_milestone": "EA-000002-000010 aberta a partir de regressão visual comprovada no PRJ-000004.",
+  "last_completed_milestone": "EA-000002-000010 Fases 01-02 concluídas: regra e templates do Gerador 1.13 atualizados.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -92,7 +92,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Formalizar escala proporcional e gate de overflow; propagar ao PRJ-000004 e sincronizar perfil.",
+  "next_logical_step": "Concluir auditoria e deploy do PRJ-000004; sincronizar perfil como IMPLEMENTADO_E_VERIFICADO e fechar EA-000002-000010.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-22",
   "project_code": "PRJ-000002",

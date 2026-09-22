@@ -138,7 +138,7 @@
   "generator_strategy_code": "EA-000002-000006",
   "updated_at": "2026-09-22",
   "audit_ref": "audits/rota-a-piloto-prj-000003-prj-000004-2026-09-20.md",
-  "site_status": "PUBLICACOES_COLECAO_DETALHE_PUBLICADAS_E_AUDITADAS",
+  "site_status": "HOME_TIPOGRAFIA_RESPONSIVA_EM_PROPAGACAO",
   "contact_protocol": {
     "status": "E2E_VERIFICADO",
     "institutional_email": "planejamentofinanceiro2012@gmail.com",
@@ -164,7 +164,23 @@
       "Fontes",
       "Fale Conosco"
     ],
-    "visual_identity": "financeira/formativa exclusiva"
+    "visual_identity": "financeira/formativa exclusiva",
+    "typography_policy": {
+      "status": "IMPLEMENTADO_AGUARDA_AUDITORIA_E_DEPLOY",
+      "body_base": "1rem",
+      "h1_range": "1.55rem–1.90rem",
+      "home_h1_range": "1.75rem–2.10rem",
+      "h2_range": "1.25rem–1.50rem",
+      "h3": "1.08rem",
+      "mobile_h1": "1.60rem",
+      "mobile_home_h1": "1.75rem",
+      "mobile_test_widths_px": [
+        360,
+        390,
+        412
+      ],
+      "implementation_strategy_ref": "thiagoba2004/planejamento-financeiro:EA-000004-000040"
+    }
   },
   "artifact_policy": {
     "text_canonical": "Markdown",

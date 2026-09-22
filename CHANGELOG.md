@@ -2,6 +2,19 @@
 
 Todas as alterações materiais do núcleo universal e da infraestrutura do Gerador devem ser registradas aqui.
 
+## 1.13 — 22/09/2026 — Tipografia responsiva e Home sem overflow
+
+- instituída escala tipográfica moderada para Sites informativos/formativos;
+- títulos deixam de usar escala de display como padrão e passam a ter faixas proporcionais ao corpo;
+- `vw` sem teto seguro deixa de ser aceitável para headings;
+- Home deve empilhar blocos estruturais no mobile quando a composição lateral puder provocar corte;
+- overflow horizontal geral passa a bloquear conclusão;
+- teste responsivo mínimo: 360 px, 390 px e 412 px;
+- avisos contextuais redundantes devem permanecer na página temática quando sua duplicação comprometer a Home;
+- padrão validado inicialmente no PRJ-000004 — Planejamento Financeiro;
+- estratégia: `EA-000002-000010`.
+
+
 ## 1.12 — 22/09/2026 — Coleção → Detalhe em Publicações
 
 - páginas de Notícias, Artigos e Observatório passam a separar **índice/coleção** de **conteúdo individual**;

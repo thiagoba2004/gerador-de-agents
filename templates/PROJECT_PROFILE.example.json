@@ -37,7 +37,20 @@
     "home_mode": "INSTITUCIONAL_ENXUTA | OUTRO_APROVADO",
     "global_menu": [],
     "site_map": "RODAPE | OUTRO",
-    "visual_identity_ref": "SITE_STYLE_GUIDE.md"
+    "visual_identity_ref": "SITE_STYLE_GUIDE.md",
+    "typography_policy": {
+      "status": "PENDENTE_DE_EVIDENCIA | DEFINIDO | IMPLEMENTADO_E_VERIFICADO",
+      "body_base": "~1rem",
+      "h1_range": "~1.5rem–2.0rem",
+      "home_h1_range": "~1.7rem–2.2rem",
+      "h2_range": "~1.2rem–1.6rem",
+      "mobile_rule": "títulos moderados; sem overflow horizontal geral",
+      "mobile_test_widths_px": [
+        360,
+        390,
+        412
+      ]
+    }
   },
   "editorial_architecture": {
     "status": "PENDENTE_DE_EVIDENCIA | PLANEJADO | PUBLICADO | NAO_APLICAVEL",

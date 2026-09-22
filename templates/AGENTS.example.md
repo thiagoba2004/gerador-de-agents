@@ -140,6 +140,9 @@ Quando o módulo `web-site` estiver ativado, incluir expressamente:
 - Home institucional enxuta por padrão, sem catálogo dos Menus;
 - página **Mapa do Site** e link homônimo no rodapé de toda página pública;
 - identidade visual exclusiva, definida por design tokens;
+- escala tipográfica moderada: títulos apenas proporcionalmente maiores que o corpo, com limites responsivos e sem escala de display por padrão;
+- Home empilhada no mobile quando houver mais de um bloco estrutural; overflow horizontal geral é falha;
+- teste responsivo mínimo em 360 px, 390 px e 412 px;
 - responsividade e acessibilidade básica;
 - separação entre governança interna e camada pública;
 - gate de auditoria de navegação, rotas, mobile, links e identidade;

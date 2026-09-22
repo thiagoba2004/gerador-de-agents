@@ -111,3 +111,15 @@ Quando disponível, Git será a memória histórica preferencial. Estados como p
 **Regra de interface:** o título é o hiperlink principal. Metadados e resumo/subtítulo fornecem pistas suficientes sobre o conteúdo antes do clique. Evitar “Leia mais” como único link.
 
 **Consequência:** índices não acumulam textos integrais; Markdown e HTML seguem a mesma granularidade; Observatório organiza snapshots/relatórios/unidades temáticas como objetos individuais.
+
+
+## DEC-20260922-TYPOGRAPHY-RESPONSIVE — Hierarquia tipográfica moderada e Home responsiva
+
+**Data:** 22/09/2026  
+**Estado:** ACEITA
+
+**Decisão:** Sites informativos e formativos não usarão, por padrão, títulos em escala de display. A hierarquia deve ser perceptível, porém proporcional ao corpo. Layouts estruturais da Home devem empilhar no mobile quando a disposição lado a lado puder produzir corte ou overflow.
+
+**Gate:** overflow horizontal geral ou heading que domine desproporcionalmente a viewport bloqueia conclusão. Testes mínimos em 360 px, 390 px e 412 px.
+
+**Origem:** regressão visual comprovada no PRJ-000004, onde `h1` alcançava 5rem e o título da Home 6,5rem.
