@@ -62,6 +62,13 @@ Se não houver resposta concreta, não criar.
 19. Uma mesma informação pode alimentar as três camadas, mas não deve gerar três textos duplicados. Preferir referência cruzada, atualização da página estável ou produto derivado com função genuinamente diferente.
 20. Arquivar ou atualizar conteúdo perecível sem quebrar a proveniência. Notícias históricas podem permanecer como registro; sínteses e observatórios devem indicar quando uma conclusão foi superada ou revista.
 
+
+21. Quando Notícias, Artigos ou Observatório forem publicados em Site multipágina, aplicar o padrão **Coleção → Detalhe**: a página da seção funciona como índice/arquivo e o conteúdo integral vive em URL individual própria.
+22. Em páginas de coleção, o **título do item deve ser o hiperlink principal** para a página individual. Exibir metadados mínimos e resumo/subtítulo curto quando úteis para orientar a escolha.
+23. É vedado usar a página de índice como recipiente contínuo de múltiplas notícias, artigos ou relatórios integrais, salvo justificativa arquitetural expressa para conteúdo único e não cumulativo.
+24. A fonte Markdown canônica deve acompanhar a granularidade pública: índice/coleção possui Markdown próprio e cada conteúdo individual possui seu Markdown próprio.
+25. O gate de publicação deve testar coleção→detalhe, detalhe→coleção/contexto, URLs individuais e ausência de duplicação integral entre índice e detalhe.
+
 ## Estados específicos
 
 ```text

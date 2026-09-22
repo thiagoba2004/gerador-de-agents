@@ -99,3 +99,15 @@ Quando disponível, Git será a memória histórica preferencial. Estados como p
 **Pesquisa:** monitoramento periódico separa cadência de busca de gatilho de publicação; Observatórios adotam, quando material, horizon scanning e lógica de evidência viva.
 
 **Consequência:** perfis de projeto passam a registrar `editorial_architecture`, e o Mapa do Site deve expor as camadas públicas mesmo quando agrupadas sob hub.
+
+
+## DEC-20260922-COLLECTION-DETAIL — Separação entre coleção e conteúdo individual
+
+**Data:** 22/09/2026  
+**Estado:** ACEITA
+
+**Decisão:** Notícias, Artigos e Observatório públicos adotam, por padrão, arquitetura **Coleção → Detalhe**. A página da seção é um índice/arquivo para descoberta e comparação; cada conteúdo possui URL individual própria.
+
+**Regra de interface:** o título é o hiperlink principal. Metadados e resumo/subtítulo fornecem pistas suficientes sobre o conteúdo antes do clique. Evitar “Leia mais” como único link.
+
+**Consequência:** índices não acumulam textos integrais; Markdown e HTML seguem a mesma granularidade; Observatório organiza snapshots/relatórios/unidades temáticas como objetos individuais.

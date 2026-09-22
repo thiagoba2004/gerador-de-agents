@@ -52,7 +52,15 @@
     "classification_rule": "Cada conteúdo possui função editorial primária, com referências cruzadas quando necessário.",
     "news_scan_cadence": [],
     "observatory_update_policy": "",
-    "architecture_ref": "SITE_ARCHITECTURE.md"
+    "architecture_ref": "SITE_ARCHITECTURE.md",
+    "collection_detail_pattern": {
+      "status": "PENDENTE_DE_EVIDENCIA | PLANEJADO | IMPLEMENTADO | NAO_APLICAVEL",
+      "collection_pages": [],
+      "detail_route_pattern": "",
+      "title_is_primary_link": true,
+      "metadata_policy": "data + tema/categoria quando útil",
+      "summary_policy": "resumo curto ou subtítulo para information scent"
+    }
   },
   "contact_protocol": {
     "status": "NAO_APLICAVEL | MIGRACAO_TECNICA_PENDENTE | BACKEND_CONFIGURADO | E2E_VERIFICADO",

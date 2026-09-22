@@ -81,6 +81,36 @@ Aplicar os seguintes critérios antes de alterar o primeiro nível do menu:
 9. A arquitetura deve preservar as **áreas estáveis de conhecimento** como fontes de referência. Notícias, Artigos e Observatório são camadas transversais, não substitutos automáticos de dossiês, guias, conhecimentos, jurisprudência, ferramentas, fontes ou equivalentes.
 10. Conteúdo derivado deve privilegiar ligação bidirecional: notícia aponta para a página estável afetada; artigo referencia os conteúdos-base; observatório mantém mapa/síntese e aponta para evidências e produtos relacionados.
 
+
+
+### 2.3. Padrão canônico Coleção → Detalhe para Publicações
+
+Quando Notícias, Artigos e/ou Observatório possuírem mais de uma unidade publicável — ou quando a área tiver vocação de crescimento cumulativo — a arquitetura deve separar obrigatoriamente dois níveis:
+
+```text
+SEÇÃO EDITORIAL
+→ PÁGINA DE COLEÇÃO/ÍNDICE
+→ PÁGINA INDIVIDUAL DE DETALHE
+```
+
+Regras:
+
+1. **A página da seção não deve incorporar integralmente todos os conteúdos individuais.** Sua função principal é descoberta, comparação e navegação.
+2. Cada item da coleção deve apresentar, no mínimo:
+   - **título único e descritivo como hiperlink** para a página individual;
+   - data pertinente;
+   - tema/categoria quando útil;
+   - resumo curto ou subtítulo que ofereça informação suficiente para o visitante decidir se deseja abrir o conteúdo.
+3. Evitar links genéricos como “Leia mais” como único destino. O título do item deve ser clicável.
+4. A página individual deve possuir URL própria, título/H1 próprio, metadados próprios e ligação de retorno ou contexto para a coleção.
+5. **Notícias:** índice cronológico ou temático; cada notícia publicada possui página própria.
+6. **Artigos:** índice/arquivo com título, tese/subtítulo ou resumo e metadados; cada artigo possui página própria.
+7. **Observatório:** índice de snapshots, relatórios, mapas ou unidades temáticas; cada unidade observacional possui página própria com versão/data de corte quando aplicável.
+8. Uma seção com apenas um item pode já adotar o padrão para evitar migração estrutural futura.
+9. Páginas de coleção podem incorporar paginação, filtros ou agrupamentos somente quando o volume justificar; não criar complexidade antecipadamente.
+10. O Mapa do Site deve distinguir a seção editorial das páginas individuais materialmente relevantes, conforme a densidade do acervo.
+11. A auditoria deve verificar links título→detalhe, retorno/contexto detalhe→coleção, ausência de conteúdo integral duplicado no índice e inexistência de páginas órfãs.
+
 ### 3. Página Início
 
 1. A página **Início** é institucional e enxuta por padrão.

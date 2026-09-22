@@ -148,6 +148,7 @@ Quando o módulo `web-site` estiver ativado, incluir expressamente:
 - decisão explícita entre `TOP_LEVEL_SEPARATE`, `EDITORIAL_HUB`, `NESTED_CONTEXTUAL` e `NOT_APPLICABLE`;
 - regra de que as três funções não precisam ser três itens independentes do menu;
 - classificação editorial primária para evitar cópias redundantes entre as camadas.
+- padrão **Coleção → Detalhe** para Notícias, Artigos e Observatório: página de índice/arquivo separada das páginas individuais; títulos dos itens são hiperlinks descritivos acompanhados de metadados e resumo curto.
 
 Quando `research` estiver ativado junto com essas camadas, incluir também busca recorrente, horizon scanning, evidência viva, data de corte, critérios de relevância e distinção entre cadência de busca e gatilho de publicação. Quando `publication` estiver ativado, exigir metadados e transparência adequados ao tipo Notícias/Artigos/Observatório.
 

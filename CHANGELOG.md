@@ -2,6 +2,17 @@
 
 Todas as alterações materiais do núcleo universal e da infraestrutura do Gerador devem ser registradas aqui.
 
+## 1.12 — 22/09/2026 — Coleção → Detalhe em Publicações
+
+- páginas de Notícias, Artigos e Observatório passam a separar **índice/coleção** de **conteúdo individual**;
+- o título de cada item é o hiperlink principal para sua página própria;
+- índice deve oferecer metadados e resumo/subtítulo curto, sem reproduzir integralmente múltiplos conteúdos;
+- Observatório passa a tratar snapshots/relatórios/unidades temáticas como objetos individuais versionáveis;
+- Markdown canônico passa a acompanhar a mesma granularidade pública;
+- regra incorporada a `web-site`, `publication`, template de AGENTS e template de perfil;
+- estratégia: `EA-000002-000009`.
+
+
 ## 1.11 — 22/09/2026 — Arquitetura editorial transversal
 
 - instituídas as funções canônicas **Notícias**, **Artigos** e **Observatório** para Sites de conhecimento quando materialmente aplicáveis;
