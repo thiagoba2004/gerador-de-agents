@@ -5,8 +5,8 @@
   "project_ref": "thiagoba2004/classe-e-massas",
   "kernel_version_audited_against": "1.4",
   "kernel_version_applied": "1.4",
-  "agents_version_current": "2.2",
-  "agents_blob_sha_current": "7b6abfab8c0fac3ba99f8d652803f3200437b777",
+  "agents_version_current": "2.8",
+  "agents_blob_sha_current": "18654f8a6f46c2d690139bba430d110b14548ecd",
   "previous_agents_version": "1.8",
   "previous_agents_blob_sha": "0c0fc7bd17de1084728ed1f1f2c4aa61405d1a86",
   "migration_strategy_id": "STRAT-CEM-20260917-002",
@@ -156,7 +156,7 @@
   "migration_plan_ref": "governanca/estrategia-migracao-agents-kernel-1.2.md",
   "backfill_plan_ref": "governanca/estrategia-backfill-estrategias-autonomas.md",
   "next_governance_step": "Classificar apenas quando necessário os grupos ainda pendentes de evidência; não criar estratégias retroativas por suposição.",
-  "updated_at": "2026-09-20",
+  "updated_at": "2026-09-22",
   "post_migration_governance_updates": [
     {
       "date": "2026-09-18",
@@ -182,6 +182,12 @@
       "date": "2026-09-20",
       "change": "Revogada a triplicidade obrigatória Markdown + HTML + JSON; JSON/JSONL passa a ser condicional a uso estruturado real.",
       "generator_strategy_code": "EA-000002-000007"
+    },
+    {
+      "date": "2026-09-22",
+      "strategy_code": "EA-000001-000024",
+      "change": "AGENTS v2.8 substitui, no Classe e Massas, o menu móvel recolhível por faixa horizontal deslizante alinhada a AJ/PF e formaliza cards de destino único como hiperlinks integrais visualmente distintos.",
+      "generator_strategy_code": "EA-000002-000015"
     }
   ],
   "project_code": "PRJ-000001",
