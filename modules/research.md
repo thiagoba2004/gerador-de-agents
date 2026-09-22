@@ -25,6 +25,19 @@ Além do pacote universal, o projeto deve manter, conforme a complexidade:
 6. Quando fontes conflitarem, registrar a divergência em vez de escolher silenciosamente uma versão.
 7. Não reconstruir citações, números ou datas de memória se a fonte puder ser recuperada.
 
+### Pesquisa recorrente, horizon scanning e evidência viva
+
+Quando o projeto mantiver **Notícias** e/ou **Observatório**, aplicar adicionalmente:
+
+8. Definir universo temático: por padrão, monitorar assuntos já cobertos pelo Site; expansão para tema novo exige decisão explícita.
+9. Separar **cadência de busca** de **gatilho de publicação/atualização**. Fazer uma busca periódica não obriga a fabricar notícia ou revisão sem achado material.
+10. Para monitoramento recorrente, registrar quando aplicável: janela temporal, descritores, fontes prioritárias, data de corte, critérios de inclusão/relevância, duplicidades e lacunas.
+11. Em horizon scanning, trabalhar pelo menos com o ciclo: **detectar → filtrar → priorizar → avaliar → disseminar → acompanhar**.
+12. No Observatório, manter perguntas permanentes, taxonomia ou mapa de conhecimento suficiente para relacionar temas, atores, normas, dados, evidências, controvérsias e sinais.
+13. Quando conclusões forem atualizáveis, usar lógica de **evidência viva**: cadência predefinida ou gatilho de revisão, data da última busca, versão/data da síntese e registro do que mudou.
+14. Buscas semanais, mensais, trimestrais, semestrais e anuais podem coexistir, mas devem ter funções distintas e não repetir mecanicamente o mesmo produto. O perfil do projeto deve definir a cadência aplicável.
+15. Resultados negativos relevantes devem ser qualificados como **não localizados na busca datada**, nunca como prova absoluta de inexistência.
+
 ## Estados específicos
 
 ```text
