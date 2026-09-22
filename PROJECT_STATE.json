@@ -86,7 +86,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "PRJ-000003 — abrir ciclo corretivo autônomo para os 10 achados da EA-000003-000019 e, ao final, executar auditoria regressiva; nenhuma estratégia do Gerador permanece ativa.",
+  "next_logical_step": "Modo operacional. PRJ-000003 concluiu e reauditedou o ciclo corretivo A-01 a A-10 até EA-000003-000031; nenhum ciclo corretivo jurídico permanece pendente no registro agregado.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-22",
   "project_code": "PRJ-000002",
