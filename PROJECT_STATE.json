@@ -5,10 +5,16 @@
   "status": "OPERACIONAL",
   "release_version": "1.12",
   "kernel_version": "1.4",
-  "current_strategy_id": null,
+  "current_strategy_id": "EA-000002-000010",
   "last_concluded_strategy_id": "EA-000002-000009",
-  "current_phase": "NENHUMA — modo operacional",
-  "last_completed_milestone": "EA-000002-000009 concluída: padrão Coleção → Detalhe formalizado no Gerador 1.12 e implantado/verificado em PRJ-000003 e PRJ-000004.",
+  "current_phase": {
+    "phase_number": 1,
+    "phase_total": 4,
+    "phase_code": "F-000002-000010-001",
+    "phase_name": "Formalização do problema e regra",
+    "status": "EM_EXECUCAO"
+  },
+  "last_completed_milestone": "EA-000002-000010 aberta a partir de regressão visual comprovada no PRJ-000004.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -86,14 +92,14 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Modo operacional: toda nova área pública de Notícias, Artigos ou Observatório deve usar índice/coleção com títulos hiperlinkados e páginas individuais, salvo exceção arquitetural expressa.",
+  "next_logical_step": "Formalizar escala proporcional e gate de overflow; propagar ao PRJ-000004 e sincronizar perfil.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-22",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
-  "current_strategy_code": null,
-  "current_strategy_name": null,
+  "current_strategy_code": "EA-000002-000010",
+  "current_strategy_name": "Escala tipográfica e composição responsiva de Home",
   "identification_standard": {
     "file": "IDENTIFICATION_STANDARD.md",
     "version": "1.0",
