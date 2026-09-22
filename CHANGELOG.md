@@ -2,6 +2,18 @@
 
 Todas as alterações materiais do núcleo universal e da infraestrutura do Gerador devem ser registradas aqui.
 
+## 1.11 — 22/09/2026 — Arquitetura editorial transversal
+
+- instituídas as funções canônicas **Notícias**, **Artigos** e **Observatório** para Sites de conhecimento quando materialmente aplicáveis;
+- definida a separação funcional entre atualização factual, análise autoral e inteligência/pesquisa cumulativa;
+- criados quatro modos de composição: `TOP_LEVEL_SEPARATE`, `EDITORIAL_HUB`, `NESTED_CONTEXTUAL` e `NOT_APPLICABLE`;
+- `EDITORIAL_HUB` passa a ser hipótese preferencial a testar em Sites já densos, sem impor rótulo automático ao hub;
+- módulo `research` passa a prever busca recorrente, horizon scanning e evidência viva;
+- módulo `publication` passa a exigir função editorial primária e regras específicas por tipo;
+- template de perfil passa a registrar `editorial_architecture`;
+- perfis de Ações Judiciais e Planejamento Financeiro sincronizados com suas arquiteturas públicas vigentes e com as novas camadas planejadas;
+- estratégia: `EA-000002-000008`.
+
 ## 1.10 — 20/09/2026 — JSON condicional
 
 - revogada a regra de triplicidade editorial obrigatória `.md + .html + .json`;
