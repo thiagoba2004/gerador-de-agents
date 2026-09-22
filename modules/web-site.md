@@ -66,6 +66,21 @@ NOT_APPLICABLE       = função justificada como não aplicável ao projeto
 
 A escolha deve considerar encontrabilidade, clareza de rótulo, estabilidade transversal, densidade do menu, mobile, expectativa do visitante e sobreposição com áreas já existentes. É proibido escolher um modo apenas para reproduzir a estrutura interna do repositório.
 
+### 2.2. Gate de composição da navegação editorial
+
+Aplicar os seguintes critérios antes de alterar o primeiro nível do menu:
+
+1. **Usar `TOP_LEVEL_SEPARATE`** somente quando Notícias, Artigos e Observatório forem, individualmente, destinos frequentes e prioritários para o visitante e a inclusão das três opções não degradar a leitura do menu em desktop ou mobile.
+2. **Preferir `EDITORIAL_HUB`** em Sites de conhecimento já densos, quando as três funções forem transversais a várias áreas temáticas e sua promoção individual tornar o primeiro nível excessivamente fragmentado.
+3. **Usar `NESTED_CONTEXTUAL`** quando as funções editoriais fizerem sentido apenas dentro de uma única área estável e não tiverem autonomia transversal real.
+4. **Usar `NOT_APPLICABLE`** somente com justificativa persistida; ausência histórica da seção não constitui justificativa suficiente.
+5. Um hub editorial deve possuir página central útil, com explicação breve das três funções e acesso inequívoco às subáreas; não pode ser um dropdown sem destino ou um contêiner vazio.
+6. O rótulo do hub deve ser compreensível ao visitante e testado contra os demais nomes do menu. Não adotar automaticamente “Editorial”, “Conteúdo”, “Publicações” ou qualquer outro rótulo sem confronto com o vocabulário do projeto.
+7. Independentemente do modo escolhido, o **Mapa do Site** deve expor explicitamente Notícias, Artigos e Observatório quando forem públicos, inclusive quando não estiverem no primeiro nível.
+8. Mudança de composição exige auditoria de todas as páginas públicas para garantir ordem uniforme, `aria-current`, rotas, breadcrumbs quando usados e ausência de links órfãos.
+9. A arquitetura deve preservar as **áreas estáveis de conhecimento** como fontes de referência. Notícias, Artigos e Observatório são camadas transversais, não substitutos automáticos de dossiês, guias, conhecimentos, jurisprudência, ferramentas, fontes ou equivalentes.
+10. Conteúdo derivado deve privilegiar ligação bidirecional: notícia aponta para a página estável afetada; artigo referencia os conteúdos-base; observatório mantém mapa/síntese e aponta para evidências e produtos relacionados.
+
 ### 3. Página Início
 
 1. A página **Início** é institucional e enxuta por padrão.
