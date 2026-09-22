@@ -238,6 +238,19 @@ A governança pode permanecer no repositório público. A regra é sobre **inter
 8. Modelos reutilizáveis seguem adicionalmente o módulo `publication`.
 9. Formulários e protocolos seguem adicionalmente o módulo `contact-protocol`.
 
+### 8.1. Padrão transversal do botão ENVIAR MENSAGEM
+
+Quando um Site possuir formulário público de contato, o botão real **ENVIAR MENSAGEM** deve seguir um padrão geométrico comum entre os projetos:
+
+1. usar a classe adicional `submit-button`;
+2. ser sempre **oval/pílula**, com `border-radius:999px`;
+3. continuar sendo `<button type="submit">`;
+4. preservar a **cor primária própria de cada Projeto**;
+5. não transformar todos os demais botões em pílulas por consequência;
+6. a auditoria visual deve verificar explicitamente que o botão de envio não voltou a ficar retangular.
+
+A regra compartilhada é de forma e semântica, não de paleta.
+
 ## Estados específicos
 
 ```text
