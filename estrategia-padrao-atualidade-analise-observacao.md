@@ -27,7 +27,7 @@
 **Gate:** menus e funções dos perfis reproduzem o estado canônico dos projetos.
 
 ### FASE 05/06 [F-000002-000008-005] — Regras de composição do menu e mapa do site
-**Estado:** PENDENTE  
+**Estado:** CONCLUÍDA  
 **Objetivo:** definir quando as três funções aparecem como itens de primeiro nível, quando são agrupadas sob um hub editorial e como são refletidas no Mapa do Site.  
 **Gate:** decisão baseada em necessidade do visitante, estabilidade transversal, clareza de rótulos e custo de navegação.
 
