@@ -17,7 +17,7 @@
 **Gate:** nenhuma função pode ser mera duplicação nominal de outra área do Site.
 
 ### FASE 03/06 [F-000002-000008-003] — Propagação normativa no Gerador
-**Estado:** PENDENTE  
+**Estado:** CONCLUÍDA  
 **Objetivo:** atualizar modules/web-site.md, modules/publication.md, modules/research.md, AGENTS.md e templates para incorporar o padrão.  
 **Gate:** regra reutilizável explícita, sem impor automaticamente três itens de primeiro nível a todo Site.
 
