@@ -22,7 +22,7 @@
 **Gate:** regra reutilizável explícita, sem impor automaticamente três itens de primeiro nível a todo Site.
 
 ### FASE 04/06 [F-000002-000008-004] — Sincronização dos perfis piloto
-**Estado:** PENDENTE  
+**Estado:** CONCLUÍDA  
 **Objetivo:** corrigir drift entre profiles/acoes-judiciais.json, profiles/planejamento-financeiro.json e as arquiteturas públicas efetivamente vigentes.  
 **Gate:** menus e funções dos perfis reproduzem o estado canônico dos projetos.
 
