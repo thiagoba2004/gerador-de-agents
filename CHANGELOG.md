@@ -1,3 +1,11 @@
+## 1.17 — 22/09/2026
+
+- Admite explicitamente `HORIZONTAL_SCROLL` e `COLLAPSIBLE_DISCLOSURE` como padrões válidos de navegação mobile, por decisão arquitetural documentada.
+- Preserva barra horizontal rolável em famílias de Sites que já adotam esse paradigma, salvo decisão rastreável em contrário.
+- Formaliza cards de destino único como hiperlinks integrais visualmente distinguíveis de cards informativos.
+- Reserva botões a ações reais de interface, evitando CTAs internos redundantes para simples navegação.
+- Sincroniza o aprendizado da EA-000001-000024 do Classe e Massas.
+
 ## 1.16 — 22/09/2026
 
 - Formaliza navegação dinâmica responsiva no módulo `web-site`.
