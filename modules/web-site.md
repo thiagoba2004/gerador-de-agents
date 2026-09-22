@@ -36,6 +36,36 @@ Quando ativado, manter, conforme aplicável:
 5. Quando o módulo `contact-protocol` estiver ativo, **Fale Conosco** integra o menu global.
 6. **Mapa do Site não substitui o menu global**.
 
+### 2.1. Camadas editoriais transversais: Notícias, Artigos e Observatório
+
+Sites com vocação de conhecimento, consulta, formação, pesquisa, análise ou atualização temática devem avaliar explicitamente três funções editoriais transversais:
+
+1. **Notícias** — camada temporal e factual. Responde prioritariamente **“o que mudou?”** e acompanha fatos, atos, decisões, normas, dados, eventos e desenvolvimentos relevantes aos temas já cobertos pelo Site.
+2. **Artigos** — camada autoral e argumentativa. Responde prioritariamente **“como interpretar, confrontar ou problematizar?”** e desenvolve teses, raciocínio crítico, novas perspectivas e implicações, distinguindo fatos, fontes, inferências e posição editorial/autoral.
+3. **Observatório** — camada cumulativa de inteligência e conhecimento. Responde prioritariamente **“o que sabemos, como se conecta, o que está mudando e onde estão as lacunas?”** e sistematiza pesquisa, sinais, tendências, relações, lacunas, linhas do tempo e sínteses atualizáveis.
+
+Essas três funções são distintas. Uma notícia não deve ser artificialmente alongada para funcionar como artigo; um artigo não deve se apresentar como notícia neutra; e o Observatório não deve virar depósito cronológico de notícias ou mera lista de fontes.
+
+A avaliação das três camadas é obrigatória quando materialmente pertinente, mas **a presença conceitual não implica três itens independentes no menu global**. O perfil e o `SITE_ARCHITECTURE.md` devem registrar explicitamente:
+
+- quais camadas são aplicáveis;
+- quais estão públicas, planejadas ou não aplicáveis;
+- o modo de navegação escolhido;
+- o rótulo de eventual hub editorial;
+- as rotas e relações com áreas temáticas estáveis;
+- a regra de classificação primária de cada conteúdo.
+
+Modos canônicos de composição:
+
+```text
+TOP_LEVEL_SEPARATE   = Notícias, Artigos e Observatório como itens independentes
+EDITORIAL_HUB        = um item de primeiro nível agrega as três subáreas
+NESTED_CONTEXTUAL    = camadas acessíveis dentro de área temática/hub já existente
+NOT_APPLICABLE       = função justificada como não aplicável ao projeto
+```
+
+A escolha deve considerar encontrabilidade, clareza de rótulo, estabilidade transversal, densidade do menu, mobile, expectativa do visitante e sobreposição com áreas já existentes. É proibido escolher um modo apenas para reproduzir a estrutura interna do repositório.
+
 ### 3. Página Início
 
 1. A página **Início** é institucional e enxuta por padrão.
