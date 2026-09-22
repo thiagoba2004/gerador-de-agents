@@ -144,6 +144,8 @@ Quando o módulo `web-site` estiver ativado, incluir expressamente:
 - Home empilhada no mobile quando houver mais de um bloco estrutural; overflow horizontal geral é falha;
 - teste responsivo mínimo em 360 px, 390 px e 412 px;
 - responsividade e acessibilidade básica;
+- em menus densos no mobile, navegação dinâmica/recolhível em vez de mero empilhamento permanente; botão com `aria-controls`/`aria-expanded`, fechamento por Escape e fallback sem JavaScript;
+- hubs editoriais podem usar disclosure/dropdown para subáreas, preservando destino próprio do hub e acesso por teclado;
 - separação entre governança interna e camada pública;
 - estados editoriais internos (monitoramento, triagem, pendência, critérios, gatilhos e pré-publicações) não aparecem no Site Público; coleções públicas listam apenas itens efetivamente publicados;
 - gate de auditoria de navegação, rotas, mobile, links e identidade;
