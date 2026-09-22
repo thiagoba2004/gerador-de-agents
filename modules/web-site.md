@@ -189,11 +189,11 @@ Regras:
 
 1. O Site deve funcionar em desktop e mobile.
 2. No mobile, menu global não pode desaparecer sem alternativa.
-3. Em menus densos, **não considerar “dinâmico” um menu que apenas empilha permanentemente todos os itens em múltiplas linhas**. Quando a densidade justificar, preferir navegação recolhível/disclosure.
-4. Quando houver menu recolhível, o controle deve usar botão semântico, `aria-controls` e `aria-expanded`; a tecla Escape deve fechar a navegação quando aberta.
-5. Hubs com subáreas, como **Publicações**, podem usar disclosure/dropdown. O hub deve continuar acessível por destino próprio, e as subáreas devem permanecer alcançáveis por teclado.
-6. O comportamento deve seguir **progressive enhancement**: sem JavaScript, a navegação essencial permanece visível ou alcançável.
-7. Linha horizontal rolável só deve ser usada quando houver justificativa explícita de projeto; não é solução padrão para esconder excesso de itens.
+3. Menus densos não devem ser simplesmente empilhados em múltiplas linhas. A arquitetura deve escolher explicitamente entre, pelo menos, `HORIZONTAL_SCROLL` e `COLLAPSIBLE_DISCLOSURE`.
+4. `HORIZONTAL_SCROLL` é válido quando a faixa de navegação é deliberadamente rolável, preserva itens em uma linha, mantém o item atual identificável e confina o overflow ao componente. Quando uma família de Sites já adota esse paradigma de modo consistente, ele deve ser preservado salvo decisão arquitetural rastreável em contrário.
+5. `COLLAPSIBLE_DISCLOSURE` é válido quando a densidade, hierarquia ou profundidade do menu justificarem recolhimento. O controle deve usar botão semântico, `aria-controls` e `aria-expanded`; a tecla Escape deve fechar a navegação quando aberta.
+6. Hubs com subáreas, como **Publicações**, podem ser um destino simples de primeiro nível ou usar disclosure/dropdown. A escolha deve ser documentada; o hub deve continuar acessível por URL própria.
+7. O comportamento deve seguir **progressive enhancement** quando depender de JavaScript: sem JavaScript, a navegação essencial permanece visível ou alcançável.
 8. O item atual deve permanecer identificável.
 9. Alvos interativos devem buscar dimensão mínima próxima de 44 px.
 10. Deve haver foco visível por teclado.
@@ -201,7 +201,7 @@ Regras:
 12. Evitar overflow horizontal da página; exceções controladas podem existir para componentes deliberadamente roláveis e tabelas.
 13. Contraste deve permanecer legível; não depender apenas de cor para indicar estado.
 14. Respeitar preferências de redução de movimento quando houver animações relevantes.
-15. O gate mobile deve verificar, no mínimo: estado fechado/aberto, submenu quando houver, Escape, clique/toque, foco por teclado e fallback sem JavaScript.
+15. O gate mobile deve verificar o padrão escolhido: em `HORIZONTAL_SCROLL`, rolagem tátil, ausência de quebra e item atual; em `COLLAPSIBLE_DISCLOSURE`, estado fechado/aberto, Escape, clique/toque, foco e fallback.
 
 ### 7. Separação entre governança interna e camada pública
 
@@ -231,8 +231,12 @@ A governança pode permanecer no repositório público. A regra é sobre **inter
 1. Não criar cards, menus, caixas ou seções apenas para “preencher” a página.
 2. Componentes devem ter função informacional ou operacional real.
 3. Conteúdo de navegação não deve competir visualmente com conteúdo principal.
-4. Modelos reutilizáveis seguem adicionalmente o módulo `publication`.
-5. Formulários e protocolos seguem adicionalmente o módulo `contact-protocol`.
+4. Quando um card representar **um único destino**, preferir que o próprio card seja o hiperlink de bloco inteiro; ele deve ser visualmente distinguível de card apenas informativo por superfície, borda ou outro contraste perceptível.
+5. Não usar botão interno do tipo “LER”, “ABRIR” ou equivalente como única pista de navegação quando o card inteiro puder ser o link. Botões devem representar ações reais de interface, como copiar, enviar, confirmar, expandir ou executar comando.
+6. Cards com múltiplos destinos ou ações não devem ser convertidos em um único link; manter estrutura informativa e links secundários semanticamente claros.
+7. Hover e foco devem reforçar a affordance do card-link; cor não deve ser a única indicação de estado.
+8. Modelos reutilizáveis seguem adicionalmente o módulo `publication`.
+9. Formulários e protocolos seguem adicionalmente o módulo `contact-protocol`.
 
 ## Estados específicos
 
