@@ -32,7 +32,7 @@
 **Gate:** decisão baseada em necessidade do visitante, estabilidade transversal, clareza de rótulos e custo de navegação.
 
 ### FASE 06/06 [F-000002-000008-006] — Auditoria cruzada e fechamento
-**Estado:** PENDENTE  
+**Estado:** CONCLUÍDA  
 **Objetivo:** testar o padrão nos PRJ-000003 e PRJ-000004, registrar exceções e fechar a versão do Gerador.  
 **Gate:** arquitetura coerente nos dois pilotos, sem regressão de rotas, menus, mobile, conteúdo ou governança.
 
