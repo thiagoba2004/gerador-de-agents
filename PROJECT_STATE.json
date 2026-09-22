@@ -2,13 +2,13 @@
   "project_id": "GDA",
   "project_name": "Gerador de Agents",
   "repository": "thiagoba2004/gerador-de-agents",
-  "status": "OPERACIONAL",
+  "status": "EM_EXECUCAO",
   "release_version": "1.10",
   "kernel_version": "1.4",
-  "current_strategy_id": null,
+  "current_strategy_id": "EA-000002-000008",
   "last_concluded_strategy_id": "EA-000002-000007",
-  "current_phase": "NENHUMA — modo operacional",
-  "last_completed_milestone": "Auditoria transversal de títulos visíveis concluída em 21/09/2026: 97 HTMLs examinados nos quatro Projetos canônicos; zero <title> técnicos ausentes; três páginas do Planejamento Financeiro sem <h1> editorial; dez documentos do Classe e Massas com múltiplos <h1>.",
+  "current_phase": "FASE 03/06 [F-000002-000008-003] — Propagação normativa no Gerador — PENDENTE",
+  "last_completed_milestone": "EA-000002-000008: Fases 01 e 02 concluídas em 22/09/2026; estado da arte documentado e funções Notícias, Artigos e Observatório diferenciadas.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -89,14 +89,14 @@
     "PRJ-000003: migrar Fale Conosco de FormSubmit para Forminit + EmailJS e verificar E2E.",
     "PRJ-000004: migrar Fale Conosco de FormSubmit para Forminit + EmailJS e verificar E2E."
   ],
-  "next_logical_step": "Se autorizado, corrigir no PRJ-000004 as três páginas sem <h1> editorial e, em execução separada no PRJ-000001, normalizar os dez documentos com múltiplos <h1>.",
+  "next_logical_step": "Executar FASE 03/06 da EA-000002-000008: propagar o padrão editorial nos módulos web-site, publication e research, no AGENTS e nos templates; depois sincronizar os perfis piloto.",
   "chat_only_work_is_not_persisted": true,
-  "updated_at": "2026-09-21",
+  "updated_at": "2026-09-22",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
-  "current_strategy_code": null,
-  "current_strategy_name": null,
+  "current_strategy_code": "EA-000002-000008",
+  "current_strategy_name": "Padrão editorial de Atualidade, Análise e Observação para Sites",
   "identification_standard": {
     "file": "IDENTIFICATION_STANDARD.md",
     "version": "1.0",
@@ -106,5 +106,13 @@
     "status": "IMPLANTADO_E_VERIFICADO"
   },
   "last_concluded_strategy_code": "EA-000002-000007",
-  "current_strategy": null
+  "current_strategy": {
+    "strategy_code": "EA-000002-000008",
+    "strategy_name": "Padrão editorial de Atualidade, Análise e Observação para Sites",
+    "phase_number": 3,
+    "phase_total": 6,
+    "phase_code": "F-000002-000008-003",
+    "phase_name": "Propagação normativa no Gerador",
+    "phase_status": "PENDENTE"
+  }
 }
