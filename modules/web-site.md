@@ -188,14 +188,20 @@ Regras:
 ### 6. Responsividade e acessibilidade
 
 1. O Site deve funcionar em desktop e mobile.
-2. No mobile, menu global não pode desaparecer sem alternativa; pode usar linha horizontal rolável quando esse for o padrão do projeto.
-3. O item atual deve permanecer identificável.
-4. Alvos interativos devem buscar dimensão mínima próxima de 44 px.
-5. Deve haver foco visível por teclado.
-6. Usar HTML semântico para `header`, `nav`, `main`, `footer`, headings e formulários.
-7. Evitar overflow horizontal da página; exceções controladas podem existir para menu rolável e tabelas.
-8. Contraste deve permanecer legível; não depender apenas de cor para indicar estado.
-9. Respeitar preferências de redução de movimento quando houver animações relevantes.
+2. No mobile, menu global não pode desaparecer sem alternativa.
+3. Em menus densos, **não considerar “dinâmico” um menu que apenas empilha permanentemente todos os itens em múltiplas linhas**. Quando a densidade justificar, preferir navegação recolhível/disclosure.
+4. Quando houver menu recolhível, o controle deve usar botão semântico, `aria-controls` e `aria-expanded`; a tecla Escape deve fechar a navegação quando aberta.
+5. Hubs com subáreas, como **Publicações**, podem usar disclosure/dropdown. O hub deve continuar acessível por destino próprio, e as subáreas devem permanecer alcançáveis por teclado.
+6. O comportamento deve seguir **progressive enhancement**: sem JavaScript, a navegação essencial permanece visível ou alcançável.
+7. Linha horizontal rolável só deve ser usada quando houver justificativa explícita de projeto; não é solução padrão para esconder excesso de itens.
+8. O item atual deve permanecer identificável.
+9. Alvos interativos devem buscar dimensão mínima próxima de 44 px.
+10. Deve haver foco visível por teclado.
+11. Usar HTML semântico para `header`, `nav`, `main`, `footer`, headings e formulários.
+12. Evitar overflow horizontal da página; exceções controladas podem existir para componentes deliberadamente roláveis e tabelas.
+13. Contraste deve permanecer legível; não depender apenas de cor para indicar estado.
+14. Respeitar preferências de redução de movimento quando houver animações relevantes.
+15. O gate mobile deve verificar, no mínimo: estado fechado/aberto, submenu quando houver, Escape, clique/toque, foco por teclado e fallback sem JavaScript.
 
 ### 7. Separação entre governança interna e camada pública
 
