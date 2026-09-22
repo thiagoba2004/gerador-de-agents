@@ -214,7 +214,14 @@ Quando o módulo `web-site` estiver `ATIVADO`, o Gerador deve materializar no `A
 7. páginas centrais com conteúdo real, sem placeholders;
 8. separação entre governança interna do repositório e interface pública;
 9. `SITE_ARCHITECTURE.md` e `SITE_STYLE_GUIDE.md`;
-10. gate de auditoria de rotas, menu, Mapa do Site, mobile, links, identidade e vazamento interno.
+10. gate de auditoria de rotas, menu, Mapa do Site, mobile, links, identidade e vazamento interno;
+11. avaliação explícita das camadas **Notícias, Artigos e Observatório** quando o Site tiver vocação de conhecimento, consulta, formação, pesquisa, análise ou atualização temática;
+12. distinção funcional obrigatória: Notícias = mudança factual/temporal; Artigos = análise autoral/argumentativa; Observatório = pesquisa cumulativa, visão sistêmica e sinais/lacunas;
+13. decisão explícita de composição da navegação: `TOP_LEVEL_SEPARATE`, `EDITORIAL_HUB`, `NESTED_CONTEXTUAL` ou `NOT_APPLICABLE`;
+14. regra de que a aplicabilidade das três camadas **não obriga** três itens independentes no menu global;
+15. prevenção de duplicação editorial por classificação primária de conteúdo e referências cruzadas.
+
+Quando `research` e/ou `publication` também estiverem ativos, o AGENTS do projeto-alvo deve propagar as regras complementares de monitoramento periódico, horizon scanning, evidência viva, distinção entre cadência de busca e gatilho de publicação e identificação do tipo editorial primário.
 
 É proibido tratar “Site” como sinônimo de uma homepage com cards e uma página longa.
 
