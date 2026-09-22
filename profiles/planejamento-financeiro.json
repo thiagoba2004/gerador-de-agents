@@ -138,7 +138,7 @@
   "generator_strategy_code": "EA-000002-000006",
   "updated_at": "2026-09-22",
   "audit_ref": "audits/rota-a-piloto-prj-000003-prj-000004-2026-09-20.md",
-  "site_status": "ARQUITETURA_EDITORIAL_PUBLICACOES_PUBLICADA_E_AUDITADA",
+  "site_status": "PUBLICACOES_COLECAO_DETALHE_PUBLICADAS_E_AUDITADAS",
   "contact_protocol": {
     "status": "E2E_VERIFICADO",
     "institutional_email": "planejamentofinanceiro2012@gmail.com",
@@ -217,6 +217,21 @@
       "/publicacoes/artigos/",
       "/publicacoes/observatorio/"
     ],
-    "implementation_audit_ref": "thiagoba2004/planejamento-financeiro:research/EA-000004-000035/auditoria-integracao-publicacoes-2026-09-22.md"
+    "implementation_audit_ref": "thiagoba2004/planejamento-financeiro:research/EA-000004-000035/auditoria-integracao-publicacoes-2026-09-22.md",
+    "collection_detail_pattern": {
+      "status": "IMPLEMENTADO_E_VERIFICADO",
+      "collection_pages": [
+        "/publicacoes/noticias/",
+        "/publicacoes/artigos/",
+        "/publicacoes/observatorio/"
+      ],
+      "detail_route_pattern": "/publicacoes/<camada>/<slug>.html",
+      "title_is_primary_link": true,
+      "metadata_policy": "data + tema/categoria quando útil",
+      "summary_policy": "resumo curto ou subtítulo para orientar a escolha",
+      "implementation_strategy_ref": "thiagoba2004/planejamento-financeiro:EA-000004-000039",
+      "audit_ref": "thiagoba2004/planejamento-financeiro:research/EA-000004-000039/auditoria-colecao-detalhe-2026-09-22.md",
+      "deployment_run_id": 35740393931
+    }
   }
 }
