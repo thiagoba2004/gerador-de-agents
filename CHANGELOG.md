@@ -1,3 +1,10 @@
+## 1.16 — 22/09/2026
+
+- Formaliza navegação dinâmica responsiva no módulo `web-site`.
+- Menu denso no mobile não pode ser considerado dinâmico por mero empilhamento permanente.
+- Introduz requisito de disclosure/recolhimento acessível, `aria-expanded`, Escape e progressive enhancement.
+- Sincroniza o aprendizado da EA-000001-000023 do Classe e Massas.
+
 # CHANGELOG — GERADOR DE AGENTS
 
 Todas as alterações materiais do núcleo universal e da infraestrutura do Gerador devem ser registradas aqui.
