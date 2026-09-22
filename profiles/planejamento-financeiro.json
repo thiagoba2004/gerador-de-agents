@@ -136,11 +136,11 @@
   "migration_status": "ROTA_A_IMPLANTADA_E_VERIFICADA",
   "local_strategy_log_ref": "STRATEGY_LOG.jsonl",
   "generator_strategy_code": "EA-000002-000006",
-  "updated_at": "2026-09-22T09:10:30-03:00",
+  "updated_at": "2026-09-22",
   "audit_ref": "audits/rota-a-piloto-prj-000003-prj-000004-2026-09-20.md",
-  "site_status": "PUBLICADO_COM_ARQUITETURA_VERIFICADA_CONTATO_EM_MIGRACAO",
+  "site_status": "ARQUITETURA_EDITORIAL_PUBLICACOES_PUBLICADA_E_AUDITADA",
   "contact_protocol": {
-    "status": "MIGRACAO_TECNICA_PENDENTE",
+    "status": "E2E_VERIFICADO",
     "institutional_email": "planejamentofinanceiro2012@gmail.com",
     "protocol_prefix": "PF",
     "reference_project": "Classe e Massas",
@@ -148,8 +148,8 @@
       "receipt": "Forminit",
       "email_confirmation": "EmailJS"
     },
-    "current_nonconforming_stack": "FormSubmit",
-    "rule": "Não declarar E2E_VERIFICADO antes da migração e do teste real."
+    "current_nonconforming_stack": null,
+    "rule": "Forminit recebe a submissão; EmailJS confirma o protocolo. Estado E2E verificado no projeto-alvo."
   },
   "site_architecture": {
     "home_mode": "INSTITUCIONAL_ENXUTA",
@@ -160,6 +160,7 @@
       "Conhecimentos",
       "Casos",
       "Ferramentas",
+      "Publicações",
       "Fontes",
       "Fale Conosco"
     ],
@@ -184,14 +185,14 @@
     ]
   },
   "editorial_architecture": {
-    "status": "PLANEJADO",
+    "status": "IMPLEMENTADO_E_VERIFICADO",
     "layers": {
-      "noticias": "PLANEJADO",
-      "artigos": "PLANEJADO",
-      "observatorio": "PLANEJADO"
+      "noticias": "PUBLICADO",
+      "artigos": "PUBLICADO",
+      "observatorio": "PUBLICADO"
     },
-    "navigation_mode": "A_DEFINIR",
-    "hub_label": "",
+    "navigation_mode": "EDITORIAL_HUB",
+    "hub_label": "Publicações",
     "scope_rule": "Por padrão, somente temas de planejamento financeiro e formação profissional já cobertos pelo Site; expansão exige decisão explícita.",
     "classification_rule": "Cada conteúdo possui função editorial primária; Notícias, Artigos e Observatório podem se referenciar sem duplicação textual.",
     "news_scan_cadence": [
@@ -209,6 +210,13 @@
       "EA-000004-000037",
       "EA-000004-000038"
     ],
-    "public_status": "NAO_IMPLEMENTADO"
+    "public_status": "IMPLEMENTADO_E_VERIFICADO",
+    "public_routes": [
+      "/publicacoes/",
+      "/publicacoes/noticias/",
+      "/publicacoes/artigos/",
+      "/publicacoes/observatorio/"
+    ],
+    "implementation_audit_ref": "thiagoba2004/planejamento-financeiro:research/EA-000004-000035/auditoria-integracao-publicacoes-2026-09-22.md"
   }
 }

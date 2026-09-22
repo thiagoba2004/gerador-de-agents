@@ -8,7 +8,7 @@
   "current_strategy_id": null,
   "last_concluded_strategy_id": "EA-000002-000008",
   "current_phase": "NENHUMA — modo operacional",
-  "last_completed_milestone": "EA-000002-000008 concluída em 22/09/2026: arquitetura editorial transversal Notícias/Artigos/Observatório implementada no Gerador 1.11 e auditada em 13/13 controles.",
+  "last_completed_milestone": "EA-000002-000008 concluída e propagação local comprovada em 22/09/2026: PRJ-000003 e PRJ-000004 implementaram EDITORIAL_HUB 'Publicações' com Notícias, Artigos e Observatório, auditoria sem falhas e deploy GitHub Pages com success.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -84,12 +84,9 @@
   "non_blocking_debts": [
     "Migração efetiva do Classe e Massas para a ordem vigente do kernel 1.2 deve ocorrer em execução específica no projeto-alvo.",
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
-    "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap.",
-    "Ativar/configurar GitHub Pages dos PRJ-000003 e PRJ-000004 por mecanismo com acesso às configurações Pages; até lá o estado é ESTRUTURADO_NAO_PUBLICADO.",
-    "PRJ-000003: migrar Fale Conosco de FormSubmit para Forminit + EmailJS e verificar E2E.",
-    "PRJ-000004: migrar Fale Conosco de FormSubmit para Forminit + EmailJS e verificar E2E."
+    "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Executar as estratégias locais EA-000003-000020 no Ações Judiciais e EA-000004-000035 no Planejamento Financeiro, iniciando pelo inventário de sobreposição semântica e decisão de arquitetura.",
+  "next_logical_step": "Modo operacional: aplicar o padrão editorial 1.11 a novos projetos e manter os perfis sincronizados com as arquiteturas públicas; não há integração editorial pendente em PRJ-000003 ou PRJ-000004.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-22",
   "project_code": "PRJ-000002",
