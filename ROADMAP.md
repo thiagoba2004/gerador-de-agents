@@ -121,3 +121,12 @@ Plano: `estrategia-padrao-atualidade-analise-observacao.md`.
 4. FASE 04/04 [F-000002-000013-004] — Auditoria cruzada e fechamento — CONCLUÍDA.
 
 **Resultado:** GDA 1–13, AJ 1–27 e PF 1–42 contíguos no registro agregado; ROADMAPs reconciliados; pendência material preservada no PRJ-000003: 10 achados da EA-000003-000019 ainda sem correção pública integral comprovada.
+
+
+## EA-000002-000014 — Padrão reutilizável de navegação dinâmica responsiva — CONCLUÍDA
+
+1. FASE 01/03 [F-000002-000014-001] — Delimitação da lacuna — CONCLUÍDA.
+2. FASE 02/03 [F-000002-000014-002] — Atualização do módulo web-site e template AGENTS — CONCLUÍDA.
+3. FASE 03/03 [F-000002-000014-003] — Auditoria, registro agregado e fechamento — CONCLUÍDA.
+
+**Resultado:** Gerador 1.16 passa a distinguir responsividade estática de navegação dinâmica; menu denso no mobile deve preferir disclosure/recolhimento acessível, com fallback sem JavaScript.
