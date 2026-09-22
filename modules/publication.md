@@ -55,6 +55,12 @@ Se não houver resposta concreta, não criar.
 12. É proibido manter botões, links, cards, menus, rotas navegáveis ou outros portões públicos para edições anteriores de Modelos.
 13. O histórico de edições anteriores deve ser preservado pelo Git ou por mecanismo não publicado no Site Público.
 14. A auditoria de publicação deve procurar regressões desses padrões em todas as seções do site, e não apenas na página modificada.
+15. Quando o projeto utilizar **Notícias, Artigos e/ou Observatório**, todo conteúdo publicável deve possuir uma função editorial primária identificável, ainda que seja cruzado por tags e links para outras áreas.
+16. **Notícia:** registrar data do fato quando conhecida, data de publicação, fontes recuperáveis e distinção entre fato verificado, alegação e impacto ainda incerto. Cadência de busca não cria obrigação de publicar conteúdo sem materialidade.
+17. **Artigo:** distinguir fatos, marco normativo/técnico, evidências, inferências, objeções e posição autoral/editorial. O artigo deve indicar suas fontes e não se apresentar como simples notícia.
+18. **Observatório:** expor escopo, data de corte/atualização, método de coleta/sistematização quando material, estado das conclusões e mudanças relevantes entre versões.
+19. Uma mesma informação pode alimentar as três camadas, mas não deve gerar três textos duplicados. Preferir referência cruzada, atualização da página estável ou produto derivado com função genuinamente diferente.
+20. Arquivar ou atualizar conteúdo perecível sem quebrar a proveniência. Notícias históricas podem permanecer como registro; sínteses e observatórios devem indicar quando uma conclusão foi superada ou revista.
 
 ## Estados específicos
 
