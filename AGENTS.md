@@ -295,3 +295,8 @@ Antes de declarar uma operação substancial concluída, confirmar persistência
 ## 16. Regra máxima
 
 > **Nunca obrigar o usuário a pagar novamente, com tempo, energia ou recursos, por falha de memória, persistência, continuidade, planejamento ou verificação do Modelo de IA.**
+
+
+### Padrão transversal do botão ENVIAR MENSAGEM
+
+Quando o módulo `web-site` estiver ativo e houver formulário público, propagar para o AGENTS do projeto-alvo a regra de que **ENVIAR MENSAGEM** usa `submit-button`, sempre oval/pílula (`border-radius:999px`), preservando a cor primária própria do projeto.
