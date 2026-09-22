@@ -111,3 +111,13 @@ Plano: `estrategia-padrao-atualidade-analise-observacao.md`.
 6. FASE 06/06 [F-000002-000008-006] — Auditoria cruzada e fechamento — CONCLUÍDA.
 
 **Resultado:** Gerador 1.11 aprovado em 13/13 controles. Próxima execução pertence às estratégias locais dos PRJ-000003 e PRJ-000004.
+
+
+## EA-000002-000013 — Reconciliação canônica pós-Observatório e continuidade determinística — CONCLUÍDA
+
+1. FASE 01/04 [F-000002-000013-001] — Inventário de divergências canônicas — CONCLUÍDA.
+2. FASE 02/04 [F-000002-000013-002] — Reconciliação dos projetos piloto — CONCLUÍDA.
+3. FASE 03/04 [F-000002-000013-003] — Sincronização do registro agregado — CONCLUÍDA.
+4. FASE 04/04 [F-000002-000013-004] — Auditoria cruzada e fechamento — CONCLUÍDA.
+
+**Resultado:** GDA 1–13, AJ 1–27 e PF 1–42 contíguos no registro agregado; ROADMAPs reconciliados; pendência material preservada no PRJ-000003: 10 achados da EA-000003-000019 ainda sem correção pública integral comprovada.
