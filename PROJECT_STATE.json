@@ -5,16 +5,10 @@
   "status": "OPERACIONAL",
   "release_version": "1.13",
   "kernel_version": "1.4",
-  "current_strategy_id": "EA-000002-000010",
-  "last_concluded_strategy_id": "EA-000002-000009",
-  "current_phase": {
-    "phase_number": 3,
-    "phase_total": 4,
-    "phase_code": "F-000002-000010-003",
-    "phase_name": "Propagação e auditoria no projeto piloto",
-    "status": "EM_EXECUCAO"
-  },
-  "last_completed_milestone": "EA-000002-000010 Fases 01-02 concluídas: regra e templates do Gerador 1.13 atualizados.",
+  "current_strategy_id": null,
+  "last_concluded_strategy_id": "EA-000002-000010",
+  "current_phase": "NENHUMA — modo operacional",
+  "last_completed_milestone": "EA-000002-000010 concluída: Gerador 1.13 formalizou escala tipográfica moderada e Home responsiva; padrão implantado/verificado em PRJ-000003 e PRJ-000004.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -92,14 +86,14 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Concluir auditoria e deploy do PRJ-000004; sincronizar perfil como IMPLEMENTADO_E_VERIFICADO e fechar EA-000002-000010.",
+  "next_logical_step": "Modo operacional: aplicar o padrão 1.13 a novos Sites e impedir headings em escala de display/overflow geral sem justificativa explícita.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-22",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
-  "current_strategy_code": "EA-000002-000010",
-  "current_strategy_name": "Escala tipográfica e composição responsiva de Home",
+  "current_strategy_code": null,
+  "current_strategy_name": null,
   "identification_standard": {
     "file": "IDENTIFICATION_STANDARD.md",
     "version": "1.0",
@@ -108,6 +102,6 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000009",
+  "last_concluded_strategy_code": "EA-000002-000010",
   "current_strategy": null
 }

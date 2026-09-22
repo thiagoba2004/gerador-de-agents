@@ -138,7 +138,7 @@
   "generator_strategy_code": "EA-000002-000006",
   "updated_at": "2026-09-22",
   "audit_ref": "audits/rota-a-piloto-prj-000003-prj-000004-2026-09-20.md",
-  "site_status": "HOME_TIPOGRAFIA_RESPONSIVA_EM_PROPAGACAO",
+  "site_status": "HOME_TIPOGRAFIA_RESPONSIVA_PUBLICADA_E_AUDITADA",
   "contact_protocol": {
     "status": "E2E_VERIFICADO",
     "institutional_email": "planejamentofinanceiro2012@gmail.com",
@@ -166,7 +166,7 @@
     ],
     "visual_identity": "financeira/formativa exclusiva",
     "typography_policy": {
-      "status": "IMPLEMENTADO_AGUARDA_AUDITORIA_E_DEPLOY",
+      "status": "IMPLEMENTADO_E_VERIFICADO",
       "body_base": "1rem",
       "h1_range": "1.55rem–1.90rem",
       "home_h1_range": "1.75rem–2.10rem",
@@ -179,7 +179,9 @@
         390,
         412
       ],
-      "implementation_strategy_ref": "thiagoba2004/planejamento-financeiro:EA-000004-000040"
+      "implementation_strategy_ref": "thiagoba2004/planejamento-financeiro:EA-000004-000040",
+      "audit_ref": "thiagoba2004/planejamento-financeiro:research/EA-000004-000040/auditoria-home-tipografia-2026-09-22.md",
+      "deployment_run_id": 35747406857
     }
   },
   "artifact_policy": {
