@@ -192,3 +192,12 @@ Antes de declarar trabalho substancial concluído, confirmar conforme aplicável
 ## 13. Regra máxima
 
 > **Nunca obrigar o usuário a pagar novamente, com tempo, energia ou recursos, por falha de memória, persistência, continuidade, planejamento ou verificação do Modelo de IA.**
+
+
+### Padrão transversal do botão ENVIAR MENSAGEM
+
+- todo botão público **ENVIAR MENSAGEM** deve incluir a classe `submit-button`;
+- `submit-button` deve ser sempre oval/pílula (`border-radius:999px`), nunca retangular;
+- a cor permanece específica da identidade visual do projeto;
+- o componente continua sendo `<button type="submit">`;
+- não aplicar essa forma automaticamente a todos os demais botões.
