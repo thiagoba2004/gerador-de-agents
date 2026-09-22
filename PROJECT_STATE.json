@@ -3,12 +3,12 @@
   "project_name": "Gerador de Agents",
   "repository": "thiagoba2004/gerador-de-agents",
   "status": "OPERACIONAL",
-  "release_version": "1.17",
+  "release_version": "1.18",
   "kernel_version": "1.4",
   "current_strategy_id": null,
-  "last_concluded_strategy_id": "EA-000002-000015",
+  "last_concluded_strategy_id": "EA-000002-000016",
   "current_phase": "NENHUMA — modo operacional",
-  "last_completed_milestone": "EA-000002-000015 concluída: cards-link e navegação horizontal deslizante formalizados como padrão reutilizável; PRJ-000001 sincronizado até EA-000001-000024.",
+  "last_completed_milestone": "EA-000002-000016 concluída: submit-button oval/pílula formalizado como padrão transversal para ENVIAR MENSAGEM.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -86,7 +86,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Modo operacional. Em Sites com menu denso, escolher explicitamente HORIZONTAL_SCROLL ou COLLAPSIBLE_DISCLOSURE; cards de destino único devem preferir hiperlink integral visualmente distinguível.",
+  "next_logical_step": "Modo operacional. Formulários públicos devem usar ENVIAR MENSAGEM com submit-button oval/pílula e cor própria do projeto.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-22",
   "project_code": "PRJ-000002",
@@ -102,6 +102,6 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000015",
+  "last_concluded_strategy_code": "EA-000002-000016",
   "current_strategy": null
 }
