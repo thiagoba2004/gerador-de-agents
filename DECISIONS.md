@@ -82,3 +82,20 @@ Quando disponível, Git será a memória histórica preferencial. Estados como p
 **Padrão de referência para “igual ao Classe e Massas”:** Forminit para recebimento confirmado e EmailJS para confirmação do protocolo ao remetente.
 
 **Consequência:** FormSubmit implantado nos projetos piloto é classificado como divergência técnica e deve ser migrado antes da verificação end-to-end.
+
+## DEC-20260922-EDITORIAL-LAYERS — Notícias, Artigos e Observatório como camadas editoriais transversais
+
+**Data:** 22/09/2026  
+**Estado:** ACEITA
+
+**Decisão:** Sites com vocação de conhecimento, consulta, formação, pesquisa, análise ou atualização devem avaliar explicitamente três funções editoriais distintas: **Notícias**, **Artigos** e **Observatório**.
+
+**Fronteiras:** Notícias tratam mudança factual/temporal; Artigos tratam análise autoral/argumentativa; Observatório trata pesquisa cumulativa, inteligência, visão sistêmica, sinais e lacunas.
+
+**Arquitetura:** a existência das três funções não obriga três itens independentes no primeiro nível. O projeto deve escolher e registrar `TOP_LEVEL_SEPARATE`, `EDITORIAL_HUB`, `NESTED_CONTEXTUAL` ou `NOT_APPLICABLE`. Em Sites já densos e com funções transversais, `EDITORIAL_HUB` é a hipótese preferencial a testar, não uma imposição automática.
+
+**Publicação:** cada conteúdo possui função editorial primária. Uma mesma evidência pode alimentar mais de uma camada, mas não deve gerar cópias redundantes.
+
+**Pesquisa:** monitoramento periódico separa cadência de busca de gatilho de publicação; Observatórios adotam, quando material, horizon scanning e lógica de evidência viva.
+
+**Consequência:** perfis de projeto passam a registrar `editorial_architecture`, e o Mapa do Site deve expor as camadas públicas mesmo quando agrupadas sob hub.
