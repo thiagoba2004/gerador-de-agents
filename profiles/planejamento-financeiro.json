@@ -138,7 +138,7 @@
   "generator_strategy_code": "EA-000002-000006",
   "updated_at": "2026-09-22",
   "audit_ref": "audits/rota-a-piloto-prj-000003-prj-000004-2026-09-20.md",
-  "site_status": "HOME_TIPOGRAFIA_RESPONSIVA_PUBLICADA_E_AUDITADA",
+  "site_status": "ESTADOS_EDITORIAIS_INTERNOS_REMOVIDOS_DA_UI_PUBLICA",
   "contact_protocol": {
     "status": "E2E_VERIFICADO",
     "institutional_email": "planejamentofinanceiro2012@gmail.com",
@@ -252,9 +252,11 @@
       "deployment_run_id": 35740393931
     },
     "public_internal_state_policy": {
-      "status": "EM_PROPAGACAO",
+      "status": "IMPLEMENTADO_E_VERIFICADO",
       "rule": "Estados de monitoramento, triagem, critérios e gatilhos permanecem internos; o Site Público lista apenas conteúdos efetivamente publicados.",
-      "implementation_strategy_ref": "thiagoba2004/planejamento-financeiro:EA-000004-000041"
+      "implementation_strategy_ref": "thiagoba2004/planejamento-financeiro:EA-000004-000041",
+      "audit_ref": "thiagoba2004/planejamento-financeiro:research/EA-000004-000041/auditoria-estados-internos-site-publico-2026-09-22.md",
+      "deployment_run_id": 35753271968
     }
   }
 }

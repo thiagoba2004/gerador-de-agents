@@ -5,16 +5,10 @@
   "status": "OPERACIONAL",
   "release_version": "1.14",
   "kernel_version": "1.4",
-  "current_strategy_id": "EA-000002-000011",
-  "last_concluded_strategy_id": "EA-000002-000010",
-  "current_phase": {
-    "phase_number": 3,
-    "phase_total": 4,
-    "phase_code": "F-000002-000011-003",
-    "phase_name": "Propagação aos projetos piloto",
-    "status": "EM_EXECUCAO"
-  },
-  "last_completed_milestone": "EA-000002-000011 Fases 01-02 concluídas: regra formalizada e Gerador 1.14 atualizado.",
+  "current_strategy_id": null,
+  "last_concluded_strategy_id": "EA-000002-000011",
+  "current_phase": "NENHUMA — modo operacional",
+  "last_completed_milestone": "EA-000002-000011 concluída: estados editoriais internos foram excluídos da UI pública e regra incorporada ao Gerador 1.14.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -92,14 +86,14 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Confirmar remoção/deploy em PRJ-000003 e PRJ-000004; sincronizar perfis e fechar.",
+  "next_logical_step": "Modo operacional: monitoramento e triagem permanecem internos; Sites Públicos exibem somente conteúdos efetivamente publicados.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-22",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
-  "current_strategy_code": "EA-000002-000011",
-  "current_strategy_name": "Estados editoriais internos fora do Site Público",
+  "current_strategy_code": null,
+  "current_strategy_name": null,
   "identification_standard": {
     "file": "IDENTIFICATION_STANDARD.md",
     "version": "1.0",
@@ -108,6 +102,6 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000010",
+  "last_concluded_strategy_code": "EA-000002-000011",
   "current_strategy": null
 }
