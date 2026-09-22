@@ -144,8 +144,10 @@ Quando o módulo `web-site` estiver ativado, incluir expressamente:
 - Home empilhada no mobile quando houver mais de um bloco estrutural; overflow horizontal geral é falha;
 - teste responsivo mínimo em 360 px, 390 px e 412 px;
 - responsividade e acessibilidade básica;
-- em menus densos no mobile, navegação dinâmica/recolhível em vez de mero empilhamento permanente; botão com `aria-controls`/`aria-expanded`, fechamento por Escape e fallback sem JavaScript;
-- hubs editoriais podem usar disclosure/dropdown para subáreas, preservando destino próprio do hub e acesso por teclado;
+- em menus densos no mobile, escolher e documentar `HORIZONTAL_SCROLL` ou `COLLAPSIBLE_DISCLOSURE`; o primeiro usa faixa rolável sem quebra e overflow restrito ao componente, e o segundo usa botão semântico com `aria-controls`/`aria-expanded`, Escape e fallback;
+- quando uma família de Sites já adotar navegação horizontal rolável de forma consistente, preservar esse paradigma salvo decisão arquitetural rastreável em contrário;
+- hubs editoriais podem ser links simples para página-hub ou usar disclosure/dropdown para subáreas, preservando destino próprio do hub e acesso por teclado;
+- cards de destino único devem preferencialmente ser hiperlinks integrais com diferenciação visual em relação a cards informativos; botões ficam reservados a ações reais, não à simples navegação;
 - separação entre governança interna e camada pública;
 - estados editoriais internos (monitoramento, triagem, pendência, critérios, gatilhos e pré-publicações) não aparecem no Site Público; coleções públicas listam apenas itens efetivamente publicados;
 - gate de auditoria de navegação, rotas, mobile, links e identidade;
