@@ -142,7 +142,14 @@ Quando o módulo `web-site` estiver ativado, incluir expressamente:
 - identidade visual exclusiva, definida por design tokens;
 - responsividade e acessibilidade básica;
 - separação entre governança interna e camada pública;
-- gate de auditoria de navegação, rotas, mobile, links e identidade.
+- gate de auditoria de navegação, rotas, mobile, links e identidade;
+- avaliação explícita de **Notícias, Artigos e Observatório** em Sites de conhecimento/consulta/formação/pesquisa/análise/atualização;
+- distinção funcional: Notícias = fatos e mudanças; Artigos = análise autoral e argumentação; Observatório = pesquisa cumulativa, visão sistêmica, sinais e lacunas;
+- decisão explícita entre `TOP_LEVEL_SEPARATE`, `EDITORIAL_HUB`, `NESTED_CONTEXTUAL` e `NOT_APPLICABLE`;
+- regra de que as três funções não precisam ser três itens independentes do menu;
+- classificação editorial primária para evitar cópias redundantes entre as camadas.
+
+Quando `research` estiver ativado junto com essas camadas, incluir também busca recorrente, horizon scanning, evidência viva, data de corte, critérios de relevância e distinção entre cadência de busca e gatilho de publicação. Quando `publication` estiver ativado, exigir metadados e transparência adequados ao tipo Notícias/Artigos/Observatório.
 
 Quando o módulo `contact-protocol` estiver ativado, incluir expressamente:
 
