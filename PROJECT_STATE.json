@@ -5,10 +5,10 @@
   "status": "OPERACIONAL",
   "release_version": "1.15",
   "kernel_version": "1.4",
-  "current_strategy_id": "EA-000002-000013",
-  "last_concluded_strategy_id": "EA-000002-000012",
-  "current_phase": "Fase 01/04 — Inventário de divergências canônicas",
-  "last_completed_milestone": "EA-000002-000012 concluída: arquitetura pública do Observatório formalizada no Gerador 1.15 e implantada/verificada em PRJ-000003 e PRJ-000004.",
+  "current_strategy_id": null,
+  "last_concluded_strategy_id": "EA-000002-000013",
+  "current_phase": "NENHUMA — modo operacional",
+  "last_completed_milestone": "EA-000002-000013 concluída: governança canônica reconciliada; GDA 1–13, AJ 1–27 e PF 1–42 contíguos no registro agregado.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -86,14 +86,14 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Concluir inventário de divergências e reconciliar ROADMAPs dos projetos piloto com os logs locais comprovados.",
+  "next_logical_step": "PRJ-000003 — abrir ciclo corretivo autônomo para os 10 achados da EA-000003-000019 e, ao final, executar auditoria regressiva; nenhuma estratégia do Gerador permanece ativa.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-22",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
-  "current_strategy_code": "EA-000002-000013",
-  "current_strategy_name": "Reconciliação canônica pós-Observatório e continuidade determinística",
+  "current_strategy_code": null,
+  "current_strategy_name": null,
   "identification_standard": {
     "file": "IDENTIFICATION_STANDARD.md",
     "version": "1.0",
@@ -102,14 +102,6 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000012",
-  "current_strategy": {
-    "strategy_code": "EA-000002-000013",
-    "strategy_name": "Reconciliação canônica pós-Observatório e continuidade determinística",
-    "phase_number": 1,
-    "phase_total": 4,
-    "phase_code": "F-000002-000013-001",
-    "phase_name": "Inventário de divergências canônicas",
-    "status": "EM_EXECUCAO"
-  }
+  "last_concluded_strategy_code": "EA-000002-000013",
+  "current_strategy": null
 }
