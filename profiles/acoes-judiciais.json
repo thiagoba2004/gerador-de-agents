@@ -132,7 +132,7 @@
   "migration_status": "ROTA_A_IMPLANTADA_E_VERIFICADA",
   "local_strategy_log_ref": "STRATEGY_LOG.jsonl",
   "generator_strategy_code": "EA-000002-000006",
-  "updated_at": "2026-09-20",
+  "updated_at": "2026-09-22T09:10:00-03:00",
   "audit_ref": "audits/rota-a-piloto-prj-000003-prj-000004-2026-09-20.md",
   "site_status": "PUBLICADO_COM_ARQUITETURA_VERIFICADA_CONTATO_EM_MIGRACAO",
   "contact_protocol": {
@@ -156,6 +156,7 @@
       "Guias",
       "Modelos",
       "Jurisprudência",
+      "Doutrina",
       "Legislação",
       "Fontes",
       "Fale Conosco"
@@ -179,5 +180,33 @@
       "fixtures",
       "automation/API/search/filter/validation inputs"
     ]
+  },
+  "editorial_architecture": {
+    "status": "PLANEJADO",
+    "layers": {
+      "noticias": "PLANEJADO",
+      "artigos": "PLANEJADO",
+      "observatorio": "PLANEJADO"
+    },
+    "navigation_mode": "A_DEFINIR",
+    "hub_label": "",
+    "scope_rule": "Por padrão, somente temas jurídicos já cobertos pelo Site; expansão exige decisão explícita.",
+    "classification_rule": "Cada conteúdo possui função editorial primária; Notícias, Artigos e Observatório podem se referenciar sem duplicação textual.",
+    "news_scan_cadence": [
+      "SEMANAL",
+      "MENSAL",
+      "TRIMESTRAL",
+      "SEMESTRAL",
+      "ANUAL"
+    ],
+    "observatory_update_policy": "Evidência viva por cadência e/ou gatilho material, com data de corte, versão e registro do que mudou.",
+    "architecture_ref": "SITE_ARCHITECTURE.md",
+    "implementation_strategy_ref": "thiagoba2004/acoes-judiciais:EA-000003-000020",
+    "child_strategies": [
+      "EA-000003-000021",
+      "EA-000003-000022",
+      "EA-000003-000023"
+    ],
+    "public_status": "NAO_IMPLEMENTADO"
   }
 }
