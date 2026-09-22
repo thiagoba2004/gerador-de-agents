@@ -1,7 +1,7 @@
 # EA-000002-000008 — Padrão editorial de Atualidade, Análise e Observação para Sites
 
 **Projeto:** PRJ-000002 — Gerador de Agents  
-**Status:** EM EXECUÇÃO  
+**Status:** CONCLUÍDA  
 **Objetivo:** definir um padrão reutilizável para Sites com três funções editoriais distintas — Notícias, Artigos e Observatório — sem confundir tipos de conteúdo, inflar o menu global ou duplicar áreas temáticas já existentes.
 
 ## Plano de Fases
