@@ -185,6 +185,16 @@ Regras:
 
 A governança pode permanecer no repositório público. A regra é sobre **interface e artefato publicado**, não sobre ocultação do código-fonte do repositório.
 
+
+### 7.1. Estados editoriais internos não são conteúdo público
+
+1. Estados e mecanismos de trabalho como **“Em monitoramento”**, “fila editorial”, “triagem”, “pendente”, “pré-publicação”, “critério editorial”, “gatilho de revisão”, “gatilho de publicação” e equivalentes pertencem à governança interna.
+2. O Site Público não deve listar itens ainda não aprovados como notícia, artigo ou unidade do Observatório.
+3. Monitoramento, horizon scanning, critérios de materialidade, sinais imaturos e gatilhos podem existir em arquivos internos de pesquisa, logs, matrizes ou documentos de trabalho, mas não como blocos públicos de pré-publicação.
+4. O Observatório Público pode apresentar **conclusões, estado do conhecimento, lacunas e mudanças já analisadas**, sem expor a fila interna de acompanhamento.
+5. Notícias públicas devem conter apenas notícias efetivamente publicadas; itens descartados, imaturos ou aguardando confirmação permanecem fora da UI.
+6. Antes do deploy, varrer HTML/Markdown públicos em busca de rótulos e microcopy que revelem estados editoriais internos. A presença desses elementos bloqueia publicação.
+
 ### 8. Conteúdo e componentes
 
 1. Não criar cards, menus, caixas ou seções apenas para “preencher” a página.

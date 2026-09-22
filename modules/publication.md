@@ -116,3 +116,13 @@ O módulo `publication` governa artefatos e estados de publicação. Ele **não 
 - Site Público → avaliar `web-site`;
 - Fale Conosco protocolado → avaliar `contact-protocol`;
 - publicação bem-sucedida não prova responsividade, navegação correta ou contato funcional.
+
+
+## Estados editoriais internos e pré-publicação
+
+- O pipeline editorial pode manter internamente itens em monitoramento, triagem, pendência, horizon scanning ou fila de publicação.
+- Esses estados **não devem ser publicados** na interface do Site.
+- Uma coleção pública lista somente objetos editoriais já publicados.
+- O Observatório público pode publicar sínteses, conclusões, lacunas e mudanças analisadas, mas não a fila de sinais internos, gatilhos ou itens aguardando maturação.
+- “Critério editorial”, “Em monitoramento”, “Próximos gatilhos” e rótulos equivalentes devem permanecer nos documentos internos quando representarem governança e não conteúdo substantivo para o leitor.
+- O gate de publicação inclui busca por vazamento de estados editoriais internos.

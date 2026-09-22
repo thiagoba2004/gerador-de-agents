@@ -2,6 +2,16 @@
 
 Todas as alterações materiais do núcleo universal e da infraestrutura do Gerador devem ser registradas aqui.
 
+## 1.14 — 22/09/2026 — Estados editoriais internos fora do Site Público
+
+- monitoramento, triagem, critérios editoriais, gatilhos e pré-publicações passam a ser explicitamente internos;
+- coleções públicas de Notícias, Artigos e Observatório listam apenas conteúdos efetivamente publicados;
+- Observatório público pode exibir conclusões, mudanças analisadas e lacunas, mas não a fila interna de sinais;
+- o gate de publicação passa a buscar vazamento de rótulos como “Em monitoramento”, “Critério editorial” e “Próximos gatilhos” quando usados como governança;
+- regra propagada inicialmente a Ações Judiciais e Planejamento Financeiro;
+- estratégia: `EA-000002-000011`.
+
+
 ## 1.13 — 22/09/2026 — Tipografia responsiva e Home sem overflow
 
 - instituída escala tipográfica moderada para Sites informativos/formativos;

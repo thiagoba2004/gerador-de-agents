@@ -145,6 +145,7 @@ Quando o módulo `web-site` estiver ativado, incluir expressamente:
 - teste responsivo mínimo em 360 px, 390 px e 412 px;
 - responsividade e acessibilidade básica;
 - separação entre governança interna e camada pública;
+- estados editoriais internos (monitoramento, triagem, pendência, critérios, gatilhos e pré-publicações) não aparecem no Site Público; coleções públicas listam apenas itens efetivamente publicados;
 - gate de auditoria de navegação, rotas, mobile, links e identidade;
 - avaliação explícita de **Notícias, Artigos e Observatório** em Sites de conhecimento/consulta/formação/pesquisa/análise/atualização;
 - distinção funcional: Notícias = fatos e mudanças; Artigos = análise autoral e argumentação; Observatório = pesquisa cumulativa, visão sistêmica, sinais e lacunas;

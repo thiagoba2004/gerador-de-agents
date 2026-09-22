@@ -242,6 +242,11 @@
       "implementation_strategy_ref": "thiagoba2004/acoes-judiciais:EA-000003-000024",
       "audit_ref": "thiagoba2004/acoes-judiciais:research/EA-000003-000024/auditoria-colecao-detalhe-2026-09-22.md",
       "deployment_run_id": 35740233434
+    },
+    "public_internal_state_policy": {
+      "status": "EM_PROPAGACAO",
+      "rule": "Estados de monitoramento, triagem, critérios e gatilhos permanecem internos; o Site Público lista apenas conteúdos efetivamente publicados.",
+      "implementation_strategy_ref": "thiagoba2004/acoes-judiciais:EA-000003-000026"
     }
   }
 }
