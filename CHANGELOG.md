@@ -1,3 +1,16 @@
+## 1.19 — 24/09/2026 — Pauta editorial interna / backlog de conteúdo
+
+- institui `governanca/PAUTA_EDITORIAL.md` como artefato interno padrão para projetos com Artigos ou fila editorial futura;
+- distingue pauta editorial de Roadmap: possibilidades editoriais não são trabalho automaticamente priorizado;
+- cria estados canônicos de `IDEIA` a `PUBLICADA`, com `SUSPENSA` e `DESCARTADA`;
+- exige triagem de densidade, novidade, relevância, fontes e redundância antes de pesquisa substantiva;
+- exige Estratégia Autônoma e Plano de Fases para execução de item priorizado;
+- proíbe exposição da pauta, prioridades e estados internos no Site Público;
+- cria `templates/PAUTA_EDITORIAL.example.md`;
+- atualiza `modules/publication.md`, `templates/AGENTS.example.md`, `GERADOR_WORKFLOW.md` e `AGENTS.md`;
+- padrão implantado inicialmente em Classe e Massas, Ações Judiciais e Planejamento Financeiro;
+- estratégia: `EA-000002-000017`.
+
 ## 1.17 — 22/09/2026
 
 - Admite explicitamente `HORIZONTAL_SCROLL` e `COLLAPSIBLE_DISCLOSURE` como padrões válidos de navegação mobile, por decisão arquitetural documentada.
