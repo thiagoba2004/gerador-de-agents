@@ -15,3 +15,5 @@ Templates atualmente disponíveis:
 - `PROJECT_PROFILE.example.json` — perfil estruturado do projeto, módulos, riscos, ferramentas e estado de migração.
 
 A existência de um template não obriga sua utilização literal. O Gerador deve adaptar a estrutura ao projeto concreto sem eliminar as funções essenciais de governança, rastreabilidade, persistência e continuidade.
+
+- `PAUTA_EDITORIAL.example.md` — modelo de pauta editorial/backlog interno para projetos com Artigos ou fila editorial futura; nunca é conteúdo público.
