@@ -95,6 +95,7 @@ DECISIONS.md, quando aplicável
 SITE_ARCHITECTURE.md, quando web-site estiver ativo
 SITE_STYLE_GUIDE.md, quando web-site estiver ativo
 CONTACT_STACK.md, quando contact-protocol estiver ativo
+governanca/PAUTA_EDITORIAL.md, quando publication estiver ativo e houver Artigos/fila editorial futura
 ```
 
 **Gate A3:** cada função essencial — regras, pedidos, estratégias, estado e planejamento — possui fonte persistente.
@@ -122,7 +123,8 @@ Verificar:
 - ausência de confirmações falsas;
 - estado e próximo passo persistidos;
 - se `web-site` estiver ativo: menu, Home, Mapa do Site, identidade, mobile e separação público/interno;
-- se `contact-protocol` estiver ativo: stack aprovada, isolamento por projeto e estado real do teste end-to-end.
+- se `contact-protocol` estiver ativo: stack aprovada, isolamento por projeto e estado real do teste end-to-end;
+- se `publication` + Artigos/fila editorial estiverem ativos: `governanca/PAUTA_EDITORIAL.md` existente ou decisão `NOT_APPLICABLE` justificada, e ausência da pauta no artefato público.
 
 **Saída:** projeto implantado ou relatório explícito das pendências restantes.
 
@@ -152,7 +154,8 @@ Inventariar:
 - integrações e ferramentas;
 - lacunas documentais;
 - arquitetura pública existente, menus, Home, Mapa do Site, CSS/tokens e responsividade;
-- formulário de contato, provedores, IDs/configuração pública, e-mail institucional, protocolo e evidências de teste.
+- formulário de contato, provedores, IDs/configuração pública, e-mail institucional, protocolo e evidências de teste;
+- pauta editorial interna/backlog de conteúdo, quando houver Artigos ou fila editorial futura, incluindo verificação de que não está exposta no Site Público.
 
 Backfill de estratégia somente com evidência persistente.
 
