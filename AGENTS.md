@@ -300,3 +300,19 @@ Antes de declarar uma operação substancial concluída, confirmar persistência
 ### Padrão transversal do botão ENVIAR MENSAGEM
 
 Quando o módulo `web-site` estiver ativo e houver formulário público, propagar para o AGENTS do projeto-alvo a regra de que **ENVIAR MENSAGEM** usa `submit-button`, sempre oval/pílula (`border-radius:999px`), preservando a cor primária própria do projeto.
+
+### 9.5. Propagação obrigatória da pauta editorial interna
+
+Quando o módulo `publication` estiver `ATIVADO` e o projeto possuir ou planejar **Artigos** ou uma fila de conteúdos analíticos futuros, o Gerador deve:
+
+1. criar ou avaliar `governanca/PAUTA_EDITORIAL.md`;
+2. usar `templates/PAUTA_EDITORIAL.example.md` como estrutura mínima;
+3. materializar no `AGENTS.md` do projeto-alvo a distinção entre pauta editorial e Roadmap;
+4. exigir triagem de densidade, novidade, relevância, fontes e redundância antes da pesquisa substantiva;
+5. exigir Estratégia Autônoma e Plano de Fases antes da execução de um item priorizado;
+6. manter estados editoriais internos em português e registrar publicação/suspensão/descarte;
+7. impedir a exposição da pauta, prioridades e itens não publicados na camada pública;
+8. incluir busca por vazamento da pauta na auditoria de publicação.
+
+Se o projeto não possuir nem planejar Artigos/fila editorial futura, registrar a decisão como `NOT_APPLICABLE` em vez de criar um arquivo vazio.
+
