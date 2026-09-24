@@ -201,3 +201,17 @@ Antes de declarar trabalho substancial concluído, confirmar conforme aplicável
 - a cor permanece específica da identidade visual do projeto;
 - o componente continua sendo `<button type="submit">`;
 - não aplicar essa forma automaticamente a todos os demais botões.
+
+Quando o módulo `publication` estiver ativado **e o projeto possuir ou planejar Artigos/fila editorial futura**, incluir também expressamente:
+
+- `governanca/PAUTA_EDITORIAL.md` como backlog editorial interno;
+- estados canônicos de ideia → triagem → pesquisa → redação → publicação;
+- regra de que a entrada na pauta não é promessa de publicação;
+- avaliação de densidade, novidade, relevância, fontes e redundância antes da pesquisa substantiva;
+- vínculo a Estratégia Autônoma e Plano de Fases antes da execução;
+- atualização da pauta após publicação, suspensão ou descarte;
+- proibição absoluta de expor pauta, prioridade ou estados internos no Site Público;
+- auditoria de vazamento da pauta no artefato público.
+
+Se Artigos/fila editorial não forem aplicáveis, registrar `NOT_APPLICABLE` com justificativa em vez de criar backlog vazio.
+
