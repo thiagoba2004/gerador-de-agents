@@ -138,3 +138,43 @@ O módulo `publication` governa artefatos e estados de publicação. Ele **não 
 - Projetos financeiros/formativos podem estruturar premissas/evidências, implicações e interdependências.
 - “Questões em aberto” é conteúdo público quando descreve uma lacuna substantiva já analisada; monitoramento e gatilhos continuam internos.
 - O gate de publicação verifica data de atualização, retorno ao índice, links para fontes/conteúdos relacionados e ausência de versionamento técnico sem função pública.
+
+## Pauta editorial interna / backlog de conteúdo
+
+Quando o projeto possuir **Artigos** ou outro fluxo editorial de conteúdo analítico futuro, o módulo `publication` deve avaliar e, por padrão, criar:
+
+```text
+governanca/PAUTA_EDITORIAL.md
+```
+
+Esse arquivo é **governança interna**, não conteúdo público.
+
+Regras obrigatórias:
+
+1. a pauta registra hipóteses de conteúdos futuros; não constitui promessa de pesquisa, redação ou publicação;
+2. uma entrada deve registrar, quando possível, identificador, título provisório, pergunta/ângulo, eixo, relação com conteúdo existente, prioridade, estado, densidade e Estratégia Autônoma vinculada;
+3. antes de pesquisa substantiva, avaliar relevância, novidade, densidade, fontes disponíveis e risco de redundância;
+4. pauta editorial e Roadmap têm funções diferentes: a pauta organiza possibilidades; Roadmap/Planos de Fases governam trabalho priorizado;
+5. item aprovado para execução deve ser vinculado a Estratégia Autônoma e Plano de Fases antes da pesquisa substantiva;
+6. item publicado deve ser atualizado para `PUBLICADA` com referência final;
+7. itens suspensos ou descartados permanecem rastreáveis com motivo suficiente para evitar retrabalho;
+8. o arquivo, seus estados, prioridades e itens não publicados **não podem aparecer no Site Público**, inclusive menus, cards, coleções, Mapa do Site, sitemap, feeds ou metadados públicos;
+9. a auditoria de publicação deve procurar vazamento da pauta e bloquear a publicação em caso de exposição acidental.
+
+Estados canônicos:
+
+```text
+IDEIA
+EM_TRIAGEM
+APROVADA_PARA_PESQUISA
+EM_PESQUISA
+PRONTA_PARA_REDACAO
+EM_REDACAO
+PRONTA_PARA_PUBLICACAO
+PUBLICADA
+SUSPENSA
+DESCARTADA
+```
+
+Se o projeto não possuir nem planejar Artigos ou fila editorial futura, registrar `NOT_APPLICABLE` com justificativa em vez de criar um backlog vazio.
+
