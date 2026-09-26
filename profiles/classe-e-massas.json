@@ -3,8 +3,8 @@
   "project_name": "Classe e Massas",
   "project_purpose": "Projeto editorial, documental e de pesquisa com traduções, artigos, observatórios, materiais jurídicos, bases estruturadas e infraestrutura de site.",
   "project_ref": "thiagoba2004/classe-e-massas",
-  "kernel_version_audited_against": "1.4",
-  "kernel_version_applied": "1.4",
+  "kernel_version_audited_against": "1.5",
+  "kernel_version_applied": "1.5",
   "agents_version_current": "2.8",
   "agents_blob_sha_current": "18654f8a6f46c2d690139bba430d110b14548ecd",
   "previous_agents_version": "1.8",
@@ -58,7 +58,7 @@
     {
       "module_id": "research",
       "status": "ATIVADO",
-      "rationale": "Pesquisa e levantamento documental integram expressamente o escopo e os objetos ativos do projeto; as regras locais da v1.8 permanecem incorporadas na v1.9.",
+      "rationale": "Pesquisa e levantamento documental integram expressamente o escopo e os objetos ativos do projeto; as regras locais da v1.8 permanecem incorporadas na v1.9. A partir de 26/09/2026, BDTD/IBICT integra a descoberta acadêmica brasileira quando pertinente.",
       "source_refs": [
         "AGENTS.md#1.1",
         "PROJECT_STATE.json:DOS-PLR-BB-2026"
@@ -147,6 +147,17 @@
       ],
       "decided_at": "2026-09-20T14:30:00-03:00",
       "kernel_version": "1.4"
+    },
+    {
+      "module_id": "knowledge-index",
+      "status": "ATIVADO",
+      "rationale": "O projeto possui corpus persistente relevante e necessidade comprovada de busca transversal independente da indexação do provedor Git.",
+      "source_refs": [
+        "EA-000001-000032",
+        "governanca/KNOWLEDGE_INDEX.jsonl"
+      ],
+      "decided_at": "2026-09-26",
+      "kernel_version": "1.5"
     }
   ],
   "migration_status": "IMPLANTADA_E_VERIFICADA",
@@ -156,7 +167,7 @@
   "migration_plan_ref": "governanca/estrategia-migracao-agents-kernel-1.2.md",
   "backfill_plan_ref": "governanca/estrategia-backfill-estrategias-autonomas.md",
   "next_governance_step": "Classificar apenas quando necessário os grupos ainda pendentes de evidência; não criar estratégias retroativas por suposição.",
-  "updated_at": "2026-09-22",
+  "updated_at": "2026-09-26",
   "post_migration_governance_updates": [
     {
       "date": "2026-09-18",
@@ -221,5 +232,15 @@
       "fixtures",
       "automation/API/search/filter/validation inputs"
     ]
+  },
+  "knowledge_index": {
+    "status": "ATIVADO",
+    "path": "governanca/KNOWLEDGE_INDEX.jsonl",
+    "strategy_code": "EA-000001-000032"
+  },
+  "improvement_governance": {
+    "status": "ATIVADA",
+    "log": "IMPROVEMENT_LOG.jsonl",
+    "strategy_code": "EA-000001-000032"
   }
 }
