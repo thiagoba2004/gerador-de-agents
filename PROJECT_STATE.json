@@ -5,16 +5,10 @@
   "status": "OPERACIONAL",
   "release_version": "1.24",
   "kernel_version": "1.9",
-  "current_strategy_id": "EA-000002-000022",
-  "last_concluded_strategy_id": "EA-000002-000021",
-  "current_phase": {
-    "phase_number": 2,
-    "phase_total": 4,
-    "phase_code": "F-000002-000022-002",
-    "phase_name": "Kernel, módulo e templates",
-    "status": "EM_EXECUCAO"
-  },
-  "last_completed_milestone": "EA-000002-000021 concluída: identidade de governança separada dos ambientes Chat/Work/Projeto ChatGPT/Biblioteca/Codex.",
+  "current_strategy_id": null,
+  "last_concluded_strategy_id": "EA-000002-000022",
+  "current_phase": null,
+  "last_completed_milestone": "EA-000002-000022 concluída: arquitetura v2 separa superfície, executor, contexto, fontes e persistência; memória exclusiva preservada com Core Context e handoff explícito.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -115,14 +109,14 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Concluir propagação da Arquitetura v2 aos perfis dos Projetos PRJ-000001, PRJ-000003 e PRJ-000004; auditar; fechar EA-000002-000022.",
+  "next_logical_step": "Aplicar a Arquitetura Universal v2 nos trabalhos futuros; manter Core Context curado e usar handoff explícito quando Work/Codex não herdarem o contexto.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-26",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
-  "current_strategy_code": "EA-000002-000022",
-  "current_strategy_name": "Arquitetura Universal v2 — Isolamento, Fontes de Conhecimento e Handoff",
+  "current_strategy_code": null,
+  "current_strategy_name": null,
   "identification_standard": {
     "file": "IDENTIFICATION_STANDARD.md",
     "version": "1.0",
@@ -131,11 +125,8 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000021",
-  "current_strategy": {
-    "strategy_code": "EA-000002-000022",
-    "strategy_name": "Arquitetura Universal v2 — Isolamento, Fontes de Conhecimento e Handoff"
-  },
+  "last_concluded_strategy_code": "EA-000002-000022",
+  "current_strategy": null,
   "editorial_backlog_standard": {
     "version": "1.0",
     "template": "templates/PAUTA_EDITORIAL.example.md",
@@ -143,8 +134,8 @@
     "public_default": false,
     "status": "IMPLANTADO_E_AUDITADO"
   },
-  "strategy_status": "EM_EXECUCAO",
-  "last_concluded_strategy_name": "Arquitetura Universal de Ambientes de Execução e Persistência",
+  "strategy_status": "SEM_ESTRATEGIA_ATIVA",
+  "last_concluded_strategy_name": "Arquitetura Universal v2 — Isolamento, Fontes de Conhecimento e Handoff",
   "knowledge_index": {
     "status": "IMPLANTADO_E_VERIFICADO",
     "schema_version": "1.0",
@@ -195,7 +186,7 @@
     "updated_at": "2026-09-26"
   },
   "execution_environment_architecture": {
-    "status": "V2_EM_PROPAGACAO",
+    "status": "V2_IMPLANTADA_E_VERIFICADA",
     "version": "2.0",
     "global_source": "thiagoba2004/governanca-geral-modelos-ia/ARQUITETURA_UNIVERSAL_AMBIENTES_EXECUCAO_PERSISTENCIA.md",
     "local_profile": "EXECUTION_ENVIRONMENT_PROFILE.json",
@@ -213,6 +204,7 @@
     "local_filesystem": "WORKING_COPY_ONLY",
     "handoff_required_when_context_not_inherited": true,
     "canonical_persistence": "thiagoba2004/gerador-de-agents",
-    "updated_at": "2026-09-26"
+    "updated_at": "2026-09-26",
+    "verified_at": "2026-09-26"
   }
 }
