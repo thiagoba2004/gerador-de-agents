@@ -5,7 +5,7 @@
 **project_sequence:** `000002`  
 **project_alias:** `GDA`  
 **project_name:** `Gerador de Agents`  
-**generated_from_kernel:** `1.6`  
+**generated_from_kernel:** `1.7`  
 **repository:** `thiagoba2004/gerador-de-agents`
 
 ## 1. Missão do projeto
@@ -331,6 +331,25 @@ Quando o módulo `publication` estiver `ATIVADO` e o projeto possuir ou planejar
 Se o projeto não possuir nem planejar Artigos/fila editorial futura, registrar a decisão como `NOT_APPLICABLE` em vez de criar um arquivo vazio.
 
 
+
+## Classificação Universal de Informação
+
+Antes de criar, mover, enviar, fazer upload, commit, publicar ou anexar arquivo persistente, aplicar a política global:
+
+- `/Governanca-Geral-Modelos-IA/CLASSIFICACAO_UNIVERSAL_INFORMACAO.md`;
+- `/Governanca-Geral-Modelos-IA/INFORMATION_CLASSIFICATION_POLICY.json`.
+
+Se a Biblioteca não estiver acessível, aplicar obrigatoriamente as regras mínimas abaixo:
+
+1. classificar **sensibilidade**: `S0_PUBLICO`, `S1_INTERNO_NAO_SENSIVEL`, `S2_CONFIDENCIAL`, `S3_ALTAMENTE_SENSIVEL` ou `S4_SEGREDO_CRITICO`;
+2. classificar **superfície**: `P0_COFRE_EXTERNO`, `P1_GIT_PRIVADO`, `P2_GIT_PUBLICO_REPOSITORIO` ou `P3_PUBLICO_SITE`;
+3. `S2` ou superior nunca pode ser salvo em repositório público nem no Site;
+4. documento bruto `S3` permanece em cofre externo por padrão e não deve ser commitado ao Git;
+5. `S4` nunca deve ser enviado ao Modelo nem persistido em Git, Biblioteca, chat ou logs;
+6. conteúdo só pode descer de classe mediante criação de **derivado sanitizado**; o original mantém sua classificação;
+7. mudança de visibilidade do repositório, ativação de Pages ou mudança de destino exige nova classificação.
+
+O arquivo `INFORMATION_HANDLING_PROFILE.json` registra a superfície técnica e os limites deste repositório.
 
 ### 9.6. Propagação obrigatória do índice semântico-factual
 
