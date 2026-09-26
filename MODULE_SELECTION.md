@@ -1,6 +1,6 @@
 # MODULE SELECTION — POLÍTICA DE ATIVAÇÃO DE MÓDULOS
 
-**kernel_version:** `1.7`
+**kernel_version:** `1.8`
 
 O Gerador de Agents deve selecionar módulos especializados por evidência do projeto, nunca por associação vaga ou preferência do modelo.
 
@@ -49,6 +49,10 @@ kernel_version
 A decisão pode ser persistida no perfil do projeto ou em arquivo estruturado próprio. Em um perfil com várias decisões, `decided_at` e `kernel_version` devem acompanhar cada decisão para que revisões futuras possam ser auditadas individualmente.
 
 ## 4. Matriz inicial de módulos
+
+### `execution-environments`
+
+Ativar por padrão em qualquer Projeto persistente assistido por Modelos de IA. O módulo define a separação entre identidade `PRJ/EA/F`, ambientes Chat/Work/Projeto ChatGPT/Biblioteca/Codex e superfícies de persistência. Pode ser `NAO_APLICAVEL` apenas em artefato mínimo sem continuidade, sem repositório e sem governança persistente.
 
 ### `information-classification`
 
