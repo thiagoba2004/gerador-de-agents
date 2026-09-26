@@ -1,3 +1,13 @@
+## 1.25 — 26/09/2026 — Correção de contexto por Projeto
+
+- eleva o Kernel para **1.10**;
+- corrige a Arquitetura para **2.1**;
+- remove a regra incorreta de `C3` como padrão global;
+- torna `C2/C3` propriedade individual de cada Projeto ChatGPT;
+- registra o Gerador de Agents atual em `C2_CHATGPT_PROJECT_DEFAULT_MEMORY`;
+- atualiza templates para exigir declaração explícita do modo real;
+- mantém handoff como regra condicional quando o executor não herda o contexto.
+
 ## 1.24 — 26/09/2026 — Arquitetura Universal v2: Isolamento, Fontes e Handoff
 
 - eleva o Kernel universal para **1.9**;
