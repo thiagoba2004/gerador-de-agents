@@ -3,12 +3,12 @@
   "project_name": "Gerador de Agents",
   "repository": "thiagoba2004/gerador-de-agents",
   "status": "OPERACIONAL",
-  "release_version": "1.24",
-  "kernel_version": "1.9",
+  "release_version": "1.25",
+  "kernel_version": "1.10",
   "current_strategy_id": null,
   "last_concluded_strategy_id": "EA-000002-000022",
   "current_phase": null,
-  "last_completed_milestone": "EA-000002-000022 concluída: arquitetura v2 separa superfície, executor, contexto, fontes e persistência; memória exclusiva preservada com Core Context e handoff explícito.",
+  "last_completed_milestone": "Correção da Arquitetura v2.1: modo de memória passou a ser propriedade individual; PRJ-000002 registrado em C2.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -109,7 +109,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Aplicar a Arquitetura Universal v2 nos trabalhos futuros; manter Core Context curado e usar handoff explícito quando Work/Codex não herdarem o contexto.",
+  "next_logical_step": "Aplicar C2/C3 somente conforme configuração real de cada Projeto ChatGPT; não inferir modo de memória.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-26",
   "project_code": "PRJ-000002",
@@ -160,7 +160,7 @@
     "rule": "Comunicar e persistir oportunidades materiais; não ampliar silenciosamente o escopo; executar innovation check em trabalhos substanciais.",
     "updated_at": "2026-09-26"
   },
-  "generator_release": "1.24",
+  "generator_release": "1.25",
   "global_coordinator_bridge": {
     "status": "IMPLANTADA_E_VERIFICADA",
     "bootstrap": "/Governanca-Geral-Modelos-IA/00_BOOTSTRAP_COORDENADOR_GERAL.md",
@@ -187,7 +187,7 @@
   },
   "execution_environment_architecture": {
     "status": "V2_IMPLANTADA_E_VERIFICADA",
-    "version": "2.0",
+    "version": "2.1",
     "global_source": "thiagoba2004/governanca-geral-modelos-ia/ARQUITETURA_UNIVERSAL_AMBIENTES_EXECUCAO_PERSISTENCIA.md",
     "local_profile": "EXECUTION_ENVIRONMENT_PROFILE.json",
     "planes": [
@@ -198,13 +198,15 @@
       "K",
       "P"
     ],
-    "default_project_memory": "C3_CHATGPT_PROJECT_ONLY_MEMORY",
     "work_unavailable_inside_default_context": true,
     "core_context": "CURATED",
     "local_filesystem": "WORKING_COPY_ONLY",
     "handoff_required_when_context_not_inherited": true,
     "canonical_persistence": "thiagoba2004/gerador-de-agents",
     "updated_at": "2026-09-26",
-    "verified_at": "2026-09-26"
+    "verified_at": "2026-09-26",
+    "context_mode_rule": "PER_PROJECT_EXPLICIT_NO_GLOBAL_DEFAULT",
+    "observed_chatgpt_project_memory": "C2_CHATGPT_PROJECT_DEFAULT_MEMORY",
+    "work_available_inside_observed_context": true
   }
 }
