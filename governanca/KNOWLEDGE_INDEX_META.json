@@ -3,16 +3,16 @@
   "extensions": {
     ".json": 10,
     ".jsonl": 10,
-    ".md": 76,
+    ".md": 77,
     ".yml": 1
   },
   "generator": "tools/build_knowledge_index.py",
   "index_file": "governanca/KNOWLEDGE_INDEX.jsonl",
-  "record_count": 97,
+  "record_count": 98,
   "schema_version": "1.0",
   "semantic_tag_counts": {
     "bdtd_ibict": 16,
-    "editorial": 52,
+    "editorial": 51,
     "financeiro": 26,
     "fonte": 42,
     "governanca": 64,
