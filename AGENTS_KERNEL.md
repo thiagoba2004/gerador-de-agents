@@ -1,9 +1,9 @@
 # AGENTS KERNEL — NÚCLEO UNIVERSAL
 
-**kernel_version:** 1.4  
+**kernel_version:** 1.5  
 **project_code de origem:** `PRJ-000002`  
 **project_alias de origem:** `GDA`  
-**data:** 19/09/2026
+**data:** 26/09/2026
 
 ## 1. Finalidade
 
@@ -237,6 +237,36 @@ Antes de declarar trabalho substancial concluído, verificar conforme aplicável
 - cópia adicional de marco crítico, quando necessária;
 - próximo passo lógico registrado.
 
-## 19. Regra máxima
+## 19. Índice universal do acervo
+
+Projetos com corpus persistente relevante devem manter mecanismo próprio de descoberta semântica e factual, independente da indexação do provedor Git. O padrão é `governanca/KNOWLEDGE_INDEX.jsonl`, gerado de forma determinística por ferramenta versionada.
+
+Regras:
+
+- JSON/JSONL é justificável aqui por função computacional concreta; não deve replicar o texto integral dos documentos;
+- o índice deve registrar metadados, hashes, títulos/headings, termos, tags, domínios/fontes e identificadores recuperáveis;
+- perguntas transversais sobre “onde aparece X?” devem consultar primeiro o índice e confirmar depois no documento original;
+- resultado nulo só pode ser interpretado à luz do estado/data da última geração;
+- projetos relacionados podem manter catálogo cruzado de índices.
+
+## 20. Inovação e aperfeiçoamento proativos
+
+Ao identificar durante pesquisa, auditoria, execução ou recuperação de estado uma lacuna estrutural, repetição manual evitável, risco de perda, oportunidade de automação, fonte relevante ausente ou padrão reutilizável, o Modelo deve:
+
+1. **comunicar a oportunidade ao usuário na mesma interação**, quando material;
+2. registrar a oportunidade em `IMPROVEMENT_LOG.jsonl` ou mecanismo persistente equivalente;
+3. descrever problema, proposta, benefício esperado, escopo e estado;
+4. não esconder oportunidade útil apenas no raciocínio interno;
+5. não expandir silenciosamente o escopo: melhoria material que exija trabalho novo deve ser submetida à decisão do usuário ou vinculada a autorização já existente;
+6. quando aprovada, abrir/vincular Estratégia Autônoma e Plano de Fases;
+7. no fechamento de trabalho substancial, executar um **innovation check**: o que pode ser indexado, automatizado, padronizado, reutilizado, simplificado ou tornado mais verificável?
+
+A ausência de sugestão é aceitável somente quando não houver oportunidade material identificada.
+
+## 21. Descoberta acadêmica brasileira
+
+Quando o módulo de pesquisa tratar de tema compatível com produção acadêmica brasileira, considerar sistematicamente a **Biblioteca Digital Brasileira de Teses e Dissertações (BDTD/IBICT)** como fonte de descoberta. O resultado deve ser validado no repositório da instituição de origem e, quando disponível, por Handle/DOI. Presença na BDTD não equivale, por si só, a qualidade, atualidade ou aderência.
+
+## 22. Regra máxima
 
 > **Nunca obrigar o usuário a pagar novamente, com tempo, energia ou recursos, por falha de memória, persistência, continuidade, planejamento ou verificação do Modelo de IA.**
