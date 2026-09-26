@@ -231,11 +231,11 @@ Este Projeto mantém identidade `PRJ/EA/F` independente de dispositivo, executor
 
 - Superfície: mobile/web/desktop;
 - Executor: Chat/Work/Codex;
-- Contexto: declarar explicitamente o modo real do Projeto ChatGPT (`C2` ou `C3`); não existe padrão global;
+- Vínculo: declarar primeiro `B0` (sem Projeto ChatGPT) ou `B1` (com Projeto ChatGPT); somente em `B1` declarar `C2` ou `C3`;
 - Fontes: Core Context anexado + Biblioteca + Git + nuvem conectada + filesystem + Web conforme necessidade;
 - Persistência: repositório/cofre/site conforme classificação.
 
-Se o Projeto estiver em `C3`, Work não estará disponível dentro dele; em `C2`, Work permanece compatível conforme disponibilidade. Handoff explícito é obrigatório quando o executor de destino não herdar o contexto necessário.
+Se houver vínculo `B1` e o Projeto ChatGPT estiver em `C3`, Work não estará disponível dentro dele; em `B0`, C2/C3 é não aplicável. Handoff explícito é obrigatório quando o executor de destino não herdar o contexto necessário.
 
 Filesystem local é working copy; nunca a única fonte necessária à continuidade.
 
