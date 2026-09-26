@@ -3,8 +3,8 @@
   "project_name": "Classe e Massas",
   "project_purpose": "Projeto editorial, documental e de pesquisa com traduções, artigos, observatórios, materiais jurídicos, bases estruturadas e infraestrutura de site.",
   "project_ref": "thiagoba2004/classe-e-massas",
-  "kernel_version_audited_against": "1.5",
-  "kernel_version_applied": "1.5",
+  "kernel_version_audited_against": "1.6",
+  "kernel_version_applied": "1.6",
   "agents_version_current": "2.8",
   "agents_blob_sha_current": "18654f8a6f46c2d690139bba430d110b14548ecd",
   "previous_agents_version": "1.8",
@@ -242,5 +242,17 @@
     "status": "ATIVADA",
     "log": "IMPROVEMENT_LOG.jsonl",
     "strategy_code": "EA-000001-000032"
+  },
+  "global_coordinator_bridge": {
+    "status": "ATIVADA",
+    "bootstrap": "/Governanca-Geral-Modelos-IA/00_BOOTSTRAP_COORDENADOR_GERAL.md",
+    "mode": "CONDICIONAL",
+    "triggers": [
+      "repercussão transversal",
+      "dúvida de roteamento",
+      "governança global",
+      "candidato a novo Projeto"
+    ],
+    "strategy_code": "EA-000001-000033"
   }
 }
