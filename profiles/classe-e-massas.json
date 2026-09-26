@@ -3,8 +3,8 @@
   "project_name": "Classe e Massas",
   "project_purpose": "Projeto editorial, documental e de pesquisa com traduções, artigos, observatórios, materiais jurídicos, bases estruturadas e infraestrutura de site.",
   "project_ref": "thiagoba2004/classe-e-massas",
-  "kernel_version_audited_against": "1.7",
-  "kernel_version_applied": "1.7",
+  "kernel_version_audited_against": "1.8",
+  "kernel_version_applied": "1.8",
   "agents_version_current": "2.8",
   "agents_blob_sha_current": "18654f8a6f46c2d690139bba430d110b14548ecd",
   "previous_agents_version": "1.8",
@@ -170,6 +170,18 @@
       ],
       "decided_at": "2026-09-26",
       "kernel_version": "1.7"
+    },
+    {
+      "module_id": "execution-environments",
+      "status": "ATIVADO",
+      "rationale": "Projeto persistente assistido por Modelos de IA; precisa separar identidade PRJ/EA/F dos ambientes Chat/Work/Projeto ChatGPT/Biblioteca/Codex e da persistência Git/Cofre.",
+      "source_refs": [
+        "EA-000001-000035",
+        "EXECUTION_ENVIRONMENT_PROFILE.json",
+        "modules/execution-environments.md"
+      ],
+      "decided_at": "2026-09-26",
+      "kernel_version": "1.8"
     }
   ],
   "migration_status": "IMPLANTADA_E_VERIFICADA",
@@ -275,5 +287,12 @@
     "raw_s3_allowed": false,
     "s4_allowed": false,
     "strategy_code": "EA-000001-000034"
+  },
+  "execution_environments": {
+    "status": "ATIVADO",
+    "profile_path": "EXECUTION_ENVIRONMENT_PROFILE.json",
+    "global_architecture": "thiagoba2004/governanca-geral-modelos-ia/ARQUITETURA_UNIVERSAL_AMBIENTES_EXECUCAO_PERSISTENCIA.md",
+    "project_identity_independent_of_platform": true,
+    "strategy_code": "EA-000001-000035"
   }
 }
