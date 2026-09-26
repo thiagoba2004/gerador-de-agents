@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 import argparse,json,re,unicodedata
 from pathlib import Path
-def n(s):return re.sub(r'\\s+',' ',unicodedata.normalize('NFKD',str(s)).encode('ascii','ignore').decode('ascii').lower()).strip()
+def n(s):return re.sub(r'\s+',' ',unicodedata.normalize('NFKD',str(s)).encode('ascii','ignore').decode('ascii').lower()).strip()
 def blob(r):
     x=[r.get('path',''),r.get('title',''),' '.join(r.get('headings',[])),' '.join(r.get('keywords',[])),' '.join(r.get('semantic_tags',[])),' '.join(r.get('external_domains',[])),' '.join(r.get('source_systems',[]))]
     for v in r.get('identifiers',{}).values():x.append(' '.join(v))
