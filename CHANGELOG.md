@@ -1,3 +1,13 @@
+## 1.21 — 26/09/2026 — Roteamento bidirecional com o Coordenador Geral
+
+- eleva o Kernel universal para **1.6**;
+- formaliza a consulta condicional a `/Governanca-Geral-Modelos-IA/00_BOOTSTRAP_COORDENADOR_GERAL.md` quando houver repercussão transversal, dúvida de pertencimento, governança global ou potencial de novo Projeto;
+- preserva o caminho direto para pedidos inequivocamente locais;
+- estabelece regra anti-loop: Bootstrap → Projeto é normal; Projeto → Bootstrap ocorre somente diante dos gatilhos de roteamento;
+- orienta que ausência de acesso à Biblioteca não autoriza reconstrução ou invenção do conteúdo global;
+- propaga a regra para o template de AGENTS e para os três Projetos atuais;
+- estratégia: `EA-000002-000019`.
+
 ## 1.20 — 26/09/2026 — Knowledge Index, BDTD e melhoria contínua proativa
 
 - eleva o Kernel universal para **1.5**;
