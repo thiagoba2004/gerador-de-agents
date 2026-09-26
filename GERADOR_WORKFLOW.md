@@ -247,3 +247,15 @@ A saída deve informar, conforme aplicável:
 - lacunas encontradas;
 - estado real da persistência/versionamento;
 - próximo passo lógico.
+
+
+## 6. Gates transversais de conhecimento e melhoria
+
+Em Rota A ou Rota B, antes do fechamento:
+
+1. avaliar se o corpus exige `knowledge-index`; para Sites/projetos documentais persistentes, a resposta padrão é SIM;
+2. criar/validar `IMPROVEMENT_LOG.jsonl`;
+3. verificar se oportunidades materiais identificadas durante a execução foram comunicadas e registradas;
+4. quando `research` e produção acadêmica brasileira forem pertinentes, incluir BDTD/IBICT no protocolo;
+5. executar o innovation check final e registrar propostas ainda não implementadas;
+6. impedir exposição pública do índice e do log de melhorias, salvo decisão expressa em contrário.
