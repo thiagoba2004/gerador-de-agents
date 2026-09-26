@@ -1,0 +1,26 @@
+{
+  "schema_version": "1.0",
+  "project_code": "{{PROJECT_CODE}}",
+  "project_name": "{{PROJECT_NAME}}",
+  "updated_at": "{{DATE}}",
+  "global_policy": "/Governanca-Geral-Modelos-IA/CLASSIFICACAO_UNIVERSAL_INFORMACAO.md",
+  "repository": {
+    "visibility": "{{PUBLIC_OR_PRIVATE}}",
+    "surface": "{{P1_OR_P2}}",
+    "confidential_content_allowed": {{CONFIDENTIAL_ALLOWED}},
+    "s2_or_higher_allowed": {{S2_ALLOWED}},
+    "raw_s3_allowed": false,
+    "s4_allowed": false
+  },
+  "pages": {
+    "enabled": {{PAGES_ENABLED}},
+    "surface": "{{P3_OR_NULL}}",
+    "explicit_publication_gate_required": {{PAGES_ENABLED}}
+  },
+  "default_rules": {
+    "public_content": "S0_PUBLICO",
+    "confidential_derivatives": "P1_GIT_PRIVADO when permitted",
+    "raw_highly_sensitive_documents": "P0_COFRE_EXTERNO",
+    "secrets": "Never store in Git/Library/chat/logs"
+  }
+}
