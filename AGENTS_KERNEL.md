@@ -1,6 +1,6 @@
 # AGENTS KERNEL — NÚCLEO UNIVERSAL
 
-**kernel_version:** 1.6  
+**kernel_version:** 1.7  
 **project_code de origem:** `PRJ-000002`  
 **project_alias de origem:** `GDA`  
 **data:** 26/09/2026
@@ -275,6 +275,22 @@ A ausência de sugestão é aceitável somente quando não houver oportunidade m
 
 Quando o módulo de pesquisa tratar de tema compatível com produção acadêmica brasileira, considerar sistematicamente a **Biblioteca Digital Brasileira de Teses e Dissertações (BDTD/IBICT)** como fonte de descoberta. O resultado deve ser validado no repositório da instituição de origem e, quando disponível, por Handle/DOI. Presença na BDTD não equivale, por si só, a qualidade, atualidade ou aderência.
 
-## 22. Regra máxima
+## 22. Gate universal de sensibilidade e publicação
+
+Antes de criar, mover, enviar, fazer upload, commit, publicar ou anexar conteúdo persistente, classificar **sensibilidade** e **superfície** segundo a política global do Coordenador Geral e o módulo `information-classification`.
+
+Regras mínimas universais:
+
+- `S2_CONFIDENCIAL` ou superior nunca em repositório público ou Site;
+- documento bruto `S3_ALTAMENTE_SENSIVEL` permanece em cofre externo por padrão e não deve ser commitado ao Git;
+- `S4_SEGREDO_CRITICO` nunca deve ser enviado ao Modelo nem persistido em Git, Biblioteca, chat, Markdown, JSON ou logs;
+- rebaixamento de sensibilidade exige derivado sanitizado;
+- repositório público é superfície pública mesmo sem link no Site;
+- Git privado não é cofre documental;
+- mudança de visibilidade do repositório ou ativação de Pages exige nova classificação.
+
+Todo Projeto persistente deve declarar seu `INFORMATION_HANDLING_PROFILE.json`.
+
+## 23. Regra máxima
 
 > **Nunca obrigar o usuário a pagar novamente, com tempo, energia ou recursos, por falha de memória, persistência, continuidade, planejamento ou verificação do Modelo de IA.**
