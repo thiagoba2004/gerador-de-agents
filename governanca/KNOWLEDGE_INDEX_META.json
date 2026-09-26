@@ -21,5 +21,8 @@
     "superendividamento": 7,
     "trabalho_sindical": 4
   },
-  "source_system_counts": {}
-}\n
+  "source_system_counts": {
+    "BDTD/IBICT": 1,
+    "IBICT": 1
+  }
+}
