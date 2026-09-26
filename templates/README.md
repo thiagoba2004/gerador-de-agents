@@ -17,3 +17,6 @@ Templates atualmente disponíveis:
 A existência de um template não obriga sua utilização literal. O Gerador deve adaptar a estrutura ao projeto concreto sem eliminar as funções essenciais de governança, rastreabilidade, persistência e continuidade.
 
 - `PAUTA_EDITORIAL.example.md` — modelo de pauta editorial/backlog interno para projetos com Artigos ou fila editorial futura; nunca é conteúdo público.
+
+- `EXECUTION_ENVIRONMENT_PROFILE.example.json` — perfil v2 de superfície, executor, contexto, fontes e handoff.
+- `EXECUTION_HANDOFF.example.md` — pacote mínimo e auditável para transferir execução entre contextos incompatíveis.
