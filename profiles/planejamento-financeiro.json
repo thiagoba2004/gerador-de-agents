@@ -6,7 +6,7 @@
   "project_id_legacy": "planejamento-financeiro",
   "project_purpose": "Qualificar profissionais com base no CFP®, integrando preparação para a prova, desenvolvimento de competências e aplicação profissional no mercado.",
   "project_ref": "thiagoba2004/planejamento-financeiro",
-  "kernel_version": "1.7",
+  "kernel_version": "1.8",
   "canonical_files": [
     "AGENTS.md",
     "REQUEST_LOG.jsonl",
@@ -154,6 +154,18 @@
       ],
       "decided_at": "2026-09-26",
       "kernel_version": "1.7"
+    },
+    {
+      "module_id": "execution-environments",
+      "status": "ATIVADO",
+      "rationale": "Projeto persistente assistido por Modelos de IA; precisa separar identidade PRJ/EA/F dos ambientes Chat/Work/Projeto ChatGPT/Biblioteca/Codex e da persistência Git/Cofre.",
+      "source_refs": [
+        "EA-000004-000051",
+        "EXECUTION_ENVIRONMENT_PROFILE.json",
+        "modules/execution-environments.md"
+      ],
+      "decided_at": "2026-09-26",
+      "kernel_version": "1.8"
     }
   ],
   "migration_status": "ROTA_A_IMPLANTADA_E_VERIFICADA",
@@ -333,5 +345,12 @@
     "raw_s3_allowed": false,
     "s4_allowed": false,
     "strategy_code": "EA-000004-000050"
+  },
+  "execution_environments": {
+    "status": "ATIVADO",
+    "profile_path": "EXECUTION_ENVIRONMENT_PROFILE.json",
+    "global_architecture": "thiagoba2004/governanca-geral-modelos-ia/ARQUITETURA_UNIVERSAL_AMBIENTES_EXECUCAO_PERSISTENCIA.md",
+    "project_identity_independent_of_platform": true,
+    "strategy_code": "EA-000004-000051"
   }
 }
