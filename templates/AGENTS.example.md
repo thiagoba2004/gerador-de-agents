@@ -225,6 +225,21 @@ Se Artigos/fila editorial não forem aplicáveis, registrar `NOT_APPLICABLE` com
 
 
 
+## Arquitetura de ambientes de execução
+
+Este Projeto mantém identidade `PRJ/EA/F` independente de Chat, Work, Projeto ChatGPT, Biblioteca ou Codex.
+
+Preferências:
+
+- Chat: diálogo, decisão e tarefa delimitada;
+- Work: pesquisa ampla, auditoria, muitos arquivos/apps e entrega acabada;
+- Projeto ChatGPT: contêiner contextual opcional, nunca identidade canônica;
+- Biblioteca: contexto/espelho operacional;
+- Codex: código, testes e engenharia de repositório;
+- Apps/Connectors: acesso autorizado a sistemas externos.
+
+`EXECUTION_ENVIRONMENT_PROFILE.json` registra as preferências locais. O GitHub permanece fonte versionada quando houver repositório.
+
 ## Classificação Universal de Informação
 
 Antes de persistir qualquer arquivo, aplicar a política global de sensibilidade/publicação e o `INFORMATION_HANDLING_PROFILE.json` do Projeto.
