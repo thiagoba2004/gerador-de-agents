@@ -1,0 +1,25 @@
+{
+  "deterministic": true,
+  "extensions": {
+    ".json": 6,
+    ".jsonl": 9,
+    ".md": 68,
+    ".yml": 1
+  },
+  "generator": "tools/build_knowledge_index.py",
+  "index_file": "governanca/KNOWLEDGE_INDEX.jsonl",
+  "record_count": 84,
+  "schema_version": "1.0",
+  "semantic_tag_counts": {
+    "bdtd_ibict": 9,
+    "editorial": 48,
+    "financeiro": 25,
+    "fonte": 41,
+    "governanca": 52,
+    "juridico": 8,
+    "pesquisa_academica": 23,
+    "superendividamento": 7,
+    "trabalho_sindical": 4
+  },
+  "source_system_counts": {}
+}\n
