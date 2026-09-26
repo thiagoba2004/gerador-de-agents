@@ -9,14 +9,14 @@ TEXT_EXTS={'.md','.html','.htm','.json','.jsonl','.csv','.txt','.yml','.yaml','.
 EXCLUDE_DIRS={'.git','_site','node_modules','vendor','.venv','venv','__pycache__'}
 EXCLUDE_FILES={'governanca/KNOWLEDGE_INDEX.jsonl','governanca/KNOWLEDGE_INDEX_META.json','tools/build_knowledge_index.py','tools/query_knowledge_index.py'}
 STOP=set('a o os as um uma uns umas de da do das dos e ou em no na nos nas por para com sem sob sobre entre ao aos que se ser foi sao como quando onde qual quais mais menos muito muita muitos muitas este esta estes estas isso isto aquele aquela seu sua seus suas the and of to in for on with from is are be by as at an or'.split())
-URL_RE=re.compile(r'https?://[^\\s<>\\]\\[)"\\\']+')
+URL_RE=re.compile(r'https?://[^\s<>\]\[)"\']+')
 ID_PATTERNS={
- 'project_codes':re.compile(r'\\bPRJ-\\d{6}\\b'),
- 'strategy_codes':re.compile(r'\\bEA-\\d{6}-\\d{6}\\b'),
- 'phase_codes':re.compile(r'\\bF-\\d{6}-\\d{6}-\\d{3}\\b'),
- 'request_ids':re.compile(r'\\bREQ-\\d{8}-\\d{3}\\b'),
- 'doi':re.compile(r'\\b10\\.\\d{4,9}/[-._;()/:A-Z0-9]+\\b',re.I),
- 'handles':re.compile(r'https?://(?:hdl\\.handle\\.net|handle\\.net)/[^\\s<>\\]\\[)"\\\']+',re.I)
+ 'project_codes':re.compile(r'\bPRJ-\d{6}\b'),
+ 'strategy_codes':re.compile(r'\bEA-\d{6}-\d{6}\b'),
+ 'phase_codes':re.compile(r'\bF-\d{6}-\d{6}-\d{3}\b'),
+ 'request_ids':re.compile(r'\bREQ-\d{8}-\d{3}\b'),
+ 'doi':re.compile(r'\b10\.\d{4,9}/[-._;()/:A-Z0-9]+\b',re.I),
+ 'handles':re.compile(r'https?://(?:hdl\.handle\.net|handle\.net)/[^\s<>\]\[)"\']+',re.I)
 }
 TAG_RULES={
  'bdtd_ibict':['bdtd','biblioteca digital brasileira de teses e dissertacoes','ibict'],
@@ -35,7 +35,7 @@ SOURCE_SYSTEMS={
  'usp.br':'USP','ufba.br':'UFBA','ufpe.br':'UFPE','ufc.br':'UFC','ufpb.br':'UFPB','unb.br':'UnB','ufu.br':'UFU','ufsc.br':'UFSC'
 }
 def norm(s):
-    return re.sub(r'\\s+',' ',unicodedata.normalize('NFKD',str(s)).encode('ascii','ignore').decode('ascii').lower()).strip()
+    return re.sub(r'\s+',' ',unicodedata.normalize('NFKD',str(s)).encode('ascii','ignore').decode('ascii').lower()).strip()
 def read_text(p):
     try:return p.read_text(encoding='utf-8')
     except UnicodeDecodeError:
@@ -51,15 +51,15 @@ def title_headings(text,ext,fallback):
     title=None; hs=[]
     if ext=='.md':
         for line in text.splitlines():
-            m=re.match(r'^\\s*(#{1,6})\\s+(.+?)\\s*$',line)
+            m=re.match(r'^\s*(#{1,6})\s+(.+?)\s*$',line)
             if m:
-                v=re.sub(r'\\s+#+\\s*$','',m.group(2)).strip(); hs.append(v)
+                v=re.sub(r'\s+#+\s*$','',m.group(2)).strip(); hs.append(v)
                 if title is None and len(m.group(1))==1:title=v
     elif ext in {'.html','.htm'}:
         m=re.search(r'(?is)<title[^>]*>(.*?)</title>',text)
-        if m:title=re.sub(r'\\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',m.group(1)))).strip()
+        if m:title=re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',m.group(1)))).strip()
         for m in re.finditer(r'(?is)<h[1-6][^>]*>(.*?)</h[1-6]>',text):
-            v=re.sub(r'\\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',m.group(1)))).strip()
+            v=re.sub(r'\s+',' ',html.unescape(re.sub(r'<[^>]+>',' ',m.group(1)))).strip()
             if v:hs.append(v)
         if not title and hs:title=hs[0]
     return title or fallback,hs[:24]
@@ -95,8 +95,8 @@ def main():
         ids={k:sorted(set(rx.findall(text)))[:100] for k,rx in ID_PATTERNS.items()}
         rows.append({'path':rel,'extension':ext,'size_bytes':len(raw),'sha256':hashlib.sha256(raw).hexdigest(),'title':title,'headings':hs,'keywords':keywords(plain),'semantic_tags':tags,'external_domains':domains[:50],'source_systems':systems,'identifiers':ids})
     out=root/a.out; meta=root/a.meta; out.parent.mkdir(parents=True,exist_ok=True)
-    out.write_text(''.join(json.dumps(r,ensure_ascii=False,sort_keys=True)+'\\n' for r in rows),encoding='utf-8')
+    out.write_text(''.join(json.dumps(r,ensure_ascii=False,sort_keys=True)+'\n' for r in rows),encoding='utf-8')
     tc=Counter(t for r in rows for t in r['semantic_tags']); sc=Counter(s for r in rows for s in r['source_systems'])
-    meta.write_text(json.dumps({'schema_version':'1.0','record_count':len(rows),'extensions':dict(sorted(Counter(r['extension'] for r in rows).items())),'semantic_tag_counts':dict(sorted(tc.items())),'source_system_counts':dict(sorted(sc.items())),'index_file':a.out,'generator':'tools/build_knowledge_index.py','deterministic':True},ensure_ascii=False,indent=2,sort_keys=True)+'\\n',encoding='utf-8')
+    meta.write_text(json.dumps({'schema_version':'1.0','record_count':len(rows),'extensions':dict(sorted(Counter(r['extension'] for r in rows).items())),'semantic_tag_counts':dict(sorted(tc.items())),'source_system_counts':dict(sorted(sc.items())),'index_file':a.out,'generator':'tools/build_knowledge_index.py','deterministic':True},ensure_ascii=False,indent=2,sort_keys=True)+'\n',encoding='utf-8')
     print('indexed='+str(len(rows)))
 if __name__=='__main__':main()
