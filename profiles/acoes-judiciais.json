@@ -6,7 +6,7 @@
   "project_id_legacy": "acoes-judiciais",
   "project_purpose": "Fonte pública de consulta teórica e prática sobre possíveis ações judiciais para pessoas físicas e jurídicas, organizada por estratégias autônomas temáticas.",
   "project_ref": "thiagoba2004/acoes-judiciais",
-  "kernel_version": "1.6",
+  "kernel_version": "1.7",
   "canonical_files": [
     "AGENTS.md",
     "REQUEST_LOG.jsonl",
@@ -138,6 +138,18 @@
       ],
       "decided_at": "2026-09-26",
       "kernel_version": "1.5"
+    },
+    {
+      "module_id": "information-classification",
+      "status": "ATIVADO",
+      "rationale": "O projeto persiste arquivos em Git e possui superfície pública; o gate universal de sensibilidade/publicação é obrigatório para impedir S2+ em repositório público e separar documentos brutos de derivados sanitizados.",
+      "source_refs": [
+        "EA-000003-000043",
+        "INFORMATION_HANDLING_PROFILE.json",
+        "modules/information-classification.md"
+      ],
+      "decided_at": "2026-09-26",
+      "kernel_version": "1.7"
     }
   ],
   "migration_status": "ROTA_A_IMPLANTADA_E_VERIFICADA",
@@ -304,5 +316,14 @@
       "candidato a novo Projeto"
     ],
     "strategy_code": "EA-000003-000042"
+  },
+  "information_handling": {
+    "status": "ATIVADO",
+    "profile_path": "INFORMATION_HANDLING_PROFILE.json",
+    "repository_surface": "P2_GIT_PUBLICO_REPOSITORIO",
+    "s2_or_higher_allowed": false,
+    "raw_s3_allowed": false,
+    "s4_allowed": false,
+    "strategy_code": "EA-000003-000043"
   }
 }
