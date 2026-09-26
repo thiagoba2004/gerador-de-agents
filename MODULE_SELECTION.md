@@ -1,6 +1,6 @@
 # MODULE SELECTION — POLÍTICA DE ATIVAÇÃO DE MÓDULOS
 
-**kernel_version:** `1.4`
+**kernel_version:** `1.5`
 
 O Gerador de Agents deve selecionar módulos especializados por evidência do projeto, nunca por associação vaga ou preferência do modelo.
 
@@ -49,6 +49,10 @@ kernel_version
 A decisão pode ser persistida no perfil do projeto ou em arquivo estruturado próprio. Em um perfil com várias decisões, `decided_at` e `kernel_version` devem acompanhar cada decisão para que revisões futuras possam ser auditadas individualmente.
 
 ## 4. Matriz inicial de módulos
+
+### `knowledge-index`
+
+Ativar por padrão quando o projeto possuir corpus persistente relevante, múltiplos documentos canônicos ou necessidade recorrente de responder perguntas transversais sobre o próprio acervo. Pode ser `NAO_APLICAVEL` apenas para projetos mínimos sem corpus documental significativo.
 
 ### `research`
 
