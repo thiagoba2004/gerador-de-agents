@@ -5,7 +5,7 @@
 **project_sequence:** `000002`  
 **project_alias:** `GDA`  
 **project_name:** `Gerador de Agents`  
-**generated_from_kernel:** `1.4`  
+**generated_from_kernel:** `1.6`  
 **repository:** `thiagoba2004/gerador-de-agents`
 
 ## 1. Missão do projeto
@@ -35,6 +35,20 @@ EXECUTAR
 ```
 
 Nenhum pedido deve ser tratado apenas no chat quando o repositório estiver acessível.
+
+### Ponte bidirecional com o Coordenador Geral
+
+Antes de tratar pedidos com **possível repercussão transversal**, **dúvida de pertencimento/roteamento**, possível vínculo com a **governança global** ou sinais de **candidato a novo Projeto**, consultar, quando a Biblioteca estiver acessível:
+
+`/Governanca-Geral-Modelos-IA/00_BOOTSTRAP_COORDENADOR_GERAL.md`
+
+Regras:
+
+- pedidos inequivocamente locais e já abrangidos por este Projeto seguem diretamente este `AGENTS.md`, sem consulta obrigatória ao Bootstrap;
+- a consulta ao Bootstrap é condicional e serve para classificar/rotear, não para substituir a governança local;
+- evitar loop de roteamento: Bootstrap → Projeto é entrada normal; Projeto → Bootstrap ocorre apenas diante de dúvida, repercussão transversal ou governança global;
+- se a Biblioteca/Bootstrap não estiver acessível na sessão, não inventar seu conteúdo; registrar a limitação quando material e prosseguir pela governança local comprovada;
+- conversas classificadas como casuais/efêmeras pelo Coordenador Geral não devem ser artificialmente absorvidas por este Projeto.
 
 ## 3. Fonte da verdade deste projeto
 
