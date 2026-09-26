@@ -6,7 +6,7 @@
   "release_version": "1.26",
   "kernel_version": "1.11",
   "current_strategy_id": null,
-  "last_concluded_strategy_id": "EA-000002-000022",
+  "last_concluded_strategy_id": "EA-000002-000023",
   "current_phase": null,
   "last_completed_milestone": "Arquitetura 2.2: Gerador de Agents é PRJ sem Projeto ChatGPT associado (B0); C2/C3 não aplicável.",
   "canonical_files": [
@@ -125,7 +125,7 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000022",
+  "last_concluded_strategy_code": "EA-000002-000023",
   "current_strategy": null,
   "editorial_backlog_standard": {
     "version": "1.0",
@@ -135,7 +135,7 @@
     "status": "IMPLANTADO_E_AUDITADO"
   },
   "strategy_status": "SEM_ESTRATEGIA_ATIVA",
-  "last_concluded_strategy_name": "Arquitetura Universal v2 — Isolamento, Fontes de Conhecimento e Handoff",
+  "last_concluded_strategy_name": "Vínculo Opcional entre Projeto de Governança e Projeto ChatGPT",
   "knowledge_index": {
     "status": "IMPLANTADO_E_VERIFICADO",
     "schema_version": "1.0",
