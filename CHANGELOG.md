@@ -1,3 +1,12 @@
+## 1.26 — 26/09/2026 — Vínculo opcional com Projeto ChatGPT
+
+- eleva o Kernel para **1.11**;
+- corrige a Arquitetura para **2.2**;
+- introduz `B0_NO_CHATGPT_PROJECT_BINDING` e `B1_CHATGPT_PROJECT_BOUND`;
+- reconhece que um Projeto de Governança pode existir sem Projeto ChatGPT;
+- registra o Gerador de Agents em `B0`; C2/C3 = não aplicável;
+- atualiza módulo e templates para classificar vínculo antes de memória.
+
 ## 1.25 — 26/09/2026 — Correção de contexto por Projeto
 
 - eleva o Kernel para **1.10**;
