@@ -1,7 +1,7 @@
 # Módulo: Execution Environments v2
 
 **module_id:** `execution-environments`  
-**architecture_version:** `2.0`
+**architecture_version:** `2.1`
 
 ## Finalidade
 
@@ -33,7 +33,7 @@ Superfície não define capacidade exclusiva.
 - `C3_CHATGPT_PROJECT_ONLY_MEMORY`
 - `C4_TEMPORARY_CHAT`
 
-**Padrão:** Projetos ChatGPT associados a Projetos de Governança usam `C3_CHATGPT_PROJECT_ONLY_MEMORY`, salvo decisão expressa.
+**Regra:** não existe padrão global. Cada Projeto ChatGPT deve declarar explicitamente `C2` ou `C3`; o módulo não pode inferir o modo pela natureza do Projeto.
 
 **Restrição:** Work não está disponível dentro de `C3`.
 
