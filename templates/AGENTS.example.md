@@ -225,6 +225,18 @@ Se Artigos/fila editorial não forem aplicáveis, registrar `NOT_APPLICABLE` com
 
 
 
+## Classificação Universal de Informação
+
+Antes de persistir qualquer arquivo, aplicar a política global de sensibilidade/publicação e o `INFORMATION_HANDLING_PROFILE.json` do Projeto.
+
+Regras mínimas:
+
+- `S2+`: nunca em repositório público ou Site;
+- documento bruto `S3`: cofre externo por padrão, não Git;
+- `S4`: nunca compartilhar com o Modelo ou persistir em Git/Biblioteca/chat/logs;
+- rebaixamento de sensibilidade somente por derivado sanitizado;
+- mudança de visibilidade ou Pages exige nova classificação.
+
 ## Índice semântico-factual do acervo
 
 Quando o projeto possuir corpus persistente relevante, manter `governanca/KNOWLEDGE_INDEX.jsonl` gerado deterministicamente. Consultá-lo antes de varreduras manuais amplas e confirmar achados no documento original. O índice não duplica o texto integral e permanece fora da camada pública.
