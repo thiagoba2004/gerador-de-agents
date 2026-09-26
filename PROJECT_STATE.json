@@ -27,7 +27,13 @@
     "IMPROVEMENT_LOG.jsonl",
     "governanca/KNOWLEDGE_INDEX.md",
     "governanca/KNOWLEDGE_INDEX.jsonl",
-    "governanca/KNOWLEDGE_INDEX_META.json"
+    "governanca/KNOWLEDGE_INDEX_META.json",
+    "modules/knowledge-index.md",
+    "tools/build_knowledge_index.py",
+    "tools/query_knowledge_index.py",
+    "KNOWLEDGE_INDEX_CATALOG.jsonl",
+    "templates/KNOWLEDGE_INDEX_PROTOCOL.example.md",
+    "templates/IMPROVEMENT_LOG.example.jsonl"
   ],
   "reusable_areas": [
     "templates/",
@@ -38,7 +44,11 @@
     "modules/professional-education.md",
     "modules/web-site.md",
     "modules/contact-protocol.md",
-    "templates/PAUTA_EDITORIAL.example.md"
+    "templates/PAUTA_EDITORIAL.example.md",
+    "modules/knowledge-index.md",
+    "tools/build_knowledge_index.py",
+    "tools/query_knowledge_index.py",
+    "KNOWLEDGE_INDEX_CATALOG.jsonl"
   ],
   "completed_phases": [
     "FASE 1 — registro e delimitação",
@@ -141,5 +151,6 @@
     "log": "IMPROVEMENT_LOG.jsonl",
     "rule": "Comunicar e persistir oportunidades materiais; não ampliar silenciosamente o escopo; executar innovation check em trabalhos substanciais.",
     "updated_at": "2026-09-26"
-  }
+  },
+  "generator_release": "1.20"
 }
