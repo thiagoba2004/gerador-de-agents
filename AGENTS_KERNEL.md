@@ -1,6 +1,6 @@
 # AGENTS KERNEL — NÚCLEO UNIVERSAL
 
-**kernel_version:** 1.8  
+**kernel_version:** 1.9  
 **project_code de origem:** `PRJ-000002`  
 **project_alias de origem:** `GDA`  
 **data:** 26/09/2026
@@ -291,26 +291,33 @@ Regras mínimas universais:
 
 Todo Projeto persistente deve declarar seu `INFORMATION_HANDLING_PROFILE.json`.
 
-## 23. Arquitetura universal de ambientes de execução e persistência
+## 23. Arquitetura universal de ambientes v2
 
-Todo Projeto deve separar três planos:
+Todo Projeto persistente deve separar:
 
-1. **Identidade/Governança:** códigos `PRJ`, `EA` e `F`;
-2. **Ambiente da plataforma:** Chat, Work, Projeto ChatGPT, Biblioteca, Codex e Apps/Connectors;
-3. **Persistência/Publicação:** Cofre, Git privado, Git público e Site.
+1. **G — Identidade/Governança:** `PRJ/EA/F`;
+2. **A — Superfície de acesso:** mobile, web, desktop;
+3. **E — Executor:** Chat, Work, Codex;
+4. **C — Contexto/Memória:** chat avulso, Projeto com memória padrão/exclusiva, temporário;
+5. **K — Fonte de Conhecimento:** fontes do Projeto, Biblioteca, Git, nuvem conectada, filesystem, Web;
+6. **P — Persistência/Publicação:** Cofre, Git privado, Git público, Site.
 
 Regras universais:
 
-- Projeto ChatGPT é contêiner contextual opcional e nunca substitui a identidade `PRJ-NNNNNN`;
-- Chat é preferencial para diálogo, decisão e tarefa delimitada;
-- Work é preferencial para pesquisa ampla, auditoria, muitos arquivos/apps e entrega acabada;
-- Codex é preferencial para código, testes e alterações intensivas em repositório;
-- Biblioteca é espelho/contexto operacional e não deve ser a única fonte quando independência de plataforma for requisito;
-- GitHub é a fonte versionada do Projeto quando houver repositório;
-- ambiente indisponível não altera `PRJ/EA/F`; aplicar fallback e persistir estado antes de encerrar;
-- trabalho substancial não deve permanecer somente no ambiente de execução.
+- Projeto ChatGPT nunca substitui a identidade `PRJ`;
+- memória exclusiva do Projeto é o padrão para Projetos ChatGPT de governança, salvo decisão expressa;
+- memória exclusiva reduz contaminação contextual, mas não elimina alucinação e não é fonte de verdade;
+- Work não está disponível dentro de Projeto com memória exclusiva;
+- fontes anexadas ao Projeto compõem Core Context curado, não o repositório integral;
+- Biblioteca é descoberta/espelho operacional;
+- Git/repositório é fonte versionada quando designado;
+- filesystem local é working copy/cache e não pode ser a única cópia necessária à continuidade;
+- quando Work/Codex não herdarem o contexto, usar handoff explícito com o mínimo necessário;
+- handoff deve preservar classificação de sensibilidade e destino canônico;
+- ambiente indisponível não altera `PRJ/EA/F`;
+- trabalho substancial termina com persistência verificável.
 
-Todo Projeto persistente deve manter `EXECUTION_ENVIRONMENT_PROFILE.json`.
+Todo Projeto persistente deve manter `EXECUTION_ENVIRONMENT_PROFILE.json` schema v2.
 
 ## 24. Regra máxima
 
