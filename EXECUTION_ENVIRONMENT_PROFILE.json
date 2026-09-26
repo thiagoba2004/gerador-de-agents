@@ -1,6 +1,6 @@
 {
-  "schema_version": "2.0",
-  "architecture_version": "2.0",
+  "schema_version": "2.1",
+  "architecture_version": "2.1",
   "project_code": "PRJ-000002",
   "project_name": "Gerador de Agents",
   "project_alias": "GDA",
@@ -13,9 +13,11 @@
   },
   "project_domain": "arquitetura de governança, templates, módulos e automação de repositórios",
   "context_policy": {
-    "default_chatgpt_project_memory": "C3_CHATGPT_PROJECT_ONLY_MEMORY",
-    "reason": "reduce cross-project contextual contamination while keeping documentary knowledge decoupled",
-    "work_available_inside_default_context": false,
+    "observed_chatgpt_project_memory": "C2_CHATGPT_PROJECT_DEFAULT_MEMORY",
+    "context_mode_source": "USER_REPORTED_2026-09-26",
+    "global_default": null,
+    "selection_rule": "PER_PROJECT_EXPLICIT_NO_GLOBAL_DEFAULT",
+    "work_available_inside_observed_context": true,
     "memory_is_source_of_truth": false
   },
   "canonical_persistence": {
@@ -63,7 +65,6 @@
   },
   "handoff": {
     "required_when_preferred_executor_does_not_inherit_context": true,
-    "especially_project_only_to_work": true,
     "minimum_context": [
       "project",
       "strategy",
@@ -75,7 +76,8 @@
       "canonical_destination",
       "completion_gate"
     ],
-    "validate_before_canonical_persistence": true
+    "validate_before_canonical_persistence": true,
+    "project_only_to_work": "ONLY_IF_THIS_PROJECT_CHANGES_TO_C3"
   },
   "fallback": {
     "preserve_project_strategy_phase_identity": true,
