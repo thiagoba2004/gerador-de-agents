@@ -71,3 +71,19 @@ Antes do fechamento:
 - perda de links ou documentos;
 - pesquisa duplicada por ausência de registro;
 - incorporação de conteúdo não verificado ao produto final.
+
+
+## BDTD/IBICT — descoberta acadêmica brasileira
+
+Quando houver aderência temática à produção de pós-graduação brasileira:
+
+1. pesquisar a **Biblioteca Digital Brasileira de Teses e Dissertações (BDTD)**, do **Instituto Brasileiro de Informação em Ciência e Tecnologia (IBICT)**, em <https://bdtd.ibict.br/>;
+2. registrar consulta, descritores, filtros e data de corte quando a pesquisa for substantiva;
+3. deduplicar versões recuperadas por repositório, Handle e DOI;
+4. preferir como referência final o registro institucional de origem e identificador persistente;
+5. ler resumo e, quando necessário, texto integral antes de atribuir tese/achado;
+6. classificar pertinência, nível (mestrado/doutorado), instituição/programa, ano, método e contribuição;
+7. não tratar presença na BDTD como selo automático de qualidade;
+8. combinar BDTD com outras bases adequadas ao domínio quando necessário.
+
+A BDTD é fonte de **descoberta e integração de metadados**; o documento da instituição de origem permanece a unidade probatória da obra.
