@@ -1,7 +1,7 @@
 # Módulo: Execution Environments v2
 
 **module_id:** `execution-environments`  
-**architecture_version:** `2.1`
+**architecture_version:** `2.2`
 
 ## Finalidade
 
@@ -27,13 +27,17 @@ Superfície não define capacidade exclusiva.
 - `E2_WORK`: execução substancial multi-etapas;
 - `E3_CODEX`: engenharia de software e repositório.
 
+### Plano B — Vínculo com Projeto ChatGPT
+- `B0_NO_CHATGPT_PROJECT_BINDING`
+- `B1_CHATGPT_PROJECT_BOUND`
+
 ### Plano C — Contexto/Memória
 - `C1_CHAT_AVULSO`
 - `C2_CHATGPT_PROJECT_DEFAULT_MEMORY`
 - `C3_CHATGPT_PROJECT_ONLY_MEMORY`
 - `C4_TEMPORARY_CHAT`
 
-**Regra:** não existe padrão global. Cada Projeto ChatGPT deve declarar explicitamente `C2` ou `C3`; o módulo não pode inferir o modo pela natureza do Projeto.
+**Regra:** primeiro declarar `B0_NO_CHATGPT_PROJECT_BINDING` ou `B1_CHATGPT_PROJECT_BOUND`. Somente em `B1` declarar `C2` ou `C3`. O módulo não pode inferir vínculo nem modo de memória.
 
 **Restrição:** Work não está disponível dentro de `C3`.
 
