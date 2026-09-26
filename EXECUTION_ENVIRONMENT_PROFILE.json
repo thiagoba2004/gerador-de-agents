@@ -1,6 +1,6 @@
 {
-  "schema_version": "2.1",
-  "architecture_version": "2.1",
+  "schema_version": "2.2",
+  "architecture_version": "2.2",
   "project_code": "PRJ-000002",
   "project_name": "Gerador de Agents",
   "project_alias": "GDA",
@@ -13,11 +13,8 @@
   },
   "project_domain": "arquitetura de governança, templates, módulos e automação de repositórios",
   "context_policy": {
-    "observed_chatgpt_project_memory": "C2_CHATGPT_PROJECT_DEFAULT_MEMORY",
-    "context_mode_source": "USER_REPORTED_2026-09-26",
-    "global_default": null,
-    "selection_rule": "PER_PROJECT_EXPLICIT_NO_GLOBAL_DEFAULT",
-    "work_available_inside_observed_context": true,
+    "project_level_memory_mode": "NOT_APPLICABLE",
+    "runtime_context_rule": "CLASSIFY_PER_EXECUTION_SESSION",
     "memory_is_source_of_truth": false
   },
   "canonical_persistence": {
@@ -77,7 +74,7 @@
       "completion_gate"
     ],
     "validate_before_canonical_persistence": true,
-    "project_only_to_work": "ONLY_IF_THIS_PROJECT_CHANGES_TO_C3"
+    "project_only_to_work": "ONLY_IF_A_FUTURE_BOUND_CHATGPT_PROJECT_USES_C3"
   },
   "fallback": {
     "preserve_project_strategy_phase_identity": true,
@@ -85,5 +82,10 @@
     "persist_state_before_exit": true,
     "never_claim_unavailable_environment": true
   },
-  "legacy_x_codes_read_only": true
+  "legacy_x_codes_read_only": true,
+  "chatgpt_project_binding": {
+    "status": "B0_NO_CHATGPT_PROJECT_BINDING",
+    "source": "USER_REPORTED_2026-09-26",
+    "chatgpt_project_name": null
+  }
 }
