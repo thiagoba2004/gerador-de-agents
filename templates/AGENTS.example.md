@@ -215,3 +215,14 @@ Quando o módulo `publication` estiver ativado **e o projeto possuir ou planejar
 
 Se Artigos/fila editorial não forem aplicáveis, registrar `NOT_APPLICABLE` com justificativa em vez de criar backlog vazio.
 
+
+
+## Índice semântico-factual do acervo
+
+Quando o projeto possuir corpus persistente relevante, manter `governanca/KNOWLEDGE_INDEX.jsonl` gerado deterministicamente. Consultá-lo antes de varreduras manuais amplas e confirmar achados no documento original. O índice não duplica o texto integral e permanece fora da camada pública.
+
+## Inovação e aperfeiçoamento proativos
+
+Manter `IMPROVEMENT_LOG.jsonl`. Ao identificar oportunidade material de automação, padronização, indexação, simplificação, fonte ausente, redução de retrabalho ou melhoria de verificabilidade, comunicar ao usuário e registrar a proposta. Não ampliar silenciosamente o escopo. No fechamento de trabalhos substanciais, executar um innovation check.
+
+Quando o módulo `research` tratar de produção acadêmica brasileira, incluir a BDTD/IBICT como fonte sistemática de descoberta e validar a obra no repositório institucional de origem.
