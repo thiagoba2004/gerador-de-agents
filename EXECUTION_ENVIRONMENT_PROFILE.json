@@ -1,5 +1,6 @@
 {
-  "schema_version": "1.0",
+  "schema_version": "2.0",
+  "architecture_version": "2.0",
   "project_code": "PRJ-000002",
   "project_name": "Gerador de Agents",
   "project_alias": "GDA",
@@ -7,27 +8,80 @@
   "global_architecture_repository": "thiagoba2004/governanca-geral-modelos-ia",
   "global_architecture_file": "ARQUITETURA_UNIVERSAL_AMBIENTES_EXECUCAO_PERSISTENCIA.md",
   "governance_identity": {
-    "independent_of_chatgpt_environment": true,
+    "independent_of_platform": true,
     "chatgpt_project_is_governance_project": false
   },
   "project_domain": "arquitetura de governança, templates, módulos e automação de repositórios",
+  "context_policy": {
+    "default_chatgpt_project_memory": "C3_CHATGPT_PROJECT_ONLY_MEMORY",
+    "reason": "reduce cross-project contextual contamination while keeping documentary knowledge decoupled",
+    "work_available_inside_default_context": false,
+    "memory_is_source_of_truth": false
+  },
   "canonical_persistence": {
     "type": "GIT_REPOSITORY",
     "repository_full_name": "thiagoba2004/gerador-de-agents",
     "source_of_truth": true
   },
-  "environment_defaults": {
-    "dialogue_decision_bounded_task": "X1_CHAT",
-    "substantial_research_audit_many_files": "X2_WORK",
-    "context_grouping": "X3_CHATGPT_PROJECT_OPTIONAL",
-    "account_file_recovery": "X4_LIBRARY",
-    "code_tests_repository_engineering": "X5_CODEX",
-    "external_service_access": "X6_APPS_CONNECTORS"
+  "access_preferences": {
+    "A1_ANDROID_MOBILE": "E1_CHAT",
+    "A2_WEB": "E2_WORK_WHEN_COMPATIBLE",
+    "A3_DESKTOP": "E3_CODEX_FOR_REPOSITORY_WORK"
+  },
+  "executor_defaults": {
+    "dialogue_decision_bounded_task": "E1_CHAT",
+    "substantial_research_audit_many_files": "E2_WORK",
+    "code_tests_repository_engineering": "E3_CODEX"
+  },
+  "knowledge_sources": {
+    "K1_PROJECT_ATTACHED_SOURCES": {
+      "role": "CURATED_CORE_CONTEXT",
+      "full_repository": false,
+      "plus_file_limit": 25,
+      "simultaneous_upload_limit": 10
+    },
+    "K2_CHATGPT_LIBRARY": {
+      "role": "OPERATIONAL_DISCOVERY_MIRROR",
+      "canonical": false
+    },
+    "K3_GIT_REPOSITORY": {
+      "role": "VERSIONED_CANONICAL_STATE",
+      "repository_full_name": "thiagoba2004/gerador-de-agents"
+    },
+    "K4_CONNECTED_CLOUD_SOURCE": {
+      "role": "MULTIPLATFORM_EXTERNAL_SOURCE",
+      "canonical_only_if_explicitly_designated": true
+    },
+    "K5_LOCAL_FILESYSTEM": {
+      "role": "WORKING_COPY_CACHE",
+      "sole_canonical": false
+    },
+    "K6_WEB_EXTERNAL": {
+      "role": "EVIDENCE_DISCOVERY",
+      "canonical": false
+    }
+  },
+  "handoff": {
+    "required_when_preferred_executor_does_not_inherit_context": true,
+    "especially_project_only_to_work": true,
+    "minimum_context": [
+      "project",
+      "strategy",
+      "phase",
+      "objective",
+      "decisions",
+      "required_sources",
+      "sensitivity",
+      "canonical_destination",
+      "completion_gate"
+    ],
+    "validate_before_canonical_persistence": true
   },
   "fallback": {
     "preserve_project_strategy_phase_identity": true,
-    "use_nearest_available_environment": true,
+    "use_nearest_available_executor": true,
     "persist_state_before_exit": true,
     "never_claim_unavailable_environment": true
-  }
+  },
+  "legacy_x_codes_read_only": true
 }
