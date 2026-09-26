@@ -1,3 +1,15 @@
+## 1.23 — 26/09/2026 — Arquitetura Universal de Ambientes de Execução e Persistência
+
+- eleva o Kernel universal para **1.8**;
+- cria o módulo `execution-environments`;
+- separa identidade de governança (`PRJ/EA/F`) de Chat, Work, Projeto ChatGPT, Biblioteca, Codex e Apps/Connectors;
+- formaliza Projeto ChatGPT como contêiner contextual opcional, nunca identidade canônica;
+- define Chat para diálogo/tarefa delimitada, Work para execução substancial e Codex para engenharia de repositório;
+- mantém GitHub como fonte versionada dos Projetos e Biblioteca como contexto/espelho operacional;
+- cria `EXECUTION_ENVIRONMENT_PROFILE.json` e template reutilizável;
+- formaliza fallback sem alteração de identidade quando o ambiente preferencial não estiver disponível;
+- estratégia: `EA-000002-000021`.
+
 ## 1.22 — 26/09/2026 — Classificação Universal de Informação
 
 - eleva o Kernel universal para **1.7**;
