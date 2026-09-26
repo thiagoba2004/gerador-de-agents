@@ -3,12 +3,12 @@
   "project_name": "Gerador de Agents",
   "repository": "thiagoba2004/gerador-de-agents",
   "status": "OPERACIONAL",
-  "release_version": "1.22",
-  "kernel_version": "1.7",
+  "release_version": "1.23",
+  "kernel_version": "1.8",
   "current_strategy_id": null,
-  "last_concluded_strategy_id": "EA-000002-000020",
+  "last_concluded_strategy_id": "EA-000002-000021",
   "current_phase": null,
-  "last_completed_milestone": "EA-000002-000020 concluída: classificação universal implantada com perfil estruturado e gate preventivo.",
+  "last_completed_milestone": "EA-000002-000021 concluída: identidade de governança separada dos ambientes Chat/Work/Projeto ChatGPT/Biblioteca/Codex.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -37,7 +37,10 @@
     "INFORMATION_HANDLING_PROFILE.json",
     "modules/information-classification.md",
     "templates/INFORMATION_HANDLING_PROFILE.example.json",
-    "templates/INFORMATION_CLASSIFICATION_MANIFEST.example.jsonl"
+    "templates/INFORMATION_CLASSIFICATION_MANIFEST.example.jsonl",
+    "EXECUTION_ENVIRONMENT_PROFILE.json",
+    "modules/execution-environments.md",
+    "templates/EXECUTION_ENVIRONMENT_PROFILE.example.json"
   ],
   "reusable_areas": [
     "templates/",
@@ -105,7 +108,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Aplicar o gate de classificação a todo novo arquivo; antes de usar dados confidenciais reais, criar superfície P1 privada separada e cofre P0 para documentos brutos; auditar o histórico público em estratégia específica.",
+  "next_logical_step": "Escolher Chat/Work/Codex conforme o perfil da tarefa sem alterar PRJ/EA/F; persistir trabalho substancial no GitHub antes de encerrar a sessão.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-26",
   "project_code": "PRJ-000002",
@@ -121,7 +124,7 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000020",
+  "last_concluded_strategy_code": "EA-000002-000021",
   "current_strategy": null,
   "editorial_backlog_standard": {
     "version": "1.0",
@@ -131,7 +134,7 @@
     "status": "IMPLANTADO_E_AUDITADO"
   },
   "strategy_status": "SEM_ESTRATEGIA_ATIVA",
-  "last_concluded_strategy_name": "Classificação Universal de Informação por Sensibilidade e Publicação",
+  "last_concluded_strategy_name": "Arquitetura Universal de Ambientes de Execução e Persistência",
   "knowledge_index": {
     "status": "IMPLANTADO_E_VERIFICADO",
     "schema_version": "1.0",
@@ -156,7 +159,7 @@
     "rule": "Comunicar e persistir oportunidades materiais; não ampliar silenciosamente o escopo; executar innovation check em trabalhos substanciais.",
     "updated_at": "2026-09-26"
   },
-  "generator_release": "1.22",
+  "generator_release": "1.23",
   "global_coordinator_bridge": {
     "status": "IMPLANTADA_E_VERIFICADA",
     "bootstrap": "/Governanca-Geral-Modelos-IA/00_BOOTSTRAP_COORDENADOR_GERAL.md",
@@ -179,6 +182,23 @@
     "raw_s3_allowed": false,
     "s4_allowed": false,
     "retroactive_history_audit": "PENDENTE_DE_ESTRATEGIA_ESPECIFICA",
+    "updated_at": "2026-09-26"
+  },
+  "execution_environment_architecture": {
+    "status": "IMPLANTADA_E_VERIFICADA",
+    "global_source": "thiagoba2004/governanca-geral-modelos-ia/ARQUITETURA_UNIVERSAL_AMBIENTES_EXECUCAO_PERSISTENCIA.md",
+    "local_profile": "EXECUTION_ENVIRONMENT_PROFILE.json",
+    "project_identity_independent_of_platform": true,
+    "canonical_persistence": "thiagoba2004/gerador-de-agents",
+    "preferred": {
+      "chat": "dialogue_bounded",
+      "work": "substantial_multistep",
+      "chatgpt_project": "optional_context",
+      "library": "operational_context",
+      "codex": "repo_engineering",
+      "apps": "external_access"
+    },
+    "fallback_preserves_identity": true,
     "updated_at": "2026-09-26"
   }
 }
