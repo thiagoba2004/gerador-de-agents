@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "project_code": "PRJ-000002",
+  "project_name": "Gerador de Agents",
+  "updated_at": "2026-09-26",
+  "global_policy": "/Governanca-Geral-Modelos-IA/CLASSIFICACAO_UNIVERSAL_INFORMACAO.md",
+  "repository": {
+    "visibility": "PUBLIC",
+    "surface": "P2_GIT_PUBLICO_REPOSITORIO",
+    "confidential_content_allowed": false,
+    "s2_or_higher_allowed": false,
+    "raw_s3_allowed": false,
+    "s4_allowed": false
+  },
+  "pages": {
+    "enabled": false,
+    "surface": null,
+    "explicit_publication_gate_required": false
+  },
+  "default_rules": {
+    "governance_files": "S1_INTERNO_NAO_SENSIVEL only after public-repository review",
+    "public_content": "S0_PUBLICO",
+    "confidential_derivatives": "Must use P1_GIT_PRIVADO in a separate private repository",
+    "raw_highly_sensitive_documents": "P0_COFRE_EXTERNO",
+    "secrets": "Never store in Git/Library/chat/logs"
+  },
+  "retroactive_history_audit": {
+    "required": true,
+    "reason": "Policy introduced after repository history already existed; Git history may contain information that predates the classification gate.",
+    "status": "PENDENTE_DE_ESTRATEGIA_ESPECIFICA"
+  }
+}
