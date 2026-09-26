@@ -130,3 +130,11 @@ Plano: `estrategia-padrao-atualidade-analise-observacao.md`.
 3. FASE 03/03 [F-000002-000014-003] — Auditoria, registro agregado e fechamento — CONCLUÍDA.
 
 **Resultado:** Gerador 1.16 passa a distinguir responsividade estática de navegação dinâmica; menu denso no mobile deve preferir disclosure/recolhimento acessível, com fallback sem JavaScript.
+
+
+## EA-000002-000022 — Arquitetura Universal v2 — Isolamento, Fontes de Conhecimento e Handoff
+
+1. FASE 01/04 [F-000002-000022-001] — Registro, diagnóstico e modelo v2 — CONCLUÍDA.
+2. FASE 02/04 [F-000002-000022-002] — Kernel, módulo e templates — CONCLUÍDA.
+3. FASE 03/04 [F-000002-000022-003] — Propagação aos Projetos — EM EXECUÇÃO.
+4. FASE 04/04 [F-000002-000022-004] — Auditoria, release e fechamento — NÃO INICIADA.
