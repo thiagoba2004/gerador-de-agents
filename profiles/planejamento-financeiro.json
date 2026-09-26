@@ -6,7 +6,7 @@
   "project_id_legacy": "planejamento-financeiro",
   "project_purpose": "Qualificar profissionais com base no CFP®, integrando preparação para a prova, desenvolvimento de competências e aplicação profissional no mercado.",
   "project_ref": "thiagoba2004/planejamento-financeiro",
-  "kernel_version": "1.4",
+  "kernel_version": "1.5",
   "canonical_files": [
     "AGENTS.md",
     "REQUEST_LOG.jsonl",
@@ -42,7 +42,7 @@
     {
       "module_id": "research",
       "status": "ATIVADO",
-      "rationale": "O projeto depende de pesquisa e atualização sistemática de fontes da Planejar e de referências técnicas.",
+      "rationale": "O projeto depende de pesquisa e atualização sistemática de fontes da Planejar e de referências técnicas. A partir de 26/09/2026, BDTD/IBICT integra a descoberta acadêmica brasileira quando pertinente.",
       "source_refs": [
         "REQ-20260920-001"
       ],
@@ -131,12 +131,23 @@
       ],
       "decided_at": "2026-09-20T14:30:00-03:00",
       "kernel_version": "1.4"
+    },
+    {
+      "module_id": "knowledge-index",
+      "status": "ATIVADO",
+      "rationale": "O projeto possui corpus persistente relevante e necessidade comprovada de busca transversal independente da indexação do provedor Git.",
+      "source_refs": [
+        "EA-000004-000048",
+        "governanca/KNOWLEDGE_INDEX.jsonl"
+      ],
+      "decided_at": "2026-09-26",
+      "kernel_version": "1.5"
     }
   ],
   "migration_status": "ROTA_A_IMPLANTADA_E_VERIFICADA",
   "local_strategy_log_ref": "STRATEGY_LOG.jsonl",
   "generator_strategy_code": "EA-000002-000006",
-  "updated_at": "2026-09-22",
+  "updated_at": "2026-09-26",
   "audit_ref": "audits/rota-a-piloto-prj-000003-prj-000004-2026-09-20.md",
   "site_status": "OBSERVATORIO_PUBLICO_ESTRUTURADO_E_VERIFICADO",
   "contact_protocol": {
@@ -279,5 +290,15 @@
       "audit_ref": "thiagoba2004/planejamento-financeiro:research/EA-000004-000042/auditoria-observatorio-publico-2026-09-22.md",
       "deployment_run_id": 35756538672
     }
+  },
+  "knowledge_index": {
+    "status": "ATIVADO",
+    "path": "governanca/KNOWLEDGE_INDEX.jsonl",
+    "strategy_code": "EA-000004-000048"
+  },
+  "improvement_governance": {
+    "status": "ATIVADA",
+    "log": "IMPROVEMENT_LOG.jsonl",
+    "strategy_code": "EA-000004-000048"
   }
 }
