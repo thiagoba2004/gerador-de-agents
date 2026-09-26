@@ -1,6 +1,6 @@
 {
-  "schema_version": "2.1",
-  "architecture_version": "2.1",
+  "schema_version": "2.2",
+  "architecture_version": "2.2",
   "project_code": "{{PROJECT_CODE}}",
   "project_name": "{{PROJECT_NAME}}",
   "project_alias": "{{PROJECT_ALIAS}}",
@@ -13,11 +13,8 @@
   },
   "project_domain": "{{PROJECT_DOMAIN}}",
   "context_policy": {
-    "observed_chatgpt_project_memory": "{{CHATGPT_PROJECT_MEMORY_MODE}}",
-    "context_mode_source": "{{CONTEXT_MODE_SOURCE}}",
-    "global_default": null,
-    "selection_rule": "PER_PROJECT_EXPLICIT_NO_GLOBAL_DEFAULT",
-    "work_available_inside_observed_context": "{{WORK_AVAILABLE_IN_OBSERVED_CONTEXT}}",
+    "project_level_memory_mode": "{{C2_OR_C3_OR_NOT_APPLICABLE}}",
+    "runtime_context_rule": "CLASSIFY_PER_EXECUTION_SESSION",
     "memory_is_source_of_truth": false
   },
   "canonical_persistence": {
@@ -85,5 +82,10 @@
     "persist_state_before_exit": true,
     "never_claim_unavailable_environment": true
   },
-  "legacy_x_codes_read_only": true
+  "legacy_x_codes_read_only": true,
+  "chatgpt_project_binding": {
+    "status": "{{CHATGPT_PROJECT_BINDING_STATUS}}",
+    "source": "{{BINDING_SOURCE}}",
+    "chatgpt_project_name": "{{CHATGPT_PROJECT_NAME_OR_NULL}}"
+  }
 }
