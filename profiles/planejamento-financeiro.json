@@ -6,7 +6,7 @@
   "project_id_legacy": "planejamento-financeiro",
   "project_purpose": "Qualificar profissionais com base no CFP®, integrando preparação para a prova, desenvolvimento de competências e aplicação profissional no mercado.",
   "project_ref": "thiagoba2004/planejamento-financeiro",
-  "kernel_version": "1.5",
+  "kernel_version": "1.6",
   "canonical_files": [
     "AGENTS.md",
     "REQUEST_LOG.jsonl",
@@ -300,5 +300,17 @@
     "status": "ATIVADA",
     "log": "IMPROVEMENT_LOG.jsonl",
     "strategy_code": "EA-000004-000048"
+  },
+  "global_coordinator_bridge": {
+    "status": "ATIVADA",
+    "bootstrap": "/Governanca-Geral-Modelos-IA/00_BOOTSTRAP_COORDENADOR_GERAL.md",
+    "mode": "CONDICIONAL",
+    "triggers": [
+      "repercussão transversal",
+      "dúvida de roteamento",
+      "governança global",
+      "candidato a novo Projeto"
+    ],
+    "strategy_code": "EA-000004-000049"
   }
 }
