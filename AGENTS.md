@@ -316,3 +316,20 @@ Quando o módulo `publication` estiver `ATIVADO` e o projeto possuir ou planejar
 
 Se o projeto não possuir nem planejar Artigos/fila editorial futura, registrar a decisão como `NOT_APPLICABLE` em vez de criar um arquivo vazio.
 
+
+
+### 9.6. Propagação obrigatória do índice semântico-factual
+
+Projetos com corpus persistente relevante devem herdar o módulo `knowledge-index`, com `governanca/KNOWLEDGE_INDEX.jsonl`, gerador determinístico e regra de consulta prévia para perguntas transversais. O índice é interno, não substitui os documentos originais e não reintroduz JSON como espelho editorial.
+
+### 9.7. Propagação obrigatória da melhoria contínua proativa
+
+Todo projeto gerado ou migrado deve receber:
+
+- `IMPROVEMENT_LOG.jsonl` ou equivalente;
+- obrigação de comunicar ao usuário oportunidades materiais de inovação/aperfeiçoamento identificadas;
+- registro persistente da oportunidade;
+- **innovation check** no fechamento de trabalho substancial;
+- trava contra expansão silenciosa de escopo: sugestão e execução são estados diferentes.
+
+Quando `research` estiver ativo e o tema admitir produção acadêmica brasileira, propagar também a BDTD/IBICT como fonte sistemática de descoberta, com validação no repositório institucional de origem.
