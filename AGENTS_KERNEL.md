@@ -1,6 +1,6 @@
 # AGENTS KERNEL — NÚCLEO UNIVERSAL
 
-**kernel_version:** 1.10  
+**kernel_version:** 1.11  
 **project_code de origem:** `PRJ-000002`  
 **project_alias de origem:** `GDA`  
 **data:** 26/09/2026
@@ -305,7 +305,7 @@ Todo Projeto persistente deve separar:
 Regras universais:
 
 - Projeto ChatGPT nunca substitui a identidade `PRJ`;
-- o modo de memória do Projeto ChatGPT é uma propriedade individual; não existe padrão global C2/C3 e o estado deve ser explicitamente registrado;
+- Projeto de Governança pode existir sem Projeto ChatGPT associado; primeiro registrar o vínculo como B0/B1 e somente em B1 declarar C2/C3;
 - memória exclusiva reduz contaminação contextual, mas não elimina alucinação e não é fonte de verdade;
 - Work não está disponível dentro de Projeto com memória exclusiva;
 - fontes anexadas ao Projeto compõem Core Context curado, não o repositório integral;
