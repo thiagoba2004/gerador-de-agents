@@ -1,0 +1,32 @@
+{
+  "schema_version": "1.0",
+  "project_code": "{{PROJECT_CODE}}",
+  "project_name": "{{PROJECT_NAME}}",
+  "project_alias": "{{PROJECT_ALIAS}}",
+  "updated_at": "{{DATE}}",
+  "global_architecture_repository": "thiagoba2004/governanca-geral-modelos-ia",
+  "global_architecture_file": "ARQUITETURA_UNIVERSAL_AMBIENTES_EXECUCAO_PERSISTENCIA.md",
+  "governance_identity": {
+    "independent_of_chatgpt_environment": true,
+    "chatgpt_project_is_governance_project": false
+  },
+  "canonical_persistence": {
+    "type": "GIT_REPOSITORY",
+    "repository_full_name": "{{PROJECT_REF}}",
+    "source_of_truth": true
+  },
+  "environment_defaults": {
+    "dialogue_decision_bounded_task": "X1_CHAT",
+    "substantial_research_audit_many_files": "X2_WORK",
+    "context_grouping": "X3_CHATGPT_PROJECT_OPTIONAL",
+    "account_file_recovery": "X4_LIBRARY",
+    "code_tests_repository_engineering": "X5_CODEX",
+    "external_service_access": "X6_APPS_CONNECTORS"
+  },
+  "fallback": {
+    "preserve_project_strategy_phase_identity": true,
+    "use_nearest_available_environment": true,
+    "persist_state_before_exit": true,
+    "never_claim_unavailable_environment": true
+  }
+}
