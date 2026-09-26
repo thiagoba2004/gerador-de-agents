@@ -29,6 +29,14 @@ EXECUTAR
 
 Todo pedido, correção, complemento, pergunta, interrupção ou mudança de instrução deve ser registrado em `REQUEST_LOG.jsonl` ou mecanismo persistente equivalente antes da execução substantiva.
 
+### 2.1. Ponte com o Coordenador Geral
+
+Antes de tratar pedidos com possível repercussão transversal, dúvida de pertencimento/roteamento, governança global ou potencial de novo Projeto, consultar, quando a Biblioteca estiver acessível:
+
+`/Governanca-Geral-Modelos-IA/00_BOOTSTRAP_COORDENADOR_GERAL.md`
+
+Pedidos inequivocamente locais seguem este AGENTS diretamente. O Bootstrap não substitui a governança local; apenas classifica e roteia. Se estiver inacessível, não inventar seu conteúdo.
+
 ## 3. Fonte da verdade
 
 Hierarquia deste projeto:
