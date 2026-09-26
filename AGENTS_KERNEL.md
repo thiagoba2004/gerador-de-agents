@@ -1,6 +1,6 @@
 # AGENTS KERNEL — NÚCLEO UNIVERSAL
 
-**kernel_version:** 1.5  
+**kernel_version:** 1.6  
 **project_code de origem:** `PRJ-000002`  
 **project_alias de origem:** `GDA`  
 **data:** 26/09/2026
@@ -20,6 +20,14 @@ Ao receber qualquer novo pedido, correção, complemento, pergunta, determinaç�
 5. somente então iniciar leitura substantiva, análise, ferramentas ou execução.
 
 É proibido afirmar que o pedido foi registrado antes da confirmação técnica.
+
+### 2.1. Ponte com o Coordenador Geral
+
+Quando existir governança global do Coordenador Geral e a sessão tiver acesso à Biblioteca, pedidos com possível repercussão transversal, dúvida de pertencimento/roteamento, governança global ou potencial de novo Projeto devem consultar primeiro:
+
+`/Governanca-Geral-Modelos-IA/00_BOOTSTRAP_COORDENADOR_GERAL.md`
+
+Pedidos inequivocamente locais não exigem essa consulta. O Bootstrap classifica e roteia; o AGENTS local continua sendo a fonte normativa do trabalho após o roteamento. Se o Bootstrap estiver inacessível, não reconstruir seu conteúdo de memória.
 
 ## 3. Registro de pedidos
 
