@@ -6,7 +6,7 @@
   "project_id_legacy": "acoes-judiciais",
   "project_purpose": "Fonte pública de consulta teórica e prática sobre possíveis ações judiciais para pessoas físicas e jurídicas, organizada por estratégias autônomas temáticas.",
   "project_ref": "thiagoba2004/acoes-judiciais",
-  "kernel_version": "1.4",
+  "kernel_version": "1.5",
   "canonical_files": [
     "AGENTS.md",
     "REQUEST_LOG.jsonl",
@@ -39,7 +39,7 @@
     {
       "module_id": "research",
       "status": "ATIVADO",
-      "rationale": "O objetivo exige pesquisa sistemática de legislação, jurisprudência, doutrina e fontes institucionais.",
+      "rationale": "O objetivo exige pesquisa sistemática de legislação, jurisprudência, doutrina e fontes institucionais. A partir de 26/09/2026, BDTD/IBICT integra a descoberta acadêmica brasileira quando pertinente.",
       "source_refs": [
         "REQ-20260920-001"
       ],
@@ -127,12 +127,23 @@
       ],
       "decided_at": "2026-09-20T14:30:00-03:00",
       "kernel_version": "1.4"
+    },
+    {
+      "module_id": "knowledge-index",
+      "status": "ATIVADO",
+      "rationale": "O projeto possui corpus persistente relevante e necessidade comprovada de busca transversal independente da indexação do provedor Git.",
+      "source_refs": [
+        "EA-000003-000041",
+        "governanca/KNOWLEDGE_INDEX.jsonl"
+      ],
+      "decided_at": "2026-09-26",
+      "kernel_version": "1.5"
     }
   ],
   "migration_status": "ROTA_A_IMPLANTADA_E_VERIFICADA",
   "local_strategy_log_ref": "STRATEGY_LOG.jsonl",
   "generator_strategy_code": "EA-000002-000006",
-  "updated_at": "2026-09-22",
+  "updated_at": "2026-09-26",
   "audit_ref": "audits/rota-a-piloto-prj-000003-prj-000004-2026-09-20.md",
   "site_status": "OBSERVATORIO_PUBLICO_ESTRUTURADO_E_VERIFICADO",
   "contact_protocol": {
@@ -271,5 +282,15 @@
       "audit_ref": "thiagoba2004/acoes-judiciais:research/EA-000003-000027/auditoria-observatorio-publico-2026-09-22.md",
       "deployment_run_id": 35756498839
     }
+  },
+  "knowledge_index": {
+    "status": "ATIVADO",
+    "path": "governanca/KNOWLEDGE_INDEX.jsonl",
+    "strategy_code": "EA-000003-000041"
+  },
+  "improvement_governance": {
+    "status": "ATIVADA",
+    "log": "IMPROVEMENT_LOG.jsonl",
+    "strategy_code": "EA-000003-000041"
   }
 }
