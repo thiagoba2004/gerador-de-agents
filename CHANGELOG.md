@@ -1,3 +1,15 @@
+## 1.20 — 26/09/2026 — Knowledge Index, BDTD e melhoria contínua proativa
+
+- eleva o Kernel universal para **1.5**;
+- cria o módulo `knowledge-index`, gerador determinístico, consulta local e catálogo cruzado de índices;
+- preserva a política de JSON condicional: o JSONL do índice existe por função computacional concreta e não espelha o texto integral;
+- incorpora a **BDTD/IBICT** ao módulo `research` como fonte sistemática de descoberta acadêmica brasileira, com validação no repositório institucional de origem;
+- cria `IMPROVEMENT_LOG.jsonl` e torna obrigatória a comunicação/persistência de oportunidades materiais de inovação e aperfeiçoamento;
+- adiciona **innovation check** ao fechamento de trabalhos substanciais;
+- corrige regressão de governança: a autorização registrada em REQ-20260920-001 para sugestões e inovações passa a regra permanente do Kernel;
+- implanta inicialmente o padrão em Classe e Massas, Ações Judiciais e Planejamento Financeiro;
+- estratégia: `EA-000002-000018`.
+
 ## 1.19 — 24/09/2026 — Pauta editorial interna / backlog de conteúdo
 
 - institui `governanca/PAUTA_EDITORIAL.md` como artefato interno padrão para projetos com Artigos ou fila editorial futura;
