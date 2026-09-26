@@ -66,8 +66,8 @@ Fonte global versionada: `thiagoba2004/governanca-geral-modelos-ia/ARQUITETURA_U
 Regras mínimas:
 
 - Projeto ChatGPT não é sinônimo deste Projeto de Governança;
-- memória exclusiva do Projeto ChatGPT é o padrão contextual;
-- Work não está disponível dentro dessa fronteira; usar handoff explícito quando Work for necessário;
+- o modo de memória é definido por Projeto; o estado atual deste Projeto é **C2 — memória padrão**;
+- no estado atual C2, Work permanece compatível; handoff por isolamento só se torna necessário se este Projeto for alterado para C3;
 - fontes anexadas formam Core Context curado, não acervo integral;
 - Biblioteca é fonte/espelho operacional;
 - GitHub permanece fonte canônica de regras, estado e histórico;
