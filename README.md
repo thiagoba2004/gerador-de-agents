@@ -1,6 +1,6 @@
 # Gerador de Agents
 
-**Release operacional:** 1.9 · **Kernel:** 1.4
+**Release operacional:** 1.24 · **Kernel:** 1.9
 
 Infraestrutura para criar, auditar, adaptar, atualizar e versionar `AGENTS.md` de projetos novos ou existentes, com continuidade, persistência, rastreabilidade, estratégia, planejamento e verificabilidade.
 
