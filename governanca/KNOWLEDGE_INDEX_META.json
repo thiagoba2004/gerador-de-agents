@@ -11,8 +11,8 @@
   "record_count": 85,
   "schema_version": "1.0",
   "semantic_tag_counts": {
-    "bdtd_ibict": 11,
-    "editorial": 48,
+    "bdtd_ibict": 12,
+    "editorial": 47,
     "financeiro": 25,
     "fonte": 42,
     "governanca": 54,
@@ -22,7 +22,7 @@
     "trabalho_sindical": 4
   },
   "source_system_counts": {
-    "BDTD/IBICT": 1,
-    "IBICT": 1
+    "BDTD/IBICT": 2,
+    "IBICT": 2
   }
 }
