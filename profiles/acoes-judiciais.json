@@ -6,7 +6,7 @@
   "project_id_legacy": "acoes-judiciais",
   "project_purpose": "Fonte pública de consulta teórica e prática sobre possíveis ações judiciais para pessoas físicas e jurídicas, organizada por estratégias autônomas temáticas.",
   "project_ref": "thiagoba2004/acoes-judiciais",
-  "kernel_version": "1.5",
+  "kernel_version": "1.6",
   "canonical_files": [
     "AGENTS.md",
     "REQUEST_LOG.jsonl",
@@ -292,5 +292,17 @@
     "status": "ATIVADA",
     "log": "IMPROVEMENT_LOG.jsonl",
     "strategy_code": "EA-000003-000041"
+  },
+  "global_coordinator_bridge": {
+    "status": "ATIVADA",
+    "bootstrap": "/Governanca-Geral-Modelos-IA/00_BOOTSTRAP_COORDENADOR_GERAL.md",
+    "mode": "CONDICIONAL",
+    "triggers": [
+      "repercussão transversal",
+      "dúvida de roteamento",
+      "governança global",
+      "candidato a novo Projeto"
+    ],
+    "strategy_code": "EA-000003-000042"
   }
 }
