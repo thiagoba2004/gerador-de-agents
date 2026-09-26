@@ -3,12 +3,12 @@
   "project_name": "Gerador de Agents",
   "repository": "thiagoba2004/gerador-de-agents",
   "status": "OPERACIONAL",
-  "release_version": "1.21",
-  "kernel_version": "1.6",
+  "release_version": "1.22",
+  "kernel_version": "1.7",
   "current_strategy_id": null,
-  "last_concluded_strategy_id": "EA-000002-000019",
+  "last_concluded_strategy_id": "EA-000002-000020",
   "current_phase": null,
-  "last_completed_milestone": "EA-000002-000019 concluída: ponte bidirecional condicional com o Bootstrap global implantada e auditada.",
+  "last_completed_milestone": "EA-000002-000020 concluída: classificação universal implantada com perfil estruturado e gate preventivo.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -33,7 +33,11 @@
     "tools/query_knowledge_index.py",
     "KNOWLEDGE_INDEX_CATALOG.jsonl",
     "templates/KNOWLEDGE_INDEX_PROTOCOL.example.md",
-    "templates/IMPROVEMENT_LOG.example.jsonl"
+    "templates/IMPROVEMENT_LOG.example.jsonl",
+    "INFORMATION_HANDLING_PROFILE.json",
+    "modules/information-classification.md",
+    "templates/INFORMATION_HANDLING_PROFILE.example.json",
+    "templates/INFORMATION_CLASSIFICATION_MANIFEST.example.jsonl"
   ],
   "reusable_areas": [
     "templates/",
@@ -101,7 +105,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Aplicar o AGENTS local diretamente em pedidos inequivocamente locais e consultar o Bootstrap global somente quando houver gatilho transversal/global ou dúvida de roteamento.",
+  "next_logical_step": "Aplicar o gate de classificação a todo novo arquivo; antes de usar dados confidenciais reais, criar superfície P1 privada separada e cofre P0 para documentos brutos; auditar o histórico público em estratégia específica.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-09-26",
   "project_code": "PRJ-000002",
@@ -117,7 +121,7 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000019",
+  "last_concluded_strategy_code": "EA-000002-000020",
   "current_strategy": null,
   "editorial_backlog_standard": {
     "version": "1.0",
@@ -127,7 +131,7 @@
     "status": "IMPLANTADO_E_AUDITADO"
   },
   "strategy_status": "SEM_ESTRATEGIA_ATIVA",
-  "last_concluded_strategy_name": "Roteamento bidirecional com o Bootstrap do Coordenador Geral",
+  "last_concluded_strategy_name": "Classificação Universal de Informação por Sensibilidade e Publicação",
   "knowledge_index": {
     "status": "IMPLANTADO_E_VERIFICADO",
     "schema_version": "1.0",
@@ -152,7 +156,7 @@
     "rule": "Comunicar e persistir oportunidades materiais; não ampliar silenciosamente o escopo; executar innovation check em trabalhos substanciais.",
     "updated_at": "2026-09-26"
   },
-  "generator_release": "1.21",
+  "generator_release": "1.22",
   "global_coordinator_bridge": {
     "status": "IMPLANTADA_E_VERIFICADA",
     "bootstrap": "/Governanca-Geral-Modelos-IA/00_BOOTSTRAP_COORDENADOR_GERAL.md",
@@ -164,6 +168,17 @@
       "candidato a novo Projeto"
     ],
     "anti_loop": true,
+    "updated_at": "2026-09-26"
+  },
+  "information_classification": {
+    "status": "IMPLANTADA_E_VERIFICADA",
+    "global_policy": "/Governanca-Geral-Modelos-IA/CLASSIFICACAO_UNIVERSAL_INFORMACAO.md",
+    "local_profile": "INFORMATION_HANDLING_PROFILE.json",
+    "repository_surface": "P2_GIT_PUBLICO_REPOSITORIO",
+    "s2_or_higher_allowed": false,
+    "raw_s3_allowed": false,
+    "s4_allowed": false,
+    "retroactive_history_audit": "PENDENTE_DE_ESTRATEGIA_ESPECIFICA",
     "updated_at": "2026-09-26"
   }
 }
