@@ -1,3 +1,17 @@
+## 1.24 — 26/09/2026 — Arquitetura Universal v2: Isolamento, Fontes e Handoff
+
+- eleva o Kernel universal para **1.9**;
+- substitui o modelo de três planos por seis planos: G, A, E, C, K e P;
+- separa Projeto ChatGPT de executor e trata memória exclusiva como fronteira contextual;
+- mantém memória exclusiva como padrão para Projetos ChatGPT de governança;
+- formaliza que Work não está disponível dentro desse contexto e exige handoff explícito quando necessário;
+- cria Plano K de Fontes de Conhecimento;
+- define fontes anexadas como Core Context curado, não repositório integral;
+- formaliza filesystem local como working copy/cache, nunca fonte única necessária à continuidade;
+- atualiza `EXECUTION_ENVIRONMENT_PROFILE.json` para schema 2.0;
+- cria template `EXECUTION_HANDOFF.example.md`;
+- estratégia: `EA-000002-000022`.
+
 ## 1.23 — 26/09/2026 — Arquitetura Universal de Ambientes de Execução e Persistência
 
 - eleva o Kernel universal para **1.8**;
