@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.0",
+  "project_code": "PRJ-000002",
+  "project_name": "Gerador de Agents",
+  "project_alias": "GDA",
+  "updated_at": "2026-09-26",
+  "global_architecture_repository": "thiagoba2004/governanca-geral-modelos-ia",
+  "global_architecture_file": "ARQUITETURA_UNIVERSAL_AMBIENTES_EXECUCAO_PERSISTENCIA.md",
+  "governance_identity": {
+    "independent_of_chatgpt_environment": true,
+    "chatgpt_project_is_governance_project": false
+  },
+  "project_domain": "arquitetura de governança, templates, módulos e automação de repositórios",
+  "canonical_persistence": {
+    "type": "GIT_REPOSITORY",
+    "repository_full_name": "thiagoba2004/gerador-de-agents",
+    "source_of_truth": true
+  },
+  "environment_defaults": {
+    "dialogue_decision_bounded_task": "X1_CHAT",
+    "substantial_research_audit_many_files": "X2_WORK",
+    "context_grouping": "X3_CHATGPT_PROJECT_OPTIONAL",
+    "account_file_recovery": "X4_LIBRARY",
+    "code_tests_repository_engineering": "X5_CODEX",
+    "external_service_access": "X6_APPS_CONNECTORS"
+  },
+  "fallback": {
+    "preserve_project_strategy_phase_identity": true,
+    "use_nearest_available_environment": true,
+    "persist_state_before_exit": true,
+    "never_claim_unavailable_environment": true
+  }
+}
