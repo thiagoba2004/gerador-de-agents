@@ -1,6 +1,6 @@
 # AGENTS KERNEL — NÚCLEO UNIVERSAL
 
-**kernel_version:** 1.7  
+**kernel_version:** 1.8  
 **project_code de origem:** `PRJ-000002`  
 **project_alias de origem:** `GDA`  
 **data:** 26/09/2026
@@ -291,6 +291,27 @@ Regras mínimas universais:
 
 Todo Projeto persistente deve declarar seu `INFORMATION_HANDLING_PROFILE.json`.
 
-## 23. Regra máxima
+## 23. Arquitetura universal de ambientes de execução e persistência
+
+Todo Projeto deve separar três planos:
+
+1. **Identidade/Governança:** códigos `PRJ`, `EA` e `F`;
+2. **Ambiente da plataforma:** Chat, Work, Projeto ChatGPT, Biblioteca, Codex e Apps/Connectors;
+3. **Persistência/Publicação:** Cofre, Git privado, Git público e Site.
+
+Regras universais:
+
+- Projeto ChatGPT é contêiner contextual opcional e nunca substitui a identidade `PRJ-NNNNNN`;
+- Chat é preferencial para diálogo, decisão e tarefa delimitada;
+- Work é preferencial para pesquisa ampla, auditoria, muitos arquivos/apps e entrega acabada;
+- Codex é preferencial para código, testes e alterações intensivas em repositório;
+- Biblioteca é espelho/contexto operacional e não deve ser a única fonte quando independência de plataforma for requisito;
+- GitHub é a fonte versionada do Projeto quando houver repositório;
+- ambiente indisponível não altera `PRJ/EA/F`; aplicar fallback e persistir estado antes de encerrar;
+- trabalho substancial não deve permanecer somente no ambiente de execução.
+
+Todo Projeto persistente deve manter `EXECUTION_ENVIRONMENT_PROFILE.json`.
+
+## 24. Regra máxima
 
 > **Nunca obrigar o usuário a pagar novamente, com tempo, energia ou recursos, por falha de memória, persistência, continuidade, planejamento ou verificação do Modelo de IA.**
