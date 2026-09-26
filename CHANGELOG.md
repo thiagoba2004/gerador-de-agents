@@ -1,3 +1,15 @@
+## 1.22 — 26/09/2026 — Classificação Universal de Informação
+
+- eleva o Kernel universal para **1.7**;
+- cria o módulo `information-classification`;
+- separa sensibilidade (`S0` a `S4`) de superfície (`P0` a `P3`);
+- proíbe `S2+` em repositório público/Site, `S3` bruto no Git e qualquer `S4` em Git/Biblioteca/chat/logs;
+- formaliza derivados sanitizados como única forma de redução de classe;
+- cria `INFORMATION_HANDLING_PROFILE.json` como perfil obrigatório de superfície;
+- cria templates de perfil e manifesto;
+- propaga o padrão aos Projetos Classe e Massas, Ações Judiciais e Planejamento Financeiro;
+- estratégia: `EA-000002-000020`.
+
 ## 1.21 — 26/09/2026 — Roteamento bidirecional com o Coordenador Geral
 
 - eleva o Kernel universal para **1.6**;
