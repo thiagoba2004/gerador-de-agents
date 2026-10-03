@@ -2,6 +2,7 @@
   "adapter_mode": "CENTRAL_BROKER_DECLARATIVE",
   "adapter_sha": "d583c1c57c07879f6a9e218b74918592acbbe44b",
   "broker_repository": "thiagoba2004/governanca-geral-modelos-ia",
+  "classification_reason": null,
   "project_code": "PRJ-000002",
   "project_current_phase": null,
   "project_current_strategy": null,
