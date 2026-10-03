@@ -3,13 +3,16 @@
   "adapter_sha": "d583c1c57c07879f6a9e218b74918592acbbe44b",
   "broker_repository": "thiagoba2004/governanca-geral-modelos-ia",
   "project_code": "PRJ-000002",
+  "project_current_phase": null,
   "project_current_strategy": null,
   "project_state_path": "PROJECT_STATE.json",
   "project_state_sha": "d859f157ec60b46059b2582fd7a794f6b0e18312",
+  "project_strategy_status": "SEM_ESTRATEGIA_ATIVA",
   "protocol_path": "APSP_AUTONOMOUS_PHASE_SUCCESSION_PROTOCOL.md",
   "protocol_sha": "47fed56b77fdabd0aaefbeb47983f4cd8dd11dff",
+  "recovery_applicable": null,
   "repository": "thiagoba2004/gerador-de-agents",
-  "schema_version": "1.0",
+  "schema_version": "1.1",
   "secret_policy": "NO_LOCAL_SECRETS",
   "status": "VERIFIED"
 }
