@@ -1,0 +1,194 @@
+{
+  "project_code": "PRJ-000007",
+  "project_sequence": 7,
+  "project_name": "Conselhos Profissionais",
+  "project_alias": null,
+  "project_id_legacy": "conselhos-profissionais",
+  "project_purpose": "Pesquisa, sistematização e acompanhamento dos conselhos de fiscalização profissional brasileiros, sua organização institucional, competências e atuação regulatória.",
+  "project_ref": "thiagoba2004/conselhos-profissionais",
+  "generator": "PRJ-000002 — Gerador de Agents",
+  "generator_strategy": "EA-000002-000024",
+  "migration_route": "B_EXISTING_PROJECT",
+  "prior_baseline": "EA-000000-000019",
+  "kernel_version": "1.11",
+  "agents_baseline_kernel": "1.11",
+  "public_repository": true,
+  "visibility_verified": "PUBLIC",
+  "repository_surface": "P2_GIT_PUBLICO_REPOSITORIO",
+  "pages_status": "NOT_VERIFIED_NOT_AUTHORIZED",
+  "public_affiliation": "INDEPENDENT_NON_OFFICIAL",
+  "publication_scope": "PUBLIC_GITHUB_DOCUMENTATION_ONLY",
+  "mission_approval_ref": "REQ-20261010-001",
+  "anticipated_deliverables": [
+    "mapa institucional de conselhos",
+    "fontes normativas primárias verificadas",
+    "sínteses documentais datadas"
+  ],
+  "formats": [
+    "Markdown para texto canônico",
+    "JSON/JSONL somente para estado e registros estruturados"
+  ],
+  "sensitive_data_handling": "S0 public and reviewed S1 non-sensitive only; no S2+, confidential matter, authentication credentials or identifiable private case materials",
+  "modules": [
+    {
+      "module_id": "research",
+      "status": "ATIVADO",
+      "rationale": "Pesquisa e sistematização documental constituem o núcleo da missão aprovada.",
+      "source_refs": [
+        "REQ-20261010-001 (aprovação de missão e natureza pública)",
+        "MODULE_SELECTION.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "legal",
+      "status": "ATIVADO",
+      "rationale": "O escopo aprovado inclui normas, competências e atuação regulatória, sem antecipar conclusões.",
+      "source_refs": [
+        "REQ-20261010-001 (aprovação de missão e natureza pública)",
+        "MODULE_SELECTION.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "publication",
+      "status": "ATIVADO",
+      "rationale": "Divulgação pública documental pelo GitHub exige separar preparação, revisão, versão e publicação.",
+      "source_refs": [
+        "REQ-20261010-001 (aprovação de missão e natureza pública)",
+        "MODULE_SELECTION.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "information-classification",
+      "status": "ATIVADO",
+      "rationale": "Repositório já PUBLIC: vedados dados confidenciais, pessoais não públicos e segredos.",
+      "source_refs": [
+        "REQ-20261010-001 (aprovação de missão e natureza pública)",
+        "MODULE_SELECTION.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "execution-environments",
+      "status": "ATIVADO",
+      "rationale": "Projeto e arquivos persistentes exigem separação de identidade, executor e fonte canônica.",
+      "source_refs": [
+        "REQ-20261010-001 (aprovação de missão e natureza pública)",
+        "MODULE_SELECTION.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "knowledge-index",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Corpus substantivo pesquisável ainda não estabelecido; reavaliar com volume e consumidores.",
+      "source_refs": [
+        "REQ-20261010-001 (aprovação de missão e natureza pública)",
+        "MODULE_SELECTION.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "web-site",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Repositório GitHub público verificado, mas não houve autorização expressa de site/Pages ou identidade visual.",
+      "source_refs": [
+        "REQ-20261010-001 (aprovação de missão e natureza pública)",
+        "MODULE_SELECTION.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "contact-protocol",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Formulário, e-mail institucional, protocolos ou contatos não foram definidos.",
+      "source_refs": [
+        "REQ-20261010-001 (aprovação de missão e natureza pública)",
+        "MODULE_SELECTION.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "software",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Missão aprovada é documental; implementação de aplicativo não foi estabelecida.",
+      "source_refs": [
+        "REQ-20261010-001 (aprovação de missão e natureza pública)",
+        "MODULE_SELECTION.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "data",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Datasets ou processamento estruturado recorrente ainda não demonstrados.",
+      "source_refs": [
+        "REQ-20261010-001 (aprovação de missão e natureza pública)",
+        "MODULE_SELECTION.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "automation",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Nenhum agendamento, gatilho ou pipeline de domínio autorizado.",
+      "source_refs": [
+        "REQ-20261010-001 (aprovação de missão e natureza pública)",
+        "MODULE_SELECTION.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "digital-evidence",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Uso probatório/chain of custody não consta do escopo aprovado.",
+      "source_refs": [
+        "REQ-20261010-001 (aprovação de missão e natureza pública)",
+        "MODULE_SELECTION.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "translation",
+      "status": "NAO_APLICAVEL",
+      "rationale": "A tradução não integra a missão atual; reavaliar apenas diante de nova necessidade.",
+      "source_refs": [
+        "REQ-20261010-001 (aprovação de missão e natureza pública)",
+        "MODULE_SELECTION.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "professional-education",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Explicar normas ao público não constitui, isoladamente, programa formativo ou certificação.",
+      "source_refs": [
+        "REQ-20261010-001 (aprovação de missão e natureza pública)",
+        "MODULE_SELECTION.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    }
+  ],
+  "local_strategy_log_ref": "STRATEGY_LOG.jsonl",
+  "local_canonical_mission_ref": "MISSAO_E_ESCOPO.md",
+  "local_publication_policy_ref": "POLITICA_FONTES_E_PUBLICACAO.md",
+  "migration_status": "PUBLIC_DOCUMENTARY_CONSTITUTION_IN_PROGRESS",
+  "updated_at": "2026-10-10",
+  "kind": "PROJECT_PROFILE_GENERATOR"
+}
