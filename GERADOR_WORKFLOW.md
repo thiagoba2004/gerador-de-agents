@@ -3,7 +3,7 @@
 **project_code:** `PRJ-000002`  
 **project_alias:** `GDA`  
 **project_id legado:** `GDA`  
-**kernel_version:** `1.4`
+**kernel_version do workflow original:** `1.4` (histórico); **kernel em uso pelo Gerador:** `1.11`.
 
 Este documento transforma a arquitetura do Gerador de Agents em um procedimento executável e reproduzível.
 
@@ -126,9 +126,31 @@ Verificar:
 - se `contact-protocol` estiver ativo: stack aprovada, isolamento por projeto e estado real do teste end-to-end;
 - se `publication` + Artigos/fila editorial estiverem ativos: `governanca/PAUTA_EDITORIAL.md` existente ou decisão `NOT_APPLICABLE` justificada, e ausência da pauta no artefato público.
 
-**Saída:** projeto implantado ou relatório explícito das pendências restantes.
+**Saída:** base técnica implantada ou relatório de pendências; o handoff operacional é tratado separadamente na Etapa A6.
 
 ---
+
+### Etapa A6 — Transferência de titularidade operacional (Handoff)
+
+**Autoridade:** `REQ-GLOBAL-20261010-014`, `ADR-GOV-0005`, `PRJ-000002:REQ-20261010-003`. A Rota A não termina com a suposição de que o Chat Global ou o Gerador acompanharão indefinidamente o Projeto.
+
+Após concluir **A1–A5**, distinguir o encerramento técnico de dois resultados possíveis:
+1. **Constituição técnica verificada**: `TECHNICAL_BOOTSTRAP_VERIFIED`, sem alegar recebimento do novo titular.
+2. **Transferência operacional recebida**: `PROJECT_OPERATIONAL_HANDOFF_ACCEPTED`, somente após demonstração dos requisitos abaixo.
+
+#### Requisitos mínimos
+
+1. Confirmar `PRJ-NNNNNN`, repositório, missão aprovada (ou pendência expressa), `AGENTS.md`, `PROJECT_STATE.json`, roadmap, logs e commit/cópia canônica.
+2. Identificar o **titular especializado** (instância que acompanha o domínio) e seu método de acesso; Codex/Work como executores não assumem automaticamente essa titularidade.
+3. Se o acompanhamento **conversacional contínuo for atribuído ao ChatGPT**, exigir Projeto ChatGPT **próprio, comprovadamente criado e vinculado ao PRJ** (`B1_CHATGPT_PROJECT_BOUND`) e memória `C2` ou `C3` escolhida pelo responsável humano. O Gerador pode preparar instruções e contexto, mas **não pode afirmar que criou ou configurou contêiner ChatGPT** sem ação e recibo da plataforma.
+4. Para Projeto essencialmente técnico **sem acompanhamento conversacional atribuído ao ChatGPT**, admitir `B0` com instância de engenharia/executor especializado explicitamente nomeado e validação de acesso e continuidade; não converter esse caso em obrigação genérica de contêiner.
+5. Fornecer pacote mínimo de handoff com estado/identificadores, missão, fontes permitidas e revisões, classificação, executor aplicável, permissões e gasto, próxima entrega, critérios de aceite e riscos em aberto.
+6. **Verificar recebimento**: em contêiner ChatGPT, abrir conversa **dentro do Projeto vinculado** e confirmar que ela recupera `AGENTS`, estado, identidade, fonte e limite de trabalho; registrar evidência de aceite. Uma resposta do Chat Global não substitui teste local.
+7. Antes do aceite, registrar `SPECIALIZED_INSTANCE_REQUIRED`, `HANDOFF_PREPARED` ou `BINDING_VERIFICATION_PENDING` com pendências verdadeiras. Nunca promover `PROJECT_OPERATIONAL_HANDOFF_ACCEPTED` pela existência de um README, perfil ou chat avulso.
+
+**Gate A6:** `PROJECT_OPERATIONAL_HANDOFF_ACCEPTED` **somente** com destinatário e prova verificáveis. Se faltar criação humana do Projeto ChatGPT, encerrar **somente** a Rota A técnica e manter handoff como `PENDING_HUMAN_PROJECT_CREATION`. Não reabrir a estratégia técnica anterior nem executar domínio especializado no lugar do titular.
+
+**Fronteira de segurança:** o handoff não altera classificação, autorizações de `action_id`, permissões Git, custos, Work/Codex, modos C2/C3 ou regras do projeto; todas seguem seus gates próprios.
 
 ## 3. Rota B — Projeto existente
 
@@ -216,9 +238,20 @@ Confirmar:
 - não houve regressão comprovada;
 - próximo passo está persistido.
 
-**Saída:** migração concluída ou lista explícita de itens não implantados.
+**Saída:** migração documental concluída ou pendências; o recebimento operacional exige B8 quando aplicável.
 
 ---
+
+### Etapa B8 — Verificação da titularidade após migração
+
+Após B1–B7, aplicar os requisitos e o gate de **A6** à instância especializada **destinatária** da alteração. Preservar titularidade local comprovada e não impor novo Projeto ChatGPT a uma arquitetura técnica em B0 que não delegue acompanhamento conversacional continuado.
+
+- Se já existir Projeto ChatGPT vinculado (`B1`), verificar as instruções, o contexto e a recuperação do novo estado, sem converter `C2/C3` por inferência.
+- Se uma migração pressupuser um novo titular, só transferir após aceite dele. Não interromper o titular atual sem sucessor válido.
+- Uma migração documental pode ser encerrada com `MIGRATION_VERIFIED_HANDOFF_PENDING`; somente `PROJECT_OPERATIONAL_HANDOFF_ACCEPTED` comprova recebimento e continuidade.
+- Não confundir alterar os arquivos do repositório com instalar ou ativar o ChatGPT Project, Codex, Work ou qualquer efeito externo.
+
+**Gate B8:** `PROJECT_OPERATIONAL_HANDOFF_ACCEPTED` quando necessário e comprovado; senão `HANDOFF_PENDING` com dono, pendência e próxima ação explicitados.
 
 ## 4. Estados de saída obrigatórios
 
