@@ -98,11 +98,12 @@
     },
     {
       "module_id": "web-site",
-      "status": "PENDENTE_DE_EVIDENCIA",
-      "rationale": "Repositório GitHub público verificado, mas não houve autorização expressa de site/Pages ou identidade visual.",
+      "status": "ATIVADO",
+      "rationale": "Autorização humana expressa em 10/10/2026 para dois sites públicos próprios; o conteúdo-fonte documental está em main/docs; ainda não houve verificação de deploy ou Pages.",
       "source_refs": [
-        "REQ-20261010-001 (aprovação de missão e natureza pública)",
-        "MODULE_SELECTION.md"
+        "PRJ-000008:REQ-000008-20261010-002",
+        "PRJ-000008:SITE_ARCHITECTURE.md",
+        "PRJ-000008:docs/index.md"
       ],
       "decided_at": "2026-10-10",
       "kernel_version": "1.11"
@@ -202,5 +203,16 @@
     "github_pages_not_verified": true,
     "substantive_research_not_executed": true,
     "git_history_security_scan_not_performed": true
+  },
+  "web_site": {
+    "module_status": "ATIVADO",
+    "strategy_code": "EA-000008-000002",
+    "site_source": "main/docs",
+    "site_mode": "GITHUB_PAGES_STATIC_MARKDOWN",
+    "source_staged": true,
+    "pages_admin_activated": "NOT_VERIFIED",
+    "http_verified": false,
+    "custom_design_status": "NOT_IMPLEMENTED",
+    "publication_source": "GITHUB_PUBLIC_WITH_PAGES_PENDING"
   }
 }
