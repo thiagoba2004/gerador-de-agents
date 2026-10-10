@@ -6,9 +6,9 @@
   "release_version": "1.26",
   "kernel_version": "1.11",
   "current_strategy_id": null,
-  "last_concluded_strategy_id": "EA-000002-000023",
+  "last_concluded_strategy_id": "EA-000002-000024",
   "current_phase": null,
-  "last_completed_milestone": "Arquitetura 2.2: Gerador de Agents é PRJ sem Projeto ChatGPT associado (B0); C2/C3 não aplicável.",
+  "last_completed_milestone": "EA-000002-000024 — constituição documental pública dos PRJ-000007 e PRJ-000008 verificada",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -109,9 +109,9 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Aplicar B0/B1 antes de qualquer classificação C2/C3.",
+  "next_logical_step": "Aguardar demandas substantivas locais dos PRJ-000007/000008; preservar Rota B e perfis. Sites, pesquisas e serviços não foram ativados.",
   "chat_only_work_is_not_persisted": true,
-  "updated_at": "2026-09-26",
+  "updated_at": "2026-10-10",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
@@ -125,7 +125,7 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000023",
+  "last_concluded_strategy_code": "EA-000002-000024",
   "current_strategy": null,
   "editorial_backlog_standard": {
     "version": "1.0",
@@ -135,7 +135,7 @@
     "status": "IMPLANTADO_E_AUDITADO"
   },
   "strategy_status": "SEM_ESTRATEGIA_ATIVA",
-  "last_concluded_strategy_name": "Vínculo Opcional entre Projeto de Governança e Projeto ChatGPT",
+  "last_concluded_strategy_name": "Constituição pública de Conselhos Profissionais e Ordem dos Advogados pela Rota B",
   "knowledge_index": {
     "status": "IMPLANTADO_E_VERIFICADO",
     "schema_version": "1.0",
@@ -208,5 +208,30 @@
     "context_mode_rule": "PER_PROJECT_EXPLICIT_NO_GLOBAL_DEFAULT",
     "chatgpt_project_binding": "B0_NO_CHATGPT_PROJECT_BINDING",
     "project_level_memory_mode": "NOT_APPLICABLE"
+  },
+  "last_public_projects_generation": {
+    "strategy_code": "EA-000002-000024",
+    "request_id": "REQ-20261010-001",
+    "report": "audits/constituicao-publica-prj-000007-000008-2026-10-10.md",
+    "targets": [
+      {
+        "project_code": "PRJ-000007",
+        "repository": "thiagoba2004/conselhos-profissionais",
+        "local_strategy": "EA-000007-000001",
+        "gate": "PUBLIC_DOCUMENTARY_CONSTITUTION_VERIFIED"
+      },
+      {
+        "project_code": "PRJ-000008",
+        "repository": "thiagoba2004/ordem-dos-advogados",
+        "local_strategy": "EA-000008-000001",
+        "gate": "PUBLIC_DOCUMENTARY_CONSTITUTION_VERIFIED"
+      }
+    ],
+    "visibility": "PUBLIC",
+    "generator_route": "B",
+    "reused_baseline": "EA-000000-000019",
+    "websites_deployed": false,
+    "substantive_research_verified": false,
+    "additional_cost": false
   }
 }
