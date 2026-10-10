@@ -1,0 +1,231 @@
+{
+  "schema_version": "1.0",
+  "project_code": "PRJ-000023",
+  "project_sequence": 23,
+  "project_name": "Bancas Examinadoras",
+  "project_alias": null,
+  "project_id_legacy": "bancas-examinadoras",
+  "project_ref": "thiagoba2004/bancas-examinadoras",
+  "generator": "PRJ-000002 — Gerador de Agents",
+  "generator_strategy": "EA-000002-000026",
+  "generator_request_id": "REQ-20261010-005",
+  "generator_release": "1.26",
+  "kernel_version": "1.11",
+  "route": "A_NEW_PROJECT",
+  "explicit_project_topic": "Bancas examinadoras que organizam concursos públicos brasileiros",
+  "project_purpose": "Constituir projeto independente sobre bancas examinadoras/organizadoras de concursos públicos e organizar estudo/documentação a partir de fontes verificadas, com entregas substantivas ainda a delimitar.",
+  "detailed_mission_status": "TOPIC_CONFIRMED_DETAILED_DELIVERABLES_PENDING",
+  "public_repository": true,
+  "visibility_verified_on": "2026-10-10",
+  "pages_status": "NOT_REQUESTED_NOT_VERIFIED",
+  "module_decision_method": "UNIVERSAL_PERSISTENCE_MODULES_ACTIVE; SPECIALIZED_MODULES_PENDING_HUMAN_EVIDENCE",
+  "modules": [
+    {
+      "module_id": "execution-environments",
+      "status": "ATIVADO",
+      "rationale": "Projeto persistente sob PRJ, precisa separar identidade, executor, contexto e persistência.",
+      "source_refs": [
+        "REQ-20261010-005",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "information-classification",
+      "status": "ATIVADO",
+      "rationale": "Repositório público com possíveis fontes de concurso contendo dados privados; controle preventivo obrigatório.",
+      "source_refs": [
+        "REQ-20261010-005",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "research",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Tema sobre bancas organizadoras foi explicitado, mas o usuário não aprovou ainda uma entrega específica de pesquisa documental.",
+      "source_refs": [
+        "REQ-20261010-005",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "legal",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Editais e atos administrativos podem exigir análise jurídica futura, mas ainda não foi solicitada pesquisa normativa substantiva.",
+      "source_refs": [
+        "REQ-20261010-005",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "publication",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Repositório Git público não é, por si, fluxo editorial ou Site aprovado.",
+      "source_refs": [
+        "REQ-20261010-005",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "software",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Não há mandato para código, sistema, coleta automatizada nem aplicativo.",
+      "source_refs": [
+        "REQ-20261010-005",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "data",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Catálogo de bancas pode demandar dados estruturados depois; não foi aprovado dataset recorrente.",
+      "source_refs": [
+        "REQ-20261010-005",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "automation",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Nenhum pipeline, gatilho ou monitoramento foi solicitado.",
+      "source_refs": [
+        "REQ-20261010-005",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "web-site",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Não há pedido de Site/GitHub Pages ou interface pública.",
+      "source_refs": [
+        "REQ-20261010-005",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "contact-protocol",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Nenhum Fale Conosco, canal ou protocolo solicitado.",
+      "source_refs": [
+        "REQ-20261010-005",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "knowledge-index",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Acervo relevante de fontes ainda não existe; reavaliar quando houver corpus e consumidores.",
+      "source_refs": [
+        "REQ-20261010-005",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "professional-education",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Projeto estuda bancas, não foi encomendado programa de preparação para concursos.",
+      "source_refs": [
+        "REQ-20261010-005",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "digital-evidence",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Não existe mandato para coleta probatória ou cadeia de custódia de provas.",
+      "source_refs": [
+        "REQ-20261010-005",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "translation",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Nenhum produto de tradução foi requerido.",
+      "source_refs": [
+        "REQ-20261010-005",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    }
+  ],
+  "domain_boundary": {
+    "focus": "bancas examinadoras/organizadoras responsáveis por concursos públicos brasileiros",
+    "distinguish": [
+      "órgão contratante",
+      "comissão do concurso",
+      "banca organizadora",
+      "examinador individual"
+    ],
+    "related_contexts": [
+      "Exam Design Research — pesquisa histórica dos bastidores dos concursos",
+      "família Academia — plataformas e produtos de concursos"
+    ],
+    "cross_project_policy": "DOCUMENTED_AUTHORIZED_SOURCES_ONLY_NO_AUTOMATIC_MEMORY_SHARING"
+  },
+  "memory_architecture": {
+    "context_selection_policy": "POLITICA_SELECAO_FUNDAMENTADA_CONTEXTO_ESPECIALIZADO.md",
+    "recommendation": "C3_CHATGPT_PROJECT_ONLY_MEMORY",
+    "justification": "Independência do domínio das bancas organizadoras ante projetos de história de concursos e produtos educacionais; Work externo pode receber contexto versionado.",
+    "human_decision_status": "RECOMMENDED_NOT_YET_APPROVED_FOR_THIS_PROJECT",
+    "actual_chatgpt_project_binding": "NOT_VERIFIED",
+    "actual_chatgpt_memory_mode": "NOT_VERIFIED",
+    "handoff_gate": "A6_PENDING"
+  },
+  "canonical_files": [
+    "README.md",
+    "AGENTS.md",
+    "REQUEST_LOG.jsonl",
+    "STRATEGY_LOG.jsonl",
+    "PROJECT_STATE.json",
+    "ROADMAP.md",
+    "INFORMATION_HANDLING_PROFILE.json",
+    "estrategias/EA-000023-000001-bootstrap-rota-a.md"
+  ],
+  "publication_policy": "PUBLIC_REPOSITORY_NOT_SITE",
+  "confidential_data_allowed": false,
+  "no_new_expense": true,
+  "substantive_scope_gate": "DELIVERABLES_PENDING_HUMAN_DEFINITION",
+  "migration_status": "TECHNICAL_BOOTSTRAP_IN_PROGRESS",
+  "updated_at": "2026-10-10"
+}
