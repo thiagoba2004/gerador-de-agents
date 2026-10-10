@@ -200,6 +200,17 @@
   "publication_policy": "PUBLIC_REPOSITORY_NOT_SITE",
   "confidential_data_allowed": false,
   "substantive_scope_gate": "AWAITING_HUMAN_DECISION",
-  "migration_status": "TECHNICAL_BOOTSTRAP_IN_PROGRESS",
-  "updated_at": "2026-10-10"
+  "migration_status": "TECHNICAL_BOOTSTRAP_VERIFIED_SUBSTANTIVE_SCOPE_PENDING",
+  "updated_at": "2026-10-10",
+  "initialization_gate": "PUBLIC_PROJECT_TECHNICAL_BOOTSTRAP_VERIFIED",
+  "verified_at": "2026-10-10",
+  "initialization_verification": {
+    "checked_on_git_remote": true,
+    "repo_public": true,
+    "minimal_files_count": 8,
+    "local_strategy_concluded": "EA-000021-000001",
+    "scope_definition_pending": true,
+    "pages_not_requested": true,
+    "no_new_expense": true
+  }
 }
