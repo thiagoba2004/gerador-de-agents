@@ -6,9 +6,9 @@
   "release_version": "1.26",
   "kernel_version": "1.11",
   "current_strategy_id": null,
-  "last_concluded_strategy_id": "EA-000002-000025",
+  "last_concluded_strategy_id": "EA-000002-000026",
   "current_phase": null,
-  "last_completed_milestone": "EA-000002-000025: dois projetos públicos tecnicamente criados e verificados na Rota A",
+  "last_completed_milestone": "EA-000002-000026: PRJ-000023 criado no repositório Git público preexistente; bootstrap técnico e readback verificados; Gate A6 pendente.",
   "canonical_files": [
     "README.md",
     "AGENTS.md",
@@ -109,7 +109,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Após a criação técnica dos PRJ-000021/000022, preparar o handoff aos Projetos ChatGPT especializados; aguardar criação/vínculo e escolha de memória C2/C3 pelo usuário, verificar recuperação do estado e somente então aceitar A6. Missões aprovadas em conversa dependem de persistência segura; não criar sites por inferência.",
+  "next_logical_step": "Aguardar definição detalhada do primeiro produto e decisão/configuração sobre Projeto ChatGPT especializado e C3 (recomendação PSFCE, não aprovada ainda); em sessão especializada validar leitura do GitHub antes de aceitar A6. Pendências antigas de PRJ-000021/22 continuam independentes.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-10-10",
   "project_code": "PRJ-000002",
@@ -125,7 +125,7 @@
     "phase_code_format": "F-PPPPPP-EEEEEE-FFF",
     "status": "IMPLANTADO_E_VERIFICADO"
   },
-  "last_concluded_strategy_code": "EA-000002-000025",
+  "last_concluded_strategy_code": "EA-000002-000026",
   "current_strategy": null,
   "editorial_backlog_standard": {
     "version": "1.0",
@@ -135,7 +135,7 @@
     "status": "IMPLANTADO_E_AUDITADO"
   },
   "strategy_status": "SEM_ESTRATEGIA_ATIVA",
-  "last_concluded_strategy_name": "Rota A — inicialização dos Projetos Cursos Universitários e Instituições Bancárias",
+  "last_concluded_strategy_name": "Rota A — constituição de Bancas Examinadoras",
   "knowledge_index": {
     "status": "IMPLANTADO_E_VERIFICADO",
     "schema_version": "1.0",
@@ -210,18 +210,19 @@
     "project_level_memory_mode": "NOT_APPLICABLE"
   },
   "last_public_projects_generation": {
-    "generator_strategy": "EA-000002-000025",
-    "request_id": "REQ-20261010-002",
+    "generator_strategy": "EA-000002-000026",
+    "request_id": "REQ-20261010-005",
     "route": "A",
-    "report": "audits/rota-a-prj-000021-prj-000022-2026-10-10.md",
+    "report": "audits/rota-a-prj-000023-bancas-examinadoras-2026-10-10.md",
     "project_codes": [
-      "PRJ-000021",
-      "PRJ-000022"
+      "PRJ-000023"
     ],
     "repository_visibility": "PUBLIC",
-    "technical_bootstraps_verified": 2,
-    "mission_definition_pending": true,
-    "websites_created": false,
+    "existing_repository_reused": true,
+    "technical_bootstraps_verified": 1,
+    "detailed_deliverables_pending": true,
+    "site_created": false,
+    "handoff_a6_accepted": false,
     "additional_cost": false
   },
   "operational_handoff_policy": {
@@ -247,6 +248,13 @@
         "technical_bootstrap": "VERIFIED",
         "specialized_chatgpt_instance": "NOT_VERIFIED",
         "handoff": "NOT_ACCEPTED"
+      },
+      "PRJ-000023": {
+        "technical_bootstrap": "VERIFIED",
+        "specialized_chatgpt_instance": "NOT_VERIFIED",
+        "context_policy": "C3_RECOMMENDED_NOT_APPROVED",
+        "handoff": "NOT_ACCEPTED",
+        "responsibility": "SPECIALIZED_INSTANCE_REQUIRED_WHEN_CHATGPT_CONTINUOUS_DEVELOPMENT_DESIGNATED"
       }
     },
     "binding_of_generator_own_chatgpt_project": "NOT_DECIDED",
