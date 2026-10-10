@@ -109,7 +109,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Aguardar definição humana das missões substantivas de PRJ-000021 e PRJ-000022, antes de ativar módulos setoriais, pesquisa ou sites.",
+  "next_logical_step": "Após a criação técnica dos PRJ-000021/000022, preparar o handoff aos Projetos ChatGPT especializados; aguardar criação/vínculo e escolha de memória C2/C3 pelo usuário, verificar recuperação do estado e somente então aceitar A6. Missões aprovadas em conversa dependem de persistência segura; não criar sites por inferência.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-10-10",
   "project_code": "PRJ-000002",
@@ -223,5 +223,36 @@
     "mission_definition_pending": true,
     "websites_created": false,
     "additional_cost": false
+  },
+  "operational_handoff_policy": {
+    "status": "ACCEPTED_NORMATIVE_VERIFIED_AS_DOCUMENT_NOT_PLATFORM_ENFORCED",
+    "source_request": "REQ-20261010-003",
+    "global_request": "REQ-GLOBAL-20261010-014",
+    "adr": "ADR-GOV-0005",
+    "workflow": "GERADOR_WORKFLOW.md",
+    "route_a_gate": "A6",
+    "route_b_gate": "B8",
+    "generator_technical_bootstrap_not_equivalent_operational_handoff": true,
+    "chatgpt_continuous_owner_requires_specific_chatgpt_project": true,
+    "requires_bound_chatgpt_project_when_applicable": true,
+    "memory_selection_by_human": true,
+    "status_for_unreceived_projects": "SPECIALIZED_INSTANCE_REQUIRED",
+    "current_targets": {
+      "PRJ-000021": {
+        "technical_bootstrap": "VERIFIED",
+        "specialized_chatgpt_instance": "NOT_VERIFIED",
+        "handoff": "NOT_ACCEPTED"
+      },
+      "PRJ-000022": {
+        "technical_bootstrap": "VERIFIED",
+        "specialized_chatgpt_instance": "NOT_VERIFIED",
+        "handoff": "NOT_ACCEPTED"
+      }
+    },
+    "binding_of_generator_own_chatgpt_project": "NOT_DECIDED",
+    "human_chatgpt_project_creation": "NECESSARY_WHEN_DESIGNATED_CHATGPT_CONTINUOUS_OWNER",
+    "platform_gate_tests_executed": 0,
+    "project_repository_writes_this_decision": 0,
+    "updated_at": "2026-10-10"
   }
 }
