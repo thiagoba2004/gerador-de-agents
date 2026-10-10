@@ -1,0 +1,205 @@
+{
+  "schema_version": "1.0",
+  "project_code": "PRJ-000022",
+  "project_sequence": 22,
+  "project_name": "Instituições Bancárias",
+  "project_alias": null,
+  "project_id_legacy": "instituicoes-bancarias",
+  "project_ref": "thiagoba2004/instituicoes-bancarias",
+  "generator_strategy": "EA-000002-000025",
+  "generator_request_id": "REQ-20261010-002",
+  "generator_release": "1.26",
+  "kernel_version": "1.11",
+  "route": "A_NEW_PROJECT",
+  "project_purpose": "NOT_YET_DEFINED_BY_HUMAN",
+  "project_topic_from_explicit_name": "instituições bancárias",
+  "public_repository": true,
+  "visibility_verified_on": "2026-10-10",
+  "pages_status": "NOT_REQUESTED_NOT_VERIFIED",
+  "module_decision_method": "ACTIVATE_UNIVERSAL_PERSISTENCE_MODULES_ONLY_UNTIL_MISSION_DEFINED",
+  "modules": [
+    {
+      "module_id": "execution-environments",
+      "status": "ATIVADO",
+      "rationale": "Projeto persistente assistido por IA; identidade e execução separadas.",
+      "source_refs": [
+        "REQ-20261010-002",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "information-classification",
+      "status": "ATIVADO",
+      "rationale": "Repositório público; controle preventivo de sensibilidade é obrigatório.",
+      "source_refs": [
+        "REQ-20261010-002",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "research",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Tema apenas nominal; falta missão aprovada e evidência para ativação setorial.",
+      "source_refs": [
+        "REQ-20261010-002",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "legal",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Tema apenas nominal; falta missão aprovada e evidência para ativação setorial.",
+      "source_refs": [
+        "REQ-20261010-002",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "publication",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Tema apenas nominal; falta missão aprovada e evidência para ativação setorial.",
+      "source_refs": [
+        "REQ-20261010-002",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "software",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Tema apenas nominal; falta missão aprovada e evidência para ativação setorial.",
+      "source_refs": [
+        "REQ-20261010-002",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "data",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Tema apenas nominal; falta missão aprovada e evidência para ativação setorial.",
+      "source_refs": [
+        "REQ-20261010-002",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "automation",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Tema apenas nominal; falta missão aprovada e evidência para ativação setorial.",
+      "source_refs": [
+        "REQ-20261010-002",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "web-site",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Tema apenas nominal; falta missão aprovada e evidência para ativação setorial.",
+      "source_refs": [
+        "REQ-20261010-002",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "contact-protocol",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Tema apenas nominal; falta missão aprovada e evidência para ativação setorial.",
+      "source_refs": [
+        "REQ-20261010-002",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "knowledge-index",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Tema apenas nominal; falta missão aprovada e evidência para ativação setorial.",
+      "source_refs": [
+        "REQ-20261010-002",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "professional-education",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Tema apenas nominal; falta missão aprovada e evidência para ativação setorial.",
+      "source_refs": [
+        "REQ-20261010-002",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "digital-evidence",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Tema apenas nominal; falta missão aprovada e evidência para ativação setorial.",
+      "source_refs": [
+        "REQ-20261010-002",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    },
+    {
+      "module_id": "translation",
+      "status": "PENDENTE_DE_EVIDENCIA",
+      "rationale": "Tema apenas nominal; falta missão aprovada e evidência para ativação setorial.",
+      "source_refs": [
+        "REQ-20261010-002",
+        "MODULE_SELECTION.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "decided_at": "2026-10-10",
+      "kernel_version": "1.11"
+    }
+  ],
+  "canonical_files": [
+    "README.md",
+    "AGENTS.md",
+    "REQUEST_LOG.jsonl",
+    "STRATEGY_LOG.jsonl",
+    "PROJECT_STATE.json",
+    "ROADMAP.md",
+    "INFORMATION_HANDLING_PROFILE.json",
+    "estrategias/EA-000022-000001-bootstrap-rota-a.md"
+  ],
+  "publication_policy": "PUBLIC_REPOSITORY_NOT_SITE",
+  "confidential_data_allowed": false,
+  "substantive_scope_gate": "AWAITING_HUMAN_DECISION",
+  "migration_status": "TECHNICAL_BOOTSTRAP_IN_PROGRESS",
+  "updated_at": "2026-10-10"
+}
