@@ -188,7 +188,19 @@
   "local_strategy_log_ref": "STRATEGY_LOG.jsonl",
   "local_canonical_mission_ref": "MISSAO_E_ESCOPO.md",
   "local_publication_policy_ref": "POLITICA_FONTES_E_PUBLICACAO.md",
-  "migration_status": "PUBLIC_DOCUMENTARY_CONSTITUTION_IN_PROGRESS",
+  "migration_status": "PUBLIC_DOCUMENTARY_CONSTITUTION_VERIFIED",
   "updated_at": "2026-10-10",
-  "kind": "PROJECT_PROFILE_GENERATOR"
+  "kind": "PROJECT_PROFILE_GENERATOR",
+  "verification": {
+    "date": "2026-10-10",
+    "scope": "TWO_EXISTING_PUBLIC_REPOSITORIES",
+    "source_local_strategy": "EA-000007-000001",
+    "gate": "PUBLIC_DOCUMENTARY_CONSTITUTION_VERIFIED",
+    "target_repository": "thiagoba2004/conselhos-profissionais",
+    "public_readback": true,
+    "local_strategy_closed": true,
+    "github_pages_not_verified": true,
+    "substantive_research_not_executed": true,
+    "git_history_security_scan_not_performed": true
+  }
 }
