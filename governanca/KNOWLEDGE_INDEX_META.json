@@ -3,23 +3,23 @@
   "extensions": {
     ".json": 17,
     ".jsonl": 10,
-    ".md": 84,
+    ".md": 85,
     ".yml": 1
   },
   "generator": "tools/build_knowledge_index.py",
   "index_file": "governanca/KNOWLEDGE_INDEX.jsonl",
-  "record_count": 112,
+  "record_count": 113,
   "schema_version": "1.0",
   "semantic_tag_counts": {
     "bdtd_ibict": 16,
     "editorial": 56,
     "financeiro": 27,
     "fonte": 55,
-    "governanca": 76,
+    "governanca": 77,
     "juridico": 8,
     "pesquisa_academica": 25,
     "superendividamento": 7,
-    "trabalho_sindical": 5
+    "trabalho_sindical": 6
   },
   "source_system_counts": {
     "BDTD/IBICT": 2,
