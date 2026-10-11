@@ -109,7 +109,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "EA-000002-000027 F005: Codex no Gerador deve executar testes/regressões de opt-in/primeira EA e reportar CI/SHA; G0 deve corrigir ACT-000000-000034-003 para 000022-000003 e reconciliar EA-000022-000002 de missão. Só então F003-F006 da EA-034 e EAs locais poderão avançar conforme gates.",
+  "next_logical_step": "EA-000002-000027 F005: ACT-006 implementada e 73 testes locais PASS. CHAT/Gerador retoma ACT-007 e criterios integrais F005; G0 corrige ACT-000000-000034-003 e reconcilia EA-000022-000002 de missao. ACT-008/009 F006 permanecem CHAT/pendentes; sem escrita nos destinatarios nesta sessao CODEX.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-10-11",
   "project_code": "PRJ-000002",
@@ -288,7 +288,16 @@
       "PRJ-000022",
       "PRJ-000023"
     ],
-    "website_completed_by_this_mandate": 0
+    "website_completed_by_this_mandate": 0,
+    "conditional_gate": {
+      "status": "IMPLEMENTED_LOCAL_REGRESSIONS_VERIFIED",
+      "action_key": "ACT-000002-000027-006",
+      "report": "audits/EA-000002-000027-F005-codex-site-2026-10-11.md",
+      "implementation_commit": "1ec78aa",
+      "local_tests": 73,
+      "ci_status": "PENDING_REMOTE_EXECUTION",
+      "public_sites_verified": 0
+    }
   },
   "action_execution_planning": {
     "policy": "thiagoba2004/governanca-geral-modelos-ia/EXECUTION_ACTION_PLAN_STANDARD.md",
@@ -320,7 +329,7 @@
     "local_strategy_created": 0,
     "target_repository_writes": 0,
     "required_global_matrix_correction": "EA-000000-000034 ACT-000000-000034-003 still incorrectly labels EA-000022-000002 as SCIV",
-    "codex_regressions": "PENDING",
+    "codex_regressions": "VERIFIED_OFFLINE_73_TESTS_NO_TARGET_WRITES",
     "native_instruction_installations": "NOT_VERIFIED",
     "A6_B8_post_installation": "NOT_EXECUTED",
     "sciv_behavioral_tests": "NOT_EXECUTED",

@@ -188,13 +188,17 @@
         "Mandato/PEP e ferramentas disponíveis na ação real",
         "Versão Git e limites de publicação conferidos"
       ],
-      "verification": "CI/regressão; sem publicação site",
+      "verification": "73 testes locais PASS (33 criacao/Site, 28 SCIV, 12 matriz); matriz real PASS; commit 1ec78aa; audits/EA-000002-000027-F005-codex-site-2026-10-11.md; sem publicacao ou aceite integral da F005",
       "completion_gate": "F-000002-000027-005_EVIDENCE_CHECK",
       "fallback": "Sem substituição de executor sem alocação/mandato",
       "on_block": "Registre BLOCKED, motivo, responsável e retome sem contornar política",
       "cost_class": "UNKNOWN",
       "spend_limit": 0,
-      "status": "PLANNED"
+      "status": "VERIFIED",
+      "evidence_refs": [
+        "audits/EA-000002-000027-F005-codex-site-2026-10-11.md",
+        "1ec78aa"
+      ]
     },
     {
       "action_key": "ACT-000002-000027-007",
