@@ -10,3 +10,7 @@
 6. F-{{PROJECT_SEQUENCE}}-000001-006 — Encerrar apenas escopo técnico com A6 pendente quando necessário, responsável e próxima ação; gate CONSTITUICAO_ENCERRADA_EM_ESCOPO.
 
 **Proibição:** não presumir aceitação A6/B8, SCIV, memória C3, site ou autorização a partir da constituição técnica.
+
+## Handoff condicional de Site — não publicar implicitamente
+
+Na Fase 003, decidir `web-site=ATIVADO|PENDENTE_DE_EVIDENCIA|NAO_APLICAVEL` e registrar motivo. Quando e somente quando `ATIVADO` por mandato comprovado, a primeira EA abre dependência para **EA local específica de Site com Plano de Fases** gerada por `templates/WEBSITE_PUBLICATION_EA.example.md` e registrada no estado/ROADMAP/log/global. O Gerador assume coordenação técnica de identidade visual/tokens/paleta, código, testes e publicação no executor permitido; o PRJ retém conteúdo/editorial. Fase 006 de constituição técnica pode encerrar com Site pendente **identificado**, nunca afirmar Site publicado. Sem autorização, registrar ausência de Site e não criar Pages.

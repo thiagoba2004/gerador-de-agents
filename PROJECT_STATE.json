@@ -109,7 +109,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "EA-000002-000027 F005: integrar e testar contrato do Gerador no rollout da EA-000000-000034 em PRJ-000022/023/007/008; F006 auditoria final depois; instalações ChatGPT A6/B8 ainda requerem ações humanas.",
+  "next_logical_step": "EA-000002-000027 F005: validar padrão técnico de Sites com EA local e tokens próprios, além do contrato SCIV; testar gate/site e regressões, preservar sites já iniciados PRJ-000007/008 (Pages F004 bloqueado), não criar site PRJ-000022/023 sem autorização; F006 após prova.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-10-11",
   "project_code": "PRJ-000002",
@@ -270,5 +270,24 @@
     "platform_gate_tests_executed": 0,
     "project_repository_writes_this_decision": 0,
     "updated_at": "2026-10-10"
+  },
+  "site_delivery_governance": {
+    "owner": "PRJ-000002_GERADOR_DE_AGENTS_TECHNICAL_OWNER",
+    "mandate": "REQ-20261011-009",
+    "phase": "F-000002-000027-005",
+    "trigger": "WEB_SITE_MODULE_ACTIVATED_BY_APPROVED_SITE_MANDATE",
+    "local_site_strategy_required": true,
+    "project_domain_owner": "SPECIALIZED_PRJ",
+    "admin_config_owner": "AUTHORIZED_HUMAN_OR_EXECUTOR",
+    "default_site_creation": false,
+    "existing_site_eas": [
+      "EA-000007-000002",
+      "EA-000008-000002"
+    ],
+    "site_not_authorized": [
+      "PRJ-000022",
+      "PRJ-000023"
+    ],
+    "website_completed_by_this_mandate": 0
   }
 }

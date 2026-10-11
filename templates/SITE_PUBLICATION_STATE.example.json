@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "project_code": "PRJ-XXXXXX",
+  "site_strategy_code": "EA-PPPPPP-EEEEEE",
+  "authorization_ref": "",
+  "mandate_status": "PENDING_EVIDENCE",
+  "publication_status": "NOT_DEPLOYED",
+  "source_folder": "docs",
+  "design_tokens": {
+    "background": "#FFFFFF",
+    "surface": "#F7F7F7",
+    "text": "#111111",
+    "primary": "#222222",
+    "secondary": "#444444",
+    "accent": "#555555",
+    "border": "#777777",
+    "focus": "#0044CC"
+  },
+  "palette_portfolio_review": "NOT_VERIFIED",
+  "palette_review_evidence_ref": "",
+  "source_commit": null,
+  "deploy_commit": null,
+  "public_url": null,
+  "http_evidence_ref": null,
+  "administrative_pages_status": "NOT_VERIFIED",
+  "notes": "Template only; do not copy default sample tokens as a branded project identity. Do not claim public deployment."
+}

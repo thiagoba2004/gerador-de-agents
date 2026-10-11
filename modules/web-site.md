@@ -297,3 +297,13 @@ Uma evolução de Site só é concluída quando:
 - quebra mobile;
 - governança interna exposta ao visitante;
 - páginas de menu sem conteúdo real.
+
+## Responsável técnico, paletas distintas e EA local de publicação — 11/10/2026
+
+**Executor técnico de referência:** Gerador de Agents (e Codex/Chat sob delegação e permissões aplicáveis), que projeta, materializa, testa e verifica o site. A IA Especializada/PRJ detém missão, fontes e aprovação editorial. O titular humano decide a existência/publicação do site e configura GitHub Pages quando somente a conta humana possuir acesso.
+
+**Governança obrigatória:** para `web-site=ATIVADO`, o Gerador deve criar ou continuar uma **Estratégia Autônoma local específica com Plano de Fases**, usando `templates/WEBSITE_PUBLICATION_EA.example.md`; associar request, estado, ROADMAP e registro dual. A ausência da EA/Plano impede declarar trabalho de Site constituído ou pronto. Para PRJ existentes, preserva-se a EA vigente (incluindo PRJ-000007/008 F004 bloqueada).
+
+**Identidade por Projeto:** definir tokens `background`, `surface`, `text`, `primary`, `secondary`, `accent`, `border`, `focus`. Seleção deve ser distintiva na comparação de portfólio, acessível, semanticamente adequada e registrada, mas não imponha um tom padronizado a todos. Os tokens podem ser hexadecimal `#RRGGBB`, reutilizados como CSS custom properties, com pares de texto/superfície testados. Para contraste do corpo em fundo/superfície: mínimo 4,5:1; títulos grandes: 3:1. Testes globais de diferenciação entre sites não podem ser substituídos por um único teste local.
+
+**Gates:** `SITE_MANDATE_RECORDED` → `SITE_EA_PHASE_PLAN_VERSIONED` → `SITE_VISUAL_SYSTEM_REVIEWED` → `SITE_CONTENT_AND_SOURCE_STAGED` → `SITE_TECHNICAL_PREFLIGHT_PASS` → `DEPLOY_CONFIGURATION_CONFIRMED` → `PUBLIC_SITE_VERIFIED`. Uma etapa não implica a outra. O validador local `tools/project_creation_gate.py --gate site` verifica integridade documental e contraste dos tokens, **não** publicação HTTP; URL/response/deployment exigem provas separadas. Em bloqueio humano/administrativo manter fase e owner.

@@ -133,3 +133,7 @@ Aplicar modules/sciv-essential.md somente opt-in com mode=ON_DEMAND e evidência
 
 
 **Obrigação no Gerador:** para cada novo PRJ registrar decisão explícita sobre `sciv-essential` em um dos três estados existentes. ATIVADO exige opt-in e EA/Plano local para implantação; não equivale a ativação automática, instalação nativa nem aceite. Aplicar `GERADOR_WORKFLOW.md` §8.
+
+## Contrato de seleção e EA obrigatória de Sites
+
+Para cada novo PRJ a decisão de `web-site` deve ser registrada com justificativa. **ATIVADO** somente com evidência/mandato de site autorizado; exige **EA local de Site e Plano** distinta da constituição técnica, exceto quando uma estratégia já existente demonstravelmente abranger o ciclo completo. O Gerador é responsável técnico de design, paleta própria, código, testes e deployment sob executor autorizado; o PRJ responde pelo conteúdo e o titular por permissões/administração. `PENDENTE_DE_EVIDENCIA` ou `NAO_APLICAVEL` não geram site nem mudança de Pages. Aplicar `GERADOR_WORKFLOW.md` §9 e `modules/web-site.md`.
