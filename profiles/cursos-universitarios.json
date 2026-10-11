@@ -232,11 +232,14 @@
     "github_read_evidence": "https://github.com/thiagoba2004/governanca-geral-modelos-ia/issues/4#issuecomment-6105087359",
     "provisioning_evidence": "https://github.com/thiagoba2004/cursos-universitarios/commit/c6bd15945bdfbb4edeb3c55160d1a7c173c3acb5",
     "state_path": "comunicados/SCIV_STATE.json",
-    "native_installation": "PREVIOUS_VERSION_HUMAN_ATTESTED_MAIN_ADAPTER_MANUAL_INSTALL_PENDING",
+    "native_installation": "HUMAN_ATTESTED_NOT_INDEPENDENTLY_VERIFIED",
     "automatic_bootstrap": "SUPERSEDED_BY_ISSUE_5_NO_READ_ON_NORMAL_TASK",
     "mode": "ON_DEMAND",
     "authority": "governanca-geral-modelos-ia issue #5 / ADR-GOV-0009",
     "operational_ref": "main",
-    "integration_commit": "2681116c0d976d7c03ee8463c39e06f279eae032"
+    "integration_commit": "2681116c0d976d7c03ee8463c39e06f279eae032",
+    "human_attestation_evidence": "thiagoba2004/cursos-universitarios/comunicados/SCIV_STATE.json#bootstrap.native_installation",
+    "real_non_sciv_conversation_test": "HUMAN_ATTESTED_TOOL_TRACE_NOT_VERIFIED",
+    "last_reconciled_at": "2026-10-11"
   }
 }
