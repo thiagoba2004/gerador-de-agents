@@ -20,3 +20,5 @@ A existência de um template não obriga sua utilização literal. O Gerador dev
 
 - `EXECUTION_ENVIRONMENT_PROFILE.example.json` — perfil v2 de superfície, executor, contexto, fontes e handoff.
 - `EXECUTION_HANDOFF.example.md` — pacote mínimo e auditável para transferir execução entre contextos incompatíveis.
+
+- SCIV_BOOTSTRAP.example.md — bloco parametrizado de leitura procedimental SCIV; materializar somente em perfis habilitados, preservando instruções fora dos marcadores. Compositor offline: tools/sciv_bootstrap.py.

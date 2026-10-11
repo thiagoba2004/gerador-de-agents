@@ -1,0 +1,29 @@
+test_access_failure_not_empty_and_independent_work_preserved (test_sciv_bootstrap.SCIVBootstrapContractTests.test_access_failure_not_empty_and_independent_work_preserved) ... ok
+test_ambiguous_existing_bootstrap_cannot_be_overwritten (test_sciv_bootstrap.SCIVBootstrapContractTests.test_ambiguous_existing_bootstrap_cannot_be_overwritten) ... ok
+test_authorized_integration_ref_update_removes_old_pilot (test_sciv_bootstrap.SCIVBootstrapContractTests.test_authorized_integration_ref_update_removes_old_pilot) ... ok
+test_central_mailbox_paths_not_destination (test_sciv_bootstrap.SCIVBootstrapContractTests.test_central_mailbox_paths_not_destination) ... ok
+test_central_repository_not_destination (test_sciv_bootstrap.SCIVBootstrapContractTests.test_central_repository_not_destination) ... ok
+test_composition_does_not_mutate_profile_or_state (test_sciv_bootstrap.SCIVBootstrapContractTests.test_composition_does_not_mutate_profile_or_state) ... ok
+test_concrete_own_repository_three_sources_before_task_bootstrap (test_sciv_bootstrap.SCIVBootstrapContractTests.test_concrete_own_repository_three_sources_before_task_bootstrap) ... ok
+test_disabled_profile_does_not_erase_existing_block (test_sciv_bootstrap.SCIVBootstrapContractTests.test_disabled_profile_does_not_erase_existing_block) ... ok
+test_injection_in_reference_is_rejected (test_sciv_bootstrap.SCIVBootstrapContractTests.test_injection_in_reference_is_rejected) ... ok
+test_mailbox_collision_is_rejected (test_sciv_bootstrap.SCIVBootstrapContractTests.test_mailbox_collision_is_rejected) ... ok
+test_malformed_or_duplicate_managed_block_needs_review (test_sciv_bootstrap.SCIVBootstrapContractTests.test_malformed_or_duplicate_managed_block_needs_review) ... ok
+test_missing_ref_never_defaults_silently_to_main (test_sciv_bootstrap.SCIVBootstrapContractTests.test_missing_ref_never_defaults_silently_to_main) ... ok
+test_native_and_real_conversation_gates_not_inferred (test_sciv_bootstrap.SCIVBootstrapContractTests.test_native_and_real_conversation_gates_not_inferred) ... ok
+test_no_binding_evidence_cannot_propagate (test_sciv_bootstrap.SCIVBootstrapContractTests.test_no_binding_evidence_cannot_propagate) ... ok
+test_no_provisioning_evidence_cannot_propagate (test_sciv_bootstrap.SCIVBootstrapContractTests.test_no_provisioning_evidence_cannot_propagate) ... ok
+test_no_read_capability_evidence_cannot_propagate (test_sciv_bootstrap.SCIVBootstrapContractTests.test_no_read_capability_evidence_cannot_propagate) ... ok
+test_outbox_version_grounding_no_privileged_execution (test_sciv_bootstrap.SCIVBootstrapContractTests.test_outbox_version_grounding_no_privileged_execution) ... ok
+test_preserves_all_original_instruction_bytes (test_sciv_bootstrap.SCIVBootstrapContractTests.test_preserves_all_original_instruction_bytes) ... ok
+test_real_pilot_handoff_preserves_original_and_matches_profile (test_sciv_bootstrap.SCIVBootstrapContractTests.test_real_pilot_handoff_preserves_original_and_matches_profile) ... ok
+test_reapplication_is_byte_identical (test_sciv_bootstrap.SCIVBootstrapContractTests.test_reapplication_is_byte_identical) ... ok
+test_unenabled_project_is_unchanged (test_sciv_bootstrap.SCIVBootstrapContractTests.test_unenabled_project_is_unchanged) ... ok
+test_unknown_managed_version_needs_review (test_sciv_bootstrap.SCIVBootstrapContractTests.test_unknown_managed_version_needs_review) ... ok
+test_wrong_project_state_is_rejected (test_sciv_bootstrap.SCIVBootstrapContractTests.test_wrong_project_state_is_rejected) ... ok
+test_wrong_repository_state_is_rejected (test_sciv_bootstrap.SCIVBootstrapContractTests.test_wrong_repository_state_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 24 tests in 0.004s
+
+OK

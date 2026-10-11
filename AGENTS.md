@@ -429,3 +429,7 @@ Ao preparar qualquer **Instrução inicial** ou **prompt de homologação** de P
 5. que **relatório documental salvo não é Gate operacional aceito**, nem certifica B1/C3, GitHub Pages ou automação na plataforma.
 
 O Gerador deve manter o modelo/perfil do Projeto e o `AGENTS.md` local coerentes com essa convenção. Falha de escrita GitHub deve produzir `NOT_PERSISTED` com relatório pronto para retomada, nunca link inventado. Trabalhos anteriores podem ser migrados preservando história e endereços legados com ponteiros Markdown. Não reabrir Estratégias concluídas ou acrescentar despesas apenas para reorganizar relatórios.
+
+## SCIV Essencial — propagação condicional do bootstrap
+
+Aplicar modules/sciv-essential.md e templates/SCIV_BOOTSTRAP.example.md somente aos perfis habilitados, com evidência de contexto, leitura e caixas locais. Materializar o passo antes do bootstrap substantivo no adaptador e confrontar AGENTS e handoff. Preservar todo conteúdo fora do bloco SCIV; seguir a seção 8 do GERADOR_WORKFLOW. Não propagar a Projetos sem vínculo ou inbox, não instalar UI por inferência nem promover gates. Preparação e testes documentais não são ensaio automático real.

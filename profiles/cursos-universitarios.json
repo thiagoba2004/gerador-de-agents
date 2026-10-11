@@ -185,6 +185,18 @@
       ],
       "decided_at": "2026-10-10",
       "kernel_version": "1.11"
+    },
+    {
+      "module_id": "sciv-essential",
+      "status": "ATIVADO",
+      "rationale": "Mandato humano específico de bootstrap documental após piloto bidirecional; somente PRJ-000021, sem instalação nativa ou PEP live.",
+      "source_refs": [
+        "REQ-20261011-SCIV-BOOTSTRAP-001",
+        "https://github.com/thiagoba2004/governanca-geral-modelos-ia/issues/4#issuecomment-6105103024",
+        "https://github.com/thiagoba2004/governanca-geral-modelos-ia/issues/4#issuecomment-6105087359"
+      ],
+      "decided_at": "2026-10-11",
+      "kernel_version": "1.11"
     }
   ],
   "canonical_files": [
@@ -212,5 +224,14 @@
     "scope_definition_pending": true,
     "pages_not_requested": true,
     "no_new_expense": true
+  },
+  "sciv_bootstrap": {
+    "enabled": true,
+    "binding_evidence": "https://github.com/thiagoba2004/governanca-geral-modelos-ia/issues/4#issuecomment-6105087359 (sessão relatada pelo titular, sem inspeção independente de UI)",
+    "github_read_evidence": "https://github.com/thiagoba2004/governanca-geral-modelos-ia/issues/4#issuecomment-6105087359",
+    "provisioning_evidence": "https://github.com/thiagoba2004/cursos-universitarios/commit/c6bd15945bdfbb4edeb3c55160d1a7c173c3acb5",
+    "state_path": "comunicados/SCIV_STATE.json",
+    "native_installation": "NOT_VERIFIED",
+    "automatic_bootstrap": "NOT_VERIFIED"
   }
 }

@@ -122,3 +122,7 @@ Quando duas regras de módulos entrarem em conflito:
 Módulos ativados não devem ser removidos apenas porque uma conversa atual não os utiliza. A desativação exige evidência de mudança material do escopo do projeto e deve ser registrada.
 
 Decisões `PENDENTE_DE_EVIDENCIA` devem ser revistas quando novas fontes canônicas relevantes forem examinadas; até lá, suas regras especializadas não são presumidas como vigentes no projeto-alvo.
+
+### sciv-essential
+
+Ativar por mandato específico, evidência de contexto especializado e capacidade GitHub de leitura, PRJ/repositório identificado e caixas locais realmente provisionadas. Registrar limites da proveniência da evidência. Sem vínculo ou inbox: NAO_APLICAVEL ou PENDENTE_DE_EVIDENCIA, sem obrigar consulta. Ativação é documental; não prova instalação nativa, processamento automático, deduplicação real entre conversas, permissão de escrita, PEP live ou A6/B8/F3. Não pressupõe módulo automation nem polling.

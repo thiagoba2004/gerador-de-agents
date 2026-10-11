@@ -32,3 +32,5 @@ Módulos não são ativados globalmente só por existirem neste diretório. Cada
 
 - `web-site.md` — arquitetura de Site, menus, Home, Mapa do Site, identidade visual, responsividade, acessibilidade e separação público/interno.
 - `contact-protocol.md` — Fale Conosco, protocolo, backend de recebimento, confirmação por e-mail e testes end-to-end.
+
+- sciv-essential.md — bootstrap documental condicional de comunicados nas caixas do próprio PRJ; não é polling ou autorização operacional.

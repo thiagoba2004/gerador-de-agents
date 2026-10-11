@@ -1,0 +1,28 @@
+{
+  "authority": "Human mandate / issue #4 comment 6105103024",
+  "generator_base": "dc5ab1c0b08bce0bd78eb98ef878a9a296b16715",
+  "pilot_base": "41c09ebea4c6267301dd2607c122f47a09052f9b",
+  "original_adapter_sha256": "a45a2db419c25ed2b20bbeccc3795c6912e7d72661aa2b55c4a6e765cb34fc9f",
+  "adapter_main_vs_pilot_base": "BYTE_IDENTICAL",
+  "preservation": "Only managed SCIV block inserted; entire original retained outside block",
+  "public_classification_review": "S1 non-sensitive technical governance reviewed for P2 public repository; no secret/protected personal data",
+  "BOOTSTRAP_INSTRUCTIONS_VERSIONED": "VERIFIED_PILOT_COMMIT_AND_EXACT_BYTE_READBACK",
+  "NATIVE_PROJECT_INSTRUCTIONS_INSTALLED": "NOT_VERIFIED",
+  "AUTOMATIC_READ_ON_PROCESSED_CONVERSATION_VERIFIED": "NOT_VERIFIED",
+  "CROSS_SESSION_DEDUPLICATION_VERIFIED": "NOT_VERIFIED",
+  "ui_installation_by_codex": false,
+  "memory_changed": false,
+  "main_merge": false,
+  "new_EA": null,
+  "module_other_projects_activated": false,
+  "pilot_bootstrap_commit": "7c8384d51f82409150bc8fe0c7bdcf05d8ff883d",
+  "generator_publication": "Containing work-branch commit; verify Git tree/readback, no self-referential SHA",
+  "tests": {
+    "bootstrap_contract_passed": 24,
+    "SCIV_passed": 119,
+    "executor_passed": 30,
+    "PEP_offline_passed": 12,
+    "failures": 0,
+    "errors": 0
+  }
+}
