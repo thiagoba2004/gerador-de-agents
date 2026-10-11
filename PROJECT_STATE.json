@@ -109,7 +109,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "G0 EA034 F003 local PRJ000022 mission/SCIV plans created and dual registered. Next executor CODEX CLI LOCAL on thiagoba2004/instituicoes-bancarias, handoff handoffs/codex/EA-000022-000003-SCIV-F002-F004.md. Do not change code here or promote global F003 before CODEX tests/readback. GDA EA027 F005 still IN_PROGRESS.",
+  "next_logical_step": "EA000002-000027 F005 ACT010 CODEX CLI local in gerador-de-agents to restore legacy-first-EA compatibility without fictitious backfill. Independently G0 EA034 ACT028 CODEX CLI local in governanca-geral-modelos-ia fixes runtime branch/symlink tests. Then PRJ000022 CODEX retests F004. F005 Gerador and F003 global not accepted; no human policy decision pending.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-10-11",
   "project_code": "PRJ-000002",
@@ -318,7 +318,7 @@
   "sciv_rollout_preparation": {
     "global_strategy": "EA-000000-000034",
     "global_phase": "F-000000-000034-003",
-    "status": "DOCUMENTARY_PREPARATION_VERIFIED_SCIV_NOT_PROVISIONED",
+    "status": "PRJ000022_F002_F003_REPO_VERIFIED_F004_BLOCKED",
     "report": "audits/EA-000000-000034-F002-preparacao-gerador-2026-10-11.md",
     "candidate_local_strategies": [
       "EA-000022-000003",
@@ -330,7 +330,7 @@
     "profile_opt_in_enabled": 0,
     "local_strategy_created": 1,
     "target_repository_writes": 0,
-    "required_global_matrix_correction": "EA-000000-000034 ACT-000000-000034-003 still incorrectly labels EA-000022-000002 as SCIV",
+    "required_global_matrix_correction": "RESOLVED_ACT003_POINTS_EA000022000003",
     "codex_regressions": "VERIFIED_OFFLINE_73_TESTS_NO_TARGET_WRITES",
     "native_instruction_installations": "NOT_VERIFIED",
     "A6_B8_post_installation": "NOT_EXECUTED",
@@ -340,9 +340,17 @@
     "global_matrix_act003_current_sciv_candidate": "EA-000022-000003",
     "generator_act007": "VERIFIED_READ_ONLY_HANDOFF_RECONCILIATION",
     "generator_act007_report": "audits/EA-000002-000027-F005-chat-sciv-handoff-2026-10-11.md",
-    "global_phase_gate": "F003_NOT_ACCEPTED_CODEX_PENDING",
-    "prj000022_mission_ea": "EA-000022-000002_CREATED_LOCAL_AND_DUAL",
-    "prj000022_sciv_ea": "EA-000022-000003_CREATED_F001_DOCUMENTARY_GATE_COMPLETED_CODEX_F002_NEXT",
-    "codex_handoff_ref": "thiagoba2004/instituicoes-bancarias/handoffs/codex/EA-000022-000003-SCIV-F002-F004.md"
+    "global_phase_gate": "F003_NOT_ACCEPTED_LOCAL_SCIV_F004_BLOCKED",
+    "prj000022_mission_ea": "EA-000022-000002_F003_DOCUMENTARY_ADAPTER_READY_NATIVE_NOT_VERIFIED",
+    "prj000022_sciv_ea": "EA-000022-000003_CREATED_F002_F003_VERIFIED_F004_BLOCKED",
+    "codex_handoff_ref": "thiagoba2004/instituicoes-bancarias/handoffs/codex/EA-000022-000003-SCIV-F002-F004.md",
+    "global_rollout_targets_with_repository_writes": 1,
+    "target_repository_writes_by_Gerador_this_session": 0,
+    "codex_prj22_report": "thiagoba2004/instituicoes-bancarias/auditorias/EA-000022-000003-codex-f002-f004-2026-10-11.md",
+    "prj000022_native_adapter_reconciliation_commit": "5d140d0fad7d1f0d89e4e167e28c8a09c4f2cc0d",
+    "prj000022_runtime_enabled": false,
+    "generator_act010": "PLANNED_EXECUTOR_CODEX_LOCAL_GERADOR",
+    "generator_act010_handoff_ref": "handoffs/codex/EA-000002-000027-F005-LEGACY-MATRIX-GATE.md",
+    "g0_runtime_act028": "PLANNED_EXECUTOR_CODEX_LOCAL_G0"
   }
 }
