@@ -47,3 +47,10 @@ Sem novos custos, gatilhos, workflows, credenciais, permissões ou mudanças nat
 O titular determinou que cada ação de EA possua executor/ferramenta/ambiente designados. Na F005, adotar norma `EXECUTION_ACTION_PLAN_STANDARD.md`, matriz `estrategias/EA-000002-000027-actions.json`, validador e testes; atualizar Kernel/Workflow/templates e gate Rota A. Preservar histórico F001–F004 e não promover F005 sem provas. A ação pode ser bloqueada por ferramenta/segurança sem desaparecer do Plano.
 
 **Matriz de execução por ação:** [EA-000002-000027-actions.json](EA-000002-000027-actions.json). Responsável, executor, ferramenta, ambiente, autorização e gate por ação, conforme norma global. Histórico F001–F004 permanece; F005/F006 não são promovidas por esta inclusão.
+
+
+## Aditamento de regressão por projeto real — PRJ-000022 (11/10/2026)
+
+O primeiro rollout real PRJ-000022 revelou falha de compatibilidade do `tools/project_creation_gate.py`: com `--route A --gate sciv`, o validador passou a exigir matriz de ações da EA de **bootstrap histórico concluído em 10/10**, anterior à norma de matriz obrigatória de 11/10. `EXECUTION_ACTION_PLAN_STANDARD.md` determina que EAs legadas não recebam planejamento fictício retroativo; registrar lacunas como `NOT_BACKFILLED`. Essa incompatibilidade bloqueou F004 local, apesar de F002 e F003 versionadas. Gate afetado: `FIRST_EA_ACTION_PLAN_UNVERIFIED`.
+
+**Nova ACT-000002-000027-010, F005:** executor CODEX CLI local no próprio Gerador; ajustar gate e testes para exigir matriz da primeira EA de nova constituição, mas permitir validação SCIV posterior de bootstrap **historicamente concluído e comprovado**, sem considerar a ausência da matriz histórica como `PASS` de validador. Não relaxar verificações de CREATE/plan/request/namespace/EA atual, Rota A nova, Rota B, SCIV nem PEP. Roteiro versionado: `handoffs/codex/EA-000002-000027-F005-LEGACY-MATRIX-GATE.md`. ACT-006/007 continuam VERIFIED; F005 e F006 não promovidas. Fonte: `thiagoba2004/instituicoes-bancarias/auditorias/EA-000022-000003-codex-f002-f004-2026-10-11.md`.
