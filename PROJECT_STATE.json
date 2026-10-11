@@ -109,7 +109,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "EA-000002-000027 F005: ACT-006 implementada e 73 testes locais PASS. CHAT/Gerador retoma ACT-007 e criterios integrais F005; G0 corrige ACT-000000-000034-003 e reconcilia EA-000022-000002 de missao. ACT-008/009 F006 permanecem CHAT/pendentes; sem escrita nos destinatarios nesta sessao CODEX.",
+  "next_logical_step": "EA-000002-000027 F005: ACT005/006/007 documented or verified, including 73 offline tests and CI success; preserve IN_PROGRESS until real target integration and formal gate assessment. G0 EA034 F002 remains open, next gate classification; local SCIV EAs not created and Codex code implementation in four target repos not authorized by this checkpoint.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-10-11",
   "project_code": "PRJ-000002",
@@ -335,6 +335,11 @@
     "native_instruction_installations": "NOT_VERIFIED",
     "A6_B8_post_installation": "NOT_EXECUTED",
     "sciv_behavioral_tests": "NOT_EXECUTED",
-    "as_of": "2026-10-11"
+    "as_of": "2026-10-11",
+    "global_matrix_act003_corrected": true,
+    "global_matrix_act003_current_sciv_candidate": "EA-000022-000003",
+    "generator_act007": "VERIFIED_READ_ONLY_HANDOFF_RECONCILIATION",
+    "generator_act007_report": "audits/EA-000002-000027-F005-chat-sciv-handoff-2026-10-11.md",
+    "global_phase_gate": "F002_NOT_PROMOTED"
   }
 }
