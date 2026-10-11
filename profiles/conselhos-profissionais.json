@@ -214,5 +214,23 @@
     "http_verified": false,
     "custom_design_status": "NOT_IMPLEMENTED",
     "publication_source": "GITHUB_PUBLIC_WITH_PAGES_PENDING"
+  },
+  "sciv_bootstrap": {
+    "enabled": false,
+    "opt_in_authorized": true,
+    "opt_in_authority": "REQ-GLOBAL-20261011-001 / EA-000000-000034; autorização de rollout, não prova de provisionamento",
+    "mode": "ON_DEMAND",
+    "rollout_status": "AUTHORIZED_NOT_PROVISIONED",
+    "planned_local_strategy": "EA-000007-000003",
+    "local_strategy_status": "CANDIDATE_NOT_CREATED",
+    "staged_plan_ref": "handoffs/sciv/EA-000000-000034/PRJ-000007-plano-local-proposto.md",
+    "planned_gate": "B8",
+    "operational_ref": "main",
+    "state_path": "comunicados/SCIV_STATE.json",
+    "state_path_status": "NOT_PRESENT_IN_TARGET_AT_AUDIT",
+    "native_installation": "NOT_VERIFIED",
+    "functional_on_demand_test": "NOT_EXECUTED",
+    "requirements": "Somente habilitar enabled=true após EA local criada, caixas/estado/adaptador existentes e readback; rejeitar polling e gatilhos automáticos",
+    "checked_at": "2026-10-11"
   }
 }
