@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.0.0",
+  "note": "EXAMPLE_NOT_REAL_EVIDENCE",
+  "native_installation": {
+    "classification": "NOT_VERIFIED",
+    "evidence_ref": "",
+    "adapter_commit": ""
+  },
+  "receipt_test": {
+    "gate": "A6_OR_B8",
+    "classification": "NOT_VERIFIED",
+    "report_path": "",
+    "transport": "SCIV_ON_DEMAND",
+    "message_id": "",
+    "correlation_id": ""
+  },
+  "sciv_test": {
+    "classification": "NOT_VERIFIED",
+    "negative_no_read_evidence_ref": "",
+    "explicit_read_evidence_ref": "",
+    "independent_tool_trace": "UNVERIFIED"
+  },
+  "handoff_acceptance": "PENDING"
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "1.0.0",
+  "message_type": "POST_NATIVE_INSTRUCTIONS_RECEIPT_TEST",
+  "message_id": "EXAMPLE_REPLACE_WITH_UNIQUE_ID",
+  "correlation_id": "EXAMPLE_REPLACE_WITH_UNIQUE_ID",
+  "source": "G0",
+  "target": "PRJ-XXXXXX",
+  "status": "TEMPLATE_NOT_PUBLISHED",
+  "classification": {
+    "sensitivity": "S0_PUBLICO",
+    "surface": "P2_GIT_PUBLICO_REPOSITORIO"
+  },
+  "source_version": "FULL_SHA_G0",
+  "instructions_adapter_commit": "FULL_SHA_PRJ",
+  "strategy_code": "EA-PPPPPP-EEEEEE",
+  "gate": "A6_OR_B8",
+  "historical_report_ref": "governanca/recebimentos/YYYY-MM-DD-prj-xxxxxx-gate-a6-or-b8.md",
+  "new_report_ref": "governanca/recebimentos/YYYY-MM-DD-prj-xxxxxx-gate-a6-or-b8-r02.md",
+  "acceptance_criteria": [
+    "Read AGENTS, PROJECT_STATE, ROADMAP, REQUEST_LOG, STRATEGY_LOG and local phase plan from main",
+    "Evaluate identity, specialized context, B1/C3 to actual evidence level",
+    "Run NEW post-native instructions receipt evaluation using historical report as baseline, never as proof",
+    "Reply with correlation in specialized mailbox and publish new report only when authorized",
+    "Distinguish VERIFIED / HUMAN_ATTESTED / NOT_VERIFIED / BLOCKED; do not infer A6/B8 accepted"
+  ],
+  "human_trigger": "Leia os Comunicados da Governança Geral e execute o teste de recebimento operacional A6/B8 destinado a este Projeto. Registre e encaminhe a resposta pelo SCIV.",
+  "automatic_trigger": false,
+  "authorization_granted": false
+}

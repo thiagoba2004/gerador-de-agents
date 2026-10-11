@@ -64,6 +64,11 @@ Antes de criar Estratégias Autônomas no novo Projeto, aplicar `IDENTIFICATION_
 
 **Gate A1.1:** código único, persistido e não derivado da denominação.
 
+### Etapa A1.2 — Estratégia inicial e Plano de Fases (gate obrigatório)
+
+Antes de executar trabalho substantivo, criar a primeira EA do PRJ com Plano de Fases próprio, registrar pedido, CREATED no \`STRATEGY_LOG.jsonl\`, estado, Roadmap e catálogo global mediante prova. \`templates/PROJECT_CREATION_EA.example.md\` contém o modelo. O Código PRJ deve estar alocado previamente; para repositório antigo (Rota B), preservar EAs históricas. O Gate A1.2 bloqueia a constituição nova quando faltar EA ou Plano; confirmar a verificação estrutural na Etapa A5 usando \`tools/project_creation_gate.py --gate bootstrap\`.
+
+
 ### Etapa A2 — Seleção de módulos
 
 Aplicar `MODULE_SELECTION.md`. Cada módulo deve receber um dos estados:
@@ -125,6 +130,8 @@ Verificar:
 - se `web-site` estiver ativo: menu, Home, Mapa do Site, identidade, mobile e separação público/interno;
 - se `contact-protocol` estiver ativo: stack aprovada, isolamento por projeto e estado real do teste end-to-end;
 - se `publication` + Artigos/fila editorial estiverem ativos: `governanca/PAUTA_EDITORIAL.md` existente ou decisão `NOT_APPLICABLE` justificada, e ausência da pauta no artefato público.
+
+**Gate A5 obrigatório:** executar `python tools/project_creation_gate.py --project-root <REPO_LOCAL> --route A --gate bootstrap`; resultado FAIL bloqueia a constituição técnica e o registro de PASS. Nenhum comando não executado pode ser declarado aprovado. Para migração legítima usar `--route B`, preservando EAs existentes.
 
 **Saída:** base técnica implantada ou relatório de pendências; o handoff operacional é tratado separadamente na Etapa A6.
 
@@ -346,3 +353,39 @@ Após integração humana autorizada, atualizar operational_ref e regenerar/conf
 ## SCIV Essencial Sob Demanda — precedência issue #5
 
 Aplicar modules/sciv-essential.md somente opt-in com mode=ON_DEMAND e evidências/capacidade/caixas locais. tools/sciv_bootstrap.py compõe apenas o bloco gerenciado, preserva demais bytes e impede reintrodução automática. Leitura somente a pedido do titular, nunca em tarefas normais. Arquivamento bilateral requer tratamento/readback; histórico não é fila. GVC/PEP preservados. Instalação nativa manual e conversa real pendentes; evidências anteriores permanecem cortes históricos, sem novos grants/EA/C3/main/gatilhos.
+
+
+## 8. Contrato integral de criação e recebimento especializado — EA-000002-000027
+
+**Autoridade:** pedido humano de 11/10/2026, EA-000002-000027, programa global EA-000000-000034. **Regra bloqueante:** nenhum Projeto persistente novo inicia trabalho substantivo ou é declarado tecnicamente constituído sem uma primeira **Estratégia Autônoma com Plano de Fases**, evento CREATED no Strategy Log, pedido, referência no estado e Roadmap, código resolvido pelo registry, readback e validação determinística. A Rota B preserva genealogia e EAs históricas, sem recriar 000001.
+
+### 8.1. Ordem obrigatória na Rota A
+
+1. Identificar missão aprovada, PRJ e namespace sem colisão; persistir pedido e decidir executor/repositório/classificação/custo.
+2. **Criar EA-PPPPPP-000001 e Plano de Fases antes do trabalho substantivo**, com código, fases F-PPPPPP-000001-FFF, gates e owners; usar \`templates/PROJECT_CREATION_EA.example.md\`. Persistir CREATED, request, estado/Roadmap e registro global por readback real.
+3. Gerar AGENTS/Kernel/perfil/módulos e arquivos do repositório; decidir explicitamente \`sciv-essential\` como ATIVADO, PENDENTE_DE_EVIDENCIA ou NAO_APLICAVEL, sem habilitar por padrão.
+4. Após A3–A5, executar \`python tools/project_creation_gate.py --project-root <REPO_LOCAL> --route A --gate bootstrap\`. O script deve ser executado em ambiente autorizado e seu resultado persistido; mera existência do arquivo não equivale a PASS. Qualquer FAIL impede \`TECHNICAL_BOOTSTRAP_VERIFIED\`.
+5. Ao terminar a constituição técnica, fechar apenas seu escopo, preservando handoff A6 pendente quando o Projeto ChatGPT não estiver validado. A Rota B usa \`--route B\` sem reescrever EAs de origem.
+
+### 8.2. Continuidade SCIV condicionada a opt-in
+
+6. Para Projeto ChatGPT especializado B1, preparar Instruções **integrais** versionadas em \`adaptadores/chatgpt/INSTRUCOES.md\` e classificação C2/C3 com evidência; nunca presumir configuração nativa.
+7. Se o titular autorizou SCIV, abrir **EA local própria com Plano de Fases** (ou vincular fase explicitamente abrangida por EA local já admitida), usando \`templates/SCIV_ROLLOUT_EA.example.md\`. Provisionar no **repositório do PRJ** o estado \`comunicados/SCIV_STATE.json\`, as caixas bilaterais \`governanca-geral/...\` e \`ia-especializada/...\`, e históricos; modo obrigatoriamente \`ON_DEMAND\` e \`operational_ref=main\`. Não habilitar polling, cron ou consulta em conversa comum.
+8. Compor **apenas** o bloco gerenciado \`SCIV_BOOTSTRAP_BEGIN\` via \`tools/sciv_bootstrap.py\`, preservando os demais bytes das Instruções. Fazer teste técnico/readback e executar \`--gate sciv\` do validador. Esse gate prova somente os arquivos, não a instalação nativa.
+
+### 8.3. Teste de recebimento APÓS instalar as Instruções — distinto do SCIV
+
+9. Titular substitui **manualmente** as Instruções nativas pelo **arquivo integral** \`main\` e confirma a versão; registrar \`NATIVE_INSTRUCTIONS_HUMAN_ATTESTED\`, com limites de observabilidade. GitHub não altera as Instruções da interface ChatGPT.
+10. Somente **após** a instalação, a Governança Geral publica na caixa local \`comunicados/governanca-geral/mensagens/\` o Comunicado \`POST_NATIVE_INSTRUCTIONS_RECEIPT_TEST\`, referindo **o teste A6 ou B8 específico que já existia**, relatório histórico de 10/10, commit da nova versão integral, PRJ/EA/gate, id/correlação, critérios, destino do novo relatório e classificação de segurança. Usar \`templates/SCIV_POST_NATIVE_RECEIPT.example.json\`. Publicação Git não inicia conversa.
+11. O titular, no Projeto ChatGPT destinatário, envia apenas: **«Leia os Comunicados da Governança Geral e execute o teste de recebimento operacional A6/B8 destinado a este Projeto. Registre e encaminhe a resposta pelo SCIV.»** Não entregar quatro prompts extensos para copiar. A IA especializada verifica mensagem/identidade/versão/GVC/PEP, consulta fontes de seu PRJ, responde criticamente, e só escreve o relatório e resposta correlacionada se a ferramenta/autorizações permitirem.
+12. Persistir **novo** \`governanca/recebimentos/AAAA-MM-DD-prj-NNNNNN-gate-a6|b8.md\` (usar \`-r02\` para colisão), mantendo histórico intocado. Sem escrita autorizada, \`WRITE_BLOCKED\`; manter mensagem ativa. G0 recebe por solicitação explícita, trata e arquiva bilateralmente após recibos reais. **A6/B8 só é aceito por seus próprios requisitos**, não por sucesso do transporte SCIV.
+
+### 8.4. Testes do mecanismo SCIV e encerramento
+
+13. Em separado, verificar **não leitura SCIV** em conversa acadêmica normal, **leitura expressamente solicitada**, autenticidade/correlação, resposta real e arquivamento bilateral. Classificar \`VERIFIED\`, \`HUMAN_ATTESTED\`, \`NOT_VERIFIED\` e \`BLOCKED\` sem inventar ferramenta.
+14. Se houver evidências reais, preencher \`governanca/recebimentos/RECEIPT_EVIDENCE.json\` conforme template; executar \`--gate post_native\` quando aplicável. O script só confere consistência documental; não autentica ação humana nem aceita A6/B8 automaticamente.
+15. Encerrar as EAs/Planos somente com gates, readback e registro local/global reconciliado. Qualquer pendência de instalação, recibo, ferramenta, C3, Pages ou PEP fica persistida com owner e próxima ação — não desaparece porque outra estratégia começou.
+
+**Quatro destinatários do rollout:** PRJ-000022/A6; PRJ-000023/A6; PRJ-000007/B8; PRJ-000008/B8. O PRJ-000021 foi o piloto SCIV concluído e não é quinto destinatário pendente. Reutilizar os roteiros de \`governanca/recebimentos/\` do respectivo Projeto, sem republicar resultados históricos como execução nova.
+
+**Gates independentes:** \`EA_INICIAL_VALIDATED\` ≠ \`SCIV_REPOSITORY_READY\` ≠ \`NATIVE_INSTRUCTIONS_HUMAN_ATTESTED\` ≠ \`A6_B8_TEST_AFTER_INSTALLATION\` ≠ \`SCIV_BEHAVIOR_VERIFIED\` ≠ \`PROJECT_OPERATIONAL_HANDOFF_ACCEPTED\`. O mero transporte não outorga autorização. Sem custo novo, credenciais, mudanças nativas automáticas ou promoção de PEP live.

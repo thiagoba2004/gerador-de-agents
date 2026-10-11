@@ -35,3 +35,8 @@ Descrever o objetivo da Estratégia Autônoma.
 **Estado:** NÃO INICIADO  
 **Objetivo:** entregar, publicar, implantar ou encerrar a estratégia.  
 **Gate:** persistência, versionamento, estado e próximo passo confirmados.
+
+
+## Continuidade exigida pelo Gerador
+
+A constituição técnica exige **arquivo físico da primeira EA com Plano de Fases**, evento CREATED no Strategy Log, request e estado; não basta mencionar a EA neste Roadmap. Rodar em ambiente autorizado \`tools/project_creation_gate.py --gate bootstrap\`; sem saída real PASS, marcar \`NOT_VERIFIED\`. Se houver Projeto ChatGPT/SCIV habilitado: Instruções Git, instalação humana, teste A6/B8 por Comunicado e teste SCIV são **gates diferentes**, com owner e estado próprios.
