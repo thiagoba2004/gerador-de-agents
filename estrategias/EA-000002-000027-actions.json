@@ -2,7 +2,7 @@
   "schema_version": "1.0.0",
   "strategy_code": "EA-000002-000027",
   "plan_ref": "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
-  "notes": "Ações das F001-F004 são mapeadas contra o histórico confirmado; não reencenadas. F005-F006 seguem pendentes conforme estado local. Validador comprova estrutura, não routing catalog/PEP.",
+  "notes": "Ações das F001-F004 são mapeadas contra o histórico confirmado; não reencenadas. F005-F006 seguem pendentes conforme estado local. Validador comprova estrutura, não routing catalog/PEP.\nEA027 F005 remedial action ACT010 added on 11/10/2026 due to real PRJ000022 gate failure for historical first EA. Code executor CODEX, not CHAT; no weakening new-project gates, no historical backfill.",
   "actions": [
     {
       "action_key": "ACT-000002-000027-001",
@@ -301,6 +301,44 @@
       "cost_class": "UNKNOWN",
       "spend_limit": 0,
       "status": "PLANNED"
+    },
+    {
+      "action_key": "ACT-000002-000027-010",
+      "phase_code": "F-000002-000027-005",
+      "description": "Corrigir regressão de compatibilidade histórica: gate SCIV/novo módulo de PRJ Rota A concluído antes da exigência de matriz de ações, sem backfill fictício",
+      "result_ref": "tools/project_creation_gate.py",
+      "accountable_owner": "PRJ-000002_GERADOR",
+      "executor": "CODEX",
+      "executor_scope": "Codex CLI local exclusivamente no checkout thiagoba2004/gerador-de-agents",
+      "tool": "Codex CLI + Python unittest + Git",
+      "environment": "Codex Local CLI no checkout do Gerador de Agents",
+      "context_mode": "B0_NO_CHATGPT_PROJECT_BINDING",
+      "source_refs": [
+        "handoffs/codex/EA-000002-000027-F005-LEGACY-MATRIX-GATE.md",
+        "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
+        "thiagoba2004/governanca-geral-modelos-ia/EXECUTION_ACTION_PLAN_STANDARD.md",
+        "thiagoba2004/instituicoes-bancarias/governanca/testes-sciv/gate-sciv.log"
+      ],
+      "destination_ref": "P2_GIT_PUBLICO_REPOSITORIO:thiagoba2004/gerador-de-agents",
+      "routing_action_id": "CODE_REFACTOR",
+      "authorization_ref": "REQ-20261011-008 / REQ-GLOBAL-20261011-001",
+      "preconditions": [
+        "Conferir baseline e HEAD do Gerador, sem perda de worktrees",
+        "Comprovar elegibilidade documental de bootstrap anterior à norma, não confiar só em data declarada",
+        "Não afrouxar gate da Rota A nova, plano corrente nem teste SCIV",
+        "Sem editar repositórios PRJ000022 ou G0 nesta ação"
+      ],
+      "verification": "Testes positivos/negativos de legado versus Rota A nova, suites de regressão e readback Git; CODEX deve executar, não comprovado aqui.",
+      "completion_gate": "F-000002-000027-005_LEGACY_MATRIX_COMPAT_REGRESSION_VERIFIED",
+      "fallback": "Sem substituição de executor sem alocação/mandato",
+      "on_block": "Registre BLOCKED, motivo, responsável e retome sem contornar política",
+      "cost_class": "NO_NEW_SPEND",
+      "spend_limit": 0,
+      "status": "PLANNED",
+      "evidence_refs": [
+        "handoffs/codex/EA-000002-000027-F005-LEGACY-MATRIX-GATE.md",
+        "thiagoba2004/instituicoes-bancarias/auditorias/EA-000022-000003-codex-f002-f004-2026-10-11.md"
+      ]
     }
   ]
 }
