@@ -292,3 +292,40 @@ Em Rota A ou Rota B, antes do fechamento:
 4. quando `research` e produção acadêmica brasileira forem pertinentes, incluir BDTD/IBICT no protocolo;
 5. executar o innovation check final e registrar propostas ainda não implementadas;
 6. impedir exposição pública do índice e do log de melhorias, salvo decisão expressa em contrário.
+
+## 7. Persistência padronizada dos testes de recebimento A6/B8
+
+**Autoridade:** `PRJ-000002:REQ-20261010-007` e `REQ-GLOBAL-20261010-018`. **Motivação:** cinco Chats especializados arquivaram seus diagnósticos em pastas/nomenclaturas arbitrárias; ausência de convenção tornou a recuperação e a auditoria menos previsíveis.
+
+### 7.1. Convenção canônica (obrigatória)
+
+**Raiz:** `governanca/recebimentos/` **dentro do repositório do próprio Projeto**, não apenas no Gerador, na UI do ChatGPT ou no chat da Governança Global.
+
+**Nome:** `AAAA-MM-DD-prj-NNNNNN-gate-a6.md` para Rota A ou `AAAA-MM-DD-prj-NNNNNN-gate-b8.md` para Rota B. Usar **data do teste**, código único real do Projeto e nome em letras minúsculas para compatibilidade entre sistemas. Exemplo:
+
+```text
+governanca/recebimentos/2026-10-10-prj-000023-gate-a6.md
+governanca/recebimentos/2026-10-10-prj-000007-gate-b8.md
+```
+
+**Mais de um teste no mesmo dia:** nunca sobrescrever sem preservar evidências; usar `-r02`, `-r03` etc. antes de `.md` e registrar relação com a avaliação anterior. Se o relatório possuir informação S2+ ou for incompatível com Git público, **não publicar** no repositório público: registrar ali apenas ponteiro sanitizado, situação da evidência e destino privado autorizado sem vazar conteúdo.
+
+### 7.2. Entregáveis obrigatórios do Gerador em cada handoff
+
+Ao fornecer a instrução de Projeto ChatGPT e o prompt de homologação, incluir em ambos as seguintes regras:
+
+1. A IA especializada deve ler efetivamente `AGENTS.md`, `PROJECT_STATE.json`, `ROADMAP.md`, `REQUEST_LOG.jsonl`, `STRATEGY_LOG.jsonl` e o Plano de Fases vigente; reunir apenas as evidências que realmente recuperou.
+2. O prompt de teste deve solicitar **persistência do relatório no caminho exato acima** depois do diagnóstico, dentro do **próprio PRJ**, quando a ação for autorizada e o conector permitir escrita. Um prompt de teste que apenas peça apresentar respostas em chat é entrega **incompleta** do Gerador.
+3. Registrar primeiro o pedido de auditoria/persistência no `REQUEST_LOG.jsonl`, conforme Kernel e catálogo de executor; conferir mandato, política de sigilo e permissão de escrita. Quando escrita não for possível, entregar o Markdown completo para execução autorizada posterior, marcar `NOT_PERSISTED` e **não inventar URL ou commit**.
+4. Nomear no relatório: `PRJ`, EA, Fase, Gate, data, repositório/branch, fontes (versões e commits quando obtidos), matriz de requisitos, pendências, distinção entre **teste documental** e **aceite**, próximo passo e ações efetivamente realizadas.
+5. Após gravar, realizar leitura remota de retorno; incluir link canônico na resposta ao usuário. **Ter arquivo versionado não equivale à configuração C2/C3, vínculo B1 ou `PROJECT_OPERATIONAL_HANDOFF_ACCEPTED`.**
+6. Para evolução de um relatório já versionado, acrescentar novo recibo datado e manter histórico. Se arquivos anteriores estiverem em outras pastas, migrar para `governanca/recebimentos/` com links Markdown relativos corrigidos, preservando os URLs antigos mediante ponteiros quando necessário. Não destruir fontes ou história Git por conveniência.
+7. O `AGENTS.md` especializado deve indicar esta convenção; o adaptador de plataforma em `adaptadores/chatgpt/INSTRUCOES.md` continua fonte recuperável, mas não se sincroniza automaticamente com a interface ChatGPT. Mudança de regra depende de versionamento e verificação.
+
+### 7.3. Evidência mínima de conclusão do ciclo
+
+O Gerador só declara a entrega do **pacote de homologação** completa se entregar, em conjunto: Instruções especializadas, prompt de teste com caminho, diagnóstico recuperável, regra de persistência, fonte/código de referência e distinção entre gates previstos e aceites.
+
+Para os PRJ-000007/000008/000021/000022/000023, os relatórios **de 10/10/2026** foram reorganizados nos caminhos acima, com versões integrais, ponteiros legados e índice `governanca/recebimentos/README.md`. Seus resultados permanecem `HANDOFF_PENDING` / `NOT_ACCEPTED` conforme cada documento; não levantar gate por movimentação documental.
+
+**Critério anti-loop:** não abrir nova EA global exclusivamente para redistribuir arquivos; priorizar a retomada das entregas locais após rastreabilidade e segurança.
