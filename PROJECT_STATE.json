@@ -109,7 +109,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "EA-000002-000027 F005: concluir gate de Site e testes/compatibilidade nos quatro PRJ sob EA-000000-000034, cuja matriz tem 27 ações em 8 fases; não encerrar F005/F006 nem declarar implantação SCIV concluída sem readback.",
+  "next_logical_step": "EA-000002-000027 F005: Codex no Gerador deve executar testes/regressões de opt-in/primeira EA e reportar CI/SHA; G0 deve corrigir ACT-000000-000034-003 para 000022-000003 e reconciliar EA-000022-000002 de missão. Só então F003-F006 da EA-034 e EAs locais poderão avançar conforme gates.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-10-11",
   "project_code": "PRJ-000002",
@@ -303,5 +303,27 @@
     "new_bootstrap_gate": "FAIL_CLOSED_IF_ACTION_MATRIX_MISSING",
     "live_dispatch": "NOT_VERIFIED",
     "historical_actions": "PRESERVED"
+  },
+  "sciv_rollout_preparation": {
+    "global_strategy": "EA-000000-000034",
+    "global_phase": "F-000000-000034-002",
+    "status": "DOCUMENTARY_PREPARATION_VERIFIED_SCIV_NOT_PROVISIONED",
+    "report": "audits/EA-000000-000034-F002-preparacao-gerador-2026-10-11.md",
+    "candidate_local_strategies": [
+      "EA-000022-000003",
+      "EA-000023-000002",
+      "EA-000007-000003",
+      "EA-000008-000003"
+    ],
+    "profile_opt_in_authorized": 4,
+    "profile_opt_in_enabled": 0,
+    "local_strategy_created": 0,
+    "target_repository_writes": 0,
+    "required_global_matrix_correction": "EA-000000-000034 ACT-000000-000034-003 still incorrectly labels EA-000022-000002 as SCIV",
+    "codex_regressions": "PENDING",
+    "native_instruction_installations": "NOT_VERIFIED",
+    "A6_B8_post_installation": "NOT_EXECUTED",
+    "sciv_behavioral_tests": "NOT_EXECUTED",
+    "as_of": "2026-10-11"
   }
 }
