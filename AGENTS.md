@@ -438,6 +438,6 @@ Aplicar modules/sciv-essential.md somente opt-in com mode=ON_DEMAND e evidência
 
 ## Garantia por EA e Plano de Fases — regra operacional de criação (11/10/2026)
 
-**Mandato:** REQ-20261011-008 / EA-000002-000027. A Rota A exige **EA inicial e Plano antes de trabalho substantivo**, registro dual e execução comprovada do gate determinístico \`tools/project_creation_gate.py\` segundo \`GERADOR_WORKFLOW.md\` §8. Não aceitar Projeto sem EA, Plano, request, CREATED, estado e readback. Rota B preserva identidade e plano histórico.
+**Mandato:** REQ-20261011-008 / EA-000002-000027. A Rota A exige **EA inicial e Plano antes de trabalho substantivo**, registro dual e execução comprovada do gate determinístico `tools/project_creation_gate.py` segundo `GERADOR_WORKFLOW.md` §8. Não aceitar Projeto sem EA, Plano, request, CREATED, estado e readback. Rota B preserva identidade e plano histórico.
 
 Quando SCIV for habilitado por opt-in, **registrar EA local própria** e prosseguir até Instruções versionadas/instalação humana, **testes de recebimento A6/B8 pós-Instruções por Comunicados** e, separadamente, testes funcionais SCIV, respostas e recibos. Instruções Git não se instalam sozinhas; mensagens não executam atos automaticamente. Nunca exigir do titular quatro grandes prompts se eles puderem ser entregues pelas caixas SCIV. Bloqueios permanecem na EA/estado até resolução e aceite competente.

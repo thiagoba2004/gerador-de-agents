@@ -326,6 +326,6 @@ Todo Projeto persistente deve manter `EXECUTION_ENVIRONMENT_PROFILE.json` schema
 
 ## 25. Estratégia Autônoma de constituição obrigatória
 
-Todo Projeto persistente **novo** deve ter primeira EA com Plano de Fases, código PRJ/EA/F único, pedido e evento CREATED, estado/roadmap e registro global com evidência antes de executar trabalho substantivo. Rota B não apaga EAs históricas. A EA técnica não aceita automaticamente A6/B8, C3 ou SCIV. Cabe ao Gerador aplicar o validador de \`GERADOR_WORKFLOW.md\` §8, registrando execução real e bloqueando ausência de Plano.
+Todo Projeto persistente **novo** deve ter primeira EA com Plano de Fases, código PRJ/EA/F único, pedido e evento CREATED, estado/roadmap e registro global com evidência antes de executar trabalho substantivo. Rota B não apaga EAs históricas. A EA técnica não aceita automaticamente A6/B8, C3 ou SCIV. Cabe ao Gerador aplicar o validador de `GERADOR_WORKFLOW.md` §8, registrando execução real e bloqueando ausência de Plano.
 
-Para projetos especializados com SCIV opt-in \`ON_DEMAND\`, separar versão Git, instalação manual das Instruções nativas, teste de recebimento **A6/B8 após instalação via Comunicados**, e testes funcionais SCIV. Mensagens não autenticam autorizações e não substituem gates. Toda continuidade fica na EA/Plano e estado persistidos, nunca apenas em memória de chat.
+Para projetos especializados com SCIV opt-in `ON_DEMAND`, separar versão Git, instalação manual das Instruções nativas, teste de recebimento **A6/B8 após instalação via Comunicados**, e testes funcionais SCIV. Mensagens não autenticam autorizações e não substituem gates. Toda continuidade fica na EA/Plano e estado persistidos, nunca apenas em memória de chat.
