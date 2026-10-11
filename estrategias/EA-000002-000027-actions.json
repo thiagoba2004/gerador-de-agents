@@ -225,13 +225,18 @@
         "Mandato/PEP e ferramentas disponíveis na ação real",
         "Versão Git e limites de publicação conferidos"
       ],
-      "verification": "Confrontar G0 EA-000000-000034 e quatro EAs locais, sem mutações nos alvos",
+      "verification": "Read back 4 distinct six-phase handoff plans, 4 opt-in authorized-but-disabled profiles and 4 target strategy logs; aligned to corrected EA034 ACT-003 (EA-000022-000003), gates A6/A6/B8/B8; report audits/EA-000002-000027-F005-chat-sciv-handoff-2026-10-11.md. Does not close EA027 F005 or global EA034 F002, and does not provision SCIV.",
       "completion_gate": "F-000002-000027-005_EVIDENCE_CHECK",
       "fallback": "Sem substituição de executor sem alocação/mandato",
       "on_block": "Registre BLOCKED, motivo, responsável e retome sem contornar política",
       "cost_class": "UNKNOWN",
       "spend_limit": 0,
-      "status": "PLANNED"
+      "status": "VERIFIED",
+      "verified_scope": "READ_ONLY_HANDOFF_RECONCILIATION_NO_TARGET_WRITES",
+      "evidence_refs": [
+        "audits/EA-000002-000027-F005-chat-sciv-handoff-2026-10-11.md",
+        "thiagoba2004/governanca-geral-modelos-ia/estrategias/EA-000000-000034-actions.json"
+      ]
     },
     {
       "action_key": "ACT-000002-000027-008",
