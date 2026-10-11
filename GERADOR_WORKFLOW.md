@@ -3,7 +3,7 @@
 **project_code:** `PRJ-000002`  
 **project_alias:** `GDA`  
 **project_id legado:** `GDA`  
-**kernel_version do workflow original:** `1.4` (histórico); **kernel em uso pelo Gerador:** `1.11`.
+**kernel_version do workflow original:** `1.4` (histórico); **kernel em uso pelo Gerador:** `1.12`.
 
 Este documento transforma a arquitetura do Gerador de Agents em um procedimento executável e reproduzível.
 
@@ -337,7 +337,7 @@ Para os PRJ-000007/000008/000021/000022/000023, os relatórios **de 10/10/2026**
 
 **Critério anti-loop:** não abrir nova EA global exclusivamente para redistribuir arquivos; priorizar a retomada das entregas locais após rastreabilidade e segurança.
 
-## 8. SCIV Sob Demanda em adaptadores ChatGPT
+### 7.4. Precedente SCIV Sob Demanda em adaptadores ChatGPT (issue #5)
 
 Autoridade: issue #5 / ADR-GOV-0009, substitui gatilho automático da issue #4; demais regras permanecem. Opt-in por sciv_bootstrap.enabled=true e mode=ON_DEMAND, evidências e caixas locais.
 

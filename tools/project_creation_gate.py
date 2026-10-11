@@ -128,7 +128,7 @@ def inspect(root: Path, route: str = "A", gate: str = "bootstrap") -> dict:
         sciv = obj("comunicados/SCIV_STATE.json")
         if sciv.get("project_code") != code:
             fail("SCIV_PROJECT_MISMATCH")
-        if sciv.get("mode") != "ON_DEMAND":
+        if sciv.get("mode", (sciv.get("bootstrap") or {}).get("mode")) != "ON_DEMAND":
             fail("SCIV_ON_DEMAND_REQUIRED")
         if sciv.get("operational_ref") != "main":
             fail("SCIV_MAIN_REF_REQUIRED")

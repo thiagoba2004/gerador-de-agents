@@ -4,7 +4,7 @@
   "repository": "thiagoba2004/gerador-de-agents",
   "status": "OPERACIONAL",
   "release_version": "1.26",
-  "kernel_version": "1.11",
+  "kernel_version": "1.12",
   "current_strategy_id": "EA-000002-000027",
   "last_concluded_strategy_id": "EA-000002-000026",
   "current_phase": "F-000002-000027-001",
@@ -109,7 +109,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Executar EA-000002-000027 F001-F006: contrato e gate determinístico da primeira EA+Plano na Rota A; SCIV opt-in; instalação manual das Instruções; testes A6/B8 por Comunicados e testes SCIV em gates separados; concluir apenas com readback e verificação.",
+  "next_logical_step": "EA-000002-000027: concluir F001/F002 por readback do fluxo publicado; executar F003 validador Python e testes negativos em ambiente autorizado; F004 modelos e testes de recebimento A6/B8 por Comunicados separados dos testes SCIV; reconciliar registro dual e fase sem presumir sucesso.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-10-11",
   "project_code": "PRJ-000002",
