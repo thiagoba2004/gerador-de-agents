@@ -154,3 +154,5 @@ Plano: `estrategia-padrao-atualidade-analise-observacao.md`.
 6. F006 — Auditoria, readback, registro dual e fechamento.
 
 **Próximo passo:** executar F001 com prova; não confundir registro da estratégia com conclusão do gate ou alteração das instruções nativas dos Projetos.
+
+**Readback de 11/10:** EA-000002-000027 F001 e F002 concluídas em escopo documental, conforme eventos -002/-003. F003 contém validador e testes versionados, **mas a suíte Python não foi executada/verificada**; F003 continua IN_PROGRESS_TESTS_PENDING, sem promoção das Fases 4-6.

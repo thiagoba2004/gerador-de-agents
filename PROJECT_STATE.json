@@ -7,7 +7,7 @@
   "kernel_version": "1.12",
   "current_strategy_id": "EA-000002-000027",
   "last_concluded_strategy_id": "EA-000002-000026",
-  "current_phase": "F-000002-000027-001",
+  "current_phase": "F-000002-000027-003",
   "last_completed_milestone": "EA-000002-000026: PRJ-000023 criado no repositório Git público preexistente; bootstrap técnico e readback verificados; Gate A6 pendente.",
   "canonical_files": [
     "README.md",
@@ -109,7 +109,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "EA-000002-000027: concluir F001/F002 por readback do fluxo publicado; executar F003 validador Python e testes negativos em ambiente autorizado; F004 modelos e testes de recebimento A6/B8 por Comunicados separados dos testes SCIV; reconciliar registro dual e fase sem presumir sucesso.",
+  "next_logical_step": "Executar e comprovar testes Python de tools/test_project_creation_gate.py (F003), corrigir failures e continuar F004-F006, mantendo gates A6/B8 e instalação ChatGPT separados. Continuar EA-000000-000034 após gate F003.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-10-11",
   "project_code": "PRJ-000002",
@@ -128,9 +128,9 @@
   "last_concluded_strategy_code": "EA-000002-000026",
   "current_strategy": {
     "strategy_code": "EA-000002-000027",
-    "status": "IN_PROGRESS",
-    "phase_code": "F-000002-000027-001",
-    "phase_number": 1,
+    "status": "IN_PROGRESS_TESTS_PENDING",
+    "phase_code": "F-000002-000027-003",
+    "phase_number": 3,
     "phase_total": 6,
     "plan_ref": "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
     "origin": "REQ-20261011-008"
@@ -142,7 +142,7 @@
     "public_default": false,
     "status": "IMPLANTADO_E_AUDITADO"
   },
-  "strategy_status": "EM_EXECUCAO",
+  "strategy_status": "EM_EXECUCAO_TESTES_PENDENTES",
   "last_concluded_strategy_name": "Rota A — constituição de Bancas Examinadoras",
   "knowledge_index": {
     "status": "IMPLANTADO_E_VERIFICADO",
