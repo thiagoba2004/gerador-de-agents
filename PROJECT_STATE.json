@@ -5,9 +5,9 @@
   "status": "OPERACIONAL",
   "release_version": "1.26",
   "kernel_version": "1.11",
-  "current_strategy_id": null,
+  "current_strategy_id": "EA-000002-000027",
   "last_concluded_strategy_id": "EA-000002-000026",
-  "current_phase": null,
+  "current_phase": "F-000002-000027-001",
   "last_completed_milestone": "EA-000002-000026: PRJ-000023 criado no repositório Git público preexistente; bootstrap técnico e readback verificados; Gate A6 pendente.",
   "canonical_files": [
     "README.md",
@@ -109,14 +109,14 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "Aguardar definição detalhada do primeiro produto e decisão/configuração sobre Projeto ChatGPT especializado e C3 (recomendação PSFCE, não aprovada ainda); em sessão especializada validar leitura do GitHub antes de aceitar A6. Pendências antigas de PRJ-000021/22 continuam independentes.",
+  "next_logical_step": "Executar EA-000002-000027 F001-F006: contrato e gate determinístico da primeira EA+Plano na Rota A; SCIV opt-in; instalação manual das Instruções; testes A6/B8 por Comunicados e testes SCIV em gates separados; concluir apenas com readback e verificação.",
   "chat_only_work_is_not_persisted": true,
-  "updated_at": "2026-10-10",
+  "updated_at": "2026-10-11",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
-  "current_strategy_code": null,
-  "current_strategy_name": null,
+  "current_strategy_code": "EA-000002-000027",
+  "current_strategy_name": "Ciclo verificável de criação de Projetos, Instruções e recebimento por SCIV",
   "identification_standard": {
     "file": "IDENTIFICATION_STANDARD.md",
     "version": "1.0",
@@ -126,7 +126,15 @@
     "status": "IMPLANTADO_E_VERIFICADO"
   },
   "last_concluded_strategy_code": "EA-000002-000026",
-  "current_strategy": null,
+  "current_strategy": {
+    "strategy_code": "EA-000002-000027",
+    "status": "IN_PROGRESS",
+    "phase_code": "F-000002-000027-001",
+    "phase_number": 1,
+    "phase_total": 6,
+    "plan_ref": "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
+    "origin": "REQ-20261011-008"
+  },
   "editorial_backlog_standard": {
     "version": "1.0",
     "template": "templates/PAUTA_EDITORIAL.example.md",
@@ -134,7 +142,7 @@
     "public_default": false,
     "status": "IMPLANTADO_E_AUDITADO"
   },
-  "strategy_status": "SEM_ESTRATEGIA_ATIVA",
+  "strategy_status": "EM_EXECUCAO",
   "last_concluded_strategy_name": "Rota A — constituição de Bancas Examinadoras",
   "knowledge_index": {
     "status": "IMPLANTADO_E_VERIFICADO",

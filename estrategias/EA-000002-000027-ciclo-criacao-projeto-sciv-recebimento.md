@@ -1,0 +1,35 @@
+# EA-000002-000027 — Ciclo verificável de criação de Projetos, Instruções e recebimento por SCIV
+
+**Projeto:** PRJ-000002 — Gerador de Agents  
+**Autoridade:** solicitação expressa do titular em 11/10/2026; programa global EA-000000-000034; issue #5, ADR-GOV-0009; política de registro dual.  
+**Pedido local:** REQ-20261011-008. **Status:** IN_PROGRESS, F001 em execução, demais fases NÃO INICIADAS.  
+**Executor:** Gerador e engenharia supervisionada; limite ao repositório do Gerador para esta EA; nenhuma escrita automática em PRJ-alvo ou Instruções nativas.
+
+## Objetivo e critérios de conclusão
+
+Impedir que novos Projetos e a implantação do SCIV fiquem dependentes da memória do Coordenador: o Gerador deve gerar **Estratégia Autônoma de constituição com Plano de Fases antes de trabalho substantivo**, manter estado de continuidade e guiar o fluxo completo até handoff A6/B8 e testes de Comunicados quando houver vínculo especializado/SCIV opt-in. Garantir com regras, templates, checagem determinística (fail closed) e regressões, não somente com orientação textual.
+
+**Invariantes:** identidade PRJ/EA/F única e reconciliada; Rota A nunca inicia trabalho substantivo sem primeira EA e plano; Rota B não reescreve genealogia; Projeto ChatGPT C3 não se presume; SCIV opt-in `ON_DEMAND`; endereço de caixa do próprio PRJ; mensagens publicadas **não acionam** automaticamente chats; instalação de Instruções nativas é ato humano distinto da versão Git; Teste A6/B8 após essa instalação é **distinto** do teste técnico/conversacional do SCIV; recibos novos não sobrescrevem relatórios de 10/10; nenhum gate se autoaprova.
+
+## Fases
+
+| Fase | Atividades obrigatórias | Gate |
+|---|---|---|
+| **F-000002-000027-001** — Baseline e rastreabilidade | Recuperar GERADOR_WORKFLOW, AGENTS_KERNEL, AGENTS, módulo SCIV, templates, logs/registries, pilotos e EAs locais; verificar namespace 000002, sequência livre 000027, mandatos e autorizações | `GENERATOR_LIFECYCLE_BASELINE_VERIFIED` |
+| **F-000002-000027-002** — Contrato completo Rota A/B | Especificar etapas/gates invariantes da primeira EA e plano; novo Projeto ChatGPT quando aplicável; diferenciação de SCIV opt-in, adaptação Git, instalação nativa, A6/B8 por Comunicado, testes SCIV, resposta e arquivo; estados/retomada | `GENERATOR_PROJECT_LIFECYCLE_CONTRACT_VERSIONED` |
+| **F-000002-000027-003** — Enforcement determinístico | Implementar validador offline sem efeitos externos que **rejeita bootstrap de PRJ sem EA inicial, plano e vínculo no log**; modo SCIV exige caixas, modo ON_DEMAND e adaptador, sem fingir B1/C3 ou uso nativo | `FIRST_EA_AND_SCIV_GATES_FAIL_CLOSED_TESTED` |
+| **F-000002-000027-004** — Modelos e testes de recebimento | Atualizar workflow/AGENTS/kernel/template e módulo SCIV; criar padrão de Comunicado `POST_NATIVE_INSTRUCTIONS_RECEIPT_TEST` e resposta; exigir A6/B8 reexecutado após instalação nativa, um por projeto; distinção dos testes SCIV; gates de persistência/proveniência | `POST_INSTRUCTION_A6_B8_SCIV_WORKFLOW_INTEGRATED` |
+| **F-000002-000027-005** — Integração e compatibilidade | Testar cenários Rota A (incluindo ausência da EA), Rota B histórica, opt-in/out SCIV, regeneração idempotente; leitura/reconciliação documental. Encaixar futuras EAs locais da EA-034 sem criá-las artificialmente | `GENERATOR_CREATION_REGRESSION_VERIFIED` |
+| **F-000002-000027-006** — Auditoria e continuidade | Commit/readback remoto, registro dual global se autorizado, relatório de evidências, estado/log/ROADMAP, documentação dos limites; publicar próxima ação da EA-034 e encerrar apenas os gates efetivamente aprovados | `GENERATOR_CREATION_FLOW_VERIFIED_IN_SCOPE` |
+
+## Fases do Projeto criado (contrato herdado)
+
+A **EA local de constituição** deve existir fisicamente em `estrategias/` com objetivo, fases e gates próprios; registrar `CREATED` em `STRATEGY_LOG.jsonl`, pedido em `REQUEST_LOG.jsonl`, estado em `PROJECT_STATE.json`, referência no `ROADMAP.md` e catálogo global, sem colisão. A EA inicial permite concluir a **constituição técnica** mesmo com A6 ou B8 pendente, desde que deixe handoff e próxima fase claramente persistidos.
+
+Se o escopo incluir **Projeto ChatGPT especializado**, entregar Instruções versionadas, definir B0/B1 e C2/C3 sem inferência, exigir instalação humana e comprovação de recebimento no próprio contêiner. Se **SCIV habilitado por mandato e evidência**, criar uma **EA local própria** (ou fase explicitamente abrangida em EA vigente validada), provisionar caixas com refs e classificação e compor bloco gerenciado. Depois da instalação manual **repetir o teste A6/B8 específico por comunicado**, entregando ao titular apenas uma mensagem curta de disparo por Projeto. Registrar resposta real com correlação, tratamento e arquivamento bilateral; em separado validar comportamento sob demanda e não leitura em conversa normal. Não usar resultados do SCIV como aceite do A6/B8.
+
+## Bloqueios e escopo
+
+Sem novos custos, gatilhos, workflows, credenciais, permissões ou mudanças nativas automáticas; não intervir nas quatro EAs locais da EA-034 por esta estratégia do Gerador; não reativar EA-033/F004 ou T6; não presumir falhas históricas corrigidas; qualquer bloqueio de ferramenta é bloqueio, não autorização para workaround. Os gates são comprovados por leitura/validação efetiva, nunca pelo texto do plano.
+
+**Próximo passo:** concluir F001 com baseline e preparar implementação da F002, seguindo sem reconfirmação para ações materiais já cobertas.

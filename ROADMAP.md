@@ -140,3 +140,17 @@ Plano: `estrategia-padrao-atualidade-analise-observacao.md`.
 4. FASE 04/04 [F-000002-000022-004] — Auditoria, release e fechamento — CONCLUÍDA.
 
 **Resultado:** Gerador 1.24 / Kernel 1.9; arquitetura v2 propagada e auditada.
+
+
+## EA-000002-000027 — Ciclo de criação de Projetos, Instruções e testes por Comunicados (11/10/2026)
+
+**Estado:** IN_PROGRESS, F001. **Autoridade:** REQ-20261011-008 e programa global EA-000000-000034. **Plano de Fases:** `estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md`.
+
+1. F001 — Baseline, namespace, inventário/mandatos.
+2. F002 — Contrato Rota A/B: EA inicial + Plano obrigatório, B1/C3, SCIV opt-in, Instruções.
+3. F003 — Gate determinístico que rejeita Projeto novo sem EA e Plano; verificação SCIV local.
+4. F004 — Templates, comunicação A6/B8 após instalação de Instruções, teste SCIV em separado.
+5. F005 — Regressão, idempotência, compatibilidade e proveniência.
+6. F006 — Auditoria, readback, registro dual e fechamento.
+
+**Próximo passo:** executar F001 com prova; não confundir registro da estratégia com conclusão do gate ou alteração das instruções nativas dos Projetos.
