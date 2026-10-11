@@ -156,3 +156,5 @@ Plano: `estrategia-padrao-atualidade-analise-observacao.md`.
 **Próximo passo:** executar F001 com prova; não confundir registro da estratégia com conclusão do gate ou alteração das instruções nativas dos Projetos.
 
 **Readback de 11/10:** EA-000002-000027 F001 e F002 concluídas em escopo documental, conforme eventos -002/-003. F003 contém validador e testes versionados, **mas a suíte Python não foi executada/verificada**; F003 continua IN_PROGRESS_TESTS_PENDING, sem promoção das Fases 4-6.
+
+**Checkpoint adicional de 11/10:** F003 concluída com **12 testes PASS** no GitHub Actions [run 38155476207](https://github.com/thiagoba2004/gerador-de-agents/actions/runs/38155476207), após inclusão da suíte `test_project_creation_gate.py` no workflow preexistente Knowledge Index. F004 concluída **somente em escopo documental**, modelos e fluxo A6/B8 por Comunicados versionados. **F005 em andamento:** aplicar/regredir nos quatro Projetos, sem presumir Instruções nativas atualizadas, testes A6/B8 executados ou SCIV aceito.
