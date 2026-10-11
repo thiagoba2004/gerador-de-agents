@@ -109,7 +109,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "EA-000002-000027 F005: validar padrão técnico de Sites com EA local e tokens próprios, além do contrato SCIV; testar gate/site e regressões, preservar sites já iniciados PRJ-000007/008 (Pages F004 bloqueado), não criar site PRJ-000022/023 sem autorização; F006 após prova.",
+  "next_logical_step": "EA-000002-000027 F005: testar gate de execução por ação em Rota A e templates; finalizar gate de Site e integrar os quatro Projetos por EA-000000-000034; após testes/readback considerar F006.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-10-11",
   "project_code": "PRJ-000002",
@@ -289,5 +289,12 @@
       "PRJ-000023"
     ],
     "website_completed_by_this_mandate": 0
+  },
+  "action_execution_planning": {
+    "policy": "thiagoba2004/governanca-geral-modelos-ia/EXECUTION_ACTION_PLAN_STANDARD.md",
+    "strategy": "EA-000002-000027",
+    "phase": "F-000002-000027-005",
+    "validator_status": "PUBLISHED_REGRESSION_PENDING",
+    "live_dispatch": "NOT_VERIFIED"
   }
 }

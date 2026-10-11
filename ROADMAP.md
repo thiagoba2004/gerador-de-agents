@@ -161,3 +161,5 @@ Plano: `estrategia-padrao-atualidade-analise-observacao.md`.
 
 
 **Aditamento da F005 (REQ-20261011-009, 11/10/2026):** centralizar **responsabilidade técnica de Sites** no Gerador com padrão compartilhado, identidade/paleta distinta por PRJ e **EA local de Site com Plano de Fases quando autorizada**. Criar modelo `templates/WEBSITE_PUBLICATION_EA.example.md`, estado de publicação, gate/contraste e testes. PRJ-000007/008 já possuem EAs de Site (F004 bloqueada por Pages), sem reabertura artificial. PRJ-000022/023 não tiveram site autorizado. SCIV global 034 coordena rollout, **não substitui EAs locais**; publicação do Site não é gate SCIV. F005 continua IN_PROGRESS até evidências.
+
+**Aditamento F005 (REQ-20261011-010):** norma de **planejamento por ação** com responsável, executor, ferramenta, ambiente, autorização, prova, custo e bloqueio; Gerador valida matriz por fase, atualiza templates e exige matriz na Rota A. A EA-000002-000027 continua F005 até readback e testes; não declarar enforcement universal do catálogo/PEP.

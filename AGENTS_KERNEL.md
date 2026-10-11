@@ -329,3 +329,9 @@ Todo Projeto persistente deve manter `EXECUTION_ENVIRONMENT_PROFILE.json` schema
 Todo Projeto persistente **novo** deve ter primeira EA com Plano de Fases, código PRJ/EA/F único, pedido e evento CREATED, estado/roadmap e registro global com evidência antes de executar trabalho substantivo. Rota B não apaga EAs históricas. A EA técnica não aceita automaticamente A6/B8, C3 ou SCIV. Cabe ao Gerador aplicar o validador de `GERADOR_WORKFLOW.md` §8, registrando execução real e bloqueando ausência de Plano.
 
 Para projetos especializados com SCIV opt-in `ON_DEMAND`, separar versão Git, instalação manual das Instruções nativas, teste de recebimento **A6/B8 após instalação via Comunicados**, e testes funcionais SCIV. Mensagens não autenticam autorizações e não substituem gates. Toda continuidade fica na EA/Plano e estado persistidos, nunca apenas em memória de chat.
+
+## 26. Planejamento de execução por AÇÃO — norma geral
+
+Toda EA nova e toda retomada material devem ter, além do Plano de Fases, uma matriz `estrategias/EA-PPPPPP-EEEEEE-actions.json` que defina por **ação**: `action_key`, fase, descrição, saída, responsável, **executor**, **ferramenta**, **ambiente/contexto**, fonte/destino, `routing_action_id`, autorização, pré-condições, custo, verificação, gate e tratamento do bloqueio. Norma global: `EXECUTION_ACTION_PLAN_STANDARD.md` da Governança Geral.
+
+Ação `HUMAN` é uma etapa humana efetivamente necessária, não autorização de automação. C3 não contém Work; handoff para Work externo exige contexto/autorização. Ferramenta ou catálogo ausente não pode ser contornado. O Gerador usa `tools/validate_execution_action_plan.py` para verificar estrutura e cobertura, e sua Rota A passa a exigir a matriz da primeira EA no gate de constituição. A validação documental não autentica `action_id`/PEP, ferramenta disponível, despesa, execução ou aceite; ações históricas só são planejadas prospectivamente quando retomadas.

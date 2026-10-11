@@ -14,3 +14,7 @@
 ## Handoff condicional de Site — não publicar implicitamente
 
 Na Fase 003, decidir `web-site=ATIVADO|PENDENTE_DE_EVIDENCIA|NAO_APLICAVEL` e registrar motivo. Quando e somente quando `ATIVADO` por mandato comprovado, a primeira EA abre dependência para **EA local específica de Site com Plano de Fases** gerada por `templates/WEBSITE_PUBLICATION_EA.example.md` e registrada no estado/ROADMAP/log/global. O Gerador assume coordenação técnica de identidade visual/tokens/paleta, código, testes e publicação no executor permitido; o PRJ retém conteúdo/editorial. Fase 006 de constituição técnica pode encerrar com Site pendente **identificado**, nunca afirmar Site publicado. Sem autorização, registrar ausência de Site e não criar Pages.
+
+## Ações vinculadas às Fases
+
+Ao instanciar esta EA, criar matriz `estrategias/EA-{{PROJECT_SEQUENCE}}-000001-actions.json` usando o modelo `templates/EXECUTION_ACTION_PLAN.example.json`, preenchendo uma ou mais ações reais **para cada fase**, com responsável, executor, ferramenta, ambiente, autorização, fonte/destino, prova e gate. Validar `tools/validate_execution_action_plan.py` antes de declarar READY; duas ações de exemplo não cobrem automaticamente seis fases. `PASS` não substitui autorização ou execução comprovada.

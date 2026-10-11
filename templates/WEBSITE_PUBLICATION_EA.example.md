@@ -14,3 +14,7 @@
 6. **F-{{PROJECT_SEQUENCE}}-{{STRATEGY_SEQUENCE}}-006 — Verificação pública/aceite:** HTTP, URL real, links, mobile, acessibilidade, fontes, independência e S0/S1 publicável; relatório e readback, encerramento local/global. **Gate:** `PUBLIC_SITE_VERIFIED` somente por evidência real.
 
 **Modelo de estado:** `templates/SITE_PUBLICATION_STATE.example.json`. Nenhuma conclusão de HTTP é inferida de arquivo JSON ou de PASS estrutural. **Sites dos PRJ-000007/000008:** preservar EAs 000002 e bloqueio F004 de Pages em vez de duplicar este modelo. **PRJ-000022/000023:** sem autorização de site não criar estratégia/site por default.
+
+## Ações vinculadas às Fases
+
+Ao instanciar esta EA, criar matriz `estrategias/EA-{{PROJECT_SEQUENCE}}-{{STRATEGY_SEQUENCE}}-actions.json` usando o modelo `templates/EXECUTION_ACTION_PLAN.example.json`, preenchendo uma ou mais ações reais **para cada fase**, com responsável, executor, ferramenta, ambiente, autorização, fonte/destino, prova e gate. Validar `tools/validate_execution_action_plan.py` antes de declarar READY; duas ações de exemplo não cobrem automaticamente seis fases. `PASS` não substitui autorização ou execução comprovada.

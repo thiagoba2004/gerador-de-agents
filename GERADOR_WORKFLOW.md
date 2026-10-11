@@ -414,3 +414,13 @@ Aplicar modules/sciv-essential.md somente opt-in com mode=ON_DEMAND e evidência
 ### 9.3. Compatibilidade com SCIV e Instruções
 
 Site é uma frente técnica **independente**, embora a EA do Projeto possa declarar dependências entre site, SCIV e handoff. Os testes A6/B8 por Comunicados, após instalação das Instruções, **não dependem de Pages** a menos que o próprio teste tenha esse requisito específico, e não podem concluir a publicação. O Gerador registra ambas as EAs e pendências em separado, sem múltiplas sessões humanas para copiar longos roteiros.
+
+## 10. Matriz de execução por ação — requisito do Plano de Fases
+
+**Autoridade:** REQ-20261011-010; fonte global `EXECUTION_ACTION_PLAN_STANDARD.md`. Antes de começar nova EA, para **cada ação material** de cada fase, persistir `estrategias/EA-PPPPPP-EEEEEE-actions.json` com os campos: `action_key`, `phase_code`, `description`, `result_ref`, `accountable_owner`, `executor`, `executor_scope`, `tool`, `environment`, `context_mode`, `source_refs`, `destination_ref`, `routing_action_id`, `authorization_ref`, `preconditions`, `verification`, `completion_gate`, `fallback`, `on_block`, `cost_class`, `spend_limit`, `status`.
+
+Escolher **executor pela ação** usando o catálogo local/global: CHAT, WORK, CODEX, SCRIPT_DETERMINISTICO, runner ou intervenção HUMAN; a ferramenta e o ambiente não são sinônimos do executor. Ex.: GitHub é repositório/conector, não executor; instalar Instruções nativas exige humano na UI do Projeto ChatGPT; Codex opera em repositório/checkout; Work pode exigir handoff fora de C3. `HUMAN_INTERVENTION` classifica etapa humana fora do catálogo de ações de IA; `action_id` inexistente/mismatch, sem permissão ou ferramenta indisponível → BLOCKED, nunca bypass.
+
+**Gate estrutural:** `python tools/validate_execution_action_plan.py --project-root <REPO> --strategy-code EA-PPPPPP-EEEEEE`. Na nova Rota A, o gate de constituição também chama esse validador para a primeira EA. `PASS` valida apenas **cobertura e completude declaradas**; READY requer catálogo/autorizações/capacidade efetivamente verificados, e COMPLETED exige recibos/readback. Nenhum plano delega autorizações. Para Rota B, preservar EAs anteriores e aplicar o novo contrato às ações **ainda não executadas** na retomada, sem fabricar história.
+
+**Continuidade:** a resposta “Onde paramos?” apresenta PRJ/EA/F e primeira ação pendente com executor, ferramenta, ambiente, dono, bloqueio e próximo gate. APSP só seleciona ações já autorizadas e disponíveis; quando não houver acesso, preservar ação pendente, não exigir mudança de IA/modelo como se fosse permissão. Templates de EA de constituição, site e SCIV devem referenciar sua própria matriz.

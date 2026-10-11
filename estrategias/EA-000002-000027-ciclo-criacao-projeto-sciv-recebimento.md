@@ -41,3 +41,7 @@ Sem novos custos, gatilhos, workflows, credenciais, permissões ou mudanças nat
 **Coordenação versus execução:** EA global SCIV-034 coordena **quatro implantações de SCIV**, mas cada PRJ terá EA local SCIV própria. EA do Gerador 027 cria padrões e controles. EAs de sites são **distintas** dessas e já existem para Conselhos Profissionais (`EA-000007-000002`) e Ordem dos Advogados (`EA-000008-000002`); ambas aguardam ação de Pages na F004. Instituições Bancárias e Bancas Examinadoras **não possuem mandato de site aprovado** neste corte. Não incorporar publicação dos sites ao gate de conclusão do SCIV 034.
 
 **F005 permanece IN_PROGRESS** até regressões e compatibilidade testadas. Fases F001–F004 anteriormente classificadas não ganham certificação adicional por este aditamento.
+
+## Aditamento F005 — execução por ação (REQ-20261011-010)
+
+O titular determinou que cada ação de EA possua executor/ferramenta/ambiente designados. Na F005, adotar norma `EXECUTION_ACTION_PLAN_STANDARD.md`, matriz `estrategias/EA-000002-000027-actions.json`, validador e testes; atualizar Kernel/Workflow/templates e gate Rota A. Preservar histórico F001–F004 e não promover F005 sem provas. A ação pode ser bloqueada por ferramenta/segurança sem desaparecer do Plano.

@@ -10,3 +10,7 @@
 6. F-{{PROJECT_SEQUENCE}}-{{STRATEGY_SEQUENCE}}-006 — Testes funcionais SCIV distintos, tratamento/arquivamento bilateral, readback e aceite separado; gate SCIV_COMPORTAMENTO_CLASSIFICADO.
 
 **Sem simular respostas nem assumir aceite do Projeto.** Se a instalação humana ou as ferramentas faltarem, persistir bloqueio e próximo passo.
+
+## Ações vinculadas às Fases
+
+Ao instanciar esta EA, criar matriz `estrategias/EA-{{PROJECT_SEQUENCE}}-{{STRATEGY_SEQUENCE}}-actions.json` usando o modelo `templates/EXECUTION_ACTION_PLAN.example.json`, preenchendo uma ou mais ações reais **para cada fase**, com responsável, executor, ferramenta, ambiente, autorização, fonte/destino, prova e gate. Validar `tools/validate_execution_action_plan.py` antes de declarar READY; duas ações de exemplo não cobrem automaticamente seis fases. `PASS` não substitui autorização ou execução comprovada.

@@ -40,3 +40,7 @@ Descrever o objetivo da Estratégia Autônoma.
 ## Continuidade exigida pelo Gerador
 
 A constituição técnica exige **arquivo físico da primeira EA com Plano de Fases**, evento CREATED no Strategy Log, request e estado; não basta mencionar a EA neste Roadmap. Rodar em ambiente autorizado \`tools/project_creation_gate.py --gate bootstrap\`; sem saída real PASS, marcar \`NOT_VERIFIED\`. Se houver Projeto ChatGPT/SCIV habilitado: Instruções Git, instalação humana, teste A6/B8 por Comunicado e teste SCIV são **gates diferentes**, com owner e estado próprios.
+
+## Matriz de execução vinculada
+
+O Roadmap deve apontar ao `estrategias/EA-PPPPPP-EEEEEE-actions.json`, contendo ação/owner/executor/ferramenta/ambiente e gate para cada fase. Não marcar READY sem validar cobertura e autorizações específicas; a validação estrutural do Gerador não executa ações.
