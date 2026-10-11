@@ -11,6 +11,19 @@ PROJECT_RE = re.compile(r"^PRJ-(\d{6})$")
 STRATEGY_RE = re.compile(r"^EA-(\d{6})-(\d{6})$")
 PHASE_RE = re.compile(r"F-(\d{6})-(\d{6})-(\d{3})")
 HEX_SHA = re.compile(r"^[a-f0-9]{40}$")
+COLOR_RE = re.compile(r"^#[a-fA-F0-9]{6}$")
+TOKENS = ("background", "surface", "text", "primary", "secondary", "accent", "border", "focus")
+
+
+def contrast(foreground: str, background: str) -> float:
+    """WCAG relative luminance for opaque sRGB tokens; no browser inference."""
+    def luminance(color: str) -> float:
+        channels = [int(color[i:i + 2], 16) / 255 for i in (1, 3, 5)]
+        linear = [c / 12.92 if c <= 0.04045 else ((c + 0.055) / 1.055) ** 2.4
+                  for c in channels]
+        return sum(c * w for c, w in zip(linear, (0.2126, 0.7152, 0.0722)))
+    low, high = sorted((luminance(foreground), luminance(background)))
+    return (high + 0.05) / (low + 0.05)
 
 
 def inspect(root: Path, route: str = "A", gate: str = "bootstrap") -> dict:
@@ -22,6 +35,9 @@ def inspect(root: Path, route: str = "A", gate: str = "bootstrap") -> dict:
     def fail(code: str) -> None:
         if code not in errors:
             errors.append(code)
+
+    if route not in ("A", "B") or gate not in ("bootstrap", "sciv", "post_native", "site"):
+        fail("INVALID_ROUTE_OR_GATE")
 
     def required(relative: str) -> Path | None:
         if (not isinstance(relative, str) or not relative or
@@ -131,6 +147,123 @@ def inspect(root: Path, route: str = "A", gate: str = "bootstrap") -> dict:
                     fail("FIRST_EA_ACTION_PLAN_UNVERIFIED")
                     evidence["action_plan_errors"] = contract["errors"]
 
+    # Module decisions live in PROJECT_STATE; the separate publication state can
+    # also trigger the requirement. Existing projects without Site remain valid.
+    modules = state.get("modules", [])
+    active_site = ((isinstance(modules, dict) and modules.get("web-site") == "ATIVADO") or
+                   (isinstance(modules, list) and any(
+                       isinstance(item, dict) and item.get("module_id") == "web-site" and
+                       item.get("status") == "ATIVADO" for item in modules)))
+    site_ref = "governanca/SITE_PUBLICATION_STATE.json"
+    has_site_state = (root / site_ref).exists()
+    site = obj(site_ref) if gate == "site" or active_site or has_site_state else {}
+    approved_site = site.get("mandate_status") == "APPROVED"
+    if gate == "site" or active_site or approved_site:
+        if site.get("project_code") != code:
+            fail("SITE_PROJECT_MISMATCH")
+        if not approved_site:
+            fail("SITE_MANDATE_NOT_APPROVED")
+        authorization = site.get("authorization_ref")
+        if not isinstance(authorization, str) or not authorization.strip() or not any(
+                entry.get("request_id") == authorization for entry in requests):
+            fail("SITE_AUTHORIZATION_REQUEST_MISSING")
+        strategy = site.get("site_strategy_code")
+        sm = STRATEGY_RE.fullmatch(strategy) if isinstance(strategy, str) else None
+        if not sm or sm.group(1) != number:
+            fail("SITE_STRATEGY_ID_INVALID")
+        else:
+            matches = [entry for entry in created if entry["strategy_code"] == strategy]
+            if len(matches) != 1:
+                fail("SITE_EA_CREATED_NOT_UNIQUE")
+            else:
+                ref = matches[0].get("plan_ref")
+                if not isinstance(ref, str) or not ref.startswith("estrategias/"):
+                    fail("SITE_PLAN_REF_MISSING")
+                else:
+                    plan = document(ref)
+                    ids = sorted({int(c) for a, b, c in PHASE_RE.findall(plan)
+                                  if strategy == f"EA-{a}-{b}"})
+                    if strategy not in plan or len(ids) < 2 or ids != list(range(1, max(ids, default=0) + 1)):
+                        fail("SITE_PHASE_PLAN_INCOMPLETE")
+                    if strategy == evidence.get("initial_strategy"):
+                        fail("SITE_SEPARATE_EA_REQUIRED")
+                    if strategy not in roadmap:
+                        fail("SITE_ROADMAP_REFERENCE_MISSING")
+                    # New Rota A Site EAs require the matrix even at bootstrap.
+                    # Historical B EAs are preserved; remaining preflight actions
+                    # must have an explicit contract before technical readiness.
+                    if route == "A" or gate == "site":
+                        from validate_execution_action_plan import validate
+                        contract = validate(root, strategy, plan_ref=ref)
+                        if contract["status"] != "PASS":
+                            fail("SITE_ACTION_PLAN_UNVERIFIED")
+                            evidence["site_action_plan_errors"] = contract["errors"]
+                    evidence["site_strategy"] = strategy
+                    evidence["site_plan"] = ref
+        evidence["site_mandate"] = site.get("mandate_status")
+    elif has_site_state:
+        if site.get("mandate_status") not in ("NOT_APPLICABLE", "PENDING_EVIDENCE"):
+            fail("SITE_MANDATE_STATUS_INVALID")
+        # A pending/absent mandate cannot quietly include a published Site.
+        if site.get("publication_status") not in (None, "NOT_DEPLOYED"):
+            fail("SITE_PUBLICATION_WITHOUT_MANDATE")
+        evidence["site_mandate"] = site.get("mandate_status")
+
+    if gate == "site":
+        architecture = document("SITE_ARCHITECTURE.md")
+        style = document("SITE_STYLE_GUIDE.md")
+        if not architecture.strip() or not style.strip():
+            fail("SITE_DESIGN_DOCUMENTS_EMPTY")
+        tokens = site.get("design_tokens")
+        if not isinstance(tokens, dict):
+            tokens = {}
+        valid_colors = True
+        for token in TOKENS:
+            value = tokens.get(token)
+            if not isinstance(value, str) or not COLOR_RE.fullmatch(value):
+                fail("SITE_TOKEN_INVALID:" + token)
+                valid_colors = False
+            elif value.lower() not in style.lower():
+                fail("SITE_STYLE_TOKEN_UNDOCUMENTED:" + token)
+        if valid_colors:
+            ratios = {surface: contrast(tokens["text"], tokens[surface])
+                      for surface in ("background", "surface")}
+            evidence["site_text_contrast"] = ratios
+            for surface, ratio in ratios.items():
+                if ratio < 4.5:
+                    fail("SITE_TEXT_CONTRAST_LOW:" + surface)
+        if site.get("palette_portfolio_review") != "VERIFIED":
+            fail("SITE_PALETTE_REVIEW_UNVERIFIED")
+        review = site.get("palette_review_evidence_ref")
+        if not isinstance(review, str) or not review.strip():
+            fail("SITE_PALETTE_REVIEW_EVIDENCE_MISSING")
+        elif not document(review).strip():
+            fail("SITE_PALETTE_REVIEW_EVIDENCE_EMPTY")
+        folder = site.get("source_folder")
+        # Reuse the same containment/path checks for the public entry point.
+        if not isinstance(folder, str) or not folder.strip():
+            fail("SITE_SOURCE_FOLDER_MISSING")
+        else:
+            document(folder + "/index.html")
+        publication = site.get("publication_status")
+        if publication not in ("NOT_DEPLOYED", "SITE_SOURCE_STAGED", "WAITING_HUMAN_PAGES_CONFIG",
+                               "PAGES_CONFIGURED", "PUBLIC_SITE_VERIFIED"):
+            fail("SITE_PUBLICATION_STATUS_INVALID")
+        if publication == "PUBLIC_SITE_VERIFIED":
+            for key in ("source_commit", "deploy_commit"):
+                if not HEX_SHA.fullmatch(str(site.get(key, ""))):
+                    fail("SITE_PUBLICATION_SHA_MISSING:" + key)
+            url = site.get("public_url")
+            if not isinstance(url, str) or not re.fullmatch(r"https://[^\s/]+(?:/[^\s]*)?", url):
+                fail("SITE_PUBLIC_URL_MISSING")
+            http = site.get("http_evidence_ref")
+            if not isinstance(http, str) or not http.strip():
+                fail("SITE_HTTP_EVIDENCE_MISSING")
+            elif not document(http).strip():
+                fail("SITE_HTTP_EVIDENCE_EMPTY")
+        evidence["site_publication_status"] = publication
+        evidence["public_site_verified_by_this_check"] = False
+
     if gate in ("sciv", "post_native"):
         sciv = obj("comunicados/SCIV_STATE.json")
         if sciv.get("project_code") != code:
@@ -185,14 +318,14 @@ def inspect(root: Path, route: str = "A", gate: str = "bootstrap") -> dict:
 
     return {"status": "PASS" if not errors else "FAIL", "gate": gate, "route": route,
             "evidence": evidence, "errors": errors,
-            "limitation": "Documentary consistency only; never native UI attestation, A6/B8 acceptance or live PEP authorization."}
+            "limitation": "Documentary consistency only; never native UI attestation, A6/B8 acceptance or live PEP authorization. Site checks do not verify live deploy/HTTP, visual portfolio distinction, browser navigation or full accessibility."}
 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--project-root", required=True, type=Path)
     parser.add_argument("--route", choices=("A", "B"), default="A")
-    parser.add_argument("--gate", choices=("bootstrap", "sciv", "post_native"), default="bootstrap")
+    parser.add_argument("--gate", choices=("bootstrap", "sciv", "post_native", "site"), default="bootstrap")
     args = parser.parse_args()
     outcome = inspect(args.project_root, route=args.route, gate=args.gate)
     print(json.dumps(outcome, ensure_ascii=False, indent=2))

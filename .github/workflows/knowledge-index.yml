@@ -19,10 +19,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - name: Validate first EA and SCIV post-native creation gate
-        run: python -m unittest discover -s tools -p 'test_project_creation_gate.py' -v
-      - name: Validate action-level execution contracts
-        run: python -m unittest discover -s tools -p 'test_validate_execution_action_plan.py' -v
+      - name: Validate creation, conditional Site, action contracts and SCIV opt-in
+        run: python -m unittest discover -s tools -p 'test*.py' -v
       - name: Verify current EA-027 action execution matrix
         run: python tools/validate_execution_action_plan.py --project-root . --strategy-code EA-000002-000027
       - name: Build deterministic knowledge index

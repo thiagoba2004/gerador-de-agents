@@ -145,12 +145,12 @@ class SCIVBootstrapContractTests(unittest.TestCase):
             self.assertIn(item, text)
 
     def test_real_pilot_handoff_preserves_original_and_matches_profile(self):
-        text = (ROOT / "handoffs/chatgpt/PRJ-000021-INSTRUCOES.md").read_text()
+        text = (ROOT / "handoffs/chatgpt/PRJ-000021-INSTRUCOES.md").read_text(encoding="utf-8")
         start, end = text.index(BEGIN), text.index(END) + len(END) + 2
         preserved = text[:start] + text[end:]
-        expected = json.loads((ROOT / "audits/sciv-bootstrap-2026-10-11/contrato.json").read_text())
+        expected = json.loads((ROOT / "audits/sciv-bootstrap-2026-10-11/contrato.json").read_text(encoding="utf-8"))
         self.assertEqual(hashlib.sha256(preserved.encode()).hexdigest(), expected["original_adapter_sha256"])
-        profile = json.loads((ROOT / "profiles/cursos-universitarios.json").read_text())
+        profile = json.loads((ROOT / "profiles/cursos-universitarios.json").read_text(encoding="utf-8"))
         self.assertEqual(profile["project_code"], "PRJ-000021")
         self.assertTrue(profile["sciv_bootstrap"]["enabled"])
         self.assertLessEqual(len(text), 8000)  # Engineering budget, not UI installation proof.
