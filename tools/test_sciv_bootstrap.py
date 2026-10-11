@@ -13,7 +13,7 @@ ROOT = Path(__file__).resolve().parents[1]
 class SCIVBootstrapContractTests(unittest.TestCase):
     def setUp(self):
         self.profile = {"project_code": "PRJ-000021", "project_ref": "thiagoba2004/cursos-universitarios",
-                        "sciv_bootstrap": {"enabled": True, "binding_evidence": "user-session-report",
+                        "sciv_bootstrap": {"enabled": True, "mode": "ON_DEMAND", "binding_evidence": "user-session-report",
                                            "github_read_evidence": "tool-read-report",
                                            "provisioning_evidence": "independent-commit-readback"}}
         self.state = {"project_code": "PRJ-000021", "repository": self.profile["project_ref"],
@@ -154,6 +154,27 @@ class SCIVBootstrapContractTests(unittest.TestCase):
         self.assertEqual(profile["project_code"], "PRJ-000021")
         self.assertTrue(profile["sciv_bootstrap"]["enabled"])
         self.assertLessEqual(len(text), 8000)  # Engineering budget, not UI installation proof.
+
+    def test_enabled_legacy_mode_cannot_reintroduce_automatic_read(self):
+        self.profile["sciv_bootstrap"].pop("mode")
+        with self.assertRaisesRegex(BootstrapError, "ON_DEMAND_MODE_REQUIRED"):
+            render(self.profile, self.state)
+
+    def test_automatic_mode_is_rejected(self):
+        self.profile["sciv_bootstrap"]["mode"] = "AUTOMATIC"
+        with self.assertRaisesRegex(BootstrapError, "ON_DEMAND_MODE_REQUIRED"):
+            render(self.profile, self.state)
+
+    def test_new_block_explicitly_prohibits_normal_task_consultation(self):
+        text = render(self.profile, self.state)
+        self.assertIn("somente quando o titular solicitar explicitamente", text)
+        self.assertIn("Não consulte GitHub/SCIV em Oi, perguntas acadêmicas ou tarefas normais", text)
+        self.assertNotIn("antes de responder a qualquer solicitação substantiva", text)
+
+    def test_bilateral_archive_requires_evidence_and_preserves_pending(self):
+        text = render(self.profile, self.state)
+        for item in ("resposta persistida/confirmada", "owner/decisão/referência", "G0 lê a saída somente a pedido", "Origem movida resolve"):
+            self.assertIn(item, text)
 
 
 if __name__ == "__main__":

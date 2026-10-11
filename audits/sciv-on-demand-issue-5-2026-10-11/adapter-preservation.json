@@ -1,0 +1,8 @@
+{
+  "outside_managed_block_equal": true,
+  "original_sha256": "a45a2db419c25ed2b20bbeccc3795c6912e7d72661aa2b55c4a6e765cb34fc9f",
+  "new_adapter_sha256": "86992738a25a9af2038e44c932aab1ea68fac63735971c64bb3de22f649de399",
+  "characters": 6413,
+  "pilot_generator_equal": true,
+  "native_ui_updated": false
+}

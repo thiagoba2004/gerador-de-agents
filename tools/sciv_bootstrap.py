@@ -45,6 +45,8 @@ def render(profile: dict, state: dict) -> str | None:
         return None
     if config.get("enabled") is not True:
         raise BootstrapError("INVALID_ENABLE_FLAG")
+    if config.get("mode") != "ON_DEMAND":
+        raise BootstrapError("ON_DEMAND_MODE_REQUIRED")
     for key in ("binding_evidence", "github_read_evidence", "provisioning_evidence"):
         if not isinstance(config.get(key), str) or not config[key].strip():
             raise BootstrapError("BOOTSTRAP_DEPENDENCY_MISSING:" + key)

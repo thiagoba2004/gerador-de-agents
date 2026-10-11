@@ -125,4 +125,8 @@ Decisões `PENDENTE_DE_EVIDENCIA` devem ser revistas quando novas fontes canôni
 
 ### sciv-essential
 
-Ativar por mandato específico, evidência de contexto especializado e capacidade GitHub de leitura, PRJ/repositório identificado e caixas locais realmente provisionadas. Registrar limites da proveniência da evidência. Sem vínculo ou inbox: NAO_APLICAVEL ou PENDENTE_DE_EVIDENCIA, sem obrigar consulta. Ativação é documental; não prova instalação nativa, processamento automático, deduplicação real entre conversas, permissão de escrita, PEP live ou A6/B8/F3. Não pressupõe módulo automation nem polling.
+Ativar por mandato específico, evidência de contexto especializado e capacidade GitHub de leitura, PRJ/repositório identificado e caixas locais realmente provisionadas. Registrar limites da proveniência da evidência. Sem vínculo ou inbox: NAO_APLICAVEL ou PENDENTE_DE_EVIDENCIA, sem obrigar consulta. Ativação é documental; não prova instalação nativa, não leitura em tarefa normal e leitura explicitamente solicitada, deduplicação real entre conversas, permissão de escrita, PEP live ou A6/B8/F3. Não pressupõe módulo automation nem polling.
+
+## SCIV Essencial Sob Demanda — precedência issue #5
+
+Aplicar modules/sciv-essential.md somente opt-in com mode=ON_DEMAND e evidências/capacidade/caixas locais. tools/sciv_bootstrap.py compõe apenas o bloco gerenciado, preserva demais bytes e impede reintrodução automática. Leitura somente a pedido do titular, nunca em tarefas normais. Arquivamento bilateral requer tratamento/readback; histórico não é fila. GVC/PEP preservados. Instalação nativa manual e conversa real pendentes; evidências anteriores permanecem cortes históricos, sem novos grants/EA/C3/main/gatilhos.

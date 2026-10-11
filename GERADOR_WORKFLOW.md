@@ -330,15 +330,19 @@ Para os PRJ-000007/000008/000021/000022/000023, os relatórios **de 10/10/2026**
 
 **Critério anti-loop:** não abrir nova EA global exclusivamente para redistribuir arquivos; priorizar a retomada das entregas locais após rastreabilidade e segurança.
 
-## 8. Bootstrap SCIV Essencial em adaptadores ChatGPT
+## 8. SCIV Sob Demanda em adaptadores ChatGPT
 
-Autoridade: issue #4, comentário 6105103024, execução humana de 11/10/2026 e REQ-20261011-SCIV-BOOTSTRAP-001. Em A5/A6 ou B6/B8, avaliar condicionalmente modules/sciv-essential.md: não impor SCIV a perfis sem habilitação, vínculo ou caixas provisionadas. Preservar todas as demais regras do Projeto.
+Autoridade: issue #5 / ADR-GOV-0009, substitui gatilho automático da issue #4; demais regras permanecem. Opt-in por sciv_bootstrap.enabled=true e mode=ON_DEMAND, evidências e caixas locais.
 
-1. Conferir perfil, repositório/PRJ, capacidade de leitura, caixas e operational_ref do estado local; evidência relatada conserva seu limite.
-2. Comparar adaptador local, main e cópia do handoff; nunca sobrescrever evolução local por handoff antigo. Compor o bloco de templates/SCIV_BOOTSTRAP.example.md por tools/sciv_bootstrap.py, offline, sem side effects; perfil não habilitado permanece intacto.
-3. Materializar a leitura de estado/inbox/outbox antes da resposta substantiva, com identificação de pendências, versões já respondidas, erro distinto de caixa vazia, crítica GVC e PEP. Reconciliar AGENTS e handoff e testar preservação, repetição, mudança de ref e casos negativos.
-4. Versionar em branch de trabalho, confirmar commit/ref/bytes, entregar o adaptador integral. Não fazer merge, instalar UI ou mudar C2/C3 automaticamente.
-5. Responsável confronta/instala uma vez o conteúdo integral no campo Instruções nativo. Depois executar tarefa ordinária em conversa nova sem mencionar SCIV/GitHub; ferramenta deve provar consulta prévia. Outra conversa deve reconhecer resposta existente da mesma versão sem republicação/efeitos.
-6. Registrar separadamente BOOTSTRAP_INSTRUCTIONS_VERSIONED, NATIVE_PROJECT_INSTRUCTIONS_INSTALLED, AUTOMATIC_READ_ON_PROCESSED_CONVERSATION_VERIFIED e CROSS_SESSION_DEDUPLICATION_VERIFIED; os três últimos não são satisfeitos por testes offline. Emitir instruções de teste e caminho de recibo A6/B8 da seção 7, sem promover esses gates.
+1. Conferir perfil, PRJ/repo, capacidade de leitura, provisionamento e operational_ref, sem criar vínculo ou permissões.
+2. Comparar adaptador local/handoff; compor offline somente bloco SCIV_BOOTSTRAP_BEGIN/END, preservando todos os demais bytes. Não sobrescrever evolução local por fonte antiga; perfil não habilitado permanece intacto.
+3. Materializar leitura SOMENTE sob solicitação explícita do titular. Não consultar em Oi, pergunta acadêmica ou tarefa normal. Identificar pendências/versões/histórico quando solicitado, separar falha de acesso de vazio, preservar GVC/PEP.
+4. Resposta real exige ferramenta/política e readback; entrada arquivada somente após tratamento rastreável. G0 consulta saída a pedido e arquiva depois de ciência/decisão/handoff confirmado. Pendência precisa owner/decisão/ref. Não confundir arquivamento e execução.
+5. Testar preservação/dedup/ref/mode/integridade; publicar engenharia em branch e conferir commit/ref/bytes. Preservar provas anteriores no Git/audits.
+6. Titular compara/instala manualmente arquivo integral no campo Instruções nativo. Nova conversa acadêmica normal deve comprovar ausência de chamadas SCIV; depois pedir leitura explicitamente e conferir fila/histórico/correlação. Sem UI manter NATIVE_INSTRUCTIONS_PENDING / REAL_CONVERSATION_VALIDATION_PENDING. Sem merge/C3/A6/B8/F2/F3 automático.
 
-Preparação padronizada somente para Projetos comprovadamente habilitados; não criar nova EA por manutenção, credenciais, infraestrutura, custos ou agendamentos. Após integração humana, atualizar estado/referência e regenerar o pacote; nunca manter branch piloto fixa como fonte concorrente.
+Após integração humana autorizada, atualizar operational_ref e regenerar/confrontar pacote sem deixar fontes concorrentes. Não criar EA/creds/gastos/agendas.
+
+## SCIV Essencial Sob Demanda — precedência issue #5
+
+Aplicar modules/sciv-essential.md somente opt-in com mode=ON_DEMAND e evidências/capacidade/caixas locais. tools/sciv_bootstrap.py compõe apenas o bloco gerenciado, preserva demais bytes e impede reintrodução automática. Leitura somente a pedido do titular, nunca em tarefas normais. Arquivamento bilateral requer tratamento/readback; histórico não é fila. GVC/PEP preservados. Instalação nativa manual e conversa real pendentes; evidências anteriores permanecem cortes históricos, sem novos grants/EA/C3/main/gatilhos.

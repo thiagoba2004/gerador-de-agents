@@ -430,6 +430,7 @@ Ao preparar qualquer **Instrução inicial** ou **prompt de homologação** de P
 
 O Gerador deve manter o modelo/perfil do Projeto e o `AGENTS.md` local coerentes com essa convenção. Falha de escrita GitHub deve produzir `NOT_PERSISTED` com relatório pronto para retomada, nunca link inventado. Trabalhos anteriores podem ser migrados preservando história e endereços legados com ponteiros Markdown. Não reabrir Estratégias concluídas ou acrescentar despesas apenas para reorganizar relatórios.
 
-## SCIV Essencial — propagação condicional do bootstrap
 
-Aplicar modules/sciv-essential.md e templates/SCIV_BOOTSTRAP.example.md somente aos perfis habilitados, com evidência de contexto, leitura e caixas locais. Materializar o passo antes do bootstrap substantivo no adaptador e confrontar AGENTS e handoff. Preservar todo conteúdo fora do bloco SCIV; seguir a seção 8 do GERADOR_WORKFLOW. Não propagar a Projetos sem vínculo ou inbox, não instalar UI por inferência nem promover gates. Preparação e testes documentais não são ensaio automático real.
+## SCIV Essencial Sob Demanda — precedência issue #5
+
+Aplicar modules/sciv-essential.md somente opt-in com mode=ON_DEMAND e evidências/capacidade/caixas locais. tools/sciv_bootstrap.py compõe apenas o bloco gerenciado, preserva demais bytes e impede reintrodução automática. Leitura somente a pedido do titular, nunca em tarefas normais. Arquivamento bilateral requer tratamento/readback; histórico não é fila. GVC/PEP preservados. Instalação nativa manual e conversa real pendentes; evidências anteriores permanecem cortes históricos, sem novos grants/EA/C3/main/gatilhos.

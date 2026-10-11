@@ -189,11 +189,12 @@
     {
       "module_id": "sciv-essential",
       "status": "ATIVADO",
-      "rationale": "Mandato humano específico de bootstrap documental após piloto bidirecional; somente PRJ-000021, sem instalação nativa ou PEP live.",
+      "rationale": "Opt-in SCIV sob demanda, somente solicitação explícita; arquivamento bilateral após tratamento confirmado. Sem consulta em tarefa normal.",
       "source_refs": [
         "REQ-20261011-SCIV-BOOTSTRAP-001",
         "https://github.com/thiagoba2004/governanca-geral-modelos-ia/issues/4#issuecomment-6105103024",
-        "https://github.com/thiagoba2004/governanca-geral-modelos-ia/issues/4#issuecomment-6105087359"
+        "https://github.com/thiagoba2004/governanca-geral-modelos-ia/issues/4#issuecomment-6105087359",
+        "governanca-geral-modelos-ia issue #5 / ADR-GOV-0009"
       ],
       "decided_at": "2026-10-11",
       "kernel_version": "1.11"
@@ -231,7 +232,9 @@
     "github_read_evidence": "https://github.com/thiagoba2004/governanca-geral-modelos-ia/issues/4#issuecomment-6105087359",
     "provisioning_evidence": "https://github.com/thiagoba2004/cursos-universitarios/commit/c6bd15945bdfbb4edeb3c55160d1a7c173c3acb5",
     "state_path": "comunicados/SCIV_STATE.json",
-    "native_installation": "NOT_VERIFIED",
-    "automatic_bootstrap": "NOT_VERIFIED"
+    "native_installation": "HUMAN_PENDING_UPDATED_ON_DEMAND_INSTRUCTIONS",
+    "automatic_bootstrap": "SUPERSEDED_BY_ISSUE_5_NO_READ_ON_NORMAL_TASK",
+    "mode": "ON_DEMAND",
+    "authority": "governanca-geral-modelos-ia issue #5 / ADR-GOV-0009"
   }
 }

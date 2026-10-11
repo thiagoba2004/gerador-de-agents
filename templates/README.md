@@ -22,3 +22,7 @@ A existência de um template não obriga sua utilização literal. O Gerador dev
 - `EXECUTION_HANDOFF.example.md` — pacote mínimo e auditável para transferir execução entre contextos incompatíveis.
 
 - SCIV_BOOTSTRAP.example.md — bloco parametrizado de leitura procedimental SCIV; materializar somente em perfis habilitados, preservando instruções fora dos marcadores. Compositor offline: tools/sciv_bootstrap.py.
+
+## SCIV Essencial Sob Demanda — precedência issue #5
+
+Aplicar modules/sciv-essential.md somente opt-in com mode=ON_DEMAND e evidências/capacidade/caixas locais. tools/sciv_bootstrap.py compõe apenas o bloco gerenciado, preserva demais bytes e impede reintrodução automática. Leitura somente a pedido do titular, nunca em tarefas normais. Arquivamento bilateral requer tratamento/readback; histórico não é fila. GVC/PEP preservados. Instalação nativa manual e conversa real pendentes; evidências anteriores permanecem cortes históricos, sem novos grants/EA/C3/main/gatilhos.

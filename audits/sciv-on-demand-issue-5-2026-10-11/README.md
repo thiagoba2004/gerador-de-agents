@@ -1,0 +1,7 @@
+# SCIV Sob Demanda — issue #5
+
+Mandato humano da Governança Geral, 11/10/2026; engenharia PRJ-000002, manutenção delimitada, sem nova EA. Base 79d27ef26ff37d37d7a1d37cd8aa663acea89ffe; registro e99eaf06c98cfaddf6f9d570e36ed459769a58ab. Branch feat/sciv-sob-demanda-issue-5-20261011, main dc5ab1c preservada.
+
+Compositor exige opt-in enabled=true/mode=ON_DEMAND e evidências/caminhos/ref coerentes. Template lê somente a pedido e define arquivo bilateral após confirmação. Bloco gerenciado conserva marcadores compatíveis; reexecução não duplica. Piloto e handoff integrais iguais; todos os demais bytes preservados (SHA-256 a45a2db419c25ed2b20bbeccc3795c6912e7d72661aa2b55c4a6e765cb34fc9f). 24 métodos anteriores preservados e 4 novos: 28 aprovados, zero falhas/erros; logs/JSON anexos. Provas de bootstrap anteriores permanecem imutáveis em audits/sciv-bootstrap-2026-10-11/Git. Somente perfil Cursos foi alterado.
+
+Arquivo de Instruções integral handoffs/chatgpt/PRJ-000021-INSTRUCOES.md pronto para confronto/instalação manual na UI; Git não sincroniza UI. NATIVE_INSTRUCTIONS_PENDING/REAL_CONVERSATION_VALIDATION_PENDING. Não declarar ausência de consulta real por teste textual/offline. PEP/main/C3/gates/credenciais/permissões/agendas/infraestrutura sem alteração. Não merge; próxima ação humana instala atualiza instruções e ensaia pergunta acadêmica nova sem consulta, seguida de pedido de leitura.
