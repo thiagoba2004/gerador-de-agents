@@ -109,7 +109,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "EA-000002-000027 F005: ACT005/006/007 documented or verified, including 73 offline tests and CI success; preserve IN_PROGRESS until real target integration and formal gate assessment. G0 EA034 F002 remains open, next gate classification; local SCIV EAs not created and Codex code implementation in four target repos not authorized by this checkpoint.",
+  "next_logical_step": "G0 EA034 F003 local PRJ000022 mission/SCIV plans created and dual registered. Next executor CODEX CLI LOCAL on thiagoba2004/instituicoes-bancarias, handoff handoffs/codex/EA-000022-000003-SCIV-F002-F004.md. Do not change code here or promote global F003 before CODEX tests/readback. GDA EA027 F005 still IN_PROGRESS.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-10-11",
   "project_code": "PRJ-000002",
@@ -317,7 +317,7 @@
   },
   "sciv_rollout_preparation": {
     "global_strategy": "EA-000000-000034",
-    "global_phase": "F-000000-000034-002",
+    "global_phase": "F-000000-000034-003",
     "status": "DOCUMENTARY_PREPARATION_VERIFIED_SCIV_NOT_PROVISIONED",
     "report": "audits/EA-000000-000034-F002-preparacao-gerador-2026-10-11.md",
     "candidate_local_strategies": [
@@ -328,7 +328,7 @@
     ],
     "profile_opt_in_authorized": 4,
     "profile_opt_in_enabled": 0,
-    "local_strategy_created": 0,
+    "local_strategy_created": 1,
     "target_repository_writes": 0,
     "required_global_matrix_correction": "EA-000000-000034 ACT-000000-000034-003 still incorrectly labels EA-000022-000002 as SCIV",
     "codex_regressions": "VERIFIED_OFFLINE_73_TESTS_NO_TARGET_WRITES",
@@ -340,6 +340,9 @@
     "global_matrix_act003_current_sciv_candidate": "EA-000022-000003",
     "generator_act007": "VERIFIED_READ_ONLY_HANDOFF_RECONCILIATION",
     "generator_act007_report": "audits/EA-000002-000027-F005-chat-sciv-handoff-2026-10-11.md",
-    "global_phase_gate": "F002_NOT_PROMOTED"
+    "global_phase_gate": "F003_NOT_ACCEPTED_CODEX_PENDING",
+    "prj000022_mission_ea": "EA-000022-000002_CREATED_LOCAL_AND_DUAL",
+    "prj000022_sciv_ea": "EA-000022-000003_CREATED_F001_DOCUMENTARY_GATE_COMPLETED_CODEX_F002_NEXT",
+    "codex_handoff_ref": "thiagoba2004/instituicoes-bancarias/handoffs/codex/EA-000022-000003-SCIV-F002-F004.md"
   }
 }
