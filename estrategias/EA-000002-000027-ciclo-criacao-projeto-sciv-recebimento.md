@@ -45,3 +45,5 @@ Sem novos custos, gatilhos, workflows, credenciais, permissões ou mudanças nat
 ## Aditamento F005 — execução por ação (REQ-20261011-010)
 
 O titular determinou que cada ação de EA possua executor/ferramenta/ambiente designados. Na F005, adotar norma `EXECUTION_ACTION_PLAN_STANDARD.md`, matriz `estrategias/EA-000002-000027-actions.json`, validador e testes; atualizar Kernel/Workflow/templates e gate Rota A. Preservar histórico F001–F004 e não promover F005 sem provas. A ação pode ser bloqueada por ferramenta/segurança sem desaparecer do Plano.
+
+**Matriz de execução por ação:** [EA-000002-000027-actions.json](EA-000002-000027-actions.json). Responsável, executor, ferramenta, ambiente, autorização e gate por ação, conforme norma global. Histórico F001–F004 permanece; F005/F006 não são promovidas por esta inclusão.

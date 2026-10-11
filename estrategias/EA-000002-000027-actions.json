@@ -1,0 +1,296 @@
+{
+  "schema_version": "1.0.0",
+  "strategy_code": "EA-000002-000027",
+  "plan_ref": "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
+  "notes": "Ações das F001-F004 são mapeadas contra o histórico confirmado; não reencenadas. F005-F006 seguem pendentes conforme estado local. Validador comprova estrutura, não routing catalog/PEP.",
+  "actions": [
+    {
+      "action_key": "ACT-000002-000027-001",
+      "phase_code": "F-000002-000027-001",
+      "description": "Recuperar identidade, namespace, EAs e contratos do Gerador",
+      "result_ref": "STRATEGY_LOG.jsonl",
+      "accountable_owner": "PRJ-000002_GERADOR",
+      "executor": "CHAT",
+      "executor_scope": "Gerador de Agents, sessão ou runner identificado",
+      "tool": "GitHub connector read",
+      "environment": "Chat global com conector GitHub",
+      "context_mode": "B0_NO_CHATGPT_PROJECT_BINDING",
+      "source_refs": [
+        "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
+        "GERADOR_WORKFLOW.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "destination_ref": "P2_GIT_PUBLICO_REPOSITORIO:thiagoba2004/gerador-de-agents",
+      "routing_action_id": "GITHUB_READ",
+      "authorization_ref": "REQ-20261011-008",
+      "preconditions": [
+        "Consulta de catálogo de executor vigente",
+        "Mandato/PEP e ferramentas disponíveis na ação real",
+        "Versão Git e limites de publicação conferidos"
+      ],
+      "verification": "Confrontar evento F001 EVT-GDA-20261011-CREATION-FLOW-002",
+      "completion_gate": "F-000002-000027-001_EVIDENCE_CHECK",
+      "fallback": "Sem substituição de executor sem alocação/mandato",
+      "on_block": "Registre BLOCKED, motivo, responsável e retome sem contornar política",
+      "cost_class": "UNKNOWN",
+      "spend_limit": 0,
+      "status": "VERIFIED"
+    },
+    {
+      "action_key": "ACT-000002-000027-002",
+      "phase_code": "F-000002-000027-002",
+      "description": "Versionar contrato de Rota A/B, handoff e SCIV separado de A6/B8",
+      "result_ref": "GERADOR_WORKFLOW.md",
+      "accountable_owner": "PRJ-000002_GERADOR",
+      "executor": "CHAT",
+      "executor_scope": "Gerador de Agents, sessão ou runner identificado",
+      "tool": "GitHub connector write/document review",
+      "environment": "Chat global com conector GitHub",
+      "context_mode": "B0_NO_CHATGPT_PROJECT_BINDING",
+      "source_refs": [
+        "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
+        "GERADOR_WORKFLOW.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "destination_ref": "P2_GIT_PUBLICO_REPOSITORIO:thiagoba2004/gerador-de-agents",
+      "routing_action_id": "GITHUB_DOC_WRITE",
+      "authorization_ref": "REQ-20261011-008",
+      "preconditions": [
+        "Consulta de catálogo de executor vigente",
+        "Mandato/PEP e ferramentas disponíveis na ação real",
+        "Versão Git e limites de publicação conferidos"
+      ],
+      "verification": "Confrontar evento F002 EVT-GDA-20261011-CREATION-FLOW-003",
+      "completion_gate": "F-000002-000027-002_EVIDENCE_CHECK",
+      "fallback": "Sem substituição de executor sem alocação/mandato",
+      "on_block": "Registre BLOCKED, motivo, responsável e retome sem contornar política",
+      "cost_class": "UNKNOWN",
+      "spend_limit": 0,
+      "status": "VERIFIED"
+    },
+    {
+      "action_key": "ACT-000002-000027-003",
+      "phase_code": "F-000002-000027-003",
+      "description": "Executar testes do gate determinístico inicial",
+      "result_ref": "tools/test_project_creation_gate.py",
+      "accountable_owner": "PRJ-000002_GERADOR",
+      "executor": "SCRIPT_DETERMINISTICO",
+      "executor_scope": "Gerador de Agents, sessão ou runner identificado",
+      "tool": "Python unittest tools/test_project_creation_gate.py",
+      "environment": "GitHub Actions runner Ubuntu Python 3.11",
+      "context_mode": "B0_NO_CHATGPT_PROJECT_BINDING",
+      "source_refs": [
+        "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
+        "GERADOR_WORKFLOW.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "destination_ref": "P2_GIT_PUBLICO_REPOSITORIO:thiagoba2004/gerador-de-agents",
+      "routing_action_id": "RULES_CHECK",
+      "authorization_ref": "REQ-20261011-008",
+      "preconditions": [
+        "Consulta de catálogo de executor vigente",
+        "Mandato/PEP e ferramentas disponíveis na ação real",
+        "Versão Git e limites de publicação conferidos"
+      ],
+      "verification": "Workflow run 38155476207, 12 PASS para gate inicial",
+      "completion_gate": "F-000002-000027-003_EVIDENCE_CHECK",
+      "fallback": "Sem substituição de executor sem alocação/mandato",
+      "on_block": "Registre BLOCKED, motivo, responsável e retome sem contornar política",
+      "cost_class": "UNKNOWN",
+      "spend_limit": 0,
+      "status": "VERIFIED"
+    },
+    {
+      "action_key": "ACT-000002-000027-004",
+      "phase_code": "F-000002-000027-004",
+      "description": "Versionar templates de Instruções, Comunicado A6/B8 e SCIV",
+      "result_ref": "templates/SCIV_POST_NATIVE_RECEIPT.example.json",
+      "accountable_owner": "PRJ-000002_GERADOR",
+      "executor": "CHAT",
+      "executor_scope": "Gerador de Agents, sessão ou runner identificado",
+      "tool": "GitHub connector and templates",
+      "environment": "Chat global com conector GitHub",
+      "context_mode": "B0_NO_CHATGPT_PROJECT_BINDING",
+      "source_refs": [
+        "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
+        "GERADOR_WORKFLOW.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "destination_ref": "P2_GIT_PUBLICO_REPOSITORIO:thiagoba2004/gerador-de-agents",
+      "routing_action_id": "CANONICAL_DRAFT",
+      "authorization_ref": "REQ-20261011-008",
+      "preconditions": [
+        "Consulta de catálogo de executor vigente",
+        "Mandato/PEP e ferramentas disponíveis na ação real",
+        "Versão Git e limites de publicação conferidos"
+      ],
+      "verification": "Conferir evento F004 EVT-GDA-20261011-CREATION-FLOW-006",
+      "completion_gate": "F-000002-000027-004_EVIDENCE_CHECK",
+      "fallback": "Sem substituição de executor sem alocação/mandato",
+      "on_block": "Registre BLOCKED, motivo, responsável e retome sem contornar política",
+      "cost_class": "UNKNOWN",
+      "spend_limit": 0,
+      "status": "VERIFIED"
+    },
+    {
+      "action_key": "ACT-000002-000027-005",
+      "phase_code": "F-000002-000027-005",
+      "description": "Testar novas regras de plano por ação e bloqueios sem executor/ferramenta/ambiente",
+      "result_ref": "tools/validate_execution_action_plan.py",
+      "accountable_owner": "PRJ-000002_GERADOR",
+      "executor": "SCRIPT_DETERMINISTICO",
+      "executor_scope": "Gerador de Agents, sessão ou runner identificado",
+      "tool": "Python unittest tools/test_validate_execution_action_plan.py",
+      "environment": "GitHub Actions runner Ubuntu Python 3.11",
+      "context_mode": "B0_NO_CHATGPT_PROJECT_BINDING",
+      "source_refs": [
+        "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
+        "GERADOR_WORKFLOW.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "destination_ref": "P2_GIT_PUBLICO_REPOSITORIO:thiagoba2004/gerador-de-agents",
+      "routing_action_id": "RULES_CHECK",
+      "authorization_ref": "REQ-20261011-010",
+      "preconditions": [
+        "Consulta de catálogo de executor vigente",
+        "Mandato/PEP e ferramentas disponíveis na ação real",
+        "Versão Git e limites de publicação conferidos"
+      ],
+      "verification": "Workflow run 38156803343, 12 PASS e 14 gate testes",
+      "completion_gate": "F-000002-000027-005_EVIDENCE_CHECK",
+      "fallback": "Sem substituição de executor sem alocação/mandato",
+      "on_block": "Registre BLOCKED, motivo, responsável e retome sem contornar política",
+      "cost_class": "UNKNOWN",
+      "spend_limit": 0,
+      "status": "VERIFIED"
+    },
+    {
+      "action_key": "ACT-000002-000027-006",
+      "phase_code": "F-000002-000027-005",
+      "description": "Implantar e testar gate de Site condicionado à EA local e paleta própria",
+      "result_ref": "tools/project_creation_gate.py",
+      "accountable_owner": "PRJ-000002_GERADOR",
+      "executor": "CODEX",
+      "executor_scope": "thiagoba2004/gerador-de-agents working tree",
+      "tool": "Codex CLI + Python tests",
+      "environment": "Codex em checkout thiagoba2004/gerador-de-agents",
+      "context_mode": "B0_NO_CHATGPT_PROJECT_BINDING",
+      "source_refs": [
+        "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
+        "GERADOR_WORKFLOW.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "destination_ref": "P2_GIT_PUBLICO_REPOSITORIO:thiagoba2004/gerador-de-agents",
+      "routing_action_id": "CODE_REFACTOR",
+      "authorization_ref": "REQ-20261011-009",
+      "preconditions": [
+        "Consulta de catálogo de executor vigente",
+        "Mandato/PEP e ferramentas disponíveis na ação real",
+        "Versão Git e limites de publicação conferidos"
+      ],
+      "verification": "CI/regressão; sem publicação site",
+      "completion_gate": "F-000002-000027-005_EVIDENCE_CHECK",
+      "fallback": "Sem substituição de executor sem alocação/mandato",
+      "on_block": "Registre BLOCKED, motivo, responsável e retome sem contornar política",
+      "cost_class": "UNKNOWN",
+      "spend_limit": 0,
+      "status": "PLANNED"
+    },
+    {
+      "action_key": "ACT-000002-000027-007",
+      "phase_code": "F-000002-000027-005",
+      "description": "Preparar roteiro de implantação SCIV dos quatro projetos com ações e handoff da Governança",
+      "result_ref": "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
+      "accountable_owner": "PRJ-000002_GERADOR",
+      "executor": "CHAT",
+      "executor_scope": "Gerador de Agents, sessão ou runner identificado",
+      "tool": "GitHub connector read",
+      "environment": "Chat global com conector GitHub",
+      "context_mode": "B0_NO_CHATGPT_PROJECT_BINDING",
+      "source_refs": [
+        "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
+        "GERADOR_WORKFLOW.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "destination_ref": "P2_GIT_PUBLICO_REPOSITORIO:thiagoba2004/gerador-de-agents",
+      "routing_action_id": "GITHUB_READ",
+      "authorization_ref": "REQ-20261011-008",
+      "preconditions": [
+        "Consulta de catálogo de executor vigente",
+        "Mandato/PEP e ferramentas disponíveis na ação real",
+        "Versão Git e limites de publicação conferidos"
+      ],
+      "verification": "Confrontar G0 EA-000000-000034 e quatro EAs locais, sem mutações nos alvos",
+      "completion_gate": "F-000002-000027-005_EVIDENCE_CHECK",
+      "fallback": "Sem substituição de executor sem alocação/mandato",
+      "on_block": "Registre BLOCKED, motivo, responsável e retome sem contornar política",
+      "cost_class": "UNKNOWN",
+      "spend_limit": 0,
+      "status": "PLANNED"
+    },
+    {
+      "action_key": "ACT-000002-000027-008",
+      "phase_code": "F-000002-000027-006",
+      "description": "Auditar testes de criação/Site/SCIV e aplicar readback remoto",
+      "result_ref": "audits/ea-000002-000027-final.md",
+      "accountable_owner": "PRJ-000002_GERADOR",
+      "executor": "CHAT",
+      "executor_scope": "Gerador de Agents, sessão ou runner identificado",
+      "tool": "GitHub connector read",
+      "environment": "Chat global com conector GitHub",
+      "context_mode": "B0_NO_CHATGPT_PROJECT_BINDING",
+      "source_refs": [
+        "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
+        "GERADOR_WORKFLOW.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "destination_ref": "P2_GIT_PUBLICO_REPOSITORIO:thiagoba2004/gerador-de-agents",
+      "routing_action_id": "GITHUB_READ",
+      "authorization_ref": "REQ-20261011-008",
+      "preconditions": [
+        "Consulta de catálogo de executor vigente",
+        "Mandato/PEP e ferramentas disponíveis na ação real",
+        "Versão Git e limites de publicação conferidos"
+      ],
+      "verification": "Relatório, SHAs e resultados reais",
+      "completion_gate": "F-000002-000027-006_EVIDENCE_CHECK",
+      "fallback": "Sem substituição de executor sem alocação/mandato",
+      "on_block": "Registre BLOCKED, motivo, responsável e retome sem contornar política",
+      "cost_class": "UNKNOWN",
+      "spend_limit": 0,
+      "status": "PLANNED"
+    },
+    {
+      "action_key": "ACT-000002-000027-009",
+      "phase_code": "F-000002-000027-006",
+      "description": "Reconciliar STRATEGY_LOG, estado, catálogo dual e encerrar quando gates satisfeitos",
+      "result_ref": "PROJECT_STATE.json",
+      "accountable_owner": "PRJ-000002_GERADOR",
+      "executor": "CHAT",
+      "executor_scope": "Gerador de Agents, sessão ou runner identificado",
+      "tool": "GitHub connector authorized write",
+      "environment": "Chat global com conector GitHub",
+      "context_mode": "B0_NO_CHATGPT_PROJECT_BINDING",
+      "source_refs": [
+        "estrategias/EA-000002-000027-ciclo-criacao-projeto-sciv-recebimento.md",
+        "GERADOR_WORKFLOW.md",
+        "AGENTS_KERNEL.md"
+      ],
+      "destination_ref": "P2_GIT_PUBLICO_REPOSITORIO:thiagoba2004/gerador-de-agents",
+      "routing_action_id": "GITHUB_DOC_WRITE",
+      "authorization_ref": "REQ-20261011-008",
+      "preconditions": [
+        "Consulta de catálogo de executor vigente",
+        "Mandato/PEP e ferramentas disponíveis na ação real",
+        "Versão Git e limites de publicação conferidos"
+      ],
+      "verification": "Readback + evidência de fechamento da EA-27",
+      "completion_gate": "F-000002-000027-006_EVIDENCE_CHECK",
+      "fallback": "Sem substituição de executor sem alocação/mandato",
+      "on_block": "Registre BLOCKED, motivo, responsável e retome sem contornar política",
+      "cost_class": "UNKNOWN",
+      "spend_limit": 0,
+      "status": "PLANNED"
+    }
+  ]
+}
