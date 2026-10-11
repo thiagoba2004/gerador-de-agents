@@ -109,7 +109,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "EA-000002-000027 F005: testar gate de execução por ação em Rota A e templates; finalizar gate de Site e integrar os quatro Projetos por EA-000000-000034; após testes/readback considerar F006.",
+  "next_logical_step": "EA-000002-000027 F005: concluir gate de Site e testes/compatibilidade nos quatro PRJ sob EA-000000-000034, cuja matriz tem 27 ações em 8 fases; não encerrar F005/F006 nem declarar implantação SCIV concluída sem readback.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-10-11",
   "project_code": "PRJ-000002",
@@ -292,9 +292,16 @@
   },
   "action_execution_planning": {
     "policy": "thiagoba2004/governanca-geral-modelos-ia/EXECUTION_ACTION_PLAN_STANDARD.md",
+    "mandate": "REQ-20261011-010",
     "strategy": "EA-000002-000027",
     "phase": "F-000002-000027-005",
-    "validator_status": "PUBLISHED_REGRESSION_PENDING",
-    "live_dispatch": "NOT_VERIFIED"
+    "matrix_ref": "estrategias/EA-000002-000027-actions.json",
+    "matrix_actions": 9,
+    "matrix_phases": 6,
+    "structural_validation": "VERIFIED",
+    "test_run_url": "https://github.com/thiagoba2004/gerador-de-agents/actions/runs/38157073016",
+    "new_bootstrap_gate": "FAIL_CLOSED_IF_ACTION_MATRIX_MISSING",
+    "live_dispatch": "NOT_VERIFIED",
+    "historical_actions": "PRESERVED"
   }
 }
