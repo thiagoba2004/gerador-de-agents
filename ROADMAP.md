@@ -165,3 +165,10 @@ Plano: `estrategia-padrao-atualidade-analise-observacao.md`.
 **Aditamento F005 (REQ-20261011-010):** norma de **planejamento por ação** com responsável, executor, ferramenta, ambiente, autorização, prova, custo e bloqueio; Gerador valida matriz por fase, atualiza templates e exige matriz na Rota A. A EA-000002-000027 continua F005 até readback e testes; não declarar enforcement universal do catálogo/PEP.
 
 **Checkpoint de 11/10 — Matriz por ação publicada e testada:** EA-000002-000027 tem `estrategias/EA-000002-000027-actions.json` (9 ações em 6 fases); a EA global 034 possui matriz de 27 ações/8 fases. `EXECUTION_ACTION_PLAN_STANDARD.md` é política canônica. CI [run 38157073016](https://github.com/thiagoba2004/gerador-de-agents/actions/runs/38157073016): **14 testes Rota A/SCIV + 12 testes do novo validador + arquivo real da EA27 PASS**. A F005 permanece IN_PROGRESS; site gate, rollout aos quatro PRJ e F006 continuam pendentes. Este PASS não é enforcement universal do dispatcher/PEP.
+
+
+## Checkpoint EA-034 / F002 — planos locais SCIV (11/10/2026)
+
+No escopo de EA-000002-000027 F005, o Gerador reconciliou a numeração nos logs locais dos quatro Projetos e preparou em `handoffs/sciv/EA-000000-000034/` quatro **propostas**, ainda sem CREATED nos destinatários: `EA-000022-000003` (reservar `000002` à missão/handoff), `EA-000023-000002`, `EA-000007-000003`, `EA-000008-000003`. Os perfis registram opt-in autorizado, `mode=ON_DEMAND`, **enabled=false** até provisionamento/testes. Piloto PRJ-000021 reconciliado como HUMAN_ATTESTED, sem prova independente da UI. Relatório `audits/EA-000000-000034-F002-preparacao-gerador-2026-10-11.md`.
+
+**Pendências sem promoção de fase:** Codex do Gerador executará regressões/CI; G0 corrigirá `ACT-000000-000034-003` da matriz global (que ainda aponta equivocadamente `EA-000022-000002` para SCIV). Nenhum código do PRJ, Instrução nativa, mensagem real ou website foi alterado; F002 global segue aberta, F005 local segue IN_PROGRESS.
