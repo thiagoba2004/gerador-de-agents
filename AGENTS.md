@@ -416,3 +416,16 @@ Preferir mecanismo determinístico seguro quando suficiente; usar o Chat em aná
 9. As alterações desta regra são **normativas**. Não provam criação de Projetos ChatGPT, ativação de memória C2/C3, execução automatizada ou teste de integração.
 
 **Próximo passo operacional:** quando os Projetos `PRJ-000021/022` demandarem acompanhamento conversacional contínuo, preparar e entregar aos seus Projetos ChatGPT especializados as instruções, o estado e os limites; aguardar criação/configuração humana e teste de recebimento antes de declarar aceite. A aprovação das missões setoriais por conversa não dispensa registrar fontes e estado local quando permitido.
+
+## Regra de entrega e persistência de relatórios A6/B8 — 10/10/2026
+
+**Autoridade:** `REQ-20261010-007` / `REQ-GLOBAL-20261010-018`; procedimento obrigatório em `GERADOR_WORKFLOW.md`, **seção 7**. Corrige a ausência anterior de instrução comum de localização e nomenclatura dos diagnósticos dos cinco Projetos especializados.
+
+Ao preparar qualquer **Instrução inicial** ou **prompt de homologação** de Projeto ChatGPT, especificar expressamente:
+1. o Gate correto da Rota A (`A6`) ou Rota B (`B8`);
+2. a pasta `governanca/recebimentos/` no **repositório de cada Projeto**, nunca somente no Gerador;
+3. o arquivo canônico `AAAA-MM-DD-prj-NNNNNN-gate-a6.md` ou `AAAA-MM-DD-prj-NNNNNN-gate-b8.md` com a data real do teste; iterações `-r02` etc.;
+4. o procedimento de registrar pedido, verificar fontes, classificar informação, confirmar executor e autorização, persistir GitHub e ler o resultado;
+5. que **relatório documental salvo não é Gate operacional aceito**, nem certifica B1/C3, GitHub Pages ou automação na plataforma.
+
+O Gerador deve manter o modelo/perfil do Projeto e o `AGENTS.md` local coerentes com essa convenção. Falha de escrita GitHub deve produzir `NOT_PERSISTED` com relatório pronto para retomada, nunca link inventado. Trabalhos anteriores podem ser migrados preservando história e endereços legados com ponteiros Markdown. Não reabrir Estratégias concluídas ou acrescentar despesas apenas para reorganizar relatórios.
