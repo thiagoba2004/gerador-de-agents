@@ -23,6 +23,11 @@ class CreationGateTests(unittest.TestCase):
             "last_concluded_strategy_code": "EA-000123-000001"}))
         self.write("estrategias/EA-000123-000001.md",
                    "EA-000123-000001\nF-000123-000001-001\nF-000123-000001-002")
+        from test_validate_execution_action_plan import action
+        self.write("estrategias/EA-000123-000001-actions.json", json.dumps({
+            "strategy_code": "EA-000123-000001",
+            "plan_ref": "estrategias/EA-000123-000001.md",
+            "actions": [action(1, 1), action(2, 2)]}))
     def write(self, name, value):
         dest = self.root / name
         dest.parent.mkdir(parents=True, exist_ok=True)
@@ -51,6 +56,19 @@ class CreationGateTests(unittest.TestCase):
             "sciv_test": {"classification": "NOT_VERIFIED"}}))
     def test_good_initial_strategy(self):
         self.assertEqual(inspect(self.root)["status"], "PASS")
+    def test_missing_action_matrix_blocks_new_creation(self):
+        (self.root / "estrategias/EA-000123-000001-actions.json").unlink()
+        self.assertIn("FIRST_EA_ACTION_PLAN_UNVERIFIED",
+                      inspect(self.root, route="A")["errors"])
+
+    def test_missing_action_tool_blocks_new_creation(self):
+        name = "estrategias/EA-000123-000001-actions.json"
+        data = json.loads((self.root / name).read_text())
+        data["actions"][0]["tool"] = ""
+        self.write(name, json.dumps(data))
+        self.assertIn("FIRST_EA_ACTION_PLAN_UNVERIFIED",
+                      inspect(self.root, route="A")["errors"])
+
     def test_missing_first_ea(self):
         self.write("STRATEGY_LOG.jsonl", "")
         self.assertIn("FIRST_EA_CREATED_EVENT_MISSING", inspect(self.root)["errors"])

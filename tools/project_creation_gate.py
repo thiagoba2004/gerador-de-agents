@@ -123,6 +123,13 @@ def inspect(root: Path, route: str = "A", gate: str = "bootstrap") -> dict:
                 fail("FIRST_EA_PHASE_PLAN_INCOMPLETE")
             evidence["initial_plan"] = ref
             evidence["phases"] = ids
+            if route == "A":
+                from validate_execution_action_plan import validate
+                contract = validate(root, strategy, plan_ref=ref)
+                evidence["action_plan_result"] = contract["status"]
+                if contract["status"] != "PASS":
+                    fail("FIRST_EA_ACTION_PLAN_UNVERIFIED")
+                    evidence["action_plan_errors"] = contract["errors"]
 
     if gate in ("sciv", "post_native"):
         sciv = obj("comunicados/SCIV_STATE.json")
