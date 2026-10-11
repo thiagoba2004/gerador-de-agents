@@ -90,7 +90,8 @@ def validate(root: Path, strategy_code: str,
         for key in NEEDED:
             val = item.get(key)
             if val is None or (isinstance(val, str) and
-                               (not val.strip() or val.strip().upper() in ("TBD", "TODO", "UNKNOWN"))):
+                               (not val.strip() or val.strip().upper() in ("TBD", "TODO") or
+                                (val.strip().upper() == "UNKNOWN" and key != "cost_class"))):
                 errors.append(prefix + "_MISSING_" + key.upper())
         for key in ("source_refs", "preconditions"):
             value = item.get(key)
