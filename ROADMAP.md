@@ -175,3 +175,8 @@ No escopo de EA-000002-000027 F005, o Gerador reconciliou a numeração nos logs
 
 
 **Checkpoint CODEX 11/10 — FASE 05/06 [F-000002-000027-005] — Integração e compatibilidade:** ACT-000002-000027-006 VERIFIED em escopo de implementação e regressão offline; gate Site condicional com EA própria/paleta/contraste, 73 testes PASS, matriz real PASS, commit `1ec78aa`. Evidência: [EA-000002-000027-F005-codex-site-2026-10-11.md](audits/EA-000002-000027-F005-codex-site-2026-10-11.md). F005 permanece IN_PROGRESS. Próximo executor: CHAT/Gerador ACT-007 e G0 para correção ACT-000000-000034-003; F006 ACT-008/009 pendentes. Nenhuma escrita nos quatro destinatários, SCIV habilitado, instalação nativa ou publicação.
+
+
+## Checkpoint CHAT — ACT-000002-000027-007 (11/10/2026)
+
+Confirmada por leitura remota a correspondência dos quatro Planos preparatórios SCIV de seis fases com os perfis `ON_DEMAND` autorizados, `enabled=false`, e logs locais sem CREATED. Corrigido no plano/matriz da EA global o código do PRJ-000022 para **EA-000022-000003**; `EA-000022-000002` permanece reservada à finalidade de missão/handoff a formalizar, não a SCIV. **ACT-007 VERIFIED no escopo de conferência documental read-only**, conforme `audits/EA-000002-000027-F005-chat-sciv-handoff-2026-10-11.md`. ACT-006 continua VERIFIED (Codex, 73 testes, CI 38167801309). F005 permanece **IN_PROGRESS**, sem avançar F006, sem EAs locais criadas, sem instalação nativa ou alteração nos quatro alvos. Próxima frente: G0 decide gate F002 da EA-034 sem presumir provisionamento; se for bloqueado, persistir motivo e responsável.
