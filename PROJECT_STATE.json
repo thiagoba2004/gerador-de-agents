@@ -295,8 +295,10 @@
       "report": "audits/EA-000002-000027-F005-codex-site-2026-10-11.md",
       "implementation_commit": "1ec78aa",
       "local_tests": 73,
-      "ci_status": "PENDING_REMOTE_EXECUTION",
-      "public_sites_verified": 0
+      "ci_status": "SUCCESS",
+      "public_sites_verified": 0,
+      "ci_run_url": "https://github.com/thiagoba2004/gerador-de-agents/actions/runs/38167801309",
+      "verified_remote_checkpoint": "fa121eaa67eee89e72c697b389575c6f1afdbe4f"
     }
   },
   "action_execution_planning": {
