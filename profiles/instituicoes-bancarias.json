@@ -11,7 +11,7 @@
   "generator_release": "1.26",
   "kernel_version": "1.11",
   "route": "A_NEW_PROJECT",
-  "project_purpose": "NOT_YET_DEFINED_BY_HUMAN",
+  "project_purpose": "Estudar, organizar e comparar documentalmente bancos e instituições financeiras brasileiras, conforme REQ-000022-20261010-002; sem prestar serviços financeiros nem alegar vínculo oficial.",
   "project_topic_from_explicit_name": "instituições bancárias",
   "public_repository": true,
   "visibility_verified_on": "2026-10-10",
@@ -199,8 +199,8 @@
   ],
   "publication_policy": "PUBLIC_REPOSITORY_NOT_SITE",
   "confidential_data_allowed": false,
-  "substantive_scope_gate": "AWAITING_HUMAN_DECISION",
-  "migration_status": "TECHNICAL_BOOTSTRAP_VERIFIED_SUBSTANTIVE_SCOPE_PENDING",
+  "substantive_scope_gate": "MISSION_APPROVED_HANDOFF_AND_FIRST_DELIVERABLES_PENDING",
+  "migration_status": "TECHNICAL_BOOTSTRAP_VERIFIED_MISSION_APPROVED_A6_PENDING",
   "updated_at": "2026-10-10",
   "initialization_gate": "PUBLIC_PROJECT_TECHNICAL_BOOTSTRAP_VERIFIED",
   "verified_at": "2026-10-10",
@@ -212,5 +212,26 @@
     "scope_definition_pending": true,
     "pages_not_requested": true,
     "no_new_expense": true
-  }
+  },
+  "sciv_bootstrap": {
+    "enabled": false,
+    "opt_in_authorized": true,
+    "opt_in_authority": "REQ-GLOBAL-20261011-001 / EA-000000-000034; autorização de rollout, não prova de provisionamento",
+    "mode": "ON_DEMAND",
+    "rollout_status": "AUTHORIZED_NOT_PROVISIONED",
+    "planned_local_strategy": "EA-000022-000003",
+    "local_strategy_status": "CANDIDATE_NOT_CREATED",
+    "staged_plan_ref": "handoffs/sciv/EA-000000-000034/PRJ-000022-plano-local-proposto.md",
+    "planned_gate": "A6",
+    "operational_ref": "main",
+    "state_path": "comunicados/SCIV_STATE.json",
+    "state_path_status": "NOT_PRESENT_IN_TARGET_AT_AUDIT",
+    "native_installation": "NOT_VERIFIED",
+    "functional_on_demand_test": "NOT_EXECUTED",
+    "requirements": "Somente habilitar enabled=true após EA local criada, caixas/estado/adaptador existentes e readback; rejeitar polling e gatilhos automáticos",
+    "checked_at": "2026-10-11"
+  },
+  "approved_mission_ref": "thiagoba2004/instituicoes-bancarias/REQUEST_LOG.jsonl#REQ-000022-20261010-002",
+  "mission_approval_status": "APPROVED_BY_HUMAN_IN_REQUEST_NOT_YET_RECONCILED_IN_TARGET_STATE",
+  "context_C3_status": "APPROVED_AS_RECOMMENDATION_NOT_VERIFIED_NATIVE_BINDING"
 }
