@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0.0",
+  "strategy_code": "EA-{{PROJECT_SEQUENCE}}-{{STRATEGY_SEQUENCE}}",
+  "plan_ref": "estrategias/EA-{{PROJECT_SEQUENCE}}-{{STRATEGY_SEQUENCE}}-plano.md",
+  "actions": [
+    {
+      "action_key": "ACT-{{PROJECT_SEQUENCE}}-{{STRATEGY_SEQUENCE}}-001",
+      "phase_code": "F-{{PROJECT_SEQUENCE}}-{{STRATEGY_SEQUENCE}}-001",
+      "description": "Descrever a entrega verificável da fase 1",
+      "result_ref": "caminho/do/artefato-de-saida",
+      "accountable_owner": "OWNER_PRJ_OU_GOVERNANCA",
+      "executor": "CHAT",
+      "executor_scope": "CHAT_GLOBAL_OU_PROJETO_CHATGPT_C3_COM_VINCULO_PROVADO",
+      "tool": "GITHUB_CONNECTOR_OU_OUTRA_FERRAMENTA_COMPROVADA",
+      "environment": "CHAT_GLOBAL_COM_GITHUB_CONECTADO",
+      "context_mode": "B0_OU_B1_C3_COMPROVADO",
+      "source_refs": [
+        "fonte/canonica/identificada"
+      ],
+      "destination_ref": "P1_OU_P2_DESTINO_VALIDADO",
+      "routing_action_id": "GITHUB_DOC_WRITE",
+      "authorization_ref": "NOT_GRANTED",
+      "preconditions": [
+        "identidade PRJ/EA/F confirmada",
+        "autorização e segurança para escrita",
+        "conector realmente disponível"
+      ],
+      "verification": "readback por SHA/commit e conferência do gate",
+      "completion_gate": "NOME_DO_GATE_DA_FASE",
+      "fallback": "BLOCKED_IF_NOT_AUTHORIZED",
+      "on_block": "registrar owner, causa, ação pendente; sem contornar ferramenta",
+      "cost_class": "UNKNOWN_REQUIRES_PREFLIGHT",
+      "spend_limit": 0,
+      "status": "PLANNED"
+    },
+    {
+      "action_key": "ACT-{{PROJECT_SEQUENCE}}-{{STRATEGY_SEQUENCE}}-002",
+      "phase_code": "F-{{PROJECT_SEQUENCE}}-{{STRATEGY_SEQUENCE}}-002",
+      "description": "Descrever a entrega verificável da fase 2",
+      "result_ref": "caminho/do/artefato-de-saida",
+      "accountable_owner": "OWNER_PRJ_OU_GOVERNANCA",
+      "executor": "CHAT",
+      "executor_scope": "CHAT_GLOBAL_OU_PROJETO_CHATGPT_C3_COM_VINCULO_PROVADO",
+      "tool": "GITHUB_CONNECTOR_OU_OUTRA_FERRAMENTA_COMPROVADA",
+      "environment": "CHAT_GLOBAL_COM_GITHUB_CONECTADO",
+      "context_mode": "B0_OU_B1_C3_COMPROVADO",
+      "source_refs": [
+        "fonte/canonica/identificada"
+      ],
+      "destination_ref": "P1_OU_P2_DESTINO_VALIDADO",
+      "routing_action_id": "GITHUB_DOC_WRITE",
+      "authorization_ref": "NOT_GRANTED",
+      "preconditions": [
+        "identidade PRJ/EA/F confirmada",
+        "autorização e segurança para escrita",
+        "conector realmente disponível"
+      ],
+      "verification": "readback por SHA/commit e conferência do gate",
+      "completion_gate": "NOME_DO_GATE_DA_FASE",
+      "fallback": "BLOCKED_IF_NOT_AUTHORIZED",
+      "on_block": "registrar owner, causa, ação pendente; sem contornar ferramenta",
+      "cost_class": "UNKNOWN_REQUIRES_PREFLIGHT",
+      "spend_limit": 0,
+      "status": "PLANNED"
+    }
+  ]
+}
