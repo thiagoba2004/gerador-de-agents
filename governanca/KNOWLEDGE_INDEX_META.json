@@ -1,7 +1,7 @@
 {
   "deterministic": true,
   "extensions": {
-    ".json": 30,
+    ".json": 31,
     ".jsonl": 10,
     ".md": 110,
     ".py": 8,
@@ -9,7 +9,7 @@
   },
   "generator": "tools/build_knowledge_index.py",
   "index_file": "governanca/KNOWLEDGE_INDEX.jsonl",
-  "record_count": 159,
+  "record_count": 160,
   "schema_version": "1.0",
   "semantic_tag_counts": {
     "bdtd_ibict": 18,
