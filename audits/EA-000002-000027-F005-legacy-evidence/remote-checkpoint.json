@@ -1,0 +1,37 @@
+{
+  "classification": "S1_INTERNO_NAO_SENSIVEL",
+  "surface": "P2_GIT_PUBLICO_REPOSITORIO",
+  "implementation_commit": "8a25dbdf37404016719b8595fca6fc3e3c354620",
+  "verified_remote_main_checkpoint": "7785a4e3f4675de51521c4afc5c9b953b6cac597",
+  "ci_run_id": 38190729893,
+  "ci_url": "https://github.com/thiagoba2004/gerador-de-agents/actions/runs/38190729893",
+  "ci_status": "completed",
+  "ci_conclusion": "success",
+  "ci_job_id": 114622735981,
+  "ci_tests_passed": 88,
+  "ci_action_matrix": "PASS_10_ACTIONS_6_PHASES",
+  "readback": "GITHUB_CONNECTOR_BLOB_SHA_MATCHES_GIT_OBJECTS",
+  "blobs": [
+    {
+      "path": "audits/EA-000002-000027-F005-codex-legacy-matrix-2026-10-11.md",
+      "sha": "9fe6b96443fdd39306f5642e8b0087aeb8ef2895",
+      "status": "fulfilled"
+    },
+    {
+      "path": "estrategias/EA-000002-000027-actions.json",
+      "sha": "73675fc167ca2ada4c37936681fe6be7b8562f5f",
+      "status": "fulfilled"
+    },
+    {
+      "path": "tools/project_creation_gate.py",
+      "sha": "14e655fe9e455552695a25e024a015d6f73a2d39",
+      "status": "fulfilled"
+    },
+    {
+      "path": "audits/EA-000002-000027-F005-legacy-evidence/prj000022-sciv-gate.json",
+      "sha": "6fe7f25b5e8c0d00b14666b7d407ecade6228576",
+      "status": "fulfilled"
+    }
+  ],
+  "target_repository_writes": 0
+}

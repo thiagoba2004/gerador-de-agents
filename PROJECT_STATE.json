@@ -109,7 +109,7 @@
     "Backfill progressivo de outras estratégias do Classe e Massas pertence ao STRATEGY_LOG.jsonl local daquele projeto.",
     "Testes adicionais da Rota A e expansão de módulos são evolução futura, não requisito do bootstrap."
   ],
-  "next_logical_step": "EA027 F005 permanece em curso. ACT010 corrigida: CI/readback remoto; CODEX PRJ000022 repete F004 apos remediacao runtime branch/symlink pela G0. F006 nao iniciada; nenhuma escrita nos destinatarios.",
+  "next_logical_step": "EA027 F005 permanece em curso; ACT010 VERIFIED (88 testes, CI e readback remoto). CODEX PRJ000022 repete F004 apos remediacao runtime branch/symlink pela G0. F006 nao iniciada; nenhuma escrita nos destinatarios.",
   "chat_only_work_is_not_persisted": true,
   "updated_at": "2026-10-11",
   "project_code": "PRJ-000002",
@@ -349,20 +349,24 @@
     "codex_prj22_report": "thiagoba2004/instituicoes-bancarias/auditorias/EA-000022-000003-codex-f002-f004-2026-10-11.md",
     "prj000022_native_adapter_reconciliation_commit": "5d140d0fad7d1f0d89e4e167e28c8a09c4f2cc0d",
     "prj000022_runtime_enabled": false,
-    "generator_act010": "VERIFIED_LOCAL_REGRESSIONS_REMOTE_CHECKPOINT_PENDING",
+    "generator_act010": "VERIFIED_REMOTE_CI_88_TESTS",
     "generator_act010_handoff_ref": "handoffs/codex/EA-000002-000027-F005-LEGACY-MATRIX-GATE.md",
     "g0_runtime_act028": "PLANNED_EXECUTOR_CODEX_LOCAL_G0",
     "generator_act010_report": "audits/EA-000002-000027-F005-codex-legacy-matrix-2026-10-11.md"
   },
   "legacy_matrix_gate": {
     "action_key": "ACT-000002-000027-010",
-    "status": "VERIFIED_LOCAL_REMOTE_CHECKPOINT_PENDING",
+    "status": "VERIFIED_REMOTE_CI",
     "report": "audits/EA-000002-000027-F005-codex-legacy-matrix-2026-10-11.md",
     "tests_passed": 88,
     "historical_matrix_result": "NOT_BACKFILLED",
     "prj000022_documentary_sciv_gate": "PASS_READ_ONLY",
     "prj000022_historical_proof_commit": "a1e29f575bd82e7f9a129fcdf2eb2d8cdc4dc9de",
     "target_writes": 0,
-    "runtime_native_acceptance": false
+    "runtime_native_acceptance": false,
+    "implementation_commit": "8a25dbdf37404016719b8595fca6fc3e3c354620",
+    "ci_status": "SUCCESS",
+    "ci_run_url": "https://github.com/thiagoba2004/gerador-de-agents/actions/runs/38190729893",
+    "verified_remote_checkpoint": "7785a4e3f4675de51521c4afc5c9b953b6cac597"
   }
 }
