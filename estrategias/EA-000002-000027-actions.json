@@ -328,16 +328,16 @@
         "Não afrouxar gate da Rota A nova, plano corrente nem teste SCIV",
         "Sem editar repositórios PRJ000022 ou G0 nesta ação"
       ],
-      "verification": "Testes positivos/negativos de legado versus Rota A nova, suites de regressão e readback Git; CODEX deve executar, não comprovado aqui.",
+      "verification": "88 testes locais PASS; PRJ000022 SCIV PASS com NOT_BACKFILLED e EA000003 matriz PASS; bootstrap estrito FAIL esperado. CI/readback remoto no checkpoint subsequente.",
       "completion_gate": "F-000002-000027-005_LEGACY_MATRIX_COMPAT_REGRESSION_VERIFIED",
       "fallback": "Sem substituição de executor sem alocação/mandato",
       "on_block": "Registre BLOCKED, motivo, responsável e retome sem contornar política",
       "cost_class": "NO_NEW_SPEND",
       "spend_limit": 0,
-      "status": "PLANNED",
+      "status": "VERIFIED",
       "evidence_refs": [
-        "handoffs/codex/EA-000002-000027-F005-LEGACY-MATRIX-GATE.md",
-        "thiagoba2004/instituicoes-bancarias/auditorias/EA-000022-000003-codex-f002-f004-2026-10-11.md"
+        "audits/EA-000002-000027-F005-codex-legacy-matrix-2026-10-11.md",
+        "audits/EA-000002-000027-F005-legacy-evidence/prj000022-sciv-gate.json"
       ]
     }
   ]

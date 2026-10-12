@@ -35,8 +35,23 @@ class CreationGateTests(unittest.TestCase):
         dest.parent.mkdir(parents=True, exist_ok=True)
         dest.write_text(value, encoding="utf-8")
     def setup_sciv(self):
+        strategy = "EA-000123-000003"
+        ref = f"estrategias/{strategy}.md"
+        log = (self.root / "STRATEGY_LOG.jsonl").read_text(encoding="utf-8")
+        self.write("STRATEGY_LOG.jsonl", log + json.dumps({
+            "event_type": "CREATED", "strategy_code": strategy, "plan_ref": ref}) + "\n")
+        roadmap = (self.root / "ROADMAP.md").read_text(encoding="utf-8")
+        self.write("ROADMAP.md", roadmap + "\n" + strategy)
+        self.write(ref, strategy + "\nF-000123-000003-001\nF-000123-000003-002")
+        from test_validate_execution_action_plan import action
+        actions = [action(1, 1), action(2, 2)]
+        for item in actions:
+            for key in ("action_key", "phase_code"):
+                item[key] = item[key].replace("000123-000001", "000123-000003")
+        self.write(f"estrategias/{strategy}-actions.json", json.dumps({
+            "strategy_code": strategy, "plan_ref": ref, "actions": actions}))
         self.write("comunicados/SCIV_STATE.json", json.dumps({
-            "project_code": "PRJ-000123", "mode": "ON_DEMAND",
+            "project_code": "PRJ-000123", "strategy_code": strategy, "mode": "ON_DEMAND",
             "operational_ref": "main",
             "inbox": "comunicados/governanca-geral/mensagens",
             "outbox": "comunicados/ia-especializada/mensagens"}))

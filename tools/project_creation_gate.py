@@ -139,13 +139,24 @@ def inspect(root: Path, route: str = "A", gate: str = "bootstrap") -> dict:
                 fail("FIRST_EA_PHASE_PLAN_INCOMPLETE")
             evidence["initial_plan"] = ref
             evidence["phases"] = ids
-            if route == "A":
+            if route == "A" or gate != "bootstrap":
                 from validate_execution_action_plan import validate
                 contract = validate(root, strategy, plan_ref=ref)
                 evidence["action_plan_result"] = contract["status"]
                 if contract["status"] != "PASS":
-                    fail("FIRST_EA_ACTION_PLAN_UNVERIFIED")
                     evidence["action_plan_errors"] = contract["errors"]
+                    # Only absence is eligible; a malformed/unsafe existing
+                    # matrix is never excused, and bootstrap always stays strict.
+                    matrix = root / f"estrategias/{strategy}-actions.json"
+                    proof = None
+                    if gate != "bootstrap" and not matrix.exists() and not matrix.is_symlink() and not errors:
+                        from legacy_bootstrap_evidence import legacy_proof
+                        proof = legacy_proof(root, first, history, requests, plan)
+                    if proof:
+                        evidence["action_plan_result"] = "NOT_BACKFILLED"
+                        evidence["legacy_bootstrap"] = proof
+                    else:
+                        fail("FIRST_EA_ACTION_PLAN_UNVERIFIED")
 
     # Module decisions live in PROJECT_STATE; the separate publication state can
     # also trigger the requirement. Existing projects without Site remain valid.
@@ -266,6 +277,34 @@ def inspect(root: Path, route: str = "A", gate: str = "bootstrap") -> dict:
 
     if gate in ("sciv", "post_native"):
         sciv = obj("comunicados/SCIV_STATE.json")
+        # The historical bootstrap exemption never covers the current rollout.
+        rollout = sciv.get("strategy_code")
+        sm = STRATEGY_RE.fullmatch(rollout) if isinstance(rollout, str) else None
+        if not sm or sm.group(1) != number or rollout == evidence.get("initial_strategy"):
+            fail("SCIV_SEPARATE_STRATEGY_REQUIRED")
+        else:
+            matches = [e for e in created if e["strategy_code"] == rollout]
+            if len(matches) != 1:
+                fail("SCIV_EA_CREATED_NOT_UNIQUE")
+            else:
+                from validate_execution_action_plan import validate
+                ref = matches[0].get("plan_ref")
+                if not isinstance(ref, str) or not ref.startswith("estrategias/"):
+                    fail("SCIV_PLAN_REF_MISSING")
+                else:
+                    plan = document(ref)
+                    ids = sorted({int(c) for a, b, c in PHASE_RE.findall(plan)
+                                  if rollout == f"EA-{a}-{b}"})
+                    if rollout not in plan or len(ids) < 2 or ids != list(range(1, max(ids, default=0) + 1)):
+                        fail("SCIV_PHASE_PLAN_INCOMPLETE")
+                    contract = validate(root, rollout, plan_ref=ref)
+                    evidence["sciv_action_plan_result"] = contract["status"]
+                    if contract["status"] != "PASS":
+                        fail("SCIV_ACTION_PLAN_UNVERIFIED")
+                        evidence["sciv_action_plan_errors"] = contract["errors"]
+                    if rollout not in roadmap:
+                        fail("SCIV_ROADMAP_REFERENCE_MISSING")
+                    evidence["sciv_strategy"] = rollout
         if sciv.get("project_code") != code:
             fail("SCIV_PROJECT_MISMATCH")
         if sciv.get("mode", (sciv.get("bootstrap") or {}).get("mode")) != "ON_DEMAND":
