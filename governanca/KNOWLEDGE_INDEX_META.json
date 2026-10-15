@@ -1,22 +1,22 @@
 {
   "deterministic": true,
   "extensions": {
-    ".json": 31,
+    ".json": 36,
     ".jsonl": 10,
-    ".md": 110,
+    ".md": 111,
     ".py": 8,
     ".yml": 1
   },
   "generator": "tools/build_knowledge_index.py",
   "index_file": "governanca/KNOWLEDGE_INDEX.jsonl",
-  "record_count": 160,
+  "record_count": 166,
   "schema_version": "1.0",
   "semantic_tag_counts": {
     "bdtd_ibict": 18,
-    "editorial": 71,
+    "editorial": 73,
     "financeiro": 28,
-    "fonte": 69,
-    "governanca": 112,
+    "fonte": 70,
+    "governanca": 115,
     "juridico": 9,
     "pesquisa_academica": 29,
     "superendividamento": 7,
