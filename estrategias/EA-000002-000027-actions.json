@@ -342,6 +342,44 @@
         "https://github.com/thiagoba2004/gerador-de-agents/actions/runs/38190729893",
         "audits/EA-000002-000027-F005-legacy-evidence/remote-checkpoint.json"
       ]
+    },
+    {
+      "action_key": "ACT-000002-000027-011",
+      "phase_code": "F-000002-000027-005",
+      "description": "Corrigir compatibilidade historica Rota B da issue #1 com prova Git estrita, testes negativos, rerun read-only e readback",
+      "result_ref": "audits/EA-000002-000027-F005-issue1-2026-10-15.md",
+      "accountable_owner": "PRJ-000002_GERADOR",
+      "executor": "CODEX",
+      "executor_scope": "Codex CLI local exclusivamente no checkout thiagoba2004/gerador-de-agents",
+      "tool": "Codex CLI + Python unittest + Git",
+      "environment": "Codex Local CLI no checkout do Gerador de Agents",
+      "context_mode": "B0_NO_CHATGPT_PROJECT_BINDING",
+      "source_refs": [
+        "https://github.com/thiagoba2004/gerador-de-agents/issues/1#issuecomment-6204036458",
+        "tools/legacy_bootstrap_evidence.py",
+        "tools/test_legacy_bootstrap_gate.py"
+      ],
+      "destination_ref": "P2_GIT_PUBLICO_REPOSITORIO:thiagoba2004/gerador-de-agents",
+      "routing_action_id": "PROJECT_MULTIFILE_CODE",
+      "authorization_ref": "REQ-20261015-CODEX-ISSUE001-001; issue #1 e issuecomment-6204036458",
+      "preconditions": [
+        "Conferir baseline e HEAD do Gerador, sem perda de worktrees",
+        "Comprovar elegibilidade documental de bootstrap anterior à norma, não confiar só em data declarada",
+        "Não afrouxar gate da Rota A nova, plano corrente nem teste SCIV",
+        "Sem editar repositórios PRJ000022 ou G0 nesta ação"
+      ],
+      "verification": "97 testes locais PASS; snapshot real PRJ000007 Rota B SCIV PASS; matriz atual PASS; publicacao/CI/readback pendentes",
+      "completion_gate": "ISSUE001_ROUTE_B_HISTORICAL_COMPAT_VERIFIED",
+      "fallback": "Sem substituição de executor sem alocação/mandato",
+      "on_block": "Registre BLOCKED, motivo, responsável e retome sem contornar política",
+      "cost_class": "NO_NEW_SPEND",
+      "spend_limit": 0,
+      "status": "VERIFIED",
+      "evidence_refs": [
+        "audits/EA-000002-000027-F005-issue1-2026-10-15.md",
+        "audits/EA-000002-000027-F005-issue1-evidence/after.json"
+      ],
+      "verified_scope": "LOCAL_TESTS_AND_READ_ONLY_SNAPSHOT_REMOTE_PENDING"
     }
   ]
 }

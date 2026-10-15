@@ -172,5 +172,120 @@ class LegacyGateTests(unittest.TestCase):
                 self.assertEqual(inspect(self.root, gate="post_native")["status"], "FAIL")
 
 
+class LegacyRouteBTests(unittest.TestCase):
+    setUp = fixtures.CreationGateTests.setUp
+    write = fixtures.CreationGateTests.write
+    setup_sciv = fixtures.CreationGateTests.setup_sciv
+    git = LegacyGateTests.git
+    legacy = LegacyGateTests.legacy
+    change_event = LegacyGateTests.change_event
+
+    def historical_b(self, *, terminal_updates=None, first_updates=None, plan_suffix="",
+                     stamp="2026-10-10T12:00:00-03:00"):
+        self.legacy()
+        path = self.root / "STRATEGY_LOG.jsonl"
+        first, terminal = [json.loads(s) for s in path.read_text().splitlines()]
+        terminal.pop("terminal_gate")
+        terminal.pop("phase_total")
+        terminal["gate"] = "PUBLIC_DOCUMENTARY_CONSTITUTION_VERIFIED"
+        first.update(first_updates or {})
+        terminal.update(terminal_updates or {})
+        self.write("STRATEGY_LOG.jsonl", json.dumps(first) + "\n" + json.dumps(terminal) + "\n")
+        self.write("estrategias/EA-000123-000001.md", "EA-000123-000001\n"
+                   "F-000123-000001-001\nF-000123-000001-002 Gate: "
+                   "`PUBLIC_DOCUMENTARY_CONSTITUTION_VERIFIED`\n" + plan_suffix)
+        self.git("add", ".")
+        self.git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.test",
+                 "commit", "--amend", "--no-edit", stamp=stamp)
+        self.setup_sciv()
+
+    def blocked(self):
+        result = inspect(self.root, route="B", gate="sciv")
+        self.assertIn("FIRST_EA_ACTION_PLAN_UNVERIFIED", result["errors"], result)
+        self.assertNotIn("legacy_bootstrap", result["evidence"])
+
+    def test_evidenced_route_b_alias_and_total_from_created(self):
+        self.historical_b()
+        before = {p.relative_to(self.root): p.read_bytes() for p in self.root.rglob("*")
+                  if p.is_file() and ".git" not in p.relative_to(self.root).parts}
+        result = inspect(self.root, route="B", gate="sciv")
+        self.assertEqual(result["status"], "PASS", result)
+        self.assertEqual(result["evidence"]["action_plan_result"], "NOT_BACKFILLED")
+        contract = result["evidence"]["legacy_bootstrap"]["terminal_contract"]
+        self.assertEqual(contract["gate_source"], "gate")
+        self.assertEqual(contract["phase_total_source"], "CREATED")
+        self.assertEqual(result, inspect(self.root, route="B", gate="sciv"))
+        self.assertEqual(before, {p.relative_to(self.root): p.read_bytes() for p in self.root.rglob("*")
+                                 if p.is_file() and ".git" not in p.relative_to(self.root).parts})
+
+    def test_versioned_contradictory_or_untyped_terminal_fields(self):
+        for update in ({"gate": "FALSE_GATE"}, {"gate": ["PUBLIC_DOCUMENTARY_CONSTITUTION_VERIFIED"]},
+                       {"terminal_gate": "OTHER"}, {"terminal_gate": None},
+                       {"phase_total": None}, {"phase_total": "2"}, {"phase_total": True},
+                       {"phase_total": 3}, {"phase_number": 1}, {"phase_number": 2.0}):
+            with self.subTest(update=update):
+                self.setUp(); self.historical_b(terminal_updates=update); self.blocked()
+
+    def test_invalid_created_total_or_missing_phase(self):
+        for update in ({"phase_total": None}, {"phase_total": "2"}, {"phase_total": 3}):
+            with self.subTest(update=update):
+                self.setUp(); self.historical_b(first_updates=update); self.blocked()
+
+    def test_alias_must_equal_last_phase_gate_in_versioned_plan(self):
+        self.historical_b()
+        ref = "estrategias/EA-000123-000001.md"
+        for text in ("EA-000123-000001\nF-000123-000001-001\nF-000123-000001-002 Gate: `OTHER`",
+                     "EA-000123-000001\nF-000123-000001-001 Gate: `PUBLIC_DOCUMENTARY_CONSTITUTION_VERIFIED`\nF-000123-000001-002"):
+            self.write(ref, text)
+            self.git("add", ref)
+            self.git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.test",
+                     "commit", "--amend", "--no-edit")
+            self.blocked()
+
+    def test_legacy_alias_never_accepts_only_worktree_or_post_cutoff_proof(self):
+        self.legacy(); self.setup_sciv()
+        records = [json.loads(s) for s in (self.root / "STRATEGY_LOG.jsonl").read_text().splitlines()]
+        records[1].pop("terminal_gate"); records[1].pop("phase_total")
+        records[1]["gate"] = "PUBLIC_DOCUMENTARY_CONSTITUTION_VERIFIED"
+        self.write("STRATEGY_LOG.jsonl", "\n".join(map(json.dumps, records)) + "\n")
+        self.write("estrategias/EA-000123-000001.md", "EA-000123-000001\nF-000123-000001-001\n"
+                   "F-000123-000001-002 Gate: `PUBLIC_DOCUMENTARY_CONSTITUTION_VERIFIED`")
+        self.blocked()
+        self.setUp(); self.historical_b(stamp="2026-10-11T00:00:00-03:00"); self.blocked()
+
+    def test_shallow_history_rejected_even_when_snapshot_is_available(self):
+        self.historical_b()
+        (self.root / ".git/shallow").write_text(self.git("rev-parse", "HEAD") + "\n")
+        self.assertEqual(self.git("rev-parse", "--is-shallow-repository"), "true")
+        self.blocked()
+
+    def test_alias_does_not_excuse_historical_or_current_bad_matrix(self):
+        for sequence, error in ((1, "FIRST_EA_ACTION_PLAN_UNVERIFIED"),
+                                (3, "SCIV_ACTION_PLAN_UNVERIFIED")):
+            with self.subTest(sequence=sequence):
+                self.setUp(); self.historical_b()
+                self.write(f"estrategias/EA-000123-{sequence:06d}-actions.json", "{}")
+                self.assertIn(error, inspect(self.root, route="B", gate="sciv")["errors"])
+
+    def test_existing_canonical_gate_and_absent_total_require_terminal_plan_match(self):
+        self.historical_b(terminal_updates={"terminal_gate": "PUBLIC_DOCUMENTARY_CONSTITUTION_VERIFIED"})
+        result = inspect(self.root, route="B", gate="sciv")
+        self.assertEqual(result["status"], "PASS", result)
+        self.assertEqual(result["evidence"]["legacy_bootstrap"]["terminal_contract"]["phase_total_source"], "CREATED")
+        self.setUp()
+        self.historical_b(terminal_updates={"terminal_gate": "OTHER", "gate": "OTHER"})
+        self.blocked()
+
+    def test_preexisting_historical_matrix_cannot_be_removed_to_claim_not_backfilled(self):
+        self.historical_b()
+        name = "estrategias/EA-000123-000001-actions.json"
+        self.write(name, "{}")
+        self.git("add", name)
+        self.git("-c", "user.name=Fixture", "-c", "user.email=fixture@example.test",
+                 "commit", "--amend", "--no-edit")
+        (self.root / name).unlink()
+        self.blocked()
+
+
 if __name__ == "__main__":
     unittest.main()

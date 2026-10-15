@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "strategy_code": "EA-000002-000027",
+  "matrix_ref": "estrategias/EA-000002-000027-actions.json",
+  "declared_actions": 11,
+  "phases_covered": 6,
+  "phase_total": 6,
+  "errors": [],
+  "limitation": "Structural contract only; action_id catalog routing, capability, PEP authorization and effects require independent runtime checks."
+}

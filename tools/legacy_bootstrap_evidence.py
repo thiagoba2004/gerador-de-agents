@@ -7,6 +7,35 @@ import subprocess
 
 EFFECTIVE_DATE = date(2026, 10, 11)
 CUTOFF = datetime.fromisoformat("2026-10-11T00:00:00-03:00")
+LEGACY_DOCUMENTARY_GATE = "PUBLIC_DOCUMENTARY_CONSTITUTION_VERIFIED"
+
+
+def terminal_contract(first: dict, terminal: dict, plan: str) -> dict | None:
+    """Interpret only the evidenced historical alias; never repair contradictions."""
+    phases = first.get("phase_total")
+    if type(phases) is not int or phases < 2:
+        return None
+    total = terminal.get("phase_total", phases)
+    number = terminal.get("phase_number")
+    if type(total) is not int or total != phases or type(number) is not int or number != phases:
+        return None
+    gate = terminal.get("terminal_gate") if "terminal_gate" in terminal else terminal.get("gate")
+    if not isinstance(gate, str) or not gate.strip():
+        return None
+    if "gate" in terminal and (not isinstance(terminal["gate"], str) or terminal["gate"] != gate):
+        return None
+    alias = "terminal_gate" not in terminal
+    if alias and gate != LEGACY_DOCUMENTARY_GATE:
+        return None
+    if alias or "phase_total" not in terminal or gate == LEGACY_DOCUMENTARY_GATE:
+        # The legacy alias is valid only on the last numbered phase's own line.
+        phase = f"F-{first['strategy_code'][3:]}-{phases:03d}"
+        lines = [line for line in plan.splitlines() if phase in line]
+        if len(lines) != 1 or re.findall(r"Gate:\s*`([A-Z][A-Z0-9_]+)`", lines[0]) != [gate]:
+            return None
+    return {"terminal_gate": gate, "gate_source": "gate" if alias else "terminal_gate",
+            "phase_total": total,
+            "phase_total_source": "CONCLUDED" if "phase_total" in terminal else "CREATED"}
 
 
 def legacy_proof(root: Path, first: dict, history: list[dict],
@@ -25,12 +54,14 @@ def legacy_proof(root: Path, first: dict, history: list[dict],
         return None
     terminal = concluded[0]
     strategy_events = [e for e in history if e.get("strategy_code") == strategy]
+    if [e for e in strategy_events if e.get("event_type") == "CREATED"] != [first]:
+        return None
+    contract = terminal_contract(first, terminal, plan)
     phases = first.get("phase_total")
     plan_phases = {int(n) for n in re.findall(
         rf"F-{re.escape(strategy[3:])}-(\d{{3}})", plan)}
     if (strategy_events[-1] != terminal or terminal.get("status") not in ("CONCLUIDO", "CONCLUDED", "COMPLETED")
-            or not terminal.get("terminal_gate") or not isinstance(phases, int) or phases < 2
-            or terminal.get("phase_total") != phases or terminal.get("phase_number") != phases
+            or contract is None
             or plan_phases != set(range(1, phases + 1))):
         return None
     try:
@@ -58,6 +89,8 @@ def legacy_proof(root: Path, first: dict, history: list[dict],
     try:
         if Path(git("rev-parse", "--show-toplevel").strip()).resolve() != root:
             return None
+        if git("rev-parse", "--is-shallow-repository").strip() != "false":
+            return None
         # Require an ancestor of HEAD with both author and committer before policy.
         for line in git("log", "--format=%H %aI %cI", "HEAD").splitlines():
             sha, author, committer = line.split()
@@ -69,6 +102,8 @@ def legacy_proof(root: Path, first: dict, history: list[dict],
             if first not in old_history or terminal not in old_history:
                 continue
             if not all(e in old_requests for e in linked) or git("show", f"{sha}:{ref}") != plan:
+                continue
+            if git("ls-tree", "--name-only", sha, "--", f"estrategias/{strategy}-actions.json").strip():
                 continue
             project = "PRJ-" + strategy.split("-")[1]
             if (project not in git("show", f"{sha}:AGENTS.md") or
@@ -82,7 +117,8 @@ def legacy_proof(root: Path, first: dict, history: list[dict],
                     "effective_date": EFFECTIVE_DATE.isoformat(),
                     "refs": ["STRATEGY_LOG.jsonl", "REQUEST_LOG.jsonl", ref],
                     "created_event": first.get("event_id"),
-                    "concluded_event": terminal.get("event_id")}
+                    "concluded_event": terminal.get("event_id"),
+                    "terminal_contract": contract}
     except (OSError, ValueError, UnicodeError, subprocess.SubprocessError):
         return None
     return None

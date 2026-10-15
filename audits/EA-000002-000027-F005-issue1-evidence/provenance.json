@@ -1,0 +1,73 @@
+{
+  "classification": "S1_INTERNO_NAO_SENSIVEL",
+  "surface": "P2_GIT_PUBLICO_REPOSITORIO",
+  "generator_baseline": "260365c810449c91b1759ee6cf0506b09e571a1a",
+  "generator_sources_sha256": {
+    "legacy_bootstrap_evidence.py": "6b4464b8834f9edce9bf3c0790fb0730acafe51e485b7906738e33b10975bbcd",
+    "test_legacy_bootstrap_gate.py": "3b60dad8642892a09aed5ee3dc1739b42c85bc8403f3800f6f6e2dbbcd595b06"
+  },
+  "target_head": "38bfb1bdf247a0f06df383a2233443b8c487fc66",
+  "shallow": false,
+  "independent_clone": true,
+  "comment_ancestor": "5c9bf3b01e9282e122ac305a18a7be4c233207d2",
+  "merge_base": "5c9bf3b01e9282e122ac305a18a7be4c233207d2",
+  "ancestor_dates": "5c9bf3b01e9282e122ac305a18a7be4c233207d2 2026-10-10T12:47:47-07:00 2026-10-10T12:47:47-07:00",
+  "plan_blob_ancestor": "8334aa2e684910f643151e4ea1b6c6e6fc5f88e9",
+  "plan_blob_head": "8334aa2e684910f643151e4ea1b6c6e6fc5f88e9",
+  "created_event_at_ancestor": {
+    "event_id": "EVT-000007-20261010-CONSTITUICAO-001",
+    "strategy_id": "EA-000007-000001",
+    "strategy_code": "EA-000007-000001",
+    "strategy_sequence": 1,
+    "strategy_name": "Constituição pública documental do Projeto Conselhos Profissionais",
+    "project_code": "PRJ-000007",
+    "project_name": "Conselhos Profissionais",
+    "date": "2026-10-10",
+    "event_type": "CREATED",
+    "status": "IN_PROGRESS",
+    "phase_number": 1,
+    "phase_total": 4,
+    "phase_code": "F-000007-000001-001",
+    "phase_name": "Diagnóstico da base existente e confirmação da missão",
+    "trigger_request_ids": [
+      "REQ-000007-20261010-001"
+    ],
+    "generator_strategy": "EA-000002-000024",
+    "plan_ref": "estrategias/EA-000007-000001-constituicao-publica.md",
+    "notes": "Project governed by own local EA. Mission and public visibility approved. Initial substantive corpus or website not yet verified."
+  },
+  "concluded_event_at_ancestor": {
+    "event_id": "EVT-000007-20261010-CONSTITUICAO-003",
+    "strategy_id": "EA-000007-000001",
+    "strategy_code": "EA-000007-000001",
+    "project_code": "PRJ-000007",
+    "date": "2026-10-10",
+    "event_type": "CONCLUDED",
+    "phase_number": 4,
+    "phase_total": 4,
+    "phase_code": "F-000007-000001-004",
+    "phase_name": "Readback remoto e fechamento da constituição documental",
+    "status": "CONCLUIDO",
+    "gate": "PUBLIC_DOCUMENTARY_CONSTITUTION_VERIFIED",
+    "execution_mode": "M1_ASSISTANT_LED_WITH_GITHUB_CONNECTOR",
+    "evidence_refs": [
+      "PROJECT_STATE.json",
+      "README.md",
+      "MISSAO_E_ESCOPO.md",
+      "POLITICA_FONTES_E_PUBLICACAO.md",
+      "estrategias/EA-000007-000001-constituicao-publica.md"
+    ],
+    "future_substantive_research_authorized_by_this_strategy": false,
+    "pages_deployment_verified": false,
+    "new_spending": false,
+    "notes": "Missão e governança documental constituídas. Corpus jurídico substantivo, portal web e auditoria integral do histórico Git não certificados."
+  },
+  "evidence_correction": "phase_total=4 exists on CONCLUDED at both ancestor and HEAD; absent terminal_gate is the real observed incompatibility. Missing-total fallback is exercised by synthetic regression tests.",
+  "selected_proof_commit": "01d3a7cb134fa247ee3bfb89f2d4470648d03721",
+  "clone_status_before": "",
+  "clone_status_after": "",
+  "enabled_before_after": false,
+  "target_repository_writes": 0,
+  "F004_promoted": false,
+  "F006_started": false
+}
