@@ -191,3 +191,5 @@ No PRJ-000022, CODEX concluiu SCIV local F002/F003 no repositório (commits `670
 ## Issue #1 — ACT-011, 15/10/2026
 
 FASE 05/06 [F-000002-000027-005] — Integração e compatibilidade: nova ACT-011, sem reabrir ACT-010. Compatibilidade Rota B tipada, 97 testes locais PASS; snapshot PRJ000007 `38bfb1b` SCIV PASS, matriz histórica NOT_BACKFILLED e matriz SCIV atual PASS. Relatório: `audits/EA-000002-000027-F005-issue1-2026-10-15.md`. Publicação/CI/readback registrados no checkpoint subsequente; F005 IN_PROGRESS, F006 não iniciada. G0/CODEX PRJ000007 devem repetir F004 local sob seus gates; nenhum SCIV ativado ou histórico reescrito.
+
+**Readback ACT-011:** implementação `2af1258c4867da3bd59b0a3ff332f7e34f94bb6c`; CI 38826591578 SUCCESS, 97 testes e matriz PASS; blobs remotos conferidos em `audits/EA-000002-000027-F005-issue1-evidence/remote-checkpoint.json`. Handoff pronto para G0/CODEX PRJ000007; sem promoção da F004 ou F006.

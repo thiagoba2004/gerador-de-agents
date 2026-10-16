@@ -1,0 +1,83 @@
+{
+  "classification": "S1_INTERNO_NAO_SENSIVEL",
+  "surface": "P2_GIT_PUBLICO_REPOSITORIO",
+  "action_key": "ACT-000002-000027-011",
+  "implementation_commit": "2af1258c4867da3bd59b0a3ff332f7e34f94bb6c",
+  "readback": "VERIFIED_GITHUB_TREE_AND_FILE_CONTENTS",
+  "blobs": [
+    {
+      "sha": "e83e765dfb2eb048963ce72c92df2c23d7c91b39",
+      "path": "PROJECT_STATE.json"
+    },
+    {
+      "sha": "b332065b2fcea4a4e4ae362ccb5a0b911e99b365",
+      "path": "REQUEST_LOG.jsonl"
+    },
+    {
+      "sha": "05f168243e8d65efad040d817cc82de15c86b551",
+      "path": "ROADMAP.md"
+    },
+    {
+      "sha": "b944673757b68b02b0607a35e81ed2d610781699",
+      "path": "STRATEGY_LOG.jsonl"
+    },
+    {
+      "sha": "4cacd710dc3aefc062f01882e41edb59feb9c61a",
+      "path": "STRATEGY_REGISTRY.jsonl"
+    },
+    {
+      "sha": "ec8bf4fda47a6c2493f689d542efa32a152858ce",
+      "path": "audits/EA-000002-000027-F005-issue1-2026-10-15.md"
+    },
+    {
+      "sha": "6a2372cee00faacded5c4f47e32755a7ec7c9c13",
+      "path": "audits/EA-000002-000027-F005-issue1-evidence/after.json"
+    },
+    {
+      "sha": "a823011b0fdc8e850915edef407b4354ed343097",
+      "path": "audits/EA-000002-000027-F005-issue1-evidence/before.json"
+    },
+    {
+      "sha": "0e14dd41e204463aa2f35f7cbb6d6d6c3c9a7bd9",
+      "path": "audits/EA-000002-000027-F005-issue1-evidence/current-sciv-matrix.json"
+    },
+    {
+      "sha": "64501d06fa4f16124fada91e4d9f2f5d8fa1c4d9",
+      "path": "audits/EA-000002-000027-F005-issue1-evidence/ea027-matrix.json"
+    },
+    {
+      "sha": "cd36151097a65b0ac2a5907b6ed64cdc4e49f71b",
+      "path": "audits/EA-000002-000027-F005-issue1-evidence/provenance.json"
+    },
+    {
+      "sha": "65cd4e6d3444dd90a03fb09bc956b0823c5f3e7a",
+      "path": "estrategias/EA-000002-000027-actions.json"
+    },
+    {
+      "sha": "720a817dd61b3041d88121319d79e3caa50e0a24",
+      "path": "tools/legacy_bootstrap_evidence.py"
+    },
+    {
+      "sha": "4e5b7475bfefdad0cb634813ce8888a19908fe2c",
+      "path": "tools/test_legacy_bootstrap_gate.py"
+    }
+  ],
+  "ci": {
+    "id": 38826591578,
+    "head_sha": "2af1258c4867da3bd59b0a3ff332f7e34f94bb6c",
+    "status": "completed",
+    "conclusion": "success",
+    "html_url": "https://github.com/thiagoba2004/gerador-de-agents/actions/runs/38826591578"
+  },
+  "ci_job_id": 116735365850,
+  "tests_passed": 97,
+  "ci_tests_seconds": 1.277,
+  "ea027_matrix": "PASS_11_ACTIONS_6_PHASES",
+  "target_gate": "PASS_READ_ONLY_EXACT_SNAPSHOT",
+  "target_F004_promoted": false,
+  "F005": "IN_PROGRESS",
+  "F006_started": false,
+  "target_writes": 0,
+  "next_executor": "G0_AND_CODEX_LOCAL_PRJ000007",
+  "next_action": "Rerun and persist F004 in target repository under its own gates"
+}
