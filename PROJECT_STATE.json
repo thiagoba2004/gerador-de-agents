@@ -265,7 +265,7 @@
         "responsibility": "SPECIALIZED_INSTANCE_REQUIRED_WHEN_CHATGPT_CONTINUOUS_DEVELOPMENT_DESIGNATED"
       }
     },
-    "binding_of_generator_own_chatgpt_project": "NOT_DECIDED",
+    "binding_of_generator_own_chatgpt_project": "CREATED_HUMAN_REPORTED_NATIVE_BINDING_NOT_INDEPENDENTLY_VERIFIED",
     "human_chatgpt_project_creation": "NECESSARY_WHEN_DESIGNATED_CHATGPT_CONTINUOUS_OWNER",
     "platform_gate_tests_executed": 0,
     "project_repository_writes_this_decision": 0,
@@ -384,5 +384,19 @@
     "implementation_commit": "2af1258c4867da3bd59b0a3ff332f7e34f94bb6c",
     "ci_run_url": "https://github.com/thiagoba2004/gerador-de-agents/actions/runs/38826591578",
     "readback": "audits/EA-000002-000027-F005-issue1-evidence/remote-checkpoint.json"
+  },
+  "chatgpt_specialized_instance": {
+    "chatgpt_project_name": "Gerador de Agents",
+    "status": "HUMAN_REPORTED_CREATED_NATIVE_INSTRUCTIONS_PENDING",
+    "reported_at": "2026-10-21",
+    "source": "USER_MESSAGE_THIS_CONVERSATION",
+    "native_instructions_ref": "adaptadores/chatgpt/INSTRUCOES.md",
+    "native_instructions_installation": "NOT_VERIFIED",
+    "mode_of_memory": "NOT_VERIFIED",
+    "binding_api_verification": "NOT_VERIFIED",
+    "first_specialized_read": "NOT_VERIFIED",
+    "execution_mandate_ref": "handoffs/governanca-geral/2026-10-21-mandato-entrega-cinco-projetos.md",
+    "project_handoff_count_accepted_at_registration": 0,
+    "future_projects_scope": "APPLY_ROUTE_A_A6_AND_ROUTE_B_B8_ONLY_WHEN_HUMAN_MANDATED"
   }
 }

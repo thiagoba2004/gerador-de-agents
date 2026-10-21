@@ -8,6 +8,10 @@
 **generated_from_kernel:** `1.9`  
 **repository:** `thiagoba2004/gerador-de-agents`
 
+## Interface nativa ChatGPT — nova IA Especializada, 21/10/2026
+
+**Fonte canônica das Instruções a instalar no Projeto ChatGPT recém-criado:** `adaptadores/chatgpt/INSTRUCOES.md` (v1.0). Esta IA tem mandato permanente para aplicar `GERADOR_WORKFLOW.md` A6/B8 a Projetos atuais **e futuros**; o primeiro mandato é `handoffs/governanca-geral/2026-10-21-mandato-entrega-cinco-projetos.md`. Criado o contêiner conforme relato humano, **não pressupor instalação/aceite das Instruções, vínculo B1 certificado, modo C3 ou leitura automática do arquivo**. A Governança Geral atua na Direção Estratégica; o Gerador assume coordenação tática/operacional autorizada das entregas. O Gerador não pode fabricar aceite das IAs de destino, ativar SCIV desabilitado, transferir trabalhos para G0 por rotina ou recorrer a CPD/Pages/symlink sem dependência comprovada.
+
 ## 1. Missão do projeto
 
 Este repositório mantém o Gerador de Agents: infraestrutura para criar, auditar, adaptar, atualizar e versionar `AGENTS.md` de outros projetos, preservando continuidade, persistência, estratégia, planejamento, verificabilidade e recuperação.
@@ -66,8 +70,8 @@ Fonte global versionada: `thiagoba2004/governanca-geral-modelos-ia/ARQUITETURA_U
 Regras mínimas:
 
 - Projeto ChatGPT não é sinônimo deste Projeto de Governança;
-- este PRJ está em `B0_NO_CHATGPT_PROJECT_BINDING`; não possui modo C2/C3 próprio;
-- Work permanece um executor disponível fora de qualquer contêiner ChatGPT; handoff por isolamento só se aplica a um futuro vínculo B1 em C3;
+- em 21/10/2026, o titular **informou a criação** do Projeto ChatGPT Gerador de Agents (PRJ-000002), superando a classificação B0 histórica quanto à existência declarada; vínculo B1 técnico, instalação das Instruções e modo de memória permanecem **NOT_VERIFIED** até prova nativa;
+- Work permanece fora do contêiner ChatGPT e não herda automaticamente seu contexto, sobretudo se C3 vier a ser comprovado; handoff exige autorização e contexto mínimo;
 - fontes anexadas formam Core Context curado, não acervo integral;
 - Biblioteca é fonte/espelho operacional;
 - GitHub permanece fonte canônica de regras, estado e histórico;

@@ -4,7 +4,7 @@
   "project_code": "PRJ-000002",
   "project_name": "Gerador de Agents",
   "project_alias": "GDA",
-  "updated_at": "2026-09-26",
+  "updated_at": "2026-10-21",
   "global_architecture_repository": "thiagoba2004/governanca-geral-modelos-ia",
   "global_architecture_file": "ARQUITETURA_UNIVERSAL_AMBIENTES_EXECUCAO_PERSISTENCIA.md",
   "governance_identity": {
@@ -13,7 +13,7 @@
   },
   "project_domain": "arquitetura de governança, templates, módulos e automação de repositórios",
   "context_policy": {
-    "project_level_memory_mode": "NOT_APPLICABLE",
+    "project_level_memory_mode": "NOT_VERIFIED_FOR_NEWLY_CREATED_CHATGPT_PROJECT",
     "runtime_context_rule": "CLASSIFY_PER_EXECUTION_SESSION",
     "memory_is_source_of_truth": false
   },
@@ -74,7 +74,7 @@
       "completion_gate"
     ],
     "validate_before_canonical_persistence": true,
-    "project_only_to_work": "ONLY_IF_A_FUTURE_BOUND_CHATGPT_PROJECT_USES_C3"
+    "project_only_to_work": "ONLY_IF_C3_ACTUALLY_CONFIGURED_WITH_EXPLICIT_AUTHORIZATION"
   },
   "fallback": {
     "preserve_project_strategy_phase_identity": true,
@@ -84,8 +84,13 @@
   },
   "legacy_x_codes_read_only": true,
   "chatgpt_project_binding": {
-    "status": "B0_NO_CHATGPT_PROJECT_BINDING",
-    "source": "USER_REPORTED_2026-09-26",
-    "chatgpt_project_name": null
+    "status": "B1_CHATGPT_PROJECT_CREATED_HUMAN_REPORTED_BINDING_NOT_PLATFORM_VERIFIED",
+    "source": "USER_EXPRESS_DECLARATION_2026-10-21",
+    "chatgpt_project_name": "Gerador de Agents",
+    "created_human_attested": true,
+    "native_instructions_installed": "NOT_VERIFIED",
+    "native_memory_mode": "NOT_VERIFIED",
+    "specialized_ai_mandate_read": "NOT_VERIFIED",
+    "canonical_instructions_ref": "adaptadores/chatgpt/INSTRUCOES.md"
   }
 }
