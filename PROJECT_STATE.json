@@ -111,7 +111,7 @@
   ],
   "next_logical_step": "ACT011 issue #1 VERIFIED: commit/CI/readback comprovados. G0/CODEX PRJ000007 repetem e persistem F004 local sob seus gates. EA027 F005 IN_PROGRESS; F006 nao iniciada; sem SCIV ativado ou escrita no destinatario.",
   "chat_only_work_is_not_persisted": true,
-  "updated_at": "2026-10-15",
+  "updated_at": "2026-10-21",
   "project_code": "PRJ-000002",
   "project_sequence": 2,
   "project_alias": "GDA",
@@ -394,9 +394,40 @@
     "native_instructions_installation": "NOT_VERIFIED",
     "mode_of_memory": "NOT_VERIFIED",
     "binding_api_verification": "NOT_VERIFIED",
-    "first_specialized_read": "NOT_VERIFIED",
+    "first_specialized_read": "MANDATE_READ_IN_CURRENT_GENERATOR_CHATGPT_CONTEXT_2026_10_21_NATIVE_B1_STILL_NOT_VERIFIED",
     "execution_mandate_ref": "handoffs/governanca-geral/2026-10-21-mandato-entrega-cinco-projetos.md",
     "project_handoff_count_accepted_at_registration": 0,
     "future_projects_scope": "APPLY_ROUTE_A_A6_AND_ROUTE_B_B8_ONLY_WHEN_HUMAN_MANDATED"
+  },
+  "five_project_operational_handoff": {
+    "objective": "OBJ-ENTREGA-5-IA-ESPECIALIZADA",
+    "authority": "REQ-GLOBAL-20261021-003",
+    "request_ref": "REQ-20261021-GDA-CHAT-001",
+    "mandate_ref": "handoffs/governanca-geral/2026-10-21-mandato-entrega-cinco-projetos.md",
+    "mandate_status": "MANDATE_READ_AND_ACCEPTED_BY_GENERATOR_AI",
+    "status": "HANDOFF_PENDING_RECIPIENT_POSITIVE_RECEIPTS",
+    "operationally_accepted": 0,
+    "total": 5,
+    "documentary_progress": [
+      {
+        "project_code": "PRJ-000021",
+        "status": "MISSION_EA002_RECONCILED_A6_PENDING",
+        "commit": "02f1457941374e095af49ca2c21085808bec2440",
+        "readback": true
+      }
+    ],
+    "other_targets": [
+      "PRJ-000022",
+      "PRJ-000023",
+      "PRJ-000007",
+      "PRJ-000008"
+    ],
+    "G0_prior_sufficiency": "FOUR_SUBSTANTIALLY_SUFFICIENT_NOT_ACCEPTED",
+    "next_action": "Receipt positive only from recipient AIs in their ChatGPT project; specific 021 B1 attestation",
+    "next_owner": "SPECIALIZED_RECIPIENT_AIS_AND_TITULAR_FOR_021_B1",
+    "report_ref": "handoffs/governanca-geral/2026-10-21-sintese-execucao-cinco-projetos-gda.md",
+    "sciv_enabled_by_mandate": false,
+    "future_projects_policy": "A6_OR_B8_ONLY_AFTER_FORMAL_AUTHORIZATION",
+    "as_of": "2026-10-21"
   }
 }
