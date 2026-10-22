@@ -453,3 +453,7 @@ Quando SCIV for habilitado por opt-in, **registrar EA local própria** e prosseg
 ## Planejamento obrigatório por ação da EA — executor, ferramenta e ambiente
 
 **Mandato:** REQ-20261011-010 / EA-000002-000027 F005. Para toda nova EA gerar `estrategias/EA-PPPPPP-EEEEEE-actions.json` com contratos de ações vinculadas às fases, incluindo responsável, executor, ferramenta, ambiente, fontes, destino, action_id, autorização, custos, verificação e blockers. O Gerador aplica `GERADOR_WORKFLOW.md` §10 e `tools/validate_execution_action_plan.py`; Rota A sem matriz bloqueia o gate de constituição. O sucesso do script é apenas estrutural. O contrato evita perda de passos mas não substitui a seleção real de executor, PEP nem prova de execução. EAs históricas preservam seus eventos, e ações restantes são incluídas na retomada.
+
+## Aviso estratégico de carteira futura — IAs por área (21/10/2026)
+
+O titular definiu como objetivo institucional uma **IA Especializada por área aprovada** numa organização UE/UT/UO. A IA **Novos Projetos** prepara a carteira e os dossiês; ao Gerador cabe futuramente **constituir e entregar** áreas/Projetos aprovados. Referência: `handoffs/governanca-geral/2026-10-21-futura-carteira-ias-especializadas-por-area.md`, `REQ-20261021-G0-002`. **Aviso de fila, NÃO tarefa para executar já:** manter **5/5 A6/B8** como prioridade vigente, sem criar PRJs/EAs ou gastar recursos pela mera publicação. Eventual IA de Entrega de Projetos é candidata, sem transferência do mandato atual. Leitura real no ChatGPT Gerador **não verificada**.
