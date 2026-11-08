@@ -405,8 +405,8 @@
     "request_ref": "REQ-20261021-GDA-CHAT-001",
     "mandate_ref": "handoffs/governanca-geral/2026-10-21-mandato-entrega-cinco-projetos.md",
     "mandate_status": "MANDATE_READ_AND_ACCEPTED_BY_GENERATOR_AI",
-    "status": "HANDOFF_PENDING_RECIPIENT_POSITIVE_RECEIPTS",
-    "operationally_accepted": 0,
+    "status": "FOUR_ACCEPTED_ONE_PENDING_B1_SPECIFIC_PRJ000021",
+    "operationally_accepted": 4,
     "total": 5,
     "documentary_progress": [
       {
@@ -423,11 +423,67 @@
       "PRJ-000008"
     ],
     "G0_prior_sufficiency": "FOUR_SUBSTANTIALLY_SUFFICIENT_NOT_ACCEPTED",
-    "next_action": "Receipt positive only from recipient AIs in their ChatGPT project; specific 021 B1 attestation",
-    "next_owner": "SPECIALIZED_RECIPIENT_AIS_AND_TITULAR_FOR_021_B1",
+    "next_action": "Titular verifies exact 2026-10-20 conversation B1 in PRJ-000021; recipient AI then decides A6 and persists positive receipt iff supported; otherwise maintain pending",
+    "next_owner": "TITULAR_FOR_PRJ000021_B1_THEN_SPECIALIZED_RECIPIENT_AI",
     "report_ref": "handoffs/governanca-geral/2026-10-21-sintese-execucao-cinco-projetos-gda.md",
     "sciv_enabled_by_mandate": false,
     "future_projects_policy": "A6_OR_B8_ONLY_AFTER_FORMAL_AUTHORIZATION",
-    "as_of": "2026-10-21"
+    "as_of": "2026-11-08",
+    "accepted_projects": [
+      "PRJ-000022",
+      "PRJ-000023",
+      "PRJ-000007",
+      "PRJ-000008"
+    ],
+    "accepted_receipts": [
+      {
+        "project_code": "PRJ-000022",
+        "gate": "A6",
+        "repository": "thiagoba2004/instituicoes-bancarias",
+        "receipt_ref": "governanca/recebimentos/2026-11-08-prj-000022-gate-a6.md",
+        "receipt_blob_sha": "9dd023025c8c838a9e16544d2fc68701cd4a6671",
+        "receipt_commit": "2547e56db97697a00bd0d2fc938a36027c9fd561",
+        "readback_verified": true
+      },
+      {
+        "project_code": "PRJ-000023",
+        "gate": "A6",
+        "repository": "thiagoba2004/bancas-examinadoras",
+        "receipt_ref": "governanca/recebimentos/2026-11-08-prj-000023-gate-a6.md",
+        "receipt_blob_sha": "f849831904f599eb85b108694f5cc7990c8d8a40",
+        "receipt_commit": "fa206b166f1c6d62b9fa20c2b635091dcc052941",
+        "readback_verified": true
+      },
+      {
+        "project_code": "PRJ-000007",
+        "gate": "B8",
+        "repository": "thiagoba2004/conselhos-profissionais",
+        "receipt_ref": "governanca/recebimentos/2026-11-08-prj-000007-gate-b8.md",
+        "receipt_blob_sha": "30a5140944914b06e4a6d544436203b326500a5d",
+        "receipt_commit": "bb6a87814791e62a60805e10a1b9711d53707509",
+        "readback_verified": true
+      },
+      {
+        "project_code": "PRJ-000008",
+        "gate": "B8",
+        "repository": "thiagoba2004/ordem-dos-advogados",
+        "receipt_ref": "governanca/recebimentos/2026-11-08-prj-000008-gate-b8.md",
+        "receipt_blob_sha": "d35bd81bbf1faacf7bef36712f4803adefc69a12",
+        "receipt_commit": "d211ef260b0c817899b1596510e3eeaf307785f4",
+        "readback_verified": true
+      }
+    ],
+    "pending_projects": [
+      {
+        "project_code": "PRJ-000021",
+        "gate": "A6",
+        "status": "HANDOFF_PENDING",
+        "pending_requirement": "B1_CURRENT_ATTESTATION_OF_2026_10_20_REPORT_ORIGINAL_CONVERSATION",
+        "source": "RECIPIENT_NEGATIVE_REPORT_FORWARDED_BY_TITULAR_2026_11_08_NOT_TARGET_COMMIT",
+        "prior_mission_ea_reconciliation_commit": "02f1457941374e095af49ca2c21085808bec2440",
+        "next_owner": "TITULAR_FOR_B1_THEN_RECIPIENT_AI_FOR_A6"
+      }
+    ],
+    "last_checkpoint_log_ref": "REQUEST_LOG.jsonl"
   }
 }
